@@ -35,7 +35,8 @@ namespace MechanicLogHelper
             if (!File.Exists(logFilePath)) return new List<LogEntry>();
 
             string json = File.ReadAllText(logFilePath);
-            return JsonConvert.DeserializeObject<List<LogEntry>>(json);
+            var log = JsonConvert.DeserializeObject<List<LogEntry>>(json);
+            return log ?? new List<LogEntry>();
         }
 
         public void SaveLogs(List<LogEntry> logs)
@@ -46,7 +47,7 @@ namespace MechanicLogHelper
 
         public void ClearLogs()
         {
-            File.WriteAllText(logFilePath, String.Empty);
+            File.WriteAllText(logFilePath, "[]");
         }
 
         public void DeleteLog(LogEntry logEntryToDelete)

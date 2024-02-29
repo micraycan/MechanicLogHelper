@@ -74,7 +74,7 @@
             this.customerNameInput.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.customerNameInput.Name = "customerNameInput";
             this.customerNameInput.Size = new System.Drawing.Size(316, 31);
-            this.customerNameInput.TabIndex = 2;
+            this.customerNameInput.TabIndex = 0;
             // 
             // vehicleInput
             // 
@@ -82,10 +82,11 @@
             this.vehicleInput.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.vehicleInput.Name = "vehicleInput";
             this.vehicleInput.Size = new System.Drawing.Size(316, 31);
-            this.vehicleInput.TabIndex = 2;
+            this.vehicleInput.TabIndex = 1;
             // 
             // licenseInput
             // 
+            this.licenseInput.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.licenseInput.Location = new System.Drawing.Point(286, 142);
             this.licenseInput.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.licenseInput.Name = "licenseInput";
