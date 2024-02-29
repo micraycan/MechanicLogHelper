@@ -150,6 +150,7 @@ namespace MechanicLogHelper
                     if (result == DialogResult.Yes)
                     {
                         logManager.DeleteLog(logEntry);
+                        ClearFormFields();
                         RefreshTreeView();
                     }
                 }
@@ -159,33 +160,34 @@ namespace MechanicLogHelper
         private bool IsInputValid()
         {
             List<string> errorMessages = new List<string>();
+            errorMessages.Add("Required fields missing:");
 
             if (string.IsNullOrWhiteSpace(customerNameInput.Text))
             {
-                errorMessages.Add("Customer name is required.");
+                errorMessages.Add("Customer Name");
             }
 
             if (string.IsNullOrWhiteSpace(vehicleInput.Text))
             {
-                errorMessages.Add("Vehicle is required.");
+                errorMessages.Add("Vehicle Make/Model");
             }
 
             if (string.IsNullOrWhiteSpace(licenseInput.Text))
             {
-                errorMessages.Add("License plate is required.");
+                errorMessages.Add("License Plate");
             }
 
             if (!IsAtleastOneUpgradeSelected())
             {
-                errorMessages.Add("At least one upgrade is required.");
+                errorMessages.Add("Minimum of one upgrade");
             }
 
             if (!IsUpgradeInputValid())
             {
-                errorMessages.Add("Installed upgrades must have a price value");
+                errorMessages.Add("Installed upgrade price");
             }
 
-            if (errorMessages.Any())
+            if (errorMessages.Count > 1)
             {
                 string errorMessage = string.Join("\n", errorMessages);
                 MessageBox.Show(errorMessage);
