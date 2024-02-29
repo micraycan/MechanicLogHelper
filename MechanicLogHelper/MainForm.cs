@@ -24,7 +24,7 @@ namespace MechanicLogHelper
         private void InitializeForm()
         {
             logManager = new LogManager();
-            
+            RefreshTreeView();
 
             // init upgrade options
             upgradeOptions.Add(new UpgradeOption { Checkbox = armorCheckbox, InputField = armorAmountInput, UpgradeName = "Armor" });
@@ -32,15 +32,20 @@ namespace MechanicLogHelper
 
             // button settings
             saveLogBtn.Click += new EventHandler(SaveLogButton_Click);
+            clearLogsBtn.Click += new EventHandler(ClearAllLogs_Click);
             deleteLogBtn.Click += new EventHandler(DeleteLogButton_Click);
             resetBtn.Click += new EventHandler(ResetButton_Click);
 
+            // tree view setting
+            this.treeViewLogs.AfterSelect += new TreeViewEventHandler(TreeViewLogs_AfterSelect);
+
             // input settings
-            armorAmountInput.KeyPress += TextBox_KeyPress;
-            brakeAmountInput.KeyPress += TextBox_KeyPress;
+            licenseInput.KeyPress += AlphanumericTextBox_KeyPress;
+            armorAmountInput.KeyPress += NumberTextBox_KeyPress;
+            brakeAmountInput.KeyPress += NumberTextBox_KeyPress;
         }
 
-        private void TextBox_KeyPress(object sender, KeyPressEventArgs e)
+        private void NumberTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             (sender as TextBox).MaxLength = 5;
 
@@ -50,30 +55,49 @@ namespace MechanicLogHelper
             }
         }
 
+        private void AlphanumericTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            (sender as TextBox).MaxLength = 8;
+
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
         private void RefreshTreeView()
         {
             treeViewLogs.Nodes.Clear();
             var logs = logManager.LoadLogs();
-            var groupedLogs = logs.GroupBy(log => log.Date.ToString("yyyy-MM-dd"));
 
-            foreach (var group in groupedLogs)
+            if (logs == null || !logs.Any())
             {
-                TreeNode dateNode = new TreeNode(group.Key);
-                foreach (var log in group)
-                {
-                    TreeNode logNode = new TreeNode(log.CustomerName);
-                    // other details
-                    dateNode.Nodes.Add(logNode);
-                }
-                treeViewLogs.Nodes.Add(dateNode);
+                TreeNode emptyNode = new TreeNode(DateTime.Now.ToString("yyyy-MM-dd"));
+                treeViewLogs.Nodes.Add(emptyNode);
             }
+            else
+            {
+                var groupedLogs = logs.GroupBy(log => log.Date.ToString("yyyy-MM-dd"));
+
+                foreach (var group in groupedLogs)
+                {
+                    TreeNode dateNode = new TreeNode(group.Key);
+                    foreach (var log in group)
+                    {
+                        TreeNode logNode = new TreeNode($"{log.CustomerName} - {log.Vehicle}");
+                        logNode.Tag = log;
+                        dateNode.Nodes.Add(logNode);
+                    }
+                    treeViewLogs.Nodes.Add(dateNode);
+                }
+            }
+
+            treeViewLogs.ExpandAll();
         }
 
         private void SaveLogButton_Click(object sender, EventArgs e)
         {
-            bool validated = ValidateLogInputs();
-
-            if (!validated) { return; }
+            if (!IsInputValid()) { return; }
 
             var logs = logManager.LoadLogs();
 
@@ -112,6 +136,7 @@ namespace MechanicLogHelper
         private void ResetButton_Click(object sender, EventArgs e)
         {
             ClearFormFields();
+            RefreshTreeView();
         }
 
         private void DeleteLogButton_Click(object sender, EventArgs e)
@@ -125,33 +150,44 @@ namespace MechanicLogHelper
                     if (result == DialogResult.Yes)
                     {
                         logManager.DeleteLog(logEntry);
+                        ClearFormFields();
                         RefreshTreeView();
                     }
                 }
             }
         }
 
-        private bool ValidateLogInputs()
+        private bool IsInputValid()
         {
             List<string> errorMessages = new List<string>();
+            errorMessages.Add("Required fields missing:");
 
             if (string.IsNullOrWhiteSpace(customerNameInput.Text))
             {
-                errorMessages.Add("Customer name is required.");
+                errorMessages.Add("Customer Name");
             }
 
             if (string.IsNullOrWhiteSpace(vehicleInput.Text))
             {
-                errorMessages.Add("Vehicle is required.");
+                errorMessages.Add("Vehicle Make/Model");
             }
 
             if (string.IsNullOrWhiteSpace(licenseInput.Text))
             {
-                errorMessages.Add("License plate is required.");
+                errorMessages.Add("License Plate");
             }
 
-            // TODO: Add at least one upgrade/repair
-            if (errorMessages.Any())
+            if (!IsAtleastOneUpgradeSelected())
+            {
+                errorMessages.Add("Minimum of one upgrade");
+            }
+
+            if (!IsUpgradeInputValid())
+            {
+                errorMessages.Add("Installed upgrade price");
+            }
+
+            if (errorMessages.Count > 1)
             {
                 string errorMessage = string.Join("\n", errorMessages);
                 MessageBox.Show(errorMessage);
@@ -183,25 +219,70 @@ namespace MechanicLogHelper
 
                 if (selectedLog != null)
                 {
+                    ClearFormFields();
+
                     customerNameInput.Text = selectedLog.CustomerName;
                     vehicleInput.Text = selectedLog.Vehicle;
                     licenseInput.Text = selectedLog.LicensePlate;
                     employeeCheckbox.Checked = selectedLog.IsEmployee;
                     // add upgrade info later
+
+                    foreach (UpgradeOption upgrade in upgradeOptions)
+                    {
+                        if (selectedLog.Upgrades.TryGetValue(upgrade.UpgradeName, out int value))
+                        {
+                            upgrade.Checkbox.Checked = true;
+                            upgrade.InputField.Text = value.ToString();
+                        }
+                    }
                 }
             }
+        }
+
+        private void ClearAllLogs_Click(object sender, EventArgs e)
+        {
+            logManager.ClearLogs();
         }
 
         private Dictionary<string, int> GetInstalledUpgrades()
         {
             Dictionary<string, int> installedParts = new Dictionary<string, int>();
 
-            if (armorCheckbox.Checked)
+            foreach (UpgradeOption upgrade in upgradeOptions)
             {
-                installedParts.Add("Armor", int.Parse(armorAmountInput.Text));
+                if (upgrade.Checkbox.Checked)
+                {
+                    installedParts.Add(upgrade.UpgradeName, int.Parse(upgrade.InputField.Text));
+                }
             }
 
             return installedParts;
+        }
+
+        private bool IsAtleastOneUpgradeSelected()
+        {
+            foreach (UpgradeOption upgrade in upgradeOptions)
+            {
+                if (upgrade.Checkbox.Checked)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        private bool IsUpgradeInputValid()
+        {
+            foreach (UpgradeOption upgrade in upgradeOptions)
+            {
+                if (upgrade.Checkbox.Checked && String.IsNullOrEmpty(upgrade.InputField.Text))
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
     }
 }
