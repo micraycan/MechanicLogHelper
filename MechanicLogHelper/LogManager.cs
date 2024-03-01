@@ -9,15 +9,23 @@ using System.Windows.Forms;
 
 namespace MechanicLogHelper
 {
+    public class UpgradeInfo
+    {
+        public string UpgradeName { get; set; }
+        public int UpgradeAmount { get; set; }
+        public string UpgradeType { get; set; }
+    }
+
     public class LogEntry
     {
         public string CustomerName { get; set; }
         public string Vehicle { get; set; }
         public string LicensePlate { get; set; }
         public bool IsEmployee { get; set; }
-        public Dictionary<string, int> Upgrades { get; set; }
-        public decimal TotalPrice { get; set; }
+        public List<UpgradeInfo> Upgrades { get; set; }
+        public int TotalPrice { get; set; }
         public DateTime Date { get; set; }
+        public string Shop { get; set; }
     }
 
     public class LogManager
@@ -62,6 +70,7 @@ namespace MechanicLogHelper
     {
         public CheckBox Checkbox { get; set; }
         public TextBox InputField { get; set; }
+        public TextBox TypeField { get; set; }
         public string UpgradeName { get; set; }
     }
 }
