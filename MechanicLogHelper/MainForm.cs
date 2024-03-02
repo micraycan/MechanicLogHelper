@@ -59,7 +59,10 @@ namespace MechanicLogHelper
             upgradeOptions.Add(new UpgradeOption { Checkbox = steeringWheelCheckbox, InputField = steeringWheelAmountInput, TypeField = steeringWheelTypeInput, UpgradeName = "Steering Wheel" }); 
             upgradeOptions.Add(new UpgradeOption { Checkbox = strutCheckbox, InputField = strutAmountInput, TypeField = strutTypeInput, UpgradeName = "Strut" }); 
             upgradeOptions.Add(new UpgradeOption { Checkbox = tintCheckbox, InputField = tintAmountInput, TypeField = tintTypeInput, UpgradeName = "Tint" });
-            upgradeOptions.Add(new UpgradeOption { Checkbox = tireSmokeCheckbox, InputField = tireSmokeAmountInput, TypeField = tireSmokeTypeInput, UpgradeName = "Tire Smoke" }); 
+            upgradeOptions.Add(new UpgradeOption { Checkbox = tireSmokeCheckbox, InputField = tireSmokeAmountInput, TypeField = tireSmokeTypeInput, UpgradeName = "Tire Smoke" });
+            upgradeOptions.Add(new UpgradeOption { Checkbox = repairCheckbox, InputField = repairAmountInput, TypeField = repairTypeInput, UpgradeName = "Repair" });
+            upgradeOptions.Add(new UpgradeOption { Checkbox = resprayInteriorCheckbox, InputField = resprayInteriorAmountInput, TypeField = resprayInteriorTypeInput, UpgradeName = "Respray Interior" });
+            upgradeOptions.Add(new UpgradeOption { Checkbox = removeNeonCheckbox, InputField = removeNeonAmountInput, TypeField = removeNeonTypeInput, UpgradeName = "Remove Neon Kit" });
 
             // button settings
             saveLogBtn.Click += new EventHandler(SaveLogButton_Click);
@@ -106,6 +109,9 @@ namespace MechanicLogHelper
             strutCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
             tintCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
             tireSmokeCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
+            repairCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
+            resprayInteriorCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
+            removeNeonCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
         }
 
         private void NumberTextBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -172,7 +178,7 @@ Customer Name: {customerName}
 Vehicle | [Make/Model]: {vehicle}
 Plate: {plate}
 Upgrades Purchased: {upgrades}
-Price Charged: ${priceCharged}
+Price Charged: ${priceCharged:n0}
 SHOP: {shop}
 ```";
 
@@ -191,6 +197,7 @@ SHOP: {shop}
         private string GetFormattedUpgrades()
         {
             List<string> resprayTypes = new List<string>();
+            List<string> bumperTypes = new List<string>();
             List<string> otherUpgrades = new List<string>();
 
             foreach (UpgradeOption upgrade in upgradeOptions)
@@ -209,6 +216,30 @@ SHOP: {shop}
 
                         resprayTypes.Add(type);
                     }
+                    else if (upgrade.UpgradeName.Contains("Bumper"))
+                    {
+                        var words = upgrade.UpgradeName.Split(' ');
+                        var type = "";
+
+                        if (words.Length > 1 && words[1] == "Bumper")
+                        {
+                            type = words[0].Substring(0, 1);
+                        }
+
+                        bumperTypes.Add(type);
+                    }
+                    else if (upgrade.UpgradeName.Contains("Repair"))
+                    {
+                        continue;
+                    }
+                    else if (upgrade.UpgradeName.Contains("Left Fender"))
+                    {
+                        otherUpgrades.Add("L Fender");
+                    }
+                    else if (upgrade.UpgradeName.Contains("Side Skirt"))
+                    {
+                        otherUpgrades.Add("Skirts");
+                    }
                     else
                     {
                         otherUpgrades.Add(upgrade.UpgradeName);
@@ -216,12 +247,18 @@ SHOP: {shop}
                 }
             }
 
-            string resprayFormatted = resprayTypes.Count > 0 ? $"Respray {string.Join("/", resprayTypes)}" : String.Empty;
+            string resprayFormatted = resprayTypes.Count > 0 ? $"{string.Join("/", resprayTypes)} Respray" : String.Empty;
+            string bumperFormatted = bumperTypes.Count > 0 ? $"{string.Join ("/", bumperTypes)} Bumper" : String.Empty;
 
             List<String> allUpgrades = otherUpgrades.ToList();
             if (!string.IsNullOrEmpty(resprayFormatted))
             {
                 allUpgrades.Add(resprayFormatted);
+            }
+
+            if (!string.IsNullOrEmpty(bumperFormatted))
+            {
+                allUpgrades.Add(bumperFormatted);
             }
 
             return string.Join(", ", allUpgrades);
