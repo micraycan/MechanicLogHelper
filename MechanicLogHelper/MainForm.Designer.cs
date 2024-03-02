@@ -67,30 +67,83 @@
             this.engineBlockCheckbox = new System.Windows.Forms.CheckBox();
             this.dialCheckbox = new System.Windows.Forms.CheckBox();
             this.customerGroup = new System.Windows.Forms.GroupBox();
+            this.shopInput = new System.Windows.Forms.TextBox();
+            this.shopLabel = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.sideSkirtAmountInput = new System.Windows.Forms.TextBox();
-            this.leftFenderAmountInput = new System.Windows.Forms.TextBox();
-            this.tireSmokeAmountInput = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.rearBumperTypeInput = new System.Windows.Forms.TextBox();
             this.rearBumperAmountInput = new System.Windows.Forms.TextBox();
+            this.resprayPearlCheckbox = new System.Windows.Forms.CheckBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.sideSkirtTypeInput = new System.Windows.Forms.TextBox();
+            this.sideSkirtAmountInput = new System.Windows.Forms.TextBox();
+            this.leftFenderTypeInput = new System.Windows.Forms.TextBox();
+            this.leftFenderAmountInput = new System.Windows.Forms.TextBox();
+            this.repairTypeInput = new System.Windows.Forms.TextBox();
+            this.tireSmokeTypeInput = new System.Windows.Forms.TextBox();
+            this.repairAmountInput = new System.Windows.Forms.TextBox();
+            this.tireSmokeAmountInput = new System.Windows.Forms.TextBox();
+            this.resprayPrimaryTypeInput = new System.Windows.Forms.TextBox();
+            this.dialTypeInput = new System.Windows.Forms.TextBox();
             this.resprayPrimaryAmountInput = new System.Windows.Forms.TextBox();
+            this.tintTypeInput = new System.Windows.Forms.TextBox();
+            this.resprayPearlTypeInput = new System.Windows.Forms.TextBox();
             this.tintAmountInput = new System.Windows.Forms.TextBox();
+            this.seatsTypeInput = new System.Windows.Forms.TextBox();
             this.resprayPearlAmountInput = new System.Windows.Forms.TextBox();
+            this.hornTypeInput = new System.Windows.Forms.TextBox();
             this.seatsAmountInput = new System.Windows.Forms.TextBox();
+            this.strutTypeInput = new System.Windows.Forms.TextBox();
+            this.plateTypeInput = new System.Windows.Forms.TextBox();
             this.strutAmountInput = new System.Windows.Forms.TextBox();
+            this.roofTypeInput = new System.Windows.Forms.TextBox();
             this.plateAmountInput = new System.Windows.Forms.TextBox();
+            this.hoodTypeInput = new System.Windows.Forms.TextBox();
             this.roofAmountInput = new System.Windows.Forms.TextBox();
+            this.steeringWheelTypeInput = new System.Windows.Forms.TextBox();
+            this.ornamentsTypeInput = new System.Windows.Forms.TextBox();
             this.steeringWheelAmountInput = new System.Windows.Forms.TextBox();
+            this.rimsTypeInput = new System.Windows.Forms.TextBox();
             this.ornamentsAmountInput = new System.Windows.Forms.TextBox();
+            this.frontBumperTypeInput = new System.Windows.Forms.TextBox();
             this.rimsAmountInput = new System.Windows.Forms.TextBox();
+            this.spoilerTypeInput = new System.Windows.Forms.TextBox();
+            this.liveryTypeInput = new System.Windows.Forms.TextBox();
             this.spoilerAmountInput = new System.Windows.Forms.TextBox();
+            this.rimColorTypeInput = new System.Windows.Forms.TextBox();
             this.liveryAmountInput = new System.Windows.Forms.TextBox();
+            this.exhaustTypeInput = new System.Windows.Forms.TextBox();
             this.rimColorAmountInput = new System.Windows.Forms.TextBox();
+            this.respraySecondaryTypeInput = new System.Windows.Forms.TextBox();
+            this.engineBlockTypeInput = new System.Windows.Forms.TextBox();
             this.respraySecondaryAmountInput = new System.Windows.Forms.TextBox();
+            this.repairCheckbox = new System.Windows.Forms.CheckBox();
             this.tireSmokeCheckbox = new System.Windows.Forms.CheckBox();
             this.rearBumperCheckbox = new System.Windows.Forms.CheckBox();
             this.seatsCheckbox = new System.Windows.Forms.CheckBox();
             this.tintCheckbox = new System.Windows.Forms.CheckBox();
-            this.resprayPearlCheckbox = new System.Windows.Forms.CheckBox();
             this.roofCheckbox = new System.Windows.Forms.CheckBox();
             this.strutCheckbox = new System.Windows.Forms.CheckBox();
             this.plateCheckbox = new System.Windows.Forms.CheckBox();
@@ -105,68 +158,27 @@
             this.leftFenderCheckbox = new System.Windows.Forms.CheckBox();
             this.resprayPrimaryCheckbox = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
-            this.engineBlockTypeInput = new System.Windows.Forms.TextBox();
-            this.respraySecondaryTypeInput = new System.Windows.Forms.TextBox();
-            this.exhaustTypeInput = new System.Windows.Forms.TextBox();
-            this.rimColorTypeInput = new System.Windows.Forms.TextBox();
-            this.liveryTypeInput = new System.Windows.Forms.TextBox();
-            this.spoilerTypeInput = new System.Windows.Forms.TextBox();
-            this.frontBumperTypeInput = new System.Windows.Forms.TextBox();
-            this.rimsTypeInput = new System.Windows.Forms.TextBox();
-            this.ornamentsTypeInput = new System.Windows.Forms.TextBox();
-            this.steeringWheelTypeInput = new System.Windows.Forms.TextBox();
-            this.hoodTypeInput = new System.Windows.Forms.TextBox();
-            this.roofTypeInput = new System.Windows.Forms.TextBox();
-            this.plateTypeInput = new System.Windows.Forms.TextBox();
-            this.strutTypeInput = new System.Windows.Forms.TextBox();
-            this.hornTypeInput = new System.Windows.Forms.TextBox();
-            this.seatsTypeInput = new System.Windows.Forms.TextBox();
-            this.resprayPearlTypeInput = new System.Windows.Forms.TextBox();
-            this.tintTypeInput = new System.Windows.Forms.TextBox();
-            this.dialTypeInput = new System.Windows.Forms.TextBox();
-            this.resprayPrimaryTypeInput = new System.Windows.Forms.TextBox();
-            this.rearBumperTypeInput = new System.Windows.Forms.TextBox();
-            this.tireSmokeTypeInput = new System.Windows.Forms.TextBox();
-            this.leftFenderTypeInput = new System.Windows.Forms.TextBox();
-            this.sideSkirtTypeInput = new System.Windows.Forms.TextBox();
-            this.armorTypeInput = new System.Windows.Forms.TextBox();
-            this.brakeTypeInput = new System.Windows.Forms.TextBox();
-            this.engineTypeInput = new System.Windows.Forms.TextBox();
-            this.suspensionTypeInput = new System.Windows.Forms.TextBox();
-            this.transmissionTypeInput = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.turboTypeInput = new System.Windows.Forms.TextBox();
-            this.shopInput = new System.Windows.Forms.TextBox();
-            this.shopLabel = new System.Windows.Forms.Label();
+            this.engineTypeInput = new System.Windows.Forms.TextBox();
+            this.transmissionTypeInput = new System.Windows.Forms.TextBox();
+            this.suspensionTypeInput = new System.Windows.Forms.TextBox();
+            this.brakeTypeInput = new System.Windows.Forms.TextBox();
+            this.armorTypeInput = new System.Windows.Forms.TextBox();
             this.infoDisplayTextBox = new System.Windows.Forms.TextBox();
+            this.removeNeonCheckbox = new System.Windows.Forms.CheckBox();
+            this.removeNeonAmountInput = new System.Windows.Forms.TextBox();
+            this.removeNeonTypeInput = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.resprayInteriorCheckbox = new System.Windows.Forms.CheckBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.resprayInteriorAmountInput = new System.Windows.Forms.TextBox();
+            this.resprayInteriorTypeInput = new System.Windows.Forms.TextBox();
             this.customerGroup.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -176,7 +188,7 @@
             // 
             this.treeViewLogs.Location = new System.Drawing.Point(11, 12);
             this.treeViewLogs.Name = "treeViewLogs";
-            this.treeViewLogs.Size = new System.Drawing.Size(269, 588);
+            this.treeViewLogs.Size = new System.Drawing.Size(269, 631);
             this.treeViewLogs.TabIndex = 0;
             // 
             // customerNameLabel
@@ -276,7 +288,7 @@
             // 
             // saveLogBtn
             // 
-            this.saveLogBtn.Location = new System.Drawing.Point(533, 391);
+            this.saveLogBtn.Location = new System.Drawing.Point(533, 434);
             this.saveLogBtn.Name = "saveLogBtn";
             this.saveLogBtn.Size = new System.Drawing.Size(105, 23);
             this.saveLogBtn.TabIndex = 5;
@@ -285,7 +297,7 @@
             // 
             // clearLogsBtn
             // 
-            this.clearLogsBtn.Location = new System.Drawing.Point(286, 391);
+            this.clearLogsBtn.Location = new System.Drawing.Point(286, 434);
             this.clearLogsBtn.Name = "clearLogsBtn";
             this.clearLogsBtn.Size = new System.Drawing.Size(105, 23);
             this.clearLogsBtn.TabIndex = 5;
@@ -294,7 +306,7 @@
             // 
             // deleteLogBtn
             // 
-            this.deleteLogBtn.Location = new System.Drawing.Point(654, 391);
+            this.deleteLogBtn.Location = new System.Drawing.Point(654, 434);
             this.deleteLogBtn.Name = "deleteLogBtn";
             this.deleteLogBtn.Size = new System.Drawing.Size(105, 23);
             this.deleteLogBtn.TabIndex = 5;
@@ -303,7 +315,7 @@
             // 
             // resetBtn
             // 
-            this.resetBtn.Location = new System.Drawing.Point(408, 391);
+            this.resetBtn.Location = new System.Drawing.Point(408, 434);
             this.resetBtn.Name = "resetBtn";
             this.resetBtn.Size = new System.Drawing.Size(105, 23);
             this.resetBtn.TabIndex = 5;
@@ -385,7 +397,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(157, 34);
+            this.label2.Location = new System.Drawing.Point(153, 21);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(13, 13);
@@ -395,7 +407,7 @@
             // dialAmountInput
             // 
             this.dialAmountInput.Enabled = false;
-            this.dialAmountInput.Location = new System.Drawing.Point(173, 32);
+            this.dialAmountInput.Location = new System.Drawing.Point(169, 19);
             this.dialAmountInput.Name = "dialAmountInput";
             this.dialAmountInput.Size = new System.Drawing.Size(86, 20);
             this.dialAmountInput.TabIndex = 1;
@@ -403,7 +415,7 @@
             // hornAmountInput
             // 
             this.hornAmountInput.Enabled = false;
-            this.hornAmountInput.Location = new System.Drawing.Point(173, 144);
+            this.hornAmountInput.Location = new System.Drawing.Point(169, 131);
             this.hornAmountInput.Name = "hornAmountInput";
             this.hornAmountInput.Size = new System.Drawing.Size(86, 20);
             this.hornAmountInput.TabIndex = 16;
@@ -411,7 +423,7 @@
             // hoodAmountInput
             // 
             this.hoodAmountInput.Enabled = false;
-            this.hoodAmountInput.Location = new System.Drawing.Point(173, 122);
+            this.hoodAmountInput.Location = new System.Drawing.Point(169, 109);
             this.hoodAmountInput.Name = "hoodAmountInput";
             this.hoodAmountInput.Size = new System.Drawing.Size(86, 20);
             this.hoodAmountInput.TabIndex = 13;
@@ -419,7 +431,7 @@
             // frontBumperAmountInput
             // 
             this.frontBumperAmountInput.Enabled = false;
-            this.frontBumperAmountInput.Location = new System.Drawing.Point(173, 99);
+            this.frontBumperAmountInput.Location = new System.Drawing.Point(169, 86);
             this.frontBumperAmountInput.Name = "frontBumperAmountInput";
             this.frontBumperAmountInput.Size = new System.Drawing.Size(86, 20);
             this.frontBumperAmountInput.TabIndex = 10;
@@ -427,7 +439,7 @@
             // exhaustAmountInput
             // 
             this.exhaustAmountInput.Enabled = false;
-            this.exhaustAmountInput.Location = new System.Drawing.Point(173, 77);
+            this.exhaustAmountInput.Location = new System.Drawing.Point(169, 64);
             this.exhaustAmountInput.Name = "exhaustAmountInput";
             this.exhaustAmountInput.Size = new System.Drawing.Size(86, 20);
             this.exhaustAmountInput.TabIndex = 7;
@@ -435,7 +447,7 @@
             // engineBlockAmountInput
             // 
             this.engineBlockAmountInput.Enabled = false;
-            this.engineBlockAmountInput.Location = new System.Drawing.Point(173, 55);
+            this.engineBlockAmountInput.Location = new System.Drawing.Point(169, 42);
             this.engineBlockAmountInput.Name = "engineBlockAmountInput";
             this.engineBlockAmountInput.Size = new System.Drawing.Size(86, 20);
             this.engineBlockAmountInput.TabIndex = 4;
@@ -443,7 +455,7 @@
             // hornCheckbox
             // 
             this.hornCheckbox.AutoSize = true;
-            this.hornCheckbox.Location = new System.Drawing.Point(18, 145);
+            this.hornCheckbox.Location = new System.Drawing.Point(14, 132);
             this.hornCheckbox.Name = "hornCheckbox";
             this.hornCheckbox.Size = new System.Drawing.Size(49, 17);
             this.hornCheckbox.TabIndex = 15;
@@ -453,7 +465,7 @@
             // hoodCheckbox
             // 
             this.hoodCheckbox.AutoSize = true;
-            this.hoodCheckbox.Location = new System.Drawing.Point(18, 123);
+            this.hoodCheckbox.Location = new System.Drawing.Point(14, 110);
             this.hoodCheckbox.Name = "hoodCheckbox";
             this.hoodCheckbox.Size = new System.Drawing.Size(52, 17);
             this.hoodCheckbox.TabIndex = 12;
@@ -463,7 +475,7 @@
             // frontBumperCheckbox
             // 
             this.frontBumperCheckbox.AutoSize = true;
-            this.frontBumperCheckbox.Location = new System.Drawing.Point(18, 100);
+            this.frontBumperCheckbox.Location = new System.Drawing.Point(14, 87);
             this.frontBumperCheckbox.Name = "frontBumperCheckbox";
             this.frontBumperCheckbox.Size = new System.Drawing.Size(89, 17);
             this.frontBumperCheckbox.TabIndex = 9;
@@ -473,7 +485,7 @@
             // exhaustCheckbox
             // 
             this.exhaustCheckbox.AutoSize = true;
-            this.exhaustCheckbox.Location = new System.Drawing.Point(18, 78);
+            this.exhaustCheckbox.Location = new System.Drawing.Point(14, 65);
             this.exhaustCheckbox.Name = "exhaustCheckbox";
             this.exhaustCheckbox.Size = new System.Drawing.Size(64, 17);
             this.exhaustCheckbox.TabIndex = 6;
@@ -483,7 +495,7 @@
             // engineBlockCheckbox
             // 
             this.engineBlockCheckbox.AutoSize = true;
-            this.engineBlockCheckbox.Location = new System.Drawing.Point(18, 56);
+            this.engineBlockCheckbox.Location = new System.Drawing.Point(14, 43);
             this.engineBlockCheckbox.Name = "engineBlockCheckbox";
             this.engineBlockCheckbox.Size = new System.Drawing.Size(89, 17);
             this.engineBlockCheckbox.TabIndex = 3;
@@ -493,7 +505,7 @@
             // dialCheckbox
             // 
             this.dialCheckbox.AutoSize = true;
-            this.dialCheckbox.Location = new System.Drawing.Point(18, 34);
+            this.dialCheckbox.Location = new System.Drawing.Point(14, 21);
             this.dialCheckbox.Name = "dialCheckbox";
             this.dialCheckbox.Size = new System.Drawing.Size(44, 17);
             this.dialCheckbox.TabIndex = 0;
@@ -518,8 +530,27 @@
             this.customerGroup.TabStop = false;
             this.customerGroup.Text = "Customer Info";
             // 
+            // shopInput
+            // 
+            this.shopInput.Location = new System.Drawing.Point(143, 100);
+            this.shopInput.Name = "shopInput";
+            this.shopInput.Size = new System.Drawing.Size(209, 20);
+            this.shopInput.TabIndex = 3;
+            this.shopInput.Text = "Hayes";
+            // 
+            // shopLabel
+            // 
+            this.shopLabel.AutoSize = true;
+            this.shopLabel.Location = new System.Drawing.Point(17, 103);
+            this.shopLabel.Name = "shopLabel";
+            this.shopLabel.Size = new System.Drawing.Size(35, 13);
+            this.shopLabel.TabIndex = 1;
+            this.shopLabel.Text = "Shop:";
+            // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label33);
+            this.groupBox2.Controls.Add(this.label31);
             this.groupBox2.Controls.Add(this.label25);
             this.groupBox2.Controls.Add(this.label20);
             this.groupBox2.Controls.Add(this.label19);
@@ -528,9 +559,12 @@
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.label18);
             this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.resprayInteriorTypeInput);
             this.groupBox2.Controls.Add(this.rearBumperTypeInput);
+            this.groupBox2.Controls.Add(this.resprayInteriorAmountInput);
             this.groupBox2.Controls.Add(this.rearBumperAmountInput);
             this.groupBox2.Controls.Add(this.resprayPearlCheckbox);
+            this.groupBox2.Controls.Add(this.label34);
             this.groupBox2.Controls.Add(this.label23);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.label17);
@@ -551,7 +585,11 @@
             this.groupBox2.Controls.Add(this.sideSkirtAmountInput);
             this.groupBox2.Controls.Add(this.leftFenderTypeInput);
             this.groupBox2.Controls.Add(this.leftFenderAmountInput);
+            this.groupBox2.Controls.Add(this.removeNeonTypeInput);
+            this.groupBox2.Controls.Add(this.repairTypeInput);
+            this.groupBox2.Controls.Add(this.removeNeonAmountInput);
             this.groupBox2.Controls.Add(this.tireSmokeTypeInput);
+            this.groupBox2.Controls.Add(this.repairAmountInput);
             this.groupBox2.Controls.Add(this.tireSmokeAmountInput);
             this.groupBox2.Controls.Add(this.resprayPrimaryTypeInput);
             this.groupBox2.Controls.Add(this.dialTypeInput);
@@ -593,6 +631,9 @@
             this.groupBox2.Controls.Add(this.engineBlockTypeInput);
             this.groupBox2.Controls.Add(this.respraySecondaryAmountInput);
             this.groupBox2.Controls.Add(this.engineBlockAmountInput);
+            this.groupBox2.Controls.Add(this.removeNeonCheckbox);
+            this.groupBox2.Controls.Add(this.repairCheckbox);
+            this.groupBox2.Controls.Add(this.resprayInteriorCheckbox);
             this.groupBox2.Controls.Add(this.tireSmokeCheckbox);
             this.groupBox2.Controls.Add(this.rearBumperCheckbox);
             this.groupBox2.Controls.Add(this.seatsCheckbox);
@@ -619,159 +660,627 @@
             this.groupBox2.Cursor = System.Windows.Forms.Cursors.Default;
             this.groupBox2.Location = new System.Drawing.Point(765, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(474, 588);
+            this.groupBox2.Size = new System.Drawing.Size(474, 631);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Cosmetic Upgrades";
             // 
-            // sideSkirtAmountInput
+            // label31
             // 
-            this.sideSkirtAmountInput.Enabled = false;
-            this.sideSkirtAmountInput.Location = new System.Drawing.Point(173, 432);
-            this.sideSkirtAmountInput.Name = "sideSkirtAmountInput";
-            this.sideSkirtAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.sideSkirtAmountInput.TabIndex = 55;
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(151, 581);
+            this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(13, 13);
+            this.label31.TabIndex = 4;
+            this.label31.Text = "$";
             // 
-            // leftFenderAmountInput
+            // label25
             // 
-            this.leftFenderAmountInput.Enabled = false;
-            this.leftFenderAmountInput.Location = new System.Drawing.Point(173, 165);
-            this.leftFenderAmountInput.Name = "leftFenderAmountInput";
-            this.leftFenderAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.leftFenderAmountInput.TabIndex = 19;
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(153, 559);
+            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(13, 13);
+            this.label25.TabIndex = 4;
+            this.label25.Text = "$";
             // 
-            // tireSmokeAmountInput
+            // label20
             // 
-            this.tireSmokeAmountInput.Enabled = false;
-            this.tireSmokeAmountInput.Location = new System.Drawing.Point(173, 544);
-            this.tireSmokeAmountInput.Name = "tireSmokeAmountInput";
-            this.tireSmokeAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.tireSmokeAmountInput.TabIndex = 70;
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(153, 447);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(13, 13);
+            this.label20.TabIndex = 4;
+            this.label20.Text = "$";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(153, 424);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(13, 13);
+            this.label19.TabIndex = 4;
+            this.label19.Text = "$";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(153, 312);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(13, 13);
+            this.label14.TabIndex = 4;
+            this.label14.Text = "$";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(153, 537);
+            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(13, 13);
+            this.label24.TabIndex = 4;
+            this.label24.Text = "$";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(153, 291);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(13, 13);
+            this.label13.TabIndex = 4;
+            this.label13.Text = "$";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(153, 402);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(13, 13);
+            this.label18.TabIndex = 4;
+            this.label18.Text = "$";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(153, 155);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(13, 13);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "$";
+            // 
+            // rearBumperTypeInput
+            // 
+            this.rearBumperTypeInput.Enabled = false;
+            this.rearBumperTypeInput.Location = new System.Drawing.Point(261, 241);
+            this.rearBumperTypeInput.Name = "rearBumperTypeInput";
+            this.rearBumperTypeInput.Size = new System.Drawing.Size(193, 20);
+            this.rearBumperTypeInput.TabIndex = 32;
             // 
             // rearBumperAmountInput
             // 
             this.rearBumperAmountInput.Enabled = false;
-            this.rearBumperAmountInput.Location = new System.Drawing.Point(173, 254);
+            this.rearBumperAmountInput.Location = new System.Drawing.Point(169, 241);
             this.rearBumperAmountInput.Name = "rearBumperAmountInput";
             this.rearBumperAmountInput.Size = new System.Drawing.Size(86, 20);
             this.rearBumperAmountInput.TabIndex = 31;
             // 
+            // resprayPearlCheckbox
+            // 
+            this.resprayPearlCheckbox.AutoSize = true;
+            this.resprayPearlCheckbox.Location = new System.Drawing.Point(14, 288);
+            this.resprayPearlCheckbox.Name = "resprayPearlCheckbox";
+            this.resprayPearlCheckbox.Size = new System.Drawing.Size(92, 17);
+            this.resprayPearlCheckbox.TabIndex = 33;
+            this.resprayPearlCheckbox.Text = "Respray Pearl";
+            this.resprayPearlCheckbox.UseVisualStyleBackColor = true;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(153, 514);
+            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(13, 13);
+            this.label23.TabIndex = 4;
+            this.label23.Text = "$";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(153, 246);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(13, 13);
+            this.label12.TabIndex = 4;
+            this.label12.Text = "$";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(153, 379);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(13, 13);
+            this.label17.TabIndex = 4;
+            this.label17.Text = "$";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(153, 134);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(13, 13);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "$";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(153, 492);
+            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(13, 13);
+            this.label22.TabIndex = 4;
+            this.label22.Text = "$";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(153, 223);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(13, 13);
+            this.label11.TabIndex = 4;
+            this.label11.Text = "$";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(153, 357);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(13, 13);
+            this.label16.TabIndex = 4;
+            this.label16.Text = "$";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(153, 112);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(13, 13);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "$";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(153, 470);
+            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(13, 13);
+            this.label21.TabIndex = 4;
+            this.label21.Text = "$";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(153, 201);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(13, 13);
+            this.label10.TabIndex = 4;
+            this.label10.Text = "$";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(153, 335);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(13, 13);
+            this.label15.TabIndex = 4;
+            this.label15.Text = "$";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(153, 89);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(13, 13);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "$";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(153, 179);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(13, 13);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "$";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(153, 67);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(13, 13);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "$";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(153, 45);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(13, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "$";
+            // 
+            // sideSkirtTypeInput
+            // 
+            this.sideSkirtTypeInput.Enabled = false;
+            this.sideSkirtTypeInput.Location = new System.Drawing.Point(261, 443);
+            this.sideSkirtTypeInput.Name = "sideSkirtTypeInput";
+            this.sideSkirtTypeInput.Size = new System.Drawing.Size(193, 20);
+            this.sideSkirtTypeInput.TabIndex = 56;
+            // 
+            // sideSkirtAmountInput
+            // 
+            this.sideSkirtAmountInput.Enabled = false;
+            this.sideSkirtAmountInput.Location = new System.Drawing.Point(169, 443);
+            this.sideSkirtAmountInput.Name = "sideSkirtAmountInput";
+            this.sideSkirtAmountInput.Size = new System.Drawing.Size(86, 20);
+            this.sideSkirtAmountInput.TabIndex = 55;
+            // 
+            // leftFenderTypeInput
+            // 
+            this.leftFenderTypeInput.Enabled = false;
+            this.leftFenderTypeInput.Location = new System.Drawing.Point(261, 151);
+            this.leftFenderTypeInput.Name = "leftFenderTypeInput";
+            this.leftFenderTypeInput.Size = new System.Drawing.Size(193, 20);
+            this.leftFenderTypeInput.TabIndex = 20;
+            // 
+            // leftFenderAmountInput
+            // 
+            this.leftFenderAmountInput.Enabled = false;
+            this.leftFenderAmountInput.Location = new System.Drawing.Point(169, 152);
+            this.leftFenderAmountInput.Name = "leftFenderAmountInput";
+            this.leftFenderAmountInput.Size = new System.Drawing.Size(86, 20);
+            this.leftFenderAmountInput.TabIndex = 19;
+            // 
+            // repairTypeInput
+            // 
+            this.repairTypeInput.Enabled = false;
+            this.repairTypeInput.Location = new System.Drawing.Point(261, 577);
+            this.repairTypeInput.Name = "repairTypeInput";
+            this.repairTypeInput.Size = new System.Drawing.Size(193, 20);
+            this.repairTypeInput.TabIndex = 71;
+            // 
+            // tireSmokeTypeInput
+            // 
+            this.tireSmokeTypeInput.Enabled = false;
+            this.tireSmokeTypeInput.Location = new System.Drawing.Point(261, 555);
+            this.tireSmokeTypeInput.Name = "tireSmokeTypeInput";
+            this.tireSmokeTypeInput.Size = new System.Drawing.Size(193, 20);
+            this.tireSmokeTypeInput.TabIndex = 71;
+            // 
+            // repairAmountInput
+            // 
+            this.repairAmountInput.Enabled = false;
+            this.repairAmountInput.Location = new System.Drawing.Point(169, 577);
+            this.repairAmountInput.Name = "repairAmountInput";
+            this.repairAmountInput.Size = new System.Drawing.Size(86, 20);
+            this.repairAmountInput.TabIndex = 70;
+            // 
+            // tireSmokeAmountInput
+            // 
+            this.tireSmokeAmountInput.Enabled = false;
+            this.tireSmokeAmountInput.Location = new System.Drawing.Point(169, 555);
+            this.tireSmokeAmountInput.Name = "tireSmokeAmountInput";
+            this.tireSmokeAmountInput.Size = new System.Drawing.Size(86, 20);
+            this.tireSmokeAmountInput.TabIndex = 70;
+            // 
+            // resprayPrimaryTypeInput
+            // 
+            this.resprayPrimaryTypeInput.Enabled = false;
+            this.resprayPrimaryTypeInput.Location = new System.Drawing.Point(261, 308);
+            this.resprayPrimaryTypeInput.Name = "resprayPrimaryTypeInput";
+            this.resprayPrimaryTypeInput.Size = new System.Drawing.Size(193, 20);
+            this.resprayPrimaryTypeInput.TabIndex = 38;
+            // 
+            // dialTypeInput
+            // 
+            this.dialTypeInput.Enabled = false;
+            this.dialTypeInput.Location = new System.Drawing.Point(261, 18);
+            this.dialTypeInput.Name = "dialTypeInput";
+            this.dialTypeInput.Size = new System.Drawing.Size(193, 20);
+            this.dialTypeInput.TabIndex = 2;
+            // 
             // resprayPrimaryAmountInput
             // 
             this.resprayPrimaryAmountInput.Enabled = false;
-            this.resprayPrimaryAmountInput.Location = new System.Drawing.Point(173, 299);
+            this.resprayPrimaryAmountInput.Location = new System.Drawing.Point(169, 309);
             this.resprayPrimaryAmountInput.Name = "resprayPrimaryAmountInput";
             this.resprayPrimaryAmountInput.Size = new System.Drawing.Size(86, 20);
             this.resprayPrimaryAmountInput.TabIndex = 37;
             // 
+            // tintTypeInput
+            // 
+            this.tintTypeInput.Enabled = false;
+            this.tintTypeInput.Location = new System.Drawing.Point(261, 533);
+            this.tintTypeInput.Name = "tintTypeInput";
+            this.tintTypeInput.Size = new System.Drawing.Size(193, 20);
+            this.tintTypeInput.TabIndex = 68;
+            // 
+            // resprayPearlTypeInput
+            // 
+            this.resprayPearlTypeInput.Enabled = false;
+            this.resprayPearlTypeInput.Location = new System.Drawing.Point(261, 286);
+            this.resprayPearlTypeInput.Name = "resprayPearlTypeInput";
+            this.resprayPearlTypeInput.Size = new System.Drawing.Size(193, 20);
+            this.resprayPearlTypeInput.TabIndex = 35;
+            // 
             // tintAmountInput
             // 
             this.tintAmountInput.Enabled = false;
-            this.tintAmountInput.Location = new System.Drawing.Point(173, 522);
+            this.tintAmountInput.Location = new System.Drawing.Point(169, 533);
             this.tintAmountInput.Name = "tintAmountInput";
             this.tintAmountInput.Size = new System.Drawing.Size(86, 20);
             this.tintAmountInput.TabIndex = 67;
             // 
+            // seatsTypeInput
+            // 
+            this.seatsTypeInput.Enabled = false;
+            this.seatsTypeInput.Location = new System.Drawing.Point(261, 420);
+            this.seatsTypeInput.Name = "seatsTypeInput";
+            this.seatsTypeInput.Size = new System.Drawing.Size(193, 20);
+            this.seatsTypeInput.TabIndex = 53;
+            // 
             // resprayPearlAmountInput
             // 
             this.resprayPearlAmountInput.Enabled = false;
-            this.resprayPearlAmountInput.Location = new System.Drawing.Point(173, 276);
+            this.resprayPearlAmountInput.Location = new System.Drawing.Point(169, 286);
             this.resprayPearlAmountInput.Name = "resprayPearlAmountInput";
             this.resprayPearlAmountInput.Size = new System.Drawing.Size(86, 20);
             this.resprayPearlAmountInput.TabIndex = 34;
             // 
+            // hornTypeInput
+            // 
+            this.hornTypeInput.Enabled = false;
+            this.hornTypeInput.Location = new System.Drawing.Point(261, 130);
+            this.hornTypeInput.Name = "hornTypeInput";
+            this.hornTypeInput.Size = new System.Drawing.Size(193, 20);
+            this.hornTypeInput.TabIndex = 17;
+            // 
             // seatsAmountInput
             // 
             this.seatsAmountInput.Enabled = false;
-            this.seatsAmountInput.Location = new System.Drawing.Point(173, 411);
+            this.seatsAmountInput.Location = new System.Drawing.Point(169, 420);
             this.seatsAmountInput.Name = "seatsAmountInput";
             this.seatsAmountInput.Size = new System.Drawing.Size(86, 20);
             this.seatsAmountInput.TabIndex = 52;
             // 
+            // strutTypeInput
+            // 
+            this.strutTypeInput.Enabled = false;
+            this.strutTypeInput.Location = new System.Drawing.Point(261, 510);
+            this.strutTypeInput.Name = "strutTypeInput";
+            this.strutTypeInput.Size = new System.Drawing.Size(193, 20);
+            this.strutTypeInput.TabIndex = 65;
+            // 
+            // plateTypeInput
+            // 
+            this.plateTypeInput.Enabled = false;
+            this.plateTypeInput.Location = new System.Drawing.Point(261, 218);
+            this.plateTypeInput.Name = "plateTypeInput";
+            this.plateTypeInput.Size = new System.Drawing.Size(193, 20);
+            this.plateTypeInput.TabIndex = 29;
+            // 
             // strutAmountInput
             // 
             this.strutAmountInput.Enabled = false;
-            this.strutAmountInput.Location = new System.Drawing.Point(173, 499);
+            this.strutAmountInput.Location = new System.Drawing.Point(169, 510);
             this.strutAmountInput.Name = "strutAmountInput";
             this.strutAmountInput.Size = new System.Drawing.Size(86, 20);
             this.strutAmountInput.TabIndex = 64;
             // 
+            // roofTypeInput
+            // 
+            this.roofTypeInput.Enabled = false;
+            this.roofTypeInput.Location = new System.Drawing.Point(261, 398);
+            this.roofTypeInput.Name = "roofTypeInput";
+            this.roofTypeInput.Size = new System.Drawing.Size(193, 20);
+            this.roofTypeInput.TabIndex = 50;
+            // 
             // plateAmountInput
             // 
             this.plateAmountInput.Enabled = false;
-            this.plateAmountInput.Location = new System.Drawing.Point(173, 232);
+            this.plateAmountInput.Location = new System.Drawing.Point(169, 219);
             this.plateAmountInput.Name = "plateAmountInput";
             this.plateAmountInput.Size = new System.Drawing.Size(86, 20);
             this.plateAmountInput.TabIndex = 28;
             // 
+            // hoodTypeInput
+            // 
+            this.hoodTypeInput.Enabled = false;
+            this.hoodTypeInput.Location = new System.Drawing.Point(261, 108);
+            this.hoodTypeInput.Name = "hoodTypeInput";
+            this.hoodTypeInput.Size = new System.Drawing.Size(193, 20);
+            this.hoodTypeInput.TabIndex = 14;
+            // 
             // roofAmountInput
             // 
             this.roofAmountInput.Enabled = false;
-            this.roofAmountInput.Location = new System.Drawing.Point(173, 389);
+            this.roofAmountInput.Location = new System.Drawing.Point(169, 398);
             this.roofAmountInput.Name = "roofAmountInput";
             this.roofAmountInput.Size = new System.Drawing.Size(86, 20);
             this.roofAmountInput.TabIndex = 49;
             // 
+            // steeringWheelTypeInput
+            // 
+            this.steeringWheelTypeInput.Enabled = false;
+            this.steeringWheelTypeInput.Location = new System.Drawing.Point(261, 488);
+            this.steeringWheelTypeInput.Name = "steeringWheelTypeInput";
+            this.steeringWheelTypeInput.Size = new System.Drawing.Size(193, 20);
+            this.steeringWheelTypeInput.TabIndex = 62;
+            // 
+            // ornamentsTypeInput
+            // 
+            this.ornamentsTypeInput.Enabled = false;
+            this.ornamentsTypeInput.Location = new System.Drawing.Point(261, 196);
+            this.ornamentsTypeInput.Name = "ornamentsTypeInput";
+            this.ornamentsTypeInput.Size = new System.Drawing.Size(193, 20);
+            this.ornamentsTypeInput.TabIndex = 26;
+            // 
             // steeringWheelAmountInput
             // 
             this.steeringWheelAmountInput.Enabled = false;
-            this.steeringWheelAmountInput.Location = new System.Drawing.Point(173, 477);
+            this.steeringWheelAmountInput.Location = new System.Drawing.Point(169, 488);
             this.steeringWheelAmountInput.Name = "steeringWheelAmountInput";
             this.steeringWheelAmountInput.Size = new System.Drawing.Size(86, 20);
             this.steeringWheelAmountInput.TabIndex = 61;
             // 
+            // rimsTypeInput
+            // 
+            this.rimsTypeInput.Enabled = false;
+            this.rimsTypeInput.Location = new System.Drawing.Point(261, 375);
+            this.rimsTypeInput.Name = "rimsTypeInput";
+            this.rimsTypeInput.Size = new System.Drawing.Size(193, 20);
+            this.rimsTypeInput.TabIndex = 47;
+            // 
             // ornamentsAmountInput
             // 
             this.ornamentsAmountInput.Enabled = false;
-            this.ornamentsAmountInput.Location = new System.Drawing.Point(173, 210);
+            this.ornamentsAmountInput.Location = new System.Drawing.Point(169, 197);
             this.ornamentsAmountInput.Name = "ornamentsAmountInput";
             this.ornamentsAmountInput.Size = new System.Drawing.Size(86, 20);
             this.ornamentsAmountInput.TabIndex = 25;
             // 
+            // frontBumperTypeInput
+            // 
+            this.frontBumperTypeInput.Enabled = false;
+            this.frontBumperTypeInput.Location = new System.Drawing.Point(261, 85);
+            this.frontBumperTypeInput.Name = "frontBumperTypeInput";
+            this.frontBumperTypeInput.Size = new System.Drawing.Size(193, 20);
+            this.frontBumperTypeInput.TabIndex = 11;
+            // 
             // rimsAmountInput
             // 
             this.rimsAmountInput.Enabled = false;
-            this.rimsAmountInput.Location = new System.Drawing.Point(173, 366);
+            this.rimsAmountInput.Location = new System.Drawing.Point(169, 375);
             this.rimsAmountInput.Name = "rimsAmountInput";
             this.rimsAmountInput.Size = new System.Drawing.Size(86, 20);
             this.rimsAmountInput.TabIndex = 46;
             // 
+            // spoilerTypeInput
+            // 
+            this.spoilerTypeInput.Enabled = false;
+            this.spoilerTypeInput.Location = new System.Drawing.Point(261, 466);
+            this.spoilerTypeInput.Name = "spoilerTypeInput";
+            this.spoilerTypeInput.Size = new System.Drawing.Size(193, 20);
+            this.spoilerTypeInput.TabIndex = 59;
+            // 
+            // liveryTypeInput
+            // 
+            this.liveryTypeInput.Enabled = false;
+            this.liveryTypeInput.Location = new System.Drawing.Point(261, 174);
+            this.liveryTypeInput.Name = "liveryTypeInput";
+            this.liveryTypeInput.Size = new System.Drawing.Size(193, 20);
+            this.liveryTypeInput.TabIndex = 23;
+            // 
             // spoilerAmountInput
             // 
             this.spoilerAmountInput.Enabled = false;
-            this.spoilerAmountInput.Location = new System.Drawing.Point(173, 455);
+            this.spoilerAmountInput.Location = new System.Drawing.Point(169, 466);
             this.spoilerAmountInput.Name = "spoilerAmountInput";
             this.spoilerAmountInput.Size = new System.Drawing.Size(86, 20);
             this.spoilerAmountInput.TabIndex = 58;
             // 
+            // rimColorTypeInput
+            // 
+            this.rimColorTypeInput.Enabled = false;
+            this.rimColorTypeInput.Location = new System.Drawing.Point(261, 353);
+            this.rimColorTypeInput.Name = "rimColorTypeInput";
+            this.rimColorTypeInput.Size = new System.Drawing.Size(193, 20);
+            this.rimColorTypeInput.TabIndex = 44;
+            // 
             // liveryAmountInput
             // 
             this.liveryAmountInput.Enabled = false;
-            this.liveryAmountInput.Location = new System.Drawing.Point(173, 188);
+            this.liveryAmountInput.Location = new System.Drawing.Point(169, 175);
             this.liveryAmountInput.Name = "liveryAmountInput";
             this.liveryAmountInput.Size = new System.Drawing.Size(86, 20);
             this.liveryAmountInput.TabIndex = 22;
             // 
+            // exhaustTypeInput
+            // 
+            this.exhaustTypeInput.Enabled = false;
+            this.exhaustTypeInput.Location = new System.Drawing.Point(261, 63);
+            this.exhaustTypeInput.Name = "exhaustTypeInput";
+            this.exhaustTypeInput.Size = new System.Drawing.Size(193, 20);
+            this.exhaustTypeInput.TabIndex = 8;
+            // 
             // rimColorAmountInput
             // 
             this.rimColorAmountInput.Enabled = false;
-            this.rimColorAmountInput.Location = new System.Drawing.Point(173, 344);
+            this.rimColorAmountInput.Location = new System.Drawing.Point(169, 353);
             this.rimColorAmountInput.Name = "rimColorAmountInput";
             this.rimColorAmountInput.Size = new System.Drawing.Size(86, 20);
             this.rimColorAmountInput.TabIndex = 43;
             // 
+            // respraySecondaryTypeInput
+            // 
+            this.respraySecondaryTypeInput.Enabled = false;
+            this.respraySecondaryTypeInput.Location = new System.Drawing.Point(261, 331);
+            this.respraySecondaryTypeInput.Name = "respraySecondaryTypeInput";
+            this.respraySecondaryTypeInput.Size = new System.Drawing.Size(193, 20);
+            this.respraySecondaryTypeInput.TabIndex = 41;
+            // 
+            // engineBlockTypeInput
+            // 
+            this.engineBlockTypeInput.Enabled = false;
+            this.engineBlockTypeInput.Location = new System.Drawing.Point(261, 41);
+            this.engineBlockTypeInput.Name = "engineBlockTypeInput";
+            this.engineBlockTypeInput.Size = new System.Drawing.Size(193, 20);
+            this.engineBlockTypeInput.TabIndex = 5;
+            // 
             // respraySecondaryAmountInput
             // 
             this.respraySecondaryAmountInput.Enabled = false;
-            this.respraySecondaryAmountInput.Location = new System.Drawing.Point(173, 322);
+            this.respraySecondaryAmountInput.Location = new System.Drawing.Point(169, 331);
             this.respraySecondaryAmountInput.Name = "respraySecondaryAmountInput";
             this.respraySecondaryAmountInput.Size = new System.Drawing.Size(86, 20);
             this.respraySecondaryAmountInput.TabIndex = 40;
             // 
+            // repairCheckbox
+            // 
+            this.repairCheckbox.AutoSize = true;
+            this.repairCheckbox.Location = new System.Drawing.Point(14, 578);
+            this.repairCheckbox.Name = "repairCheckbox";
+            this.repairCheckbox.Size = new System.Drawing.Size(57, 17);
+            this.repairCheckbox.TabIndex = 69;
+            this.repairCheckbox.Text = "Repair";
+            this.repairCheckbox.UseVisualStyleBackColor = true;
+            // 
             // tireSmokeCheckbox
             // 
             this.tireSmokeCheckbox.AutoSize = true;
-            this.tireSmokeCheckbox.Location = new System.Drawing.Point(18, 545);
+            this.tireSmokeCheckbox.Location = new System.Drawing.Point(14, 557);
             this.tireSmokeCheckbox.Name = "tireSmokeCheckbox";
             this.tireSmokeCheckbox.Size = new System.Drawing.Size(80, 17);
             this.tireSmokeCheckbox.TabIndex = 69;
@@ -781,7 +1290,7 @@
             // rearBumperCheckbox
             // 
             this.rearBumperCheckbox.AutoSize = true;
-            this.rearBumperCheckbox.Location = new System.Drawing.Point(18, 257);
+            this.rearBumperCheckbox.Location = new System.Drawing.Point(14, 244);
             this.rearBumperCheckbox.Name = "rearBumperCheckbox";
             this.rearBumperCheckbox.Size = new System.Drawing.Size(88, 17);
             this.rearBumperCheckbox.TabIndex = 30;
@@ -791,7 +1300,7 @@
             // seatsCheckbox
             // 
             this.seatsCheckbox.AutoSize = true;
-            this.seatsCheckbox.Location = new System.Drawing.Point(18, 412);
+            this.seatsCheckbox.Location = new System.Drawing.Point(14, 422);
             this.seatsCheckbox.Name = "seatsCheckbox";
             this.seatsCheckbox.Size = new System.Drawing.Size(53, 17);
             this.seatsCheckbox.TabIndex = 51;
@@ -801,27 +1310,17 @@
             // tintCheckbox
             // 
             this.tintCheckbox.AutoSize = true;
-            this.tintCheckbox.Location = new System.Drawing.Point(18, 522);
+            this.tintCheckbox.Location = new System.Drawing.Point(14, 534);
             this.tintCheckbox.Name = "tintCheckbox";
             this.tintCheckbox.Size = new System.Drawing.Size(44, 17);
             this.tintCheckbox.TabIndex = 66;
             this.tintCheckbox.Text = "Tint";
             this.tintCheckbox.UseVisualStyleBackColor = true;
             // 
-            // resprayPearlCheckbox
-            // 
-            this.resprayPearlCheckbox.AutoSize = true;
-            this.resprayPearlCheckbox.Location = new System.Drawing.Point(18, 278);
-            this.resprayPearlCheckbox.Name = "resprayPearlCheckbox";
-            this.resprayPearlCheckbox.Size = new System.Drawing.Size(92, 17);
-            this.resprayPearlCheckbox.TabIndex = 33;
-            this.resprayPearlCheckbox.Text = "Respray Pearl";
-            this.resprayPearlCheckbox.UseVisualStyleBackColor = true;
-            // 
             // roofCheckbox
             // 
             this.roofCheckbox.AutoSize = true;
-            this.roofCheckbox.Location = new System.Drawing.Point(18, 390);
+            this.roofCheckbox.Location = new System.Drawing.Point(14, 400);
             this.roofCheckbox.Name = "roofCheckbox";
             this.roofCheckbox.Size = new System.Drawing.Size(49, 17);
             this.roofCheckbox.TabIndex = 48;
@@ -831,7 +1330,7 @@
             // strutCheckbox
             // 
             this.strutCheckbox.AutoSize = true;
-            this.strutCheckbox.Location = new System.Drawing.Point(18, 500);
+            this.strutCheckbox.Location = new System.Drawing.Point(14, 512);
             this.strutCheckbox.Name = "strutCheckbox";
             this.strutCheckbox.Size = new System.Drawing.Size(48, 17);
             this.strutCheckbox.TabIndex = 63;
@@ -841,7 +1340,7 @@
             // plateCheckbox
             // 
             this.plateCheckbox.AutoSize = true;
-            this.plateCheckbox.Location = new System.Drawing.Point(18, 233);
+            this.plateCheckbox.Location = new System.Drawing.Point(14, 220);
             this.plateCheckbox.Name = "plateCheckbox";
             this.plateCheckbox.Size = new System.Drawing.Size(50, 17);
             this.plateCheckbox.TabIndex = 27;
@@ -851,7 +1350,7 @@
             // rimsCheckbox
             // 
             this.rimsCheckbox.AutoSize = true;
-            this.rimsCheckbox.Location = new System.Drawing.Point(18, 368);
+            this.rimsCheckbox.Location = new System.Drawing.Point(14, 378);
             this.rimsCheckbox.Name = "rimsCheckbox";
             this.rimsCheckbox.Size = new System.Drawing.Size(49, 17);
             this.rimsCheckbox.TabIndex = 45;
@@ -861,7 +1360,7 @@
             // steeringWheelCheckbox
             // 
             this.steeringWheelCheckbox.AutoSize = true;
-            this.steeringWheelCheckbox.Location = new System.Drawing.Point(18, 478);
+            this.steeringWheelCheckbox.Location = new System.Drawing.Point(14, 490);
             this.steeringWheelCheckbox.Name = "steeringWheelCheckbox";
             this.steeringWheelCheckbox.Size = new System.Drawing.Size(99, 17);
             this.steeringWheelCheckbox.TabIndex = 60;
@@ -871,7 +1370,7 @@
             // ornamentsCheckbox
             // 
             this.ornamentsCheckbox.AutoSize = true;
-            this.ornamentsCheckbox.Location = new System.Drawing.Point(18, 211);
+            this.ornamentsCheckbox.Location = new System.Drawing.Point(14, 198);
             this.ornamentsCheckbox.Name = "ornamentsCheckbox";
             this.ornamentsCheckbox.Size = new System.Drawing.Size(77, 17);
             this.ornamentsCheckbox.TabIndex = 24;
@@ -881,7 +1380,7 @@
             // rimColorCheckbox
             // 
             this.rimColorCheckbox.AutoSize = true;
-            this.rimColorCheckbox.Location = new System.Drawing.Point(18, 346);
+            this.rimColorCheckbox.Location = new System.Drawing.Point(14, 356);
             this.rimColorCheckbox.Name = "rimColorCheckbox";
             this.rimColorCheckbox.Size = new System.Drawing.Size(71, 17);
             this.rimColorCheckbox.TabIndex = 42;
@@ -891,7 +1390,7 @@
             // spoilerCheckbox
             // 
             this.spoilerCheckbox.AutoSize = true;
-            this.spoilerCheckbox.Location = new System.Drawing.Point(18, 455);
+            this.spoilerCheckbox.Location = new System.Drawing.Point(14, 467);
             this.spoilerCheckbox.Name = "spoilerCheckbox";
             this.spoilerCheckbox.Size = new System.Drawing.Size(58, 17);
             this.spoilerCheckbox.TabIndex = 57;
@@ -901,7 +1400,7 @@
             // liveryCheckbox
             // 
             this.liveryCheckbox.AutoSize = true;
-            this.liveryCheckbox.Location = new System.Drawing.Point(18, 188);
+            this.liveryCheckbox.Location = new System.Drawing.Point(14, 175);
             this.liveryCheckbox.Name = "liveryCheckbox";
             this.liveryCheckbox.Size = new System.Drawing.Size(54, 17);
             this.liveryCheckbox.TabIndex = 21;
@@ -911,7 +1410,7 @@
             // respraySecondaryCheckbox
             // 
             this.respraySecondaryCheckbox.AutoSize = true;
-            this.respraySecondaryCheckbox.Location = new System.Drawing.Point(18, 324);
+            this.respraySecondaryCheckbox.Location = new System.Drawing.Point(14, 334);
             this.respraySecondaryCheckbox.Name = "respraySecondaryCheckbox";
             this.respraySecondaryCheckbox.Size = new System.Drawing.Size(119, 17);
             this.respraySecondaryCheckbox.TabIndex = 39;
@@ -921,7 +1420,7 @@
             // sideSkirtCheckbox
             // 
             this.sideSkirtCheckbox.AutoSize = true;
-            this.sideSkirtCheckbox.Location = new System.Drawing.Point(18, 433);
+            this.sideSkirtCheckbox.Location = new System.Drawing.Point(14, 445);
             this.sideSkirtCheckbox.Name = "sideSkirtCheckbox";
             this.sideSkirtCheckbox.Size = new System.Drawing.Size(71, 17);
             this.sideSkirtCheckbox.TabIndex = 54;
@@ -931,7 +1430,7 @@
             // leftFenderCheckbox
             // 
             this.leftFenderCheckbox.AutoSize = true;
-            this.leftFenderCheckbox.Location = new System.Drawing.Point(18, 166);
+            this.leftFenderCheckbox.Location = new System.Drawing.Point(14, 153);
             this.leftFenderCheckbox.Name = "leftFenderCheckbox";
             this.leftFenderCheckbox.Size = new System.Drawing.Size(80, 17);
             this.leftFenderCheckbox.TabIndex = 18;
@@ -941,7 +1440,7 @@
             // resprayPrimaryCheckbox
             // 
             this.resprayPrimaryCheckbox.AutoSize = true;
-            this.resprayPrimaryCheckbox.Location = new System.Drawing.Point(18, 301);
+            this.resprayPrimaryCheckbox.Location = new System.Drawing.Point(14, 311);
             this.resprayPrimaryCheckbox.Name = "resprayPrimaryCheckbox";
             this.resprayPrimaryCheckbox.Size = new System.Drawing.Size(102, 17);
             this.resprayPrimaryCheckbox.TabIndex = 36;
@@ -975,292 +1474,12 @@
             this.groupBox1.Controls.Add(this.brakeTypeInput);
             this.groupBox1.Controls.Add(this.armorTypeInput);
             this.groupBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.groupBox1.Location = new System.Drawing.Point(286, 420);
+            this.groupBox1.Location = new System.Drawing.Point(286, 463);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(473, 180);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Performance Upgrades";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(157, 58);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(13, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "$";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(157, 80);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(13, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "$";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(157, 102);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(13, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "$";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(157, 125);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(13, 13);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "$";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(157, 147);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(13, 13);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "$";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(157, 168);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(13, 13);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "$";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(157, 192);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(13, 13);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "$";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(157, 214);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(13, 13);
-            this.label10.TabIndex = 4;
-            this.label10.Text = "$";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(157, 236);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(13, 13);
-            this.label11.TabIndex = 4;
-            this.label11.Text = "$";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(157, 259);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(13, 13);
-            this.label12.TabIndex = 4;
-            this.label12.Text = "$";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(157, 281);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(13, 13);
-            this.label13.TabIndex = 4;
-            this.label13.Text = "$";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(157, 302);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(13, 13);
-            this.label14.TabIndex = 4;
-            this.label14.Text = "$";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(157, 325);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(13, 13);
-            this.label15.TabIndex = 4;
-            this.label15.Text = "$";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(157, 347);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(13, 13);
-            this.label16.TabIndex = 4;
-            this.label16.Text = "$";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(157, 369);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(13, 13);
-            this.label17.TabIndex = 4;
-            this.label17.Text = "$";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(157, 392);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(13, 13);
-            this.label18.TabIndex = 4;
-            this.label18.Text = "$";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(157, 414);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(13, 13);
-            this.label19.TabIndex = 4;
-            this.label19.Text = "$";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(157, 435);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(13, 13);
-            this.label20.TabIndex = 4;
-            this.label20.Text = "$";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(157, 458);
-            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(13, 13);
-            this.label21.TabIndex = 4;
-            this.label21.Text = "$";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(157, 480);
-            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(13, 13);
-            this.label22.TabIndex = 4;
-            this.label22.Text = "$";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(157, 502);
-            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(13, 13);
-            this.label23.TabIndex = 4;
-            this.label23.Text = "$";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(157, 525);
-            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(13, 13);
-            this.label24.TabIndex = 4;
-            this.label24.Text = "$";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(157, 547);
-            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(13, 13);
-            this.label25.TabIndex = 4;
-            this.label25.Text = "$";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(155, 58);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(13, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "$";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(155, 80);
-            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(13, 13);
-            this.label26.TabIndex = 4;
-            this.label26.Text = "$";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(155, 102);
-            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(13, 13);
-            this.label27.TabIndex = 4;
-            this.label27.Text = "$";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(155, 125);
-            this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(13, 13);
-            this.label28.TabIndex = 4;
-            this.label28.Text = "$";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(155, 35);
-            this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(13, 13);
-            this.label29.TabIndex = 4;
-            this.label29.Text = "$";
             // 
             // label30
             // 
@@ -1272,237 +1491,55 @@
             this.label30.TabIndex = 4;
             this.label30.Text = "$";
             // 
-            // engineBlockTypeInput
+            // label29
             // 
-            this.engineBlockTypeInput.Enabled = false;
-            this.engineBlockTypeInput.Location = new System.Drawing.Point(265, 54);
-            this.engineBlockTypeInput.Name = "engineBlockTypeInput";
-            this.engineBlockTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.engineBlockTypeInput.TabIndex = 5;
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(155, 35);
+            this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(13, 13);
+            this.label29.TabIndex = 4;
+            this.label29.Text = "$";
             // 
-            // respraySecondaryTypeInput
+            // label28
             // 
-            this.respraySecondaryTypeInput.Enabled = false;
-            this.respraySecondaryTypeInput.Location = new System.Drawing.Point(265, 321);
-            this.respraySecondaryTypeInput.Name = "respraySecondaryTypeInput";
-            this.respraySecondaryTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.respraySecondaryTypeInput.TabIndex = 41;
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(155, 125);
+            this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(13, 13);
+            this.label28.TabIndex = 4;
+            this.label28.Text = "$";
             // 
-            // exhaustTypeInput
+            // label27
             // 
-            this.exhaustTypeInput.Enabled = false;
-            this.exhaustTypeInput.Location = new System.Drawing.Point(265, 76);
-            this.exhaustTypeInput.Name = "exhaustTypeInput";
-            this.exhaustTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.exhaustTypeInput.TabIndex = 8;
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(155, 102);
+            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(13, 13);
+            this.label27.TabIndex = 4;
+            this.label27.Text = "$";
             // 
-            // rimColorTypeInput
+            // label26
             // 
-            this.rimColorTypeInput.Enabled = false;
-            this.rimColorTypeInput.Location = new System.Drawing.Point(265, 343);
-            this.rimColorTypeInput.Name = "rimColorTypeInput";
-            this.rimColorTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.rimColorTypeInput.TabIndex = 44;
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(155, 80);
+            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(13, 13);
+            this.label26.TabIndex = 4;
+            this.label26.Text = "$";
             // 
-            // liveryTypeInput
+            // label1
             // 
-            this.liveryTypeInput.Enabled = false;
-            this.liveryTypeInput.Location = new System.Drawing.Point(265, 187);
-            this.liveryTypeInput.Name = "liveryTypeInput";
-            this.liveryTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.liveryTypeInput.TabIndex = 23;
-            // 
-            // spoilerTypeInput
-            // 
-            this.spoilerTypeInput.Enabled = false;
-            this.spoilerTypeInput.Location = new System.Drawing.Point(265, 454);
-            this.spoilerTypeInput.Name = "spoilerTypeInput";
-            this.spoilerTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.spoilerTypeInput.TabIndex = 59;
-            // 
-            // frontBumperTypeInput
-            // 
-            this.frontBumperTypeInput.Enabled = false;
-            this.frontBumperTypeInput.Location = new System.Drawing.Point(265, 98);
-            this.frontBumperTypeInput.Name = "frontBumperTypeInput";
-            this.frontBumperTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.frontBumperTypeInput.TabIndex = 11;
-            // 
-            // rimsTypeInput
-            // 
-            this.rimsTypeInput.Enabled = false;
-            this.rimsTypeInput.Location = new System.Drawing.Point(265, 365);
-            this.rimsTypeInput.Name = "rimsTypeInput";
-            this.rimsTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.rimsTypeInput.TabIndex = 47;
-            // 
-            // ornamentsTypeInput
-            // 
-            this.ornamentsTypeInput.Enabled = false;
-            this.ornamentsTypeInput.Location = new System.Drawing.Point(265, 209);
-            this.ornamentsTypeInput.Name = "ornamentsTypeInput";
-            this.ornamentsTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.ornamentsTypeInput.TabIndex = 26;
-            // 
-            // steeringWheelTypeInput
-            // 
-            this.steeringWheelTypeInput.Enabled = false;
-            this.steeringWheelTypeInput.Location = new System.Drawing.Point(265, 476);
-            this.steeringWheelTypeInput.Name = "steeringWheelTypeInput";
-            this.steeringWheelTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.steeringWheelTypeInput.TabIndex = 62;
-            // 
-            // hoodTypeInput
-            // 
-            this.hoodTypeInput.Enabled = false;
-            this.hoodTypeInput.Location = new System.Drawing.Point(265, 121);
-            this.hoodTypeInput.Name = "hoodTypeInput";
-            this.hoodTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.hoodTypeInput.TabIndex = 14;
-            // 
-            // roofTypeInput
-            // 
-            this.roofTypeInput.Enabled = false;
-            this.roofTypeInput.Location = new System.Drawing.Point(265, 388);
-            this.roofTypeInput.Name = "roofTypeInput";
-            this.roofTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.roofTypeInput.TabIndex = 50;
-            // 
-            // plateTypeInput
-            // 
-            this.plateTypeInput.Enabled = false;
-            this.plateTypeInput.Location = new System.Drawing.Point(265, 231);
-            this.plateTypeInput.Name = "plateTypeInput";
-            this.plateTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.plateTypeInput.TabIndex = 29;
-            // 
-            // strutTypeInput
-            // 
-            this.strutTypeInput.Enabled = false;
-            this.strutTypeInput.Location = new System.Drawing.Point(265, 498);
-            this.strutTypeInput.Name = "strutTypeInput";
-            this.strutTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.strutTypeInput.TabIndex = 65;
-            // 
-            // hornTypeInput
-            // 
-            this.hornTypeInput.Enabled = false;
-            this.hornTypeInput.Location = new System.Drawing.Point(265, 143);
-            this.hornTypeInput.Name = "hornTypeInput";
-            this.hornTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.hornTypeInput.TabIndex = 17;
-            // 
-            // seatsTypeInput
-            // 
-            this.seatsTypeInput.Enabled = false;
-            this.seatsTypeInput.Location = new System.Drawing.Point(265, 410);
-            this.seatsTypeInput.Name = "seatsTypeInput";
-            this.seatsTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.seatsTypeInput.TabIndex = 53;
-            // 
-            // resprayPearlTypeInput
-            // 
-            this.resprayPearlTypeInput.Enabled = false;
-            this.resprayPearlTypeInput.Location = new System.Drawing.Point(265, 276);
-            this.resprayPearlTypeInput.Name = "resprayPearlTypeInput";
-            this.resprayPearlTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.resprayPearlTypeInput.TabIndex = 35;
-            // 
-            // tintTypeInput
-            // 
-            this.tintTypeInput.Enabled = false;
-            this.tintTypeInput.Location = new System.Drawing.Point(265, 521);
-            this.tintTypeInput.Name = "tintTypeInput";
-            this.tintTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.tintTypeInput.TabIndex = 68;
-            // 
-            // dialTypeInput
-            // 
-            this.dialTypeInput.Enabled = false;
-            this.dialTypeInput.Location = new System.Drawing.Point(265, 31);
-            this.dialTypeInput.Name = "dialTypeInput";
-            this.dialTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.dialTypeInput.TabIndex = 2;
-            // 
-            // resprayPrimaryTypeInput
-            // 
-            this.resprayPrimaryTypeInput.Enabled = false;
-            this.resprayPrimaryTypeInput.Location = new System.Drawing.Point(265, 298);
-            this.resprayPrimaryTypeInput.Name = "resprayPrimaryTypeInput";
-            this.resprayPrimaryTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.resprayPrimaryTypeInput.TabIndex = 38;
-            // 
-            // rearBumperTypeInput
-            // 
-            this.rearBumperTypeInput.Enabled = false;
-            this.rearBumperTypeInput.Location = new System.Drawing.Point(265, 254);
-            this.rearBumperTypeInput.Name = "rearBumperTypeInput";
-            this.rearBumperTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.rearBumperTypeInput.TabIndex = 32;
-            // 
-            // tireSmokeTypeInput
-            // 
-            this.tireSmokeTypeInput.Enabled = false;
-            this.tireSmokeTypeInput.Location = new System.Drawing.Point(265, 543);
-            this.tireSmokeTypeInput.Name = "tireSmokeTypeInput";
-            this.tireSmokeTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.tireSmokeTypeInput.TabIndex = 71;
-            // 
-            // leftFenderTypeInput
-            // 
-            this.leftFenderTypeInput.Enabled = false;
-            this.leftFenderTypeInput.Location = new System.Drawing.Point(265, 164);
-            this.leftFenderTypeInput.Name = "leftFenderTypeInput";
-            this.leftFenderTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.leftFenderTypeInput.TabIndex = 20;
-            // 
-            // sideSkirtTypeInput
-            // 
-            this.sideSkirtTypeInput.Enabled = false;
-            this.sideSkirtTypeInput.Location = new System.Drawing.Point(265, 431);
-            this.sideSkirtTypeInput.Name = "sideSkirtTypeInput";
-            this.sideSkirtTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.sideSkirtTypeInput.TabIndex = 56;
-            // 
-            // armorTypeInput
-            // 
-            this.armorTypeInput.Enabled = false;
-            this.armorTypeInput.Location = new System.Drawing.Point(265, 32);
-            this.armorTypeInput.Name = "armorTypeInput";
-            this.armorTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.armorTypeInput.TabIndex = 2;
-            // 
-            // brakeTypeInput
-            // 
-            this.brakeTypeInput.Enabled = false;
-            this.brakeTypeInput.Location = new System.Drawing.Point(265, 55);
-            this.brakeTypeInput.Name = "brakeTypeInput";
-            this.brakeTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.brakeTypeInput.TabIndex = 5;
-            // 
-            // engineTypeInput
-            // 
-            this.engineTypeInput.Enabled = false;
-            this.engineTypeInput.Location = new System.Drawing.Point(265, 77);
-            this.engineTypeInput.Name = "engineTypeInput";
-            this.engineTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.engineTypeInput.TabIndex = 8;
-            // 
-            // suspensionTypeInput
-            // 
-            this.suspensionTypeInput.Enabled = false;
-            this.suspensionTypeInput.Location = new System.Drawing.Point(265, 99);
-            this.suspensionTypeInput.Name = "suspensionTypeInput";
-            this.suspensionTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.suspensionTypeInput.TabIndex = 11;
-            // 
-            // transmissionTypeInput
-            // 
-            this.transmissionTypeInput.Enabled = false;
-            this.transmissionTypeInput.Location = new System.Drawing.Point(265, 122);
-            this.transmissionTypeInput.Name = "transmissionTypeInput";
-            this.transmissionTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.transmissionTypeInput.TabIndex = 14;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(155, 58);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(13, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "$";
             // 
             // turboTypeInput
             // 
@@ -1512,22 +1549,45 @@
             this.turboTypeInput.Size = new System.Drawing.Size(193, 20);
             this.turboTypeInput.TabIndex = 17;
             // 
-            // shopInput
+            // engineTypeInput
             // 
-            this.shopInput.Location = new System.Drawing.Point(143, 100);
-            this.shopInput.Name = "shopInput";
-            this.shopInput.Size = new System.Drawing.Size(209, 20);
-            this.shopInput.TabIndex = 3;
-            this.shopInput.Text = "Hayes";
+            this.engineTypeInput.Enabled = false;
+            this.engineTypeInput.Location = new System.Drawing.Point(265, 77);
+            this.engineTypeInput.Name = "engineTypeInput";
+            this.engineTypeInput.Size = new System.Drawing.Size(193, 20);
+            this.engineTypeInput.TabIndex = 8;
             // 
-            // shopLabel
+            // transmissionTypeInput
             // 
-            this.shopLabel.AutoSize = true;
-            this.shopLabel.Location = new System.Drawing.Point(17, 103);
-            this.shopLabel.Name = "shopLabel";
-            this.shopLabel.Size = new System.Drawing.Size(35, 13);
-            this.shopLabel.TabIndex = 1;
-            this.shopLabel.Text = "Shop:";
+            this.transmissionTypeInput.Enabled = false;
+            this.transmissionTypeInput.Location = new System.Drawing.Point(265, 122);
+            this.transmissionTypeInput.Name = "transmissionTypeInput";
+            this.transmissionTypeInput.Size = new System.Drawing.Size(193, 20);
+            this.transmissionTypeInput.TabIndex = 14;
+            // 
+            // suspensionTypeInput
+            // 
+            this.suspensionTypeInput.Enabled = false;
+            this.suspensionTypeInput.Location = new System.Drawing.Point(265, 99);
+            this.suspensionTypeInput.Name = "suspensionTypeInput";
+            this.suspensionTypeInput.Size = new System.Drawing.Size(193, 20);
+            this.suspensionTypeInput.TabIndex = 11;
+            // 
+            // brakeTypeInput
+            // 
+            this.brakeTypeInput.Enabled = false;
+            this.brakeTypeInput.Location = new System.Drawing.Point(265, 55);
+            this.brakeTypeInput.Name = "brakeTypeInput";
+            this.brakeTypeInput.Size = new System.Drawing.Size(193, 20);
+            this.brakeTypeInput.TabIndex = 5;
+            // 
+            // armorTypeInput
+            // 
+            this.armorTypeInput.Enabled = false;
+            this.armorTypeInput.Location = new System.Drawing.Point(265, 32);
+            this.armorTypeInput.Name = "armorTypeInput";
+            this.armorTypeInput.Size = new System.Drawing.Size(193, 20);
+            this.armorTypeInput.TabIndex = 2;
             // 
             // infoDisplayTextBox
             // 
@@ -1535,15 +1595,87 @@
             this.infoDisplayTextBox.Multiline = true;
             this.infoDisplayTextBox.Name = "infoDisplayTextBox";
             this.infoDisplayTextBox.ReadOnly = true;
-            this.infoDisplayTextBox.Size = new System.Drawing.Size(473, 232);
+            this.infoDisplayTextBox.Size = new System.Drawing.Size(473, 275);
             this.infoDisplayTextBox.TabIndex = 6;
             this.infoDisplayTextBox.Click += new System.EventHandler(this.CopyToClipboard_Click);
+            // 
+            // removeNeonCheckbox
+            // 
+            this.removeNeonCheckbox.AutoSize = true;
+            this.removeNeonCheckbox.Location = new System.Drawing.Point(14, 601);
+            this.removeNeonCheckbox.Name = "removeNeonCheckbox";
+            this.removeNeonCheckbox.Size = new System.Drawing.Size(95, 17);
+            this.removeNeonCheckbox.TabIndex = 69;
+            this.removeNeonCheckbox.Text = "Remove Neon";
+            this.removeNeonCheckbox.UseVisualStyleBackColor = true;
+            // 
+            // removeNeonAmountInput
+            // 
+            this.removeNeonAmountInput.Enabled = false;
+            this.removeNeonAmountInput.Location = new System.Drawing.Point(169, 600);
+            this.removeNeonAmountInput.Name = "removeNeonAmountInput";
+            this.removeNeonAmountInput.Size = new System.Drawing.Size(86, 20);
+            this.removeNeonAmountInput.TabIndex = 70;
+            // 
+            // removeNeonTypeInput
+            // 
+            this.removeNeonTypeInput.Enabled = false;
+            this.removeNeonTypeInput.Location = new System.Drawing.Point(261, 600);
+            this.removeNeonTypeInput.Name = "removeNeonTypeInput";
+            this.removeNeonTypeInput.Size = new System.Drawing.Size(193, 20);
+            this.removeNeonTypeInput.TabIndex = 71;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(151, 604);
+            this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(13, 13);
+            this.label33.TabIndex = 4;
+            this.label33.Text = "$";
+            // 
+            // resprayInteriorCheckbox
+            // 
+            this.resprayInteriorCheckbox.AutoSize = true;
+            this.resprayInteriorCheckbox.Location = new System.Drawing.Point(14, 266);
+            this.resprayInteriorCheckbox.Name = "resprayInteriorCheckbox";
+            this.resprayInteriorCheckbox.Size = new System.Drawing.Size(100, 17);
+            this.resprayInteriorCheckbox.TabIndex = 30;
+            this.resprayInteriorCheckbox.Text = "Respray Interior";
+            this.resprayInteriorCheckbox.UseVisualStyleBackColor = true;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(153, 268);
+            this.label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(13, 13);
+            this.label34.TabIndex = 4;
+            this.label34.Text = "$";
+            // 
+            // resprayInteriorAmountInput
+            // 
+            this.resprayInteriorAmountInput.Enabled = false;
+            this.resprayInteriorAmountInput.Location = new System.Drawing.Point(169, 263);
+            this.resprayInteriorAmountInput.Name = "resprayInteriorAmountInput";
+            this.resprayInteriorAmountInput.Size = new System.Drawing.Size(86, 20);
+            this.resprayInteriorAmountInput.TabIndex = 31;
+            // 
+            // resprayInteriorTypeInput
+            // 
+            this.resprayInteriorTypeInput.Enabled = false;
+            this.resprayInteriorTypeInput.Location = new System.Drawing.Point(261, 263);
+            this.resprayInteriorTypeInput.Name = "resprayInteriorTypeInput";
+            this.resprayInteriorTypeInput.Size = new System.Drawing.Size(193, 20);
+            this.resprayInteriorTypeInput.TabIndex = 32;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1252, 611);
+            this.ClientSize = new System.Drawing.Size(1252, 650);
             this.Controls.Add(this.infoDisplayTextBox);
             this.Controls.Add(this.resetBtn);
             this.Controls.Add(this.deleteLogBtn);
@@ -1555,7 +1687,7 @@
             this.Controls.Add(this.treeViewLogs);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
-            this.Text = "Mechanic Log Helper v1.0";
+            this.Text = "Mechanic Log Helper v1.3";
             this.customerGroup.ResumeLayout(false);
             this.customerGroup.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -1707,6 +1839,18 @@
         private System.Windows.Forms.TextBox shopInput;
         private System.Windows.Forms.Label shopLabel;
         private System.Windows.Forms.TextBox infoDisplayTextBox;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.TextBox repairTypeInput;
+        private System.Windows.Forms.TextBox repairAmountInput;
+        private System.Windows.Forms.CheckBox repairCheckbox;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.TextBox resprayInteriorTypeInput;
+        private System.Windows.Forms.TextBox resprayInteriorAmountInput;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.TextBox removeNeonTypeInput;
+        private System.Windows.Forms.TextBox removeNeonAmountInput;
+        private System.Windows.Forms.CheckBox removeNeonCheckbox;
+        private System.Windows.Forms.CheckBox resprayInteriorCheckbox;
     }
 }
 
