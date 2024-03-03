@@ -70,6 +70,7 @@
             this.shopInput = new System.Windows.Forms.TextBox();
             this.shopLabel = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label33 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -79,9 +80,12 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.resprayInteriorTypeInput = new System.Windows.Forms.TextBox();
             this.rearBumperTypeInput = new System.Windows.Forms.TextBox();
+            this.resprayInteriorAmountInput = new System.Windows.Forms.TextBox();
             this.rearBumperAmountInput = new System.Windows.Forms.TextBox();
             this.resprayPearlCheckbox = new System.Windows.Forms.CheckBox();
+            this.label34 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -101,7 +105,9 @@
             this.sideSkirtAmountInput = new System.Windows.Forms.TextBox();
             this.leftFenderTypeInput = new System.Windows.Forms.TextBox();
             this.leftFenderAmountInput = new System.Windows.Forms.TextBox();
+            this.removeNeonTypeInput = new System.Windows.Forms.TextBox();
             this.repairTypeInput = new System.Windows.Forms.TextBox();
+            this.removeNeonAmountInput = new System.Windows.Forms.TextBox();
             this.tireSmokeTypeInput = new System.Windows.Forms.TextBox();
             this.repairAmountInput = new System.Windows.Forms.TextBox();
             this.tireSmokeAmountInput = new System.Windows.Forms.TextBox();
@@ -139,7 +145,9 @@
             this.respraySecondaryTypeInput = new System.Windows.Forms.TextBox();
             this.engineBlockTypeInput = new System.Windows.Forms.TextBox();
             this.respraySecondaryAmountInput = new System.Windows.Forms.TextBox();
+            this.removeNeonCheckbox = new System.Windows.Forms.CheckBox();
             this.repairCheckbox = new System.Windows.Forms.CheckBox();
+            this.resprayInteriorCheckbox = new System.Windows.Forms.CheckBox();
             this.tireSmokeCheckbox = new System.Windows.Forms.CheckBox();
             this.rearBumperCheckbox = new System.Windows.Forms.CheckBox();
             this.seatsCheckbox = new System.Windows.Forms.CheckBox();
@@ -171,14 +179,6 @@
             this.brakeTypeInput = new System.Windows.Forms.TextBox();
             this.armorTypeInput = new System.Windows.Forms.TextBox();
             this.infoDisplayTextBox = new System.Windows.Forms.TextBox();
-            this.removeNeonCheckbox = new System.Windows.Forms.CheckBox();
-            this.removeNeonAmountInput = new System.Windows.Forms.TextBox();
-            this.removeNeonTypeInput = new System.Windows.Forms.TextBox();
-            this.label33 = new System.Windows.Forms.Label();
-            this.resprayInteriorCheckbox = new System.Windows.Forms.CheckBox();
-            this.label34 = new System.Windows.Forms.Label();
-            this.resprayInteriorAmountInput = new System.Windows.Forms.TextBox();
-            this.resprayInteriorTypeInput = new System.Windows.Forms.TextBox();
             this.customerGroup.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -291,7 +291,7 @@
             this.saveLogBtn.Location = new System.Drawing.Point(533, 434);
             this.saveLogBtn.Name = "saveLogBtn";
             this.saveLogBtn.Size = new System.Drawing.Size(105, 23);
-            this.saveLogBtn.TabIndex = 5;
+            this.saveLogBtn.TabIndex = 7;
             this.saveLogBtn.Text = "Save Log";
             this.saveLogBtn.UseVisualStyleBackColor = true;
             // 
@@ -309,7 +309,7 @@
             this.deleteLogBtn.Location = new System.Drawing.Point(654, 434);
             this.deleteLogBtn.Name = "deleteLogBtn";
             this.deleteLogBtn.Size = new System.Drawing.Size(105, 23);
-            this.deleteLogBtn.TabIndex = 5;
+            this.deleteLogBtn.TabIndex = 8;
             this.deleteLogBtn.Text = "Delete Log";
             this.deleteLogBtn.UseVisualStyleBackColor = true;
             // 
@@ -318,7 +318,7 @@
             this.resetBtn.Location = new System.Drawing.Point(408, 434);
             this.resetBtn.Name = "resetBtn";
             this.resetBtn.Size = new System.Drawing.Size(105, 23);
-            this.resetBtn.TabIndex = 5;
+            this.resetBtn.TabIndex = 6;
             this.resetBtn.Text = "New Log";
             this.resetBtn.UseVisualStyleBackColor = true;
             // 
@@ -665,6 +665,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Cosmetic Upgrades";
             // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(151, 604);
+            this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(13, 13);
+            this.label33.TabIndex = 4;
+            this.label33.Text = "$";
+            // 
             // label31
             // 
             this.label31.AutoSize = true;
@@ -755,6 +765,14 @@
             this.label8.TabIndex = 4;
             this.label8.Text = "$";
             // 
+            // resprayInteriorTypeInput
+            // 
+            this.resprayInteriorTypeInput.Enabled = false;
+            this.resprayInteriorTypeInput.Location = new System.Drawing.Point(261, 263);
+            this.resprayInteriorTypeInput.Name = "resprayInteriorTypeInput";
+            this.resprayInteriorTypeInput.Size = new System.Drawing.Size(193, 20);
+            this.resprayInteriorTypeInput.TabIndex = 35;
+            // 
             // rearBumperTypeInput
             // 
             this.rearBumperTypeInput.Enabled = false;
@@ -762,6 +780,14 @@
             this.rearBumperTypeInput.Name = "rearBumperTypeInput";
             this.rearBumperTypeInput.Size = new System.Drawing.Size(193, 20);
             this.rearBumperTypeInput.TabIndex = 32;
+            // 
+            // resprayInteriorAmountInput
+            // 
+            this.resprayInteriorAmountInput.Enabled = false;
+            this.resprayInteriorAmountInput.Location = new System.Drawing.Point(169, 263);
+            this.resprayInteriorAmountInput.Name = "resprayInteriorAmountInput";
+            this.resprayInteriorAmountInput.Size = new System.Drawing.Size(86, 20);
+            this.resprayInteriorAmountInput.TabIndex = 34;
             // 
             // rearBumperAmountInput
             // 
@@ -777,9 +803,19 @@
             this.resprayPearlCheckbox.Location = new System.Drawing.Point(14, 288);
             this.resprayPearlCheckbox.Name = "resprayPearlCheckbox";
             this.resprayPearlCheckbox.Size = new System.Drawing.Size(92, 17);
-            this.resprayPearlCheckbox.TabIndex = 33;
+            this.resprayPearlCheckbox.TabIndex = 36;
             this.resprayPearlCheckbox.Text = "Respray Pearl";
             this.resprayPearlCheckbox.UseVisualStyleBackColor = true;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(153, 268);
+            this.label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(13, 13);
+            this.label34.TabIndex = 4;
+            this.label34.Text = "$";
             // 
             // label23
             // 
@@ -937,7 +973,7 @@
             this.sideSkirtTypeInput.Location = new System.Drawing.Point(261, 443);
             this.sideSkirtTypeInput.Name = "sideSkirtTypeInput";
             this.sideSkirtTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.sideSkirtTypeInput.TabIndex = 56;
+            this.sideSkirtTypeInput.TabIndex = 59;
             // 
             // sideSkirtAmountInput
             // 
@@ -945,7 +981,7 @@
             this.sideSkirtAmountInput.Location = new System.Drawing.Point(169, 443);
             this.sideSkirtAmountInput.Name = "sideSkirtAmountInput";
             this.sideSkirtAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.sideSkirtAmountInput.TabIndex = 55;
+            this.sideSkirtAmountInput.TabIndex = 58;
             // 
             // leftFenderTypeInput
             // 
@@ -963,13 +999,29 @@
             this.leftFenderAmountInput.Size = new System.Drawing.Size(86, 20);
             this.leftFenderAmountInput.TabIndex = 19;
             // 
+            // removeNeonTypeInput
+            // 
+            this.removeNeonTypeInput.Enabled = false;
+            this.removeNeonTypeInput.Location = new System.Drawing.Point(261, 600);
+            this.removeNeonTypeInput.Name = "removeNeonTypeInput";
+            this.removeNeonTypeInput.Size = new System.Drawing.Size(193, 20);
+            this.removeNeonTypeInput.TabIndex = 80;
+            // 
             // repairTypeInput
             // 
             this.repairTypeInput.Enabled = false;
             this.repairTypeInput.Location = new System.Drawing.Point(261, 577);
             this.repairTypeInput.Name = "repairTypeInput";
             this.repairTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.repairTypeInput.TabIndex = 71;
+            this.repairTypeInput.TabIndex = 77;
+            // 
+            // removeNeonAmountInput
+            // 
+            this.removeNeonAmountInput.Enabled = false;
+            this.removeNeonAmountInput.Location = new System.Drawing.Point(169, 600);
+            this.removeNeonAmountInput.Name = "removeNeonAmountInput";
+            this.removeNeonAmountInput.Size = new System.Drawing.Size(86, 20);
+            this.removeNeonAmountInput.TabIndex = 79;
             // 
             // tireSmokeTypeInput
             // 
@@ -977,7 +1029,7 @@
             this.tireSmokeTypeInput.Location = new System.Drawing.Point(261, 555);
             this.tireSmokeTypeInput.Name = "tireSmokeTypeInput";
             this.tireSmokeTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.tireSmokeTypeInput.TabIndex = 71;
+            this.tireSmokeTypeInput.TabIndex = 74;
             // 
             // repairAmountInput
             // 
@@ -985,7 +1037,7 @@
             this.repairAmountInput.Location = new System.Drawing.Point(169, 577);
             this.repairAmountInput.Name = "repairAmountInput";
             this.repairAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.repairAmountInput.TabIndex = 70;
+            this.repairAmountInput.TabIndex = 76;
             // 
             // tireSmokeAmountInput
             // 
@@ -993,7 +1045,7 @@
             this.tireSmokeAmountInput.Location = new System.Drawing.Point(169, 555);
             this.tireSmokeAmountInput.Name = "tireSmokeAmountInput";
             this.tireSmokeAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.tireSmokeAmountInput.TabIndex = 70;
+            this.tireSmokeAmountInput.TabIndex = 73;
             // 
             // resprayPrimaryTypeInput
             // 
@@ -1001,7 +1053,7 @@
             this.resprayPrimaryTypeInput.Location = new System.Drawing.Point(261, 308);
             this.resprayPrimaryTypeInput.Name = "resprayPrimaryTypeInput";
             this.resprayPrimaryTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.resprayPrimaryTypeInput.TabIndex = 38;
+            this.resprayPrimaryTypeInput.TabIndex = 41;
             // 
             // dialTypeInput
             // 
@@ -1017,7 +1069,7 @@
             this.resprayPrimaryAmountInput.Location = new System.Drawing.Point(169, 309);
             this.resprayPrimaryAmountInput.Name = "resprayPrimaryAmountInput";
             this.resprayPrimaryAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.resprayPrimaryAmountInput.TabIndex = 37;
+            this.resprayPrimaryAmountInput.TabIndex = 40;
             // 
             // tintTypeInput
             // 
@@ -1025,7 +1077,7 @@
             this.tintTypeInput.Location = new System.Drawing.Point(261, 533);
             this.tintTypeInput.Name = "tintTypeInput";
             this.tintTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.tintTypeInput.TabIndex = 68;
+            this.tintTypeInput.TabIndex = 71;
             // 
             // resprayPearlTypeInput
             // 
@@ -1033,7 +1085,7 @@
             this.resprayPearlTypeInput.Location = new System.Drawing.Point(261, 286);
             this.resprayPearlTypeInput.Name = "resprayPearlTypeInput";
             this.resprayPearlTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.resprayPearlTypeInput.TabIndex = 35;
+            this.resprayPearlTypeInput.TabIndex = 38;
             // 
             // tintAmountInput
             // 
@@ -1041,7 +1093,7 @@
             this.tintAmountInput.Location = new System.Drawing.Point(169, 533);
             this.tintAmountInput.Name = "tintAmountInput";
             this.tintAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.tintAmountInput.TabIndex = 67;
+            this.tintAmountInput.TabIndex = 70;
             // 
             // seatsTypeInput
             // 
@@ -1049,7 +1101,7 @@
             this.seatsTypeInput.Location = new System.Drawing.Point(261, 420);
             this.seatsTypeInput.Name = "seatsTypeInput";
             this.seatsTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.seatsTypeInput.TabIndex = 53;
+            this.seatsTypeInput.TabIndex = 56;
             // 
             // resprayPearlAmountInput
             // 
@@ -1057,7 +1109,7 @@
             this.resprayPearlAmountInput.Location = new System.Drawing.Point(169, 286);
             this.resprayPearlAmountInput.Name = "resprayPearlAmountInput";
             this.resprayPearlAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.resprayPearlAmountInput.TabIndex = 34;
+            this.resprayPearlAmountInput.TabIndex = 37;
             // 
             // hornTypeInput
             // 
@@ -1073,7 +1125,7 @@
             this.seatsAmountInput.Location = new System.Drawing.Point(169, 420);
             this.seatsAmountInput.Name = "seatsAmountInput";
             this.seatsAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.seatsAmountInput.TabIndex = 52;
+            this.seatsAmountInput.TabIndex = 55;
             // 
             // strutTypeInput
             // 
@@ -1081,7 +1133,7 @@
             this.strutTypeInput.Location = new System.Drawing.Point(261, 510);
             this.strutTypeInput.Name = "strutTypeInput";
             this.strutTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.strutTypeInput.TabIndex = 65;
+            this.strutTypeInput.TabIndex = 68;
             // 
             // plateTypeInput
             // 
@@ -1097,7 +1149,7 @@
             this.strutAmountInput.Location = new System.Drawing.Point(169, 510);
             this.strutAmountInput.Name = "strutAmountInput";
             this.strutAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.strutAmountInput.TabIndex = 64;
+            this.strutAmountInput.TabIndex = 67;
             // 
             // roofTypeInput
             // 
@@ -1105,7 +1157,7 @@
             this.roofTypeInput.Location = new System.Drawing.Point(261, 398);
             this.roofTypeInput.Name = "roofTypeInput";
             this.roofTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.roofTypeInput.TabIndex = 50;
+            this.roofTypeInput.TabIndex = 53;
             // 
             // plateAmountInput
             // 
@@ -1129,7 +1181,7 @@
             this.roofAmountInput.Location = new System.Drawing.Point(169, 398);
             this.roofAmountInput.Name = "roofAmountInput";
             this.roofAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.roofAmountInput.TabIndex = 49;
+            this.roofAmountInput.TabIndex = 52;
             // 
             // steeringWheelTypeInput
             // 
@@ -1137,7 +1189,7 @@
             this.steeringWheelTypeInput.Location = new System.Drawing.Point(261, 488);
             this.steeringWheelTypeInput.Name = "steeringWheelTypeInput";
             this.steeringWheelTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.steeringWheelTypeInput.TabIndex = 62;
+            this.steeringWheelTypeInput.TabIndex = 65;
             // 
             // ornamentsTypeInput
             // 
@@ -1153,7 +1205,7 @@
             this.steeringWheelAmountInput.Location = new System.Drawing.Point(169, 488);
             this.steeringWheelAmountInput.Name = "steeringWheelAmountInput";
             this.steeringWheelAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.steeringWheelAmountInput.TabIndex = 61;
+            this.steeringWheelAmountInput.TabIndex = 64;
             // 
             // rimsTypeInput
             // 
@@ -1161,7 +1213,7 @@
             this.rimsTypeInput.Location = new System.Drawing.Point(261, 375);
             this.rimsTypeInput.Name = "rimsTypeInput";
             this.rimsTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.rimsTypeInput.TabIndex = 47;
+            this.rimsTypeInput.TabIndex = 50;
             // 
             // ornamentsAmountInput
             // 
@@ -1185,7 +1237,7 @@
             this.rimsAmountInput.Location = new System.Drawing.Point(169, 375);
             this.rimsAmountInput.Name = "rimsAmountInput";
             this.rimsAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.rimsAmountInput.TabIndex = 46;
+            this.rimsAmountInput.TabIndex = 49;
             // 
             // spoilerTypeInput
             // 
@@ -1193,7 +1245,7 @@
             this.spoilerTypeInput.Location = new System.Drawing.Point(261, 466);
             this.spoilerTypeInput.Name = "spoilerTypeInput";
             this.spoilerTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.spoilerTypeInput.TabIndex = 59;
+            this.spoilerTypeInput.TabIndex = 62;
             // 
             // liveryTypeInput
             // 
@@ -1209,7 +1261,7 @@
             this.spoilerAmountInput.Location = new System.Drawing.Point(169, 466);
             this.spoilerAmountInput.Name = "spoilerAmountInput";
             this.spoilerAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.spoilerAmountInput.TabIndex = 58;
+            this.spoilerAmountInput.TabIndex = 61;
             // 
             // rimColorTypeInput
             // 
@@ -1217,7 +1269,7 @@
             this.rimColorTypeInput.Location = new System.Drawing.Point(261, 353);
             this.rimColorTypeInput.Name = "rimColorTypeInput";
             this.rimColorTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.rimColorTypeInput.TabIndex = 44;
+            this.rimColorTypeInput.TabIndex = 47;
             // 
             // liveryAmountInput
             // 
@@ -1241,7 +1293,7 @@
             this.rimColorAmountInput.Location = new System.Drawing.Point(169, 353);
             this.rimColorAmountInput.Name = "rimColorAmountInput";
             this.rimColorAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.rimColorAmountInput.TabIndex = 43;
+            this.rimColorAmountInput.TabIndex = 46;
             // 
             // respraySecondaryTypeInput
             // 
@@ -1249,7 +1301,7 @@
             this.respraySecondaryTypeInput.Location = new System.Drawing.Point(261, 331);
             this.respraySecondaryTypeInput.Name = "respraySecondaryTypeInput";
             this.respraySecondaryTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.respraySecondaryTypeInput.TabIndex = 41;
+            this.respraySecondaryTypeInput.TabIndex = 44;
             // 
             // engineBlockTypeInput
             // 
@@ -1265,7 +1317,17 @@
             this.respraySecondaryAmountInput.Location = new System.Drawing.Point(169, 331);
             this.respraySecondaryAmountInput.Name = "respraySecondaryAmountInput";
             this.respraySecondaryAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.respraySecondaryAmountInput.TabIndex = 40;
+            this.respraySecondaryAmountInput.TabIndex = 43;
+            // 
+            // removeNeonCheckbox
+            // 
+            this.removeNeonCheckbox.AutoSize = true;
+            this.removeNeonCheckbox.Location = new System.Drawing.Point(14, 601);
+            this.removeNeonCheckbox.Name = "removeNeonCheckbox";
+            this.removeNeonCheckbox.Size = new System.Drawing.Size(95, 17);
+            this.removeNeonCheckbox.TabIndex = 78;
+            this.removeNeonCheckbox.Text = "Remove Neon";
+            this.removeNeonCheckbox.UseVisualStyleBackColor = true;
             // 
             // repairCheckbox
             // 
@@ -1273,9 +1335,19 @@
             this.repairCheckbox.Location = new System.Drawing.Point(14, 578);
             this.repairCheckbox.Name = "repairCheckbox";
             this.repairCheckbox.Size = new System.Drawing.Size(57, 17);
-            this.repairCheckbox.TabIndex = 69;
+            this.repairCheckbox.TabIndex = 75;
             this.repairCheckbox.Text = "Repair";
             this.repairCheckbox.UseVisualStyleBackColor = true;
+            // 
+            // resprayInteriorCheckbox
+            // 
+            this.resprayInteriorCheckbox.AutoSize = true;
+            this.resprayInteriorCheckbox.Location = new System.Drawing.Point(14, 266);
+            this.resprayInteriorCheckbox.Name = "resprayInteriorCheckbox";
+            this.resprayInteriorCheckbox.Size = new System.Drawing.Size(100, 17);
+            this.resprayInteriorCheckbox.TabIndex = 33;
+            this.resprayInteriorCheckbox.Text = "Respray Interior";
+            this.resprayInteriorCheckbox.UseVisualStyleBackColor = true;
             // 
             // tireSmokeCheckbox
             // 
@@ -1283,7 +1355,7 @@
             this.tireSmokeCheckbox.Location = new System.Drawing.Point(14, 557);
             this.tireSmokeCheckbox.Name = "tireSmokeCheckbox";
             this.tireSmokeCheckbox.Size = new System.Drawing.Size(80, 17);
-            this.tireSmokeCheckbox.TabIndex = 69;
+            this.tireSmokeCheckbox.TabIndex = 72;
             this.tireSmokeCheckbox.Text = "Tire Smoke";
             this.tireSmokeCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -1303,7 +1375,7 @@
             this.seatsCheckbox.Location = new System.Drawing.Point(14, 422);
             this.seatsCheckbox.Name = "seatsCheckbox";
             this.seatsCheckbox.Size = new System.Drawing.Size(53, 17);
-            this.seatsCheckbox.TabIndex = 51;
+            this.seatsCheckbox.TabIndex = 54;
             this.seatsCheckbox.Text = "Seats";
             this.seatsCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -1313,7 +1385,7 @@
             this.tintCheckbox.Location = new System.Drawing.Point(14, 534);
             this.tintCheckbox.Name = "tintCheckbox";
             this.tintCheckbox.Size = new System.Drawing.Size(44, 17);
-            this.tintCheckbox.TabIndex = 66;
+            this.tintCheckbox.TabIndex = 69;
             this.tintCheckbox.Text = "Tint";
             this.tintCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -1323,7 +1395,7 @@
             this.roofCheckbox.Location = new System.Drawing.Point(14, 400);
             this.roofCheckbox.Name = "roofCheckbox";
             this.roofCheckbox.Size = new System.Drawing.Size(49, 17);
-            this.roofCheckbox.TabIndex = 48;
+            this.roofCheckbox.TabIndex = 51;
             this.roofCheckbox.Text = "Roof";
             this.roofCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -1333,7 +1405,7 @@
             this.strutCheckbox.Location = new System.Drawing.Point(14, 512);
             this.strutCheckbox.Name = "strutCheckbox";
             this.strutCheckbox.Size = new System.Drawing.Size(48, 17);
-            this.strutCheckbox.TabIndex = 63;
+            this.strutCheckbox.TabIndex = 66;
             this.strutCheckbox.Text = "Strut";
             this.strutCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -1353,7 +1425,7 @@
             this.rimsCheckbox.Location = new System.Drawing.Point(14, 378);
             this.rimsCheckbox.Name = "rimsCheckbox";
             this.rimsCheckbox.Size = new System.Drawing.Size(49, 17);
-            this.rimsCheckbox.TabIndex = 45;
+            this.rimsCheckbox.TabIndex = 48;
             this.rimsCheckbox.Text = "Rims";
             this.rimsCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -1363,7 +1435,7 @@
             this.steeringWheelCheckbox.Location = new System.Drawing.Point(14, 490);
             this.steeringWheelCheckbox.Name = "steeringWheelCheckbox";
             this.steeringWheelCheckbox.Size = new System.Drawing.Size(99, 17);
-            this.steeringWheelCheckbox.TabIndex = 60;
+            this.steeringWheelCheckbox.TabIndex = 63;
             this.steeringWheelCheckbox.Text = "Steering Wheel";
             this.steeringWheelCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -1383,7 +1455,7 @@
             this.rimColorCheckbox.Location = new System.Drawing.Point(14, 356);
             this.rimColorCheckbox.Name = "rimColorCheckbox";
             this.rimColorCheckbox.Size = new System.Drawing.Size(71, 17);
-            this.rimColorCheckbox.TabIndex = 42;
+            this.rimColorCheckbox.TabIndex = 45;
             this.rimColorCheckbox.Text = "Rim Color";
             this.rimColorCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -1393,7 +1465,7 @@
             this.spoilerCheckbox.Location = new System.Drawing.Point(14, 467);
             this.spoilerCheckbox.Name = "spoilerCheckbox";
             this.spoilerCheckbox.Size = new System.Drawing.Size(58, 17);
-            this.spoilerCheckbox.TabIndex = 57;
+            this.spoilerCheckbox.TabIndex = 60;
             this.spoilerCheckbox.Text = "Spoiler";
             this.spoilerCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -1413,7 +1485,7 @@
             this.respraySecondaryCheckbox.Location = new System.Drawing.Point(14, 334);
             this.respraySecondaryCheckbox.Name = "respraySecondaryCheckbox";
             this.respraySecondaryCheckbox.Size = new System.Drawing.Size(119, 17);
-            this.respraySecondaryCheckbox.TabIndex = 39;
+            this.respraySecondaryCheckbox.TabIndex = 42;
             this.respraySecondaryCheckbox.Text = "Respray Secondary";
             this.respraySecondaryCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -1423,7 +1495,7 @@
             this.sideSkirtCheckbox.Location = new System.Drawing.Point(14, 445);
             this.sideSkirtCheckbox.Name = "sideSkirtCheckbox";
             this.sideSkirtCheckbox.Size = new System.Drawing.Size(71, 17);
-            this.sideSkirtCheckbox.TabIndex = 54;
+            this.sideSkirtCheckbox.TabIndex = 57;
             this.sideSkirtCheckbox.Text = "Side Skirt";
             this.sideSkirtCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -1443,7 +1515,7 @@
             this.resprayPrimaryCheckbox.Location = new System.Drawing.Point(14, 311);
             this.resprayPrimaryCheckbox.Name = "resprayPrimaryCheckbox";
             this.resprayPrimaryCheckbox.Size = new System.Drawing.Size(102, 17);
-            this.resprayPrimaryCheckbox.TabIndex = 36;
+            this.resprayPrimaryCheckbox.TabIndex = 39;
             this.resprayPrimaryCheckbox.Text = "Respray Primary";
             this.resprayPrimaryCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -1596,80 +1668,8 @@
             this.infoDisplayTextBox.Name = "infoDisplayTextBox";
             this.infoDisplayTextBox.ReadOnly = true;
             this.infoDisplayTextBox.Size = new System.Drawing.Size(473, 275);
-            this.infoDisplayTextBox.TabIndex = 6;
+            this.infoDisplayTextBox.TabIndex = 0;
             this.infoDisplayTextBox.Click += new System.EventHandler(this.CopyToClipboard_Click);
-            // 
-            // removeNeonCheckbox
-            // 
-            this.removeNeonCheckbox.AutoSize = true;
-            this.removeNeonCheckbox.Location = new System.Drawing.Point(14, 601);
-            this.removeNeonCheckbox.Name = "removeNeonCheckbox";
-            this.removeNeonCheckbox.Size = new System.Drawing.Size(95, 17);
-            this.removeNeonCheckbox.TabIndex = 69;
-            this.removeNeonCheckbox.Text = "Remove Neon";
-            this.removeNeonCheckbox.UseVisualStyleBackColor = true;
-            // 
-            // removeNeonAmountInput
-            // 
-            this.removeNeonAmountInput.Enabled = false;
-            this.removeNeonAmountInput.Location = new System.Drawing.Point(169, 600);
-            this.removeNeonAmountInput.Name = "removeNeonAmountInput";
-            this.removeNeonAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.removeNeonAmountInput.TabIndex = 70;
-            // 
-            // removeNeonTypeInput
-            // 
-            this.removeNeonTypeInput.Enabled = false;
-            this.removeNeonTypeInput.Location = new System.Drawing.Point(261, 600);
-            this.removeNeonTypeInput.Name = "removeNeonTypeInput";
-            this.removeNeonTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.removeNeonTypeInput.TabIndex = 71;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(151, 604);
-            this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(13, 13);
-            this.label33.TabIndex = 4;
-            this.label33.Text = "$";
-            // 
-            // resprayInteriorCheckbox
-            // 
-            this.resprayInteriorCheckbox.AutoSize = true;
-            this.resprayInteriorCheckbox.Location = new System.Drawing.Point(14, 266);
-            this.resprayInteriorCheckbox.Name = "resprayInteriorCheckbox";
-            this.resprayInteriorCheckbox.Size = new System.Drawing.Size(100, 17);
-            this.resprayInteriorCheckbox.TabIndex = 30;
-            this.resprayInteriorCheckbox.Text = "Respray Interior";
-            this.resprayInteriorCheckbox.UseVisualStyleBackColor = true;
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(153, 268);
-            this.label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(13, 13);
-            this.label34.TabIndex = 4;
-            this.label34.Text = "$";
-            // 
-            // resprayInteriorAmountInput
-            // 
-            this.resprayInteriorAmountInput.Enabled = false;
-            this.resprayInteriorAmountInput.Location = new System.Drawing.Point(169, 263);
-            this.resprayInteriorAmountInput.Name = "resprayInteriorAmountInput";
-            this.resprayInteriorAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.resprayInteriorAmountInput.TabIndex = 31;
-            // 
-            // resprayInteriorTypeInput
-            // 
-            this.resprayInteriorTypeInput.Enabled = false;
-            this.resprayInteriorTypeInput.Location = new System.Drawing.Point(261, 263);
-            this.resprayInteriorTypeInput.Name = "resprayInteriorTypeInput";
-            this.resprayInteriorTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.resprayInteriorTypeInput.TabIndex = 32;
             // 
             // MainForm
             // 
