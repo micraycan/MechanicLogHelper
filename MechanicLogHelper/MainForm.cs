@@ -29,7 +29,7 @@ namespace MechanicLogHelper
 
             // init performance upgrade options
             upgradeOptions.Add(new UpgradeOption { Checkbox = armorCheckbox, InputField = armorAmountInput, TypeField = armorTypeInput, UpgradeName = "Armor" });
-            upgradeOptions.Add(new UpgradeOption { Checkbox = brakeCheckbox, InputField = brakeAmountInput, TypeField = brakeTypeInput, UpgradeName = "Brake" });
+            upgradeOptions.Add(new UpgradeOption { Checkbox = brakeCheckbox, InputField = brakeAmountInput, TypeField = brakeTypeInput, UpgradeName = "Brakes" });
             upgradeOptions.Add(new UpgradeOption { Checkbox = engineCheckbox, InputField = engineAmountInput, TypeField = engineTypeInput, UpgradeName = "Engine" });
             upgradeOptions.Add(new UpgradeOption { Checkbox = suspensionCheckbox, InputField = suspensionAmountInput, TypeField = suspensionTypeInput, UpgradeName = "Suspension" });
             upgradeOptions.Add(new UpgradeOption { Checkbox = transmissionCheckbox, InputField = transmissionAmountInput, TypeField = transmissionTypeInput, UpgradeName = "Transmission" });
