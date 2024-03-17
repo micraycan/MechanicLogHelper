@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MaterialSkin;
+using MaterialSkin.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,7 +13,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace MechanicLogHelper
 {
-    public partial class MainForm : Form
+    public partial class MainForm : MaterialForm
     {
         private LogManager logManager;
         private List<UpgradeOption> upgradeOptions = new List<UpgradeOption>();
@@ -20,6 +22,11 @@ namespace MechanicLogHelper
         {
             InitializeComponent();
             InitializeForm();
+
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
+            materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
         }
 
         private void InitializeForm()
@@ -27,15 +34,16 @@ namespace MechanicLogHelper
             logManager = new LogManager();
             RefreshTreeView();
 
-            // init performance upgrade options
+            /* init performance upgrade options
             upgradeOptions.Add(new UpgradeOption { Checkbox = armorCheckbox, InputField = armorAmountInput, TypeField = armorTypeInput, UpgradeName = "Armor" });
             upgradeOptions.Add(new UpgradeOption { Checkbox = brakeCheckbox, InputField = brakeAmountInput, TypeField = brakeTypeInput, UpgradeName = "Brakes" });
             upgradeOptions.Add(new UpgradeOption { Checkbox = engineCheckbox, InputField = engineAmountInput, TypeField = engineTypeInput, UpgradeName = "Engine" });
             upgradeOptions.Add(new UpgradeOption { Checkbox = suspensionCheckbox, InputField = suspensionAmountInput, TypeField = suspensionTypeInput, UpgradeName = "Suspension" });
             upgradeOptions.Add(new UpgradeOption { Checkbox = transmissionCheckbox, InputField = transmissionAmountInput, TypeField = transmissionTypeInput, UpgradeName = "Transmission" });
             upgradeOptions.Add(new UpgradeOption { Checkbox = turboCheckbox, InputField = turboAmountInput, TypeField = turboTypeInput, UpgradeName = "Turbo" });
+            */
 
-            // init cosmetic upgrade options
+            /* init cosmetic upgrade options
             upgradeOptions.Add(new UpgradeOption { Checkbox = dialCheckbox, InputField = dialAmountInput, TypeField = dialTypeInput, UpgradeName = "Dial" });
             upgradeOptions.Add(new UpgradeOption { Checkbox = engineBlockCheckbox, InputField = engineBlockAmountInput, TypeField = engineBlockTypeInput, UpgradeName = "Engine Block" });
             upgradeOptions.Add(new UpgradeOption { Checkbox = exhaustCheckbox, InputField = exhaustAmountInput, TypeField = exhaustTypeInput, UpgradeName = "Exhaust" });
@@ -63,22 +71,25 @@ namespace MechanicLogHelper
             upgradeOptions.Add(new UpgradeOption { Checkbox = repairCheckbox, InputField = repairAmountInput, TypeField = repairTypeInput, UpgradeName = "Repair" });
             upgradeOptions.Add(new UpgradeOption { Checkbox = resprayInteriorCheckbox, InputField = resprayInteriorAmountInput, TypeField = resprayInteriorTypeInput, UpgradeName = "Respray Interior" });
             upgradeOptions.Add(new UpgradeOption { Checkbox = removeNeonCheckbox, InputField = removeNeonAmountInput, TypeField = removeNeonTypeInput, UpgradeName = "Remove Neon Kit" });
+            */
 
-            // button settings
+            /* button settings
             saveLogBtn.Click += new EventHandler(SaveLogButton_Click);
             clearLogsBtn.Click += new EventHandler(ClearAllLogs_Click);
             deleteLogBtn.Click += new EventHandler(DeleteLogButton_Click);
             resetBtn.Click += new EventHandler(ResetButton_Click);
+            */
 
             // tree view setting
             this.treeViewLogs.AfterSelect += new TreeViewEventHandler(TreeViewLogs_AfterSelect);
 
-            // input settings
+            /* input settings
             licenseInput.KeyPress += AlphanumericTextBox_KeyPress;
             armorAmountInput.KeyPress += NumberTextBox_KeyPress;
             brakeAmountInput.KeyPress += NumberTextBox_KeyPress;
+            */
 
-            // checkbox settings
+            /* checkbox settings
             armorCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
             brakeCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
             engineCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
@@ -112,6 +123,7 @@ namespace MechanicLogHelper
             repairCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
             resprayInteriorCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
             removeNeonCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
+            */
         }
 
         private void NumberTextBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -134,6 +146,7 @@ namespace MechanicLogHelper
             }
         }
 
+        
         private void RefreshTreeView()
         {
             treeViewLogs.Nodes.Clear();
@@ -164,6 +177,7 @@ namespace MechanicLogHelper
             treeViewLogs.ExpandAll();
         }
 
+        /*
         private void GenerateInfoString()
         {
             string customerName = employeeCheckbox.Checked ? $"{customerNameInput.Text} (MECH)" : customerNameInput.Text;
@@ -184,7 +198,9 @@ SHOP: {shop}
 
             infoDisplayTextBox.Text = formattedString;
         }
+        */
 
+        /*
         private void CopyToClipboard_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(infoDisplayTextBox.Text))
@@ -192,8 +208,9 @@ SHOP: {shop}
                 Clipboard.SetText(infoDisplayTextBox.Text);
                 MessageBox.Show("Log copied to clilpboard");
             }
-        }
+        }*/
 
+        /*
         private string GetFormattedUpgrades()
         {
             List<string> resprayTypes = new List<string>();
@@ -263,7 +280,9 @@ SHOP: {shop}
 
             return string.Join(", ", allUpgrades);
         }
+        */
 
+        /*
         private int CalculateTotalPrice()
         {
             int totalPrice = 0;
@@ -277,8 +296,9 @@ SHOP: {shop}
             }
 
             return totalPrice;
-        }
+        }*/
 
+        /*
         private void SaveLogButton_Click(object sender, EventArgs e)
         {
             if (!IsInputValid()) { return; }
@@ -310,20 +330,23 @@ SHOP: {shop}
 
             RefreshTreeView();
             ClearFormFields();
-        }
+        }*/
 
+        /*
         private void ClearLogsButton_Click(object sender, EventArgs e)
         {
             logManager.ClearLogs();
             RefreshTreeView();
-        }
+        }*/
 
+        /*
         private void ResetButton_Click(object sender, EventArgs e)
         {
             ClearFormFields();
             RefreshTreeView();
-        }
+        }*/
 
+        /*
         private void DeleteLogButton_Click(object sender, EventArgs e)
         {
             if (treeViewLogs.SelectedNode != null && treeViewLogs.SelectedNode.Level == 1)
@@ -340,8 +363,9 @@ SHOP: {shop}
                     }
                 }
             }
-        }
+        }*/
 
+        /*
         private void UpgradeCheckbox_CheckedChanged(object sender, EventArgs e)
         {
             System.Windows.Forms.CheckBox checkBox = (System.Windows.Forms.CheckBox)sender;
@@ -360,8 +384,9 @@ SHOP: {shop}
                     }
                 }
             }
-        }
+        }*/
 
+        /*
         private bool IsInputValid()
         {
             List<string> errorMessages = new List<string>();
@@ -400,8 +425,9 @@ SHOP: {shop}
             }
 
             return true;
-        }
+        }*/
 
+        /*
         private void ClearFormFields()
         {
             customerNameInput.Text = String.Empty;
@@ -415,8 +441,9 @@ SHOP: {shop}
                 option.InputField.Text = "";
             }
             infoDisplayTextBox.Text = String.Empty;
-        }
+        }*/
 
+        
         private void TreeViewLogs_AfterSelect(object sender, TreeViewEventArgs e)
         {
             if (e.Node.Level == 1)
@@ -425,7 +452,7 @@ SHOP: {shop}
 
                 if (selectedLog != null)
                 {
-                    ClearFormFields();
+                    /*ClearFormFields();
 
                     customerNameInput.Text = selectedLog.CustomerName;
                     vehicleInput.Text = selectedLog.Vehicle;
@@ -443,17 +470,19 @@ SHOP: {shop}
                             upgradeOption.TypeField.Text = upgrade.UpgradeType;
                             GenerateInfoString();
                         }
-                    }
+                    }*/
                 }
             }
         }
 
+        /*
         private void ClearAllLogs_Click(object sender, EventArgs e)
         {
             logManager.ClearLogs();
             RefreshTreeView();
-        }
+        } */
 
+        /*
         private List<UpgradeInfo> GetInstalledUpgrades()
         {
             List<UpgradeInfo> installedUpgrades = new List<UpgradeInfo>();
@@ -472,8 +501,9 @@ SHOP: {shop}
             }
 
             return installedUpgrades;
-        }
+        }*/
 
+        /*
         private bool IsAtleastOneUpgradeSelected()
         {
             foreach (UpgradeOption upgrade in upgradeOptions)
@@ -485,8 +515,9 @@ SHOP: {shop}
             }
 
             return false;
-        }
+        } */
 
+        /*
         private bool IsUpgradeInputValid()
         {
             foreach (UpgradeOption upgrade in upgradeOptions)
@@ -498,6 +529,6 @@ SHOP: {shop}
             }
 
             return true;
-        }
+        }*/
     }
 }
