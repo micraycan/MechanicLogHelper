@@ -30,1670 +30,1173 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.treeViewLogs = new System.Windows.Forms.TreeView();
-            this.customerNameLabel = new System.Windows.Forms.Label();
-            this.customerNameInput = new System.Windows.Forms.TextBox();
-            this.vehicleInput = new System.Windows.Forms.TextBox();
-            this.licenseInput = new System.Windows.Forms.TextBox();
-            this.vehicleLabel = new System.Windows.Forms.Label();
-            this.licenseLabel = new System.Windows.Forms.Label();
-            this.employeeCheckbox = new System.Windows.Forms.CheckBox();
-            this.armorAmountInput = new System.Windows.Forms.TextBox();
-            this.brakeAmountInput = new System.Windows.Forms.TextBox();
-            this.brakeCheckbox = new System.Windows.Forms.CheckBox();
-            this.armorCheckbox = new System.Windows.Forms.CheckBox();
-            this.saveLogBtn = new System.Windows.Forms.Button();
-            this.clearLogsBtn = new System.Windows.Forms.Button();
-            this.deleteLogBtn = new System.Windows.Forms.Button();
-            this.resetBtn = new System.Windows.Forms.Button();
-            this.engineAmountInput = new System.Windows.Forms.TextBox();
-            this.engineCheckbox = new System.Windows.Forms.CheckBox();
-            this.suspensionAmountInput = new System.Windows.Forms.TextBox();
-            this.transmissionAmountInput = new System.Windows.Forms.TextBox();
-            this.turboAmountInput = new System.Windows.Forms.TextBox();
-            this.suspensionCheckbox = new System.Windows.Forms.CheckBox();
-            this.transmissionCheckbox = new System.Windows.Forms.CheckBox();
-            this.turboCheckbox = new System.Windows.Forms.CheckBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dialAmountInput = new System.Windows.Forms.TextBox();
-            this.hornAmountInput = new System.Windows.Forms.TextBox();
-            this.hoodAmountInput = new System.Windows.Forms.TextBox();
-            this.frontBumperAmountInput = new System.Windows.Forms.TextBox();
-            this.exhaustAmountInput = new System.Windows.Forms.TextBox();
-            this.engineBlockAmountInput = new System.Windows.Forms.TextBox();
-            this.hornCheckbox = new System.Windows.Forms.CheckBox();
-            this.hoodCheckbox = new System.Windows.Forms.CheckBox();
-            this.frontBumperCheckbox = new System.Windows.Forms.CheckBox();
-            this.exhaustCheckbox = new System.Windows.Forms.CheckBox();
-            this.engineBlockCheckbox = new System.Windows.Forms.CheckBox();
-            this.dialCheckbox = new System.Windows.Forms.CheckBox();
-            this.customerGroup = new System.Windows.Forms.GroupBox();
-            this.shopInput = new System.Windows.Forms.TextBox();
-            this.shopLabel = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.resprayInteriorTypeInput = new System.Windows.Forms.TextBox();
-            this.rearBumperTypeInput = new System.Windows.Forms.TextBox();
-            this.resprayInteriorAmountInput = new System.Windows.Forms.TextBox();
-            this.rearBumperAmountInput = new System.Windows.Forms.TextBox();
-            this.resprayPearlCheckbox = new System.Windows.Forms.CheckBox();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.sideSkirtTypeInput = new System.Windows.Forms.TextBox();
-            this.sideSkirtAmountInput = new System.Windows.Forms.TextBox();
-            this.leftFenderTypeInput = new System.Windows.Forms.TextBox();
-            this.leftFenderAmountInput = new System.Windows.Forms.TextBox();
-            this.removeNeonTypeInput = new System.Windows.Forms.TextBox();
-            this.repairTypeInput = new System.Windows.Forms.TextBox();
-            this.removeNeonAmountInput = new System.Windows.Forms.TextBox();
-            this.tireSmokeTypeInput = new System.Windows.Forms.TextBox();
-            this.repairAmountInput = new System.Windows.Forms.TextBox();
-            this.tireSmokeAmountInput = new System.Windows.Forms.TextBox();
-            this.resprayPrimaryTypeInput = new System.Windows.Forms.TextBox();
-            this.dialTypeInput = new System.Windows.Forms.TextBox();
-            this.resprayPrimaryAmountInput = new System.Windows.Forms.TextBox();
-            this.tintTypeInput = new System.Windows.Forms.TextBox();
-            this.resprayPearlTypeInput = new System.Windows.Forms.TextBox();
-            this.tintAmountInput = new System.Windows.Forms.TextBox();
-            this.seatsTypeInput = new System.Windows.Forms.TextBox();
-            this.resprayPearlAmountInput = new System.Windows.Forms.TextBox();
-            this.hornTypeInput = new System.Windows.Forms.TextBox();
-            this.seatsAmountInput = new System.Windows.Forms.TextBox();
-            this.strutTypeInput = new System.Windows.Forms.TextBox();
-            this.plateTypeInput = new System.Windows.Forms.TextBox();
-            this.strutAmountInput = new System.Windows.Forms.TextBox();
-            this.roofTypeInput = new System.Windows.Forms.TextBox();
-            this.plateAmountInput = new System.Windows.Forms.TextBox();
-            this.hoodTypeInput = new System.Windows.Forms.TextBox();
-            this.roofAmountInput = new System.Windows.Forms.TextBox();
-            this.steeringWheelTypeInput = new System.Windows.Forms.TextBox();
-            this.ornamentsTypeInput = new System.Windows.Forms.TextBox();
-            this.steeringWheelAmountInput = new System.Windows.Forms.TextBox();
-            this.rimsTypeInput = new System.Windows.Forms.TextBox();
-            this.ornamentsAmountInput = new System.Windows.Forms.TextBox();
-            this.frontBumperTypeInput = new System.Windows.Forms.TextBox();
-            this.rimsAmountInput = new System.Windows.Forms.TextBox();
-            this.spoilerTypeInput = new System.Windows.Forms.TextBox();
-            this.liveryTypeInput = new System.Windows.Forms.TextBox();
-            this.spoilerAmountInput = new System.Windows.Forms.TextBox();
-            this.rimColorTypeInput = new System.Windows.Forms.TextBox();
-            this.liveryAmountInput = new System.Windows.Forms.TextBox();
-            this.exhaustTypeInput = new System.Windows.Forms.TextBox();
-            this.rimColorAmountInput = new System.Windows.Forms.TextBox();
-            this.respraySecondaryTypeInput = new System.Windows.Forms.TextBox();
-            this.engineBlockTypeInput = new System.Windows.Forms.TextBox();
-            this.respraySecondaryAmountInput = new System.Windows.Forms.TextBox();
-            this.removeNeonCheckbox = new System.Windows.Forms.CheckBox();
-            this.repairCheckbox = new System.Windows.Forms.CheckBox();
-            this.resprayInteriorCheckbox = new System.Windows.Forms.CheckBox();
-            this.tireSmokeCheckbox = new System.Windows.Forms.CheckBox();
-            this.rearBumperCheckbox = new System.Windows.Forms.CheckBox();
-            this.seatsCheckbox = new System.Windows.Forms.CheckBox();
-            this.tintCheckbox = new System.Windows.Forms.CheckBox();
-            this.roofCheckbox = new System.Windows.Forms.CheckBox();
-            this.strutCheckbox = new System.Windows.Forms.CheckBox();
-            this.plateCheckbox = new System.Windows.Forms.CheckBox();
-            this.rimsCheckbox = new System.Windows.Forms.CheckBox();
-            this.steeringWheelCheckbox = new System.Windows.Forms.CheckBox();
-            this.ornamentsCheckbox = new System.Windows.Forms.CheckBox();
-            this.rimColorCheckbox = new System.Windows.Forms.CheckBox();
-            this.spoilerCheckbox = new System.Windows.Forms.CheckBox();
-            this.liveryCheckbox = new System.Windows.Forms.CheckBox();
-            this.respraySecondaryCheckbox = new System.Windows.Forms.CheckBox();
-            this.sideSkirtCheckbox = new System.Windows.Forms.CheckBox();
-            this.leftFenderCheckbox = new System.Windows.Forms.CheckBox();
-            this.resprayPrimaryCheckbox = new System.Windows.Forms.CheckBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.turboTypeInput = new System.Windows.Forms.TextBox();
-            this.engineTypeInput = new System.Windows.Forms.TextBox();
-            this.transmissionTypeInput = new System.Windows.Forms.TextBox();
-            this.suspensionTypeInput = new System.Windows.Forms.TextBox();
-            this.brakeTypeInput = new System.Windows.Forms.TextBox();
-            this.armorTypeInput = new System.Windows.Forms.TextBox();
-            this.infoDisplayTextBox = new System.Windows.Forms.TextBox();
-            this.customerGroup.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.customerInput = new MaterialSkin.Controls.MaterialTextBox();
+            this.vehicleInput = new MaterialSkin.Controls.MaterialTextBox();
+            this.plateInput = new MaterialSkin.Controls.MaterialTextBox();
+            this.employeeCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.logdisplayTextBox = new MaterialSkin.Controls.MaterialMultiLineTextBox();
+            this.armorDropwdown = new MaterialSkin.Controls.MaterialComboBox();
+            this.brakesDropdown = new MaterialSkin.Controls.MaterialComboBox();
+            this.engineDropdown = new MaterialSkin.Controls.MaterialComboBox();
+            this.suspensionDropdown = new MaterialSkin.Controls.MaterialComboBox();
+            this.transmissionDropdown = new MaterialSkin.Controls.MaterialComboBox();
+            this.turboCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.archCoverCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.aerialCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.customTiresCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.dResprayCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.dialCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.engineBlockCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.exhaustCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.fBumperCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.grilleCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.newLogButton = new MaterialSkin.Controls.MaterialButton();
+            this.hoodCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.interiorResprayCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.hornCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.leftFenderCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.liveryCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.ornamentsCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.oldLiveryCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.plateCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.rBumperCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.pearlResprayCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.pResprayCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.sResprayCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.rimColorCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.rimsCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.roofCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.rollcageCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.seatsCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.skirtsCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.spoilerCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.steeringWheelCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.strutCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.speakerCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.tintCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.tireSmokeCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.trimAChekbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.trimBCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.trunkCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.tabControl = new MaterialSkin.Controls.MaterialTabControl();
+            this.installTab = new System.Windows.Forms.TabPage();
+            this.removeTab = new System.Windows.Forms.TabPage();
+            this.removeNeonCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
+            this.clearLogButton = new MaterialSkin.Controls.MaterialButton();
+            this.repairInput = new MaterialSkin.Controls.MaterialTextBox();
+            this.unbilledTextbox = new MaterialSkin.Controls.MaterialTextBox();
+            this.saveLogButton = new MaterialSkin.Controls.MaterialButton();
+            this.deleteLogButton = new MaterialSkin.Controls.MaterialButton();
+            this.updateBillButton = new MaterialSkin.Controls.MaterialButton();
+            this.tabControl.SuspendLayout();
+            this.installTab.SuspendLayout();
+            this.removeTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // treeViewLogs
             // 
-            this.treeViewLogs.Location = new System.Drawing.Point(11, 12);
+            this.treeViewLogs.Location = new System.Drawing.Point(17, 305);
             this.treeViewLogs.Name = "treeViewLogs";
-            this.treeViewLogs.Size = new System.Drawing.Size(269, 631);
+            this.treeViewLogs.Size = new System.Drawing.Size(334, 283);
             this.treeViewLogs.TabIndex = 0;
             // 
-            // customerNameLabel
+            // customerInput
             // 
-            this.customerNameLabel.AutoSize = true;
-            this.customerNameLabel.Location = new System.Drawing.Point(17, 25);
-            this.customerNameLabel.Name = "customerNameLabel";
-            this.customerNameLabel.Size = new System.Drawing.Size(85, 13);
-            this.customerNameLabel.TabIndex = 1;
-            this.customerNameLabel.Text = "Customer Name:";
-            // 
-            // customerNameInput
-            // 
-            this.customerNameInput.Location = new System.Drawing.Point(143, 22);
-            this.customerNameInput.Name = "customerNameInput";
-            this.customerNameInput.Size = new System.Drawing.Size(315, 20);
-            this.customerNameInput.TabIndex = 0;
+            this.customerInput.AnimateReadOnly = false;
+            this.customerInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.customerInput.Depth = 0;
+            this.customerInput.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.customerInput.Hint = "Customer name";
+            this.customerInput.LeadingIcon = null;
+            this.customerInput.Location = new System.Drawing.Point(17, 77);
+            this.customerInput.MaxLength = 50;
+            this.customerInput.MouseState = MaterialSkin.MouseState.OUT;
+            this.customerInput.Multiline = false;
+            this.customerInput.Name = "customerInput";
+            this.customerInput.Size = new System.Drawing.Size(334, 50);
+            this.customerInput.TabIndex = 1;
+            this.customerInput.Tag = "exclude";
+            this.customerInput.Text = "";
+            this.customerInput.TrailingIcon = null;
             // 
             // vehicleInput
             // 
-            this.vehicleInput.Location = new System.Drawing.Point(143, 48);
+            this.vehicleInput.AnimateReadOnly = false;
+            this.vehicleInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.vehicleInput.Depth = 0;
+            this.vehicleInput.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.vehicleInput.Hint = "Vehicle make/model";
+            this.vehicleInput.LeadingIcon = null;
+            this.vehicleInput.Location = new System.Drawing.Point(17, 133);
+            this.vehicleInput.MaxLength = 50;
+            this.vehicleInput.MouseState = MaterialSkin.MouseState.OUT;
+            this.vehicleInput.Multiline = false;
             this.vehicleInput.Name = "vehicleInput";
-            this.vehicleInput.Size = new System.Drawing.Size(315, 20);
+            this.vehicleInput.Size = new System.Drawing.Size(334, 50);
             this.vehicleInput.TabIndex = 1;
+            this.vehicleInput.Tag = "exclude";
+            this.vehicleInput.Text = "";
+            this.vehicleInput.TrailingIcon = null;
             // 
-            // licenseInput
+            // plateInput
             // 
-            this.licenseInput.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.licenseInput.Location = new System.Drawing.Point(143, 74);
-            this.licenseInput.Name = "licenseInput";
-            this.licenseInput.Size = new System.Drawing.Size(315, 20);
-            this.licenseInput.TabIndex = 2;
-            // 
-            // vehicleLabel
-            // 
-            this.vehicleLabel.AutoSize = true;
-            this.vehicleLabel.Location = new System.Drawing.Point(17, 51);
-            this.vehicleLabel.Name = "vehicleLabel";
-            this.vehicleLabel.Size = new System.Drawing.Size(120, 13);
-            this.vehicleLabel.TabIndex = 1;
-            this.vehicleLabel.Text = "Vehicle | [Make/Model]:";
-            // 
-            // licenseLabel
-            // 
-            this.licenseLabel.AutoSize = true;
-            this.licenseLabel.Location = new System.Drawing.Point(17, 77);
-            this.licenseLabel.Name = "licenseLabel";
-            this.licenseLabel.Size = new System.Drawing.Size(74, 13);
-            this.licenseLabel.TabIndex = 1;
-            this.licenseLabel.Text = "License Plate:";
+            this.plateInput.AnimateReadOnly = false;
+            this.plateInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.plateInput.Depth = 0;
+            this.plateInput.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.plateInput.Hint = "License plate";
+            this.plateInput.LeadingIcon = null;
+            this.plateInput.Location = new System.Drawing.Point(17, 189);
+            this.plateInput.MaxLength = 50;
+            this.plateInput.MouseState = MaterialSkin.MouseState.OUT;
+            this.plateInput.Multiline = false;
+            this.plateInput.Name = "plateInput";
+            this.plateInput.Size = new System.Drawing.Size(334, 50);
+            this.plateInput.TabIndex = 1;
+            this.plateInput.Tag = "exclude";
+            this.plateInput.Text = "";
+            this.plateInput.TrailingIcon = null;
             // 
             // employeeCheckbox
             // 
             this.employeeCheckbox.AutoSize = true;
-            this.employeeCheckbox.Location = new System.Drawing.Point(362, 102);
+            this.employeeCheckbox.Depth = 0;
+            this.employeeCheckbox.Location = new System.Drawing.Point(17, 251);
+            this.employeeCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.employeeCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.employeeCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
             this.employeeCheckbox.Name = "employeeCheckbox";
-            this.employeeCheckbox.Size = new System.Drawing.Size(96, 17);
-            this.employeeCheckbox.TabIndex = 3;
+            this.employeeCheckbox.ReadOnly = false;
+            this.employeeCheckbox.Ripple = true;
+            this.employeeCheckbox.Size = new System.Drawing.Size(139, 37);
+            this.employeeCheckbox.TabIndex = 2;
             this.employeeCheckbox.Text = "Employee Sale";
             this.employeeCheckbox.UseVisualStyleBackColor = true;
             // 
-            // armorAmountInput
+            // logdisplayTextBox
             // 
-            this.armorAmountInput.Enabled = false;
-            this.armorAmountInput.Location = new System.Drawing.Point(173, 32);
-            this.armorAmountInput.Name = "armorAmountInput";
-            this.armorAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.armorAmountInput.TabIndex = 1;
+            this.logdisplayTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.logdisplayTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.logdisplayTextBox.Depth = 0;
+            this.logdisplayTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.logdisplayTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.logdisplayTextBox.Location = new System.Drawing.Point(17, 597);
+            this.logdisplayTextBox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.logdisplayTextBox.Name = "logdisplayTextBox";
+            this.logdisplayTextBox.ReadOnly = true;
+            this.logdisplayTextBox.Size = new System.Drawing.Size(334, 229);
+            this.logdisplayTextBox.TabIndex = 3;
+            this.logdisplayTextBox.Tag = "exclude";
+            this.logdisplayTextBox.Text = "";
+            this.logdisplayTextBox.Click += new System.EventHandler(this.CopyToClipboard_Click);
             // 
-            // brakeAmountInput
+            // armorDropwdown
             // 
-            this.brakeAmountInput.Enabled = false;
-            this.brakeAmountInput.Location = new System.Drawing.Point(173, 55);
-            this.brakeAmountInput.Name = "brakeAmountInput";
-            this.brakeAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.brakeAmountInput.TabIndex = 4;
+            this.armorDropwdown.AutoResize = false;
+            this.armorDropwdown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.armorDropwdown.Depth = 0;
+            this.armorDropwdown.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.armorDropwdown.DropDownHeight = 174;
+            this.armorDropwdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.armorDropwdown.DropDownWidth = 121;
+            this.armorDropwdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.armorDropwdown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.armorDropwdown.FormattingEnabled = true;
+            this.armorDropwdown.Hint = "Armor";
+            this.armorDropwdown.IntegralHeight = false;
+            this.armorDropwdown.ItemHeight = 43;
+            this.armorDropwdown.Items.AddRange(new object[] {
+            "",
+            "Armor 2",
+            "Armor 3",
+            "Armor 4",
+            "Armor 5",
+            "Armor 6"});
+            this.armorDropwdown.Location = new System.Drawing.Point(28, 16);
+            this.armorDropwdown.MaxDropDownItems = 4;
+            this.armorDropwdown.MouseState = MaterialSkin.MouseState.OUT;
+            this.armorDropwdown.Name = "armorDropwdown";
+            this.armorDropwdown.Size = new System.Drawing.Size(160, 49);
+            this.armorDropwdown.StartIndex = 0;
+            this.armorDropwdown.TabIndex = 2;
             // 
-            // brakeCheckbox
+            // brakesDropdown
             // 
-            this.brakeCheckbox.AutoSize = true;
-            this.brakeCheckbox.Location = new System.Drawing.Point(19, 56);
-            this.brakeCheckbox.Name = "brakeCheckbox";
-            this.brakeCheckbox.Size = new System.Drawing.Size(59, 17);
-            this.brakeCheckbox.TabIndex = 3;
-            this.brakeCheckbox.Text = "Brakes";
-            this.brakeCheckbox.UseVisualStyleBackColor = true;
+            this.brakesDropdown.AutoResize = false;
+            this.brakesDropdown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.brakesDropdown.Depth = 0;
+            this.brakesDropdown.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.brakesDropdown.DropDownHeight = 174;
+            this.brakesDropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.brakesDropdown.DropDownWidth = 121;
+            this.brakesDropdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.brakesDropdown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.brakesDropdown.FormattingEnabled = true;
+            this.brakesDropdown.Hint = "Brakes";
+            this.brakesDropdown.IntegralHeight = false;
+            this.brakesDropdown.ItemHeight = 43;
+            this.brakesDropdown.Items.AddRange(new object[] {
+            "",
+            "Brakes 2",
+            "Brakes 3",
+            "Brakes 4"});
+            this.brakesDropdown.Location = new System.Drawing.Point(194, 16);
+            this.brakesDropdown.MaxDropDownItems = 4;
+            this.brakesDropdown.MouseState = MaterialSkin.MouseState.OUT;
+            this.brakesDropdown.Name = "brakesDropdown";
+            this.brakesDropdown.Size = new System.Drawing.Size(160, 49);
+            this.brakesDropdown.StartIndex = 0;
+            this.brakesDropdown.TabIndex = 2;
             // 
-            // armorCheckbox
+            // engineDropdown
             // 
-            this.armorCheckbox.AutoSize = true;
-            this.armorCheckbox.Location = new System.Drawing.Point(19, 34);
-            this.armorCheckbox.Name = "armorCheckbox";
-            this.armorCheckbox.Size = new System.Drawing.Size(53, 17);
-            this.armorCheckbox.TabIndex = 0;
-            this.armorCheckbox.Text = "Armor";
-            this.armorCheckbox.UseVisualStyleBackColor = true;
+            this.engineDropdown.AutoResize = false;
+            this.engineDropdown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.engineDropdown.Depth = 0;
+            this.engineDropdown.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.engineDropdown.DropDownHeight = 174;
+            this.engineDropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.engineDropdown.DropDownWidth = 121;
+            this.engineDropdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.engineDropdown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.engineDropdown.FormattingEnabled = true;
+            this.engineDropdown.Hint = "Engine";
+            this.engineDropdown.IntegralHeight = false;
+            this.engineDropdown.ItemHeight = 43;
+            this.engineDropdown.Items.AddRange(new object[] {
+            "",
+            "Engine 2",
+            "Engine 3",
+            "Engine 4",
+            "Engine 5"});
+            this.engineDropdown.Location = new System.Drawing.Point(360, 16);
+            this.engineDropdown.MaxDropDownItems = 4;
+            this.engineDropdown.MouseState = MaterialSkin.MouseState.OUT;
+            this.engineDropdown.Name = "engineDropdown";
+            this.engineDropdown.Size = new System.Drawing.Size(160, 49);
+            this.engineDropdown.StartIndex = 0;
+            this.engineDropdown.TabIndex = 2;
             // 
-            // saveLogBtn
+            // suspensionDropdown
             // 
-            this.saveLogBtn.Location = new System.Drawing.Point(533, 434);
-            this.saveLogBtn.Name = "saveLogBtn";
-            this.saveLogBtn.Size = new System.Drawing.Size(105, 23);
-            this.saveLogBtn.TabIndex = 7;
-            this.saveLogBtn.Text = "Save Log";
-            this.saveLogBtn.UseVisualStyleBackColor = true;
+            this.suspensionDropdown.AutoResize = false;
+            this.suspensionDropdown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.suspensionDropdown.Depth = 0;
+            this.suspensionDropdown.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.suspensionDropdown.DropDownHeight = 174;
+            this.suspensionDropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.suspensionDropdown.DropDownWidth = 121;
+            this.suspensionDropdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.suspensionDropdown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.suspensionDropdown.FormattingEnabled = true;
+            this.suspensionDropdown.Hint = "Suspension";
+            this.suspensionDropdown.IntegralHeight = false;
+            this.suspensionDropdown.ItemHeight = 43;
+            this.suspensionDropdown.Items.AddRange(new object[] {
+            "",
+            "Suspension 2",
+            "Suspension 3",
+            "Suspension 4"});
+            this.suspensionDropdown.Location = new System.Drawing.Point(526, 16);
+            this.suspensionDropdown.MaxDropDownItems = 4;
+            this.suspensionDropdown.MouseState = MaterialSkin.MouseState.OUT;
+            this.suspensionDropdown.Name = "suspensionDropdown";
+            this.suspensionDropdown.Size = new System.Drawing.Size(160, 49);
+            this.suspensionDropdown.StartIndex = 0;
+            this.suspensionDropdown.TabIndex = 2;
             // 
-            // clearLogsBtn
+            // transmissionDropdown
             // 
-            this.clearLogsBtn.Location = new System.Drawing.Point(286, 434);
-            this.clearLogsBtn.Name = "clearLogsBtn";
-            this.clearLogsBtn.Size = new System.Drawing.Size(105, 23);
-            this.clearLogsBtn.TabIndex = 5;
-            this.clearLogsBtn.Text = "Clear All Logs";
-            this.clearLogsBtn.UseVisualStyleBackColor = true;
-            // 
-            // deleteLogBtn
-            // 
-            this.deleteLogBtn.Location = new System.Drawing.Point(654, 434);
-            this.deleteLogBtn.Name = "deleteLogBtn";
-            this.deleteLogBtn.Size = new System.Drawing.Size(105, 23);
-            this.deleteLogBtn.TabIndex = 8;
-            this.deleteLogBtn.Text = "Delete Log";
-            this.deleteLogBtn.UseVisualStyleBackColor = true;
-            // 
-            // resetBtn
-            // 
-            this.resetBtn.Location = new System.Drawing.Point(408, 434);
-            this.resetBtn.Name = "resetBtn";
-            this.resetBtn.Size = new System.Drawing.Size(105, 23);
-            this.resetBtn.TabIndex = 6;
-            this.resetBtn.Text = "New Log";
-            this.resetBtn.UseVisualStyleBackColor = true;
-            // 
-            // engineAmountInput
-            // 
-            this.engineAmountInput.Enabled = false;
-            this.engineAmountInput.Location = new System.Drawing.Point(173, 77);
-            this.engineAmountInput.Name = "engineAmountInput";
-            this.engineAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.engineAmountInput.TabIndex = 7;
-            // 
-            // engineCheckbox
-            // 
-            this.engineCheckbox.AutoSize = true;
-            this.engineCheckbox.Location = new System.Drawing.Point(19, 78);
-            this.engineCheckbox.Name = "engineCheckbox";
-            this.engineCheckbox.Size = new System.Drawing.Size(59, 17);
-            this.engineCheckbox.TabIndex = 6;
-            this.engineCheckbox.Text = "Engine";
-            this.engineCheckbox.UseVisualStyleBackColor = true;
-            // 
-            // suspensionAmountInput
-            // 
-            this.suspensionAmountInput.Enabled = false;
-            this.suspensionAmountInput.Location = new System.Drawing.Point(173, 99);
-            this.suspensionAmountInput.Name = "suspensionAmountInput";
-            this.suspensionAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.suspensionAmountInput.TabIndex = 10;
-            // 
-            // transmissionAmountInput
-            // 
-            this.transmissionAmountInput.Enabled = false;
-            this.transmissionAmountInput.Location = new System.Drawing.Point(173, 122);
-            this.transmissionAmountInput.Name = "transmissionAmountInput";
-            this.transmissionAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.transmissionAmountInput.TabIndex = 13;
-            // 
-            // turboAmountInput
-            // 
-            this.turboAmountInput.Enabled = false;
-            this.turboAmountInput.Location = new System.Drawing.Point(173, 144);
-            this.turboAmountInput.Name = "turboAmountInput";
-            this.turboAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.turboAmountInput.TabIndex = 16;
-            // 
-            // suspensionCheckbox
-            // 
-            this.suspensionCheckbox.AutoSize = true;
-            this.suspensionCheckbox.Location = new System.Drawing.Point(19, 100);
-            this.suspensionCheckbox.Name = "suspensionCheckbox";
-            this.suspensionCheckbox.Size = new System.Drawing.Size(81, 17);
-            this.suspensionCheckbox.TabIndex = 9;
-            this.suspensionCheckbox.Text = "Suspension";
-            this.suspensionCheckbox.UseVisualStyleBackColor = true;
-            // 
-            // transmissionCheckbox
-            // 
-            this.transmissionCheckbox.AutoSize = true;
-            this.transmissionCheckbox.Location = new System.Drawing.Point(19, 123);
-            this.transmissionCheckbox.Name = "transmissionCheckbox";
-            this.transmissionCheckbox.Size = new System.Drawing.Size(87, 17);
-            this.transmissionCheckbox.TabIndex = 12;
-            this.transmissionCheckbox.Text = "Transmission";
-            this.transmissionCheckbox.UseVisualStyleBackColor = true;
+            this.transmissionDropdown.AutoResize = false;
+            this.transmissionDropdown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.transmissionDropdown.Depth = 0;
+            this.transmissionDropdown.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.transmissionDropdown.DropDownHeight = 174;
+            this.transmissionDropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.transmissionDropdown.DropDownWidth = 121;
+            this.transmissionDropdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.transmissionDropdown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.transmissionDropdown.FormattingEnabled = true;
+            this.transmissionDropdown.Hint = "Transmission";
+            this.transmissionDropdown.IntegralHeight = false;
+            this.transmissionDropdown.ItemHeight = 43;
+            this.transmissionDropdown.Items.AddRange(new object[] {
+            "",
+            "Transmission 2",
+            "Transmission 3",
+            "Transmission 4"});
+            this.transmissionDropdown.Location = new System.Drawing.Point(692, 16);
+            this.transmissionDropdown.MaxDropDownItems = 4;
+            this.transmissionDropdown.MouseState = MaterialSkin.MouseState.OUT;
+            this.transmissionDropdown.Name = "transmissionDropdown";
+            this.transmissionDropdown.Size = new System.Drawing.Size(160, 49);
+            this.transmissionDropdown.StartIndex = 0;
+            this.transmissionDropdown.TabIndex = 2;
             // 
             // turboCheckbox
             // 
             this.turboCheckbox.AutoSize = true;
-            this.turboCheckbox.Location = new System.Drawing.Point(19, 145);
+            this.turboCheckbox.Depth = 0;
+            this.turboCheckbox.Location = new System.Drawing.Point(860, 22);
+            this.turboCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.turboCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.turboCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
             this.turboCheckbox.Name = "turboCheckbox";
-            this.turboCheckbox.Size = new System.Drawing.Size(54, 17);
-            this.turboCheckbox.TabIndex = 15;
+            this.turboCheckbox.ReadOnly = false;
+            this.turboCheckbox.Ripple = true;
+            this.turboCheckbox.Size = new System.Drawing.Size(77, 37);
+            this.turboCheckbox.TabIndex = 3;
             this.turboCheckbox.Text = "Turbo";
             this.turboCheckbox.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // archCoverCheckbox
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(153, 21);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(13, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "$";
+            this.archCoverCheckbox.AutoSize = true;
+            this.archCoverCheckbox.Depth = 0;
+            this.archCoverCheckbox.Location = new System.Drawing.Point(28, 78);
+            this.archCoverCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.archCoverCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.archCoverCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.archCoverCheckbox.Name = "archCoverCheckbox";
+            this.archCoverCheckbox.ReadOnly = false;
+            this.archCoverCheckbox.Ripple = true;
+            this.archCoverCheckbox.Size = new System.Drawing.Size(111, 37);
+            this.archCoverCheckbox.TabIndex = 4;
+            this.archCoverCheckbox.Text = "Arch Cover";
+            this.archCoverCheckbox.UseVisualStyleBackColor = true;
             // 
-            // dialAmountInput
+            // aerialCheckbox
             // 
-            this.dialAmountInput.Enabled = false;
-            this.dialAmountInput.Location = new System.Drawing.Point(169, 19);
-            this.dialAmountInput.Name = "dialAmountInput";
-            this.dialAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.dialAmountInput.TabIndex = 1;
+            this.aerialCheckbox.AutoSize = true;
+            this.aerialCheckbox.Depth = 0;
+            this.aerialCheckbox.Location = new System.Drawing.Point(28, 115);
+            this.aerialCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.aerialCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.aerialCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.aerialCheckbox.Name = "aerialCheckbox";
+            this.aerialCheckbox.ReadOnly = false;
+            this.aerialCheckbox.Ripple = true;
+            this.aerialCheckbox.Size = new System.Drawing.Size(75, 37);
+            this.aerialCheckbox.TabIndex = 4;
+            this.aerialCheckbox.Text = "Aerial";
+            this.aerialCheckbox.UseVisualStyleBackColor = true;
             // 
-            // hornAmountInput
+            // customTiresCheckbox
             // 
-            this.hornAmountInput.Enabled = false;
-            this.hornAmountInput.Location = new System.Drawing.Point(169, 131);
-            this.hornAmountInput.Name = "hornAmountInput";
-            this.hornAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.hornAmountInput.TabIndex = 16;
+            this.customTiresCheckbox.AutoSize = true;
+            this.customTiresCheckbox.Depth = 0;
+            this.customTiresCheckbox.Location = new System.Drawing.Point(28, 152);
+            this.customTiresCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.customTiresCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.customTiresCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.customTiresCheckbox.Name = "customTiresCheckbox";
+            this.customTiresCheckbox.ReadOnly = false;
+            this.customTiresCheckbox.Ripple = true;
+            this.customTiresCheckbox.Size = new System.Drawing.Size(129, 37);
+            this.customTiresCheckbox.TabIndex = 4;
+            this.customTiresCheckbox.Text = "Custom Tires";
+            this.customTiresCheckbox.UseVisualStyleBackColor = true;
             // 
-            // hoodAmountInput
+            // dResprayCheckbox
             // 
-            this.hoodAmountInput.Enabled = false;
-            this.hoodAmountInput.Location = new System.Drawing.Point(169, 109);
-            this.hoodAmountInput.Name = "hoodAmountInput";
-            this.hoodAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.hoodAmountInput.TabIndex = 13;
-            // 
-            // frontBumperAmountInput
-            // 
-            this.frontBumperAmountInput.Enabled = false;
-            this.frontBumperAmountInput.Location = new System.Drawing.Point(169, 86);
-            this.frontBumperAmountInput.Name = "frontBumperAmountInput";
-            this.frontBumperAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.frontBumperAmountInput.TabIndex = 10;
-            // 
-            // exhaustAmountInput
-            // 
-            this.exhaustAmountInput.Enabled = false;
-            this.exhaustAmountInput.Location = new System.Drawing.Point(169, 64);
-            this.exhaustAmountInput.Name = "exhaustAmountInput";
-            this.exhaustAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.exhaustAmountInput.TabIndex = 7;
-            // 
-            // engineBlockAmountInput
-            // 
-            this.engineBlockAmountInput.Enabled = false;
-            this.engineBlockAmountInput.Location = new System.Drawing.Point(169, 42);
-            this.engineBlockAmountInput.Name = "engineBlockAmountInput";
-            this.engineBlockAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.engineBlockAmountInput.TabIndex = 4;
-            // 
-            // hornCheckbox
-            // 
-            this.hornCheckbox.AutoSize = true;
-            this.hornCheckbox.Location = new System.Drawing.Point(14, 132);
-            this.hornCheckbox.Name = "hornCheckbox";
-            this.hornCheckbox.Size = new System.Drawing.Size(49, 17);
-            this.hornCheckbox.TabIndex = 15;
-            this.hornCheckbox.Text = "Horn";
-            this.hornCheckbox.UseVisualStyleBackColor = true;
-            // 
-            // hoodCheckbox
-            // 
-            this.hoodCheckbox.AutoSize = true;
-            this.hoodCheckbox.Location = new System.Drawing.Point(14, 110);
-            this.hoodCheckbox.Name = "hoodCheckbox";
-            this.hoodCheckbox.Size = new System.Drawing.Size(52, 17);
-            this.hoodCheckbox.TabIndex = 12;
-            this.hoodCheckbox.Text = "Hood";
-            this.hoodCheckbox.UseVisualStyleBackColor = true;
-            // 
-            // frontBumperCheckbox
-            // 
-            this.frontBumperCheckbox.AutoSize = true;
-            this.frontBumperCheckbox.Location = new System.Drawing.Point(14, 87);
-            this.frontBumperCheckbox.Name = "frontBumperCheckbox";
-            this.frontBumperCheckbox.Size = new System.Drawing.Size(89, 17);
-            this.frontBumperCheckbox.TabIndex = 9;
-            this.frontBumperCheckbox.Text = "Front Bumper";
-            this.frontBumperCheckbox.UseVisualStyleBackColor = true;
-            // 
-            // exhaustCheckbox
-            // 
-            this.exhaustCheckbox.AutoSize = true;
-            this.exhaustCheckbox.Location = new System.Drawing.Point(14, 65);
-            this.exhaustCheckbox.Name = "exhaustCheckbox";
-            this.exhaustCheckbox.Size = new System.Drawing.Size(64, 17);
-            this.exhaustCheckbox.TabIndex = 6;
-            this.exhaustCheckbox.Text = "Exhaust";
-            this.exhaustCheckbox.UseVisualStyleBackColor = true;
-            // 
-            // engineBlockCheckbox
-            // 
-            this.engineBlockCheckbox.AutoSize = true;
-            this.engineBlockCheckbox.Location = new System.Drawing.Point(14, 43);
-            this.engineBlockCheckbox.Name = "engineBlockCheckbox";
-            this.engineBlockCheckbox.Size = new System.Drawing.Size(89, 17);
-            this.engineBlockCheckbox.TabIndex = 3;
-            this.engineBlockCheckbox.Text = "Engine Block";
-            this.engineBlockCheckbox.UseVisualStyleBackColor = true;
+            this.dResprayCheckbox.AutoSize = true;
+            this.dResprayCheckbox.Depth = 0;
+            this.dResprayCheckbox.Location = new System.Drawing.Point(326, 226);
+            this.dResprayCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.dResprayCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.dResprayCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.dResprayCheckbox.Name = "dResprayCheckbox";
+            this.dResprayCheckbox.ReadOnly = false;
+            this.dResprayCheckbox.Ripple = true;
+            this.dResprayCheckbox.Size = new System.Drawing.Size(174, 37);
+            this.dResprayCheckbox.TabIndex = 4;
+            this.dResprayCheckbox.Text = "Respray Dashboard";
+            this.dResprayCheckbox.UseVisualStyleBackColor = true;
             // 
             // dialCheckbox
             // 
             this.dialCheckbox.AutoSize = true;
-            this.dialCheckbox.Location = new System.Drawing.Point(14, 21);
+            this.dialCheckbox.Depth = 0;
+            this.dialCheckbox.Location = new System.Drawing.Point(28, 189);
+            this.dialCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.dialCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.dialCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
             this.dialCheckbox.Name = "dialCheckbox";
-            this.dialCheckbox.Size = new System.Drawing.Size(44, 17);
-            this.dialCheckbox.TabIndex = 0;
+            this.dialCheckbox.ReadOnly = false;
+            this.dialCheckbox.Ripple = true;
+            this.dialCheckbox.Size = new System.Drawing.Size(63, 37);
+            this.dialCheckbox.TabIndex = 4;
             this.dialCheckbox.Text = "Dial";
             this.dialCheckbox.UseVisualStyleBackColor = true;
             // 
-            // customerGroup
-            // 
-            this.customerGroup.Controls.Add(this.employeeCheckbox);
-            this.customerGroup.Controls.Add(this.vehicleLabel);
-            this.customerGroup.Controls.Add(this.shopInput);
-            this.customerGroup.Controls.Add(this.licenseInput);
-            this.customerGroup.Controls.Add(this.customerNameLabel);
-            this.customerGroup.Controls.Add(this.vehicleInput);
-            this.customerGroup.Controls.Add(this.shopLabel);
-            this.customerGroup.Controls.Add(this.licenseLabel);
-            this.customerGroup.Controls.Add(this.customerNameInput);
-            this.customerGroup.Location = new System.Drawing.Point(286, 12);
-            this.customerGroup.Name = "customerGroup";
-            this.customerGroup.Size = new System.Drawing.Size(473, 134);
-            this.customerGroup.TabIndex = 1;
-            this.customerGroup.TabStop = false;
-            this.customerGroup.Text = "Customer Info";
-            // 
-            // shopInput
-            // 
-            this.shopInput.Location = new System.Drawing.Point(143, 100);
-            this.shopInput.Name = "shopInput";
-            this.shopInput.Size = new System.Drawing.Size(209, 20);
-            this.shopInput.TabIndex = 3;
-            this.shopInput.Text = "Hayes";
-            // 
-            // shopLabel
-            // 
-            this.shopLabel.AutoSize = true;
-            this.shopLabel.Location = new System.Drawing.Point(17, 103);
-            this.shopLabel.Name = "shopLabel";
-            this.shopLabel.Size = new System.Drawing.Size(35, 13);
-            this.shopLabel.TabIndex = 1;
-            this.shopLabel.Text = "Shop:";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label33);
-            this.groupBox2.Controls.Add(this.label31);
-            this.groupBox2.Controls.Add(this.label25);
-            this.groupBox2.Controls.Add(this.label20);
-            this.groupBox2.Controls.Add(this.label19);
-            this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.label24);
-            this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.label18);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.resprayInteriorTypeInput);
-            this.groupBox2.Controls.Add(this.rearBumperTypeInput);
-            this.groupBox2.Controls.Add(this.resprayInteriorAmountInput);
-            this.groupBox2.Controls.Add(this.rearBumperAmountInput);
-            this.groupBox2.Controls.Add(this.resprayPearlCheckbox);
-            this.groupBox2.Controls.Add(this.label34);
-            this.groupBox2.Controls.Add(this.label23);
-            this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.label17);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label22);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label21);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.sideSkirtTypeInput);
-            this.groupBox2.Controls.Add(this.sideSkirtAmountInput);
-            this.groupBox2.Controls.Add(this.leftFenderTypeInput);
-            this.groupBox2.Controls.Add(this.leftFenderAmountInput);
-            this.groupBox2.Controls.Add(this.removeNeonTypeInput);
-            this.groupBox2.Controls.Add(this.repairTypeInput);
-            this.groupBox2.Controls.Add(this.removeNeonAmountInput);
-            this.groupBox2.Controls.Add(this.tireSmokeTypeInput);
-            this.groupBox2.Controls.Add(this.repairAmountInput);
-            this.groupBox2.Controls.Add(this.tireSmokeAmountInput);
-            this.groupBox2.Controls.Add(this.resprayPrimaryTypeInput);
-            this.groupBox2.Controls.Add(this.dialTypeInput);
-            this.groupBox2.Controls.Add(this.resprayPrimaryAmountInput);
-            this.groupBox2.Controls.Add(this.tintTypeInput);
-            this.groupBox2.Controls.Add(this.dialAmountInput);
-            this.groupBox2.Controls.Add(this.resprayPearlTypeInput);
-            this.groupBox2.Controls.Add(this.tintAmountInput);
-            this.groupBox2.Controls.Add(this.seatsTypeInput);
-            this.groupBox2.Controls.Add(this.resprayPearlAmountInput);
-            this.groupBox2.Controls.Add(this.hornTypeInput);
-            this.groupBox2.Controls.Add(this.seatsAmountInput);
-            this.groupBox2.Controls.Add(this.strutTypeInput);
-            this.groupBox2.Controls.Add(this.hornAmountInput);
-            this.groupBox2.Controls.Add(this.plateTypeInput);
-            this.groupBox2.Controls.Add(this.strutAmountInput);
-            this.groupBox2.Controls.Add(this.roofTypeInput);
-            this.groupBox2.Controls.Add(this.plateAmountInput);
-            this.groupBox2.Controls.Add(this.hoodTypeInput);
-            this.groupBox2.Controls.Add(this.roofAmountInput);
-            this.groupBox2.Controls.Add(this.steeringWheelTypeInput);
-            this.groupBox2.Controls.Add(this.hoodAmountInput);
-            this.groupBox2.Controls.Add(this.ornamentsTypeInput);
-            this.groupBox2.Controls.Add(this.steeringWheelAmountInput);
-            this.groupBox2.Controls.Add(this.rimsTypeInput);
-            this.groupBox2.Controls.Add(this.ornamentsAmountInput);
-            this.groupBox2.Controls.Add(this.frontBumperTypeInput);
-            this.groupBox2.Controls.Add(this.rimsAmountInput);
-            this.groupBox2.Controls.Add(this.spoilerTypeInput);
-            this.groupBox2.Controls.Add(this.frontBumperAmountInput);
-            this.groupBox2.Controls.Add(this.liveryTypeInput);
-            this.groupBox2.Controls.Add(this.spoilerAmountInput);
-            this.groupBox2.Controls.Add(this.rimColorTypeInput);
-            this.groupBox2.Controls.Add(this.liveryAmountInput);
-            this.groupBox2.Controls.Add(this.exhaustTypeInput);
-            this.groupBox2.Controls.Add(this.rimColorAmountInput);
-            this.groupBox2.Controls.Add(this.respraySecondaryTypeInput);
-            this.groupBox2.Controls.Add(this.exhaustAmountInput);
-            this.groupBox2.Controls.Add(this.engineBlockTypeInput);
-            this.groupBox2.Controls.Add(this.respraySecondaryAmountInput);
-            this.groupBox2.Controls.Add(this.engineBlockAmountInput);
-            this.groupBox2.Controls.Add(this.removeNeonCheckbox);
-            this.groupBox2.Controls.Add(this.repairCheckbox);
-            this.groupBox2.Controls.Add(this.resprayInteriorCheckbox);
-            this.groupBox2.Controls.Add(this.tireSmokeCheckbox);
-            this.groupBox2.Controls.Add(this.rearBumperCheckbox);
-            this.groupBox2.Controls.Add(this.seatsCheckbox);
-            this.groupBox2.Controls.Add(this.hornCheckbox);
-            this.groupBox2.Controls.Add(this.tintCheckbox);
-            this.groupBox2.Controls.Add(this.roofCheckbox);
-            this.groupBox2.Controls.Add(this.hoodCheckbox);
-            this.groupBox2.Controls.Add(this.strutCheckbox);
-            this.groupBox2.Controls.Add(this.plateCheckbox);
-            this.groupBox2.Controls.Add(this.rimsCheckbox);
-            this.groupBox2.Controls.Add(this.frontBumperCheckbox);
-            this.groupBox2.Controls.Add(this.steeringWheelCheckbox);
-            this.groupBox2.Controls.Add(this.ornamentsCheckbox);
-            this.groupBox2.Controls.Add(this.rimColorCheckbox);
-            this.groupBox2.Controls.Add(this.exhaustCheckbox);
-            this.groupBox2.Controls.Add(this.spoilerCheckbox);
-            this.groupBox2.Controls.Add(this.liveryCheckbox);
-            this.groupBox2.Controls.Add(this.respraySecondaryCheckbox);
-            this.groupBox2.Controls.Add(this.sideSkirtCheckbox);
-            this.groupBox2.Controls.Add(this.engineBlockCheckbox);
-            this.groupBox2.Controls.Add(this.leftFenderCheckbox);
-            this.groupBox2.Controls.Add(this.resprayPrimaryCheckbox);
-            this.groupBox2.Controls.Add(this.dialCheckbox);
-            this.groupBox2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.groupBox2.Location = new System.Drawing.Point(765, 12);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(474, 631);
-            this.groupBox2.TabIndex = 3;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Cosmetic Upgrades";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(151, 604);
-            this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(13, 13);
-            this.label33.TabIndex = 4;
-            this.label33.Text = "$";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(151, 581);
-            this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(13, 13);
-            this.label31.TabIndex = 4;
-            this.label31.Text = "$";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(153, 559);
-            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(13, 13);
-            this.label25.TabIndex = 4;
-            this.label25.Text = "$";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(153, 447);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(13, 13);
-            this.label20.TabIndex = 4;
-            this.label20.Text = "$";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(153, 424);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(13, 13);
-            this.label19.TabIndex = 4;
-            this.label19.Text = "$";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(153, 312);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(13, 13);
-            this.label14.TabIndex = 4;
-            this.label14.Text = "$";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(153, 537);
-            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(13, 13);
-            this.label24.TabIndex = 4;
-            this.label24.Text = "$";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(153, 291);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(13, 13);
-            this.label13.TabIndex = 4;
-            this.label13.Text = "$";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(153, 402);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(13, 13);
-            this.label18.TabIndex = 4;
-            this.label18.Text = "$";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(153, 155);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(13, 13);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "$";
-            // 
-            // resprayInteriorTypeInput
-            // 
-            this.resprayInteriorTypeInput.Enabled = false;
-            this.resprayInteriorTypeInput.Location = new System.Drawing.Point(261, 263);
-            this.resprayInteriorTypeInput.Name = "resprayInteriorTypeInput";
-            this.resprayInteriorTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.resprayInteriorTypeInput.TabIndex = 35;
-            // 
-            // rearBumperTypeInput
-            // 
-            this.rearBumperTypeInput.Enabled = false;
-            this.rearBumperTypeInput.Location = new System.Drawing.Point(261, 241);
-            this.rearBumperTypeInput.Name = "rearBumperTypeInput";
-            this.rearBumperTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.rearBumperTypeInput.TabIndex = 32;
-            // 
-            // resprayInteriorAmountInput
-            // 
-            this.resprayInteriorAmountInput.Enabled = false;
-            this.resprayInteriorAmountInput.Location = new System.Drawing.Point(169, 263);
-            this.resprayInteriorAmountInput.Name = "resprayInteriorAmountInput";
-            this.resprayInteriorAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.resprayInteriorAmountInput.TabIndex = 34;
-            // 
-            // rearBumperAmountInput
-            // 
-            this.rearBumperAmountInput.Enabled = false;
-            this.rearBumperAmountInput.Location = new System.Drawing.Point(169, 241);
-            this.rearBumperAmountInput.Name = "rearBumperAmountInput";
-            this.rearBumperAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.rearBumperAmountInput.TabIndex = 31;
-            // 
-            // resprayPearlCheckbox
-            // 
-            this.resprayPearlCheckbox.AutoSize = true;
-            this.resprayPearlCheckbox.Location = new System.Drawing.Point(14, 288);
-            this.resprayPearlCheckbox.Name = "resprayPearlCheckbox";
-            this.resprayPearlCheckbox.Size = new System.Drawing.Size(92, 17);
-            this.resprayPearlCheckbox.TabIndex = 36;
-            this.resprayPearlCheckbox.Text = "Respray Pearl";
-            this.resprayPearlCheckbox.UseVisualStyleBackColor = true;
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(153, 268);
-            this.label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(13, 13);
-            this.label34.TabIndex = 4;
-            this.label34.Text = "$";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(153, 514);
-            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(13, 13);
-            this.label23.TabIndex = 4;
-            this.label23.Text = "$";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(153, 246);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(13, 13);
-            this.label12.TabIndex = 4;
-            this.label12.Text = "$";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(153, 379);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(13, 13);
-            this.label17.TabIndex = 4;
-            this.label17.Text = "$";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(153, 134);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(13, 13);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "$";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(153, 492);
-            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(13, 13);
-            this.label22.TabIndex = 4;
-            this.label22.Text = "$";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(153, 223);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(13, 13);
-            this.label11.TabIndex = 4;
-            this.label11.Text = "$";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(153, 357);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(13, 13);
-            this.label16.TabIndex = 4;
-            this.label16.Text = "$";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(153, 112);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(13, 13);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "$";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(153, 470);
-            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(13, 13);
-            this.label21.TabIndex = 4;
-            this.label21.Text = "$";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(153, 201);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(13, 13);
-            this.label10.TabIndex = 4;
-            this.label10.Text = "$";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(153, 335);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(13, 13);
-            this.label15.TabIndex = 4;
-            this.label15.Text = "$";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(153, 89);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(13, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "$";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(153, 179);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(13, 13);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "$";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(153, 67);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(13, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "$";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(153, 45);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(13, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "$";
-            // 
-            // sideSkirtTypeInput
-            // 
-            this.sideSkirtTypeInput.Enabled = false;
-            this.sideSkirtTypeInput.Location = new System.Drawing.Point(261, 443);
-            this.sideSkirtTypeInput.Name = "sideSkirtTypeInput";
-            this.sideSkirtTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.sideSkirtTypeInput.TabIndex = 59;
-            // 
-            // sideSkirtAmountInput
-            // 
-            this.sideSkirtAmountInput.Enabled = false;
-            this.sideSkirtAmountInput.Location = new System.Drawing.Point(169, 443);
-            this.sideSkirtAmountInput.Name = "sideSkirtAmountInput";
-            this.sideSkirtAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.sideSkirtAmountInput.TabIndex = 58;
-            // 
-            // leftFenderTypeInput
-            // 
-            this.leftFenderTypeInput.Enabled = false;
-            this.leftFenderTypeInput.Location = new System.Drawing.Point(261, 151);
-            this.leftFenderTypeInput.Name = "leftFenderTypeInput";
-            this.leftFenderTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.leftFenderTypeInput.TabIndex = 20;
-            // 
-            // leftFenderAmountInput
-            // 
-            this.leftFenderAmountInput.Enabled = false;
-            this.leftFenderAmountInput.Location = new System.Drawing.Point(169, 152);
-            this.leftFenderAmountInput.Name = "leftFenderAmountInput";
-            this.leftFenderAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.leftFenderAmountInput.TabIndex = 19;
-            // 
-            // removeNeonTypeInput
-            // 
-            this.removeNeonTypeInput.Enabled = false;
-            this.removeNeonTypeInput.Location = new System.Drawing.Point(261, 600);
-            this.removeNeonTypeInput.Name = "removeNeonTypeInput";
-            this.removeNeonTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.removeNeonTypeInput.TabIndex = 80;
-            // 
-            // repairTypeInput
-            // 
-            this.repairTypeInput.Enabled = false;
-            this.repairTypeInput.Location = new System.Drawing.Point(261, 577);
-            this.repairTypeInput.Name = "repairTypeInput";
-            this.repairTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.repairTypeInput.TabIndex = 77;
-            // 
-            // removeNeonAmountInput
-            // 
-            this.removeNeonAmountInput.Enabled = false;
-            this.removeNeonAmountInput.Location = new System.Drawing.Point(169, 600);
-            this.removeNeonAmountInput.Name = "removeNeonAmountInput";
-            this.removeNeonAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.removeNeonAmountInput.TabIndex = 79;
-            // 
-            // tireSmokeTypeInput
-            // 
-            this.tireSmokeTypeInput.Enabled = false;
-            this.tireSmokeTypeInput.Location = new System.Drawing.Point(261, 555);
-            this.tireSmokeTypeInput.Name = "tireSmokeTypeInput";
-            this.tireSmokeTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.tireSmokeTypeInput.TabIndex = 74;
-            // 
-            // repairAmountInput
-            // 
-            this.repairAmountInput.Enabled = false;
-            this.repairAmountInput.Location = new System.Drawing.Point(169, 577);
-            this.repairAmountInput.Name = "repairAmountInput";
-            this.repairAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.repairAmountInput.TabIndex = 76;
-            // 
-            // tireSmokeAmountInput
-            // 
-            this.tireSmokeAmountInput.Enabled = false;
-            this.tireSmokeAmountInput.Location = new System.Drawing.Point(169, 555);
-            this.tireSmokeAmountInput.Name = "tireSmokeAmountInput";
-            this.tireSmokeAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.tireSmokeAmountInput.TabIndex = 73;
-            // 
-            // resprayPrimaryTypeInput
-            // 
-            this.resprayPrimaryTypeInput.Enabled = false;
-            this.resprayPrimaryTypeInput.Location = new System.Drawing.Point(261, 308);
-            this.resprayPrimaryTypeInput.Name = "resprayPrimaryTypeInput";
-            this.resprayPrimaryTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.resprayPrimaryTypeInput.TabIndex = 41;
-            // 
-            // dialTypeInput
-            // 
-            this.dialTypeInput.Enabled = false;
-            this.dialTypeInput.Location = new System.Drawing.Point(261, 18);
-            this.dialTypeInput.Name = "dialTypeInput";
-            this.dialTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.dialTypeInput.TabIndex = 2;
-            // 
-            // resprayPrimaryAmountInput
-            // 
-            this.resprayPrimaryAmountInput.Enabled = false;
-            this.resprayPrimaryAmountInput.Location = new System.Drawing.Point(169, 309);
-            this.resprayPrimaryAmountInput.Name = "resprayPrimaryAmountInput";
-            this.resprayPrimaryAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.resprayPrimaryAmountInput.TabIndex = 40;
-            // 
-            // tintTypeInput
-            // 
-            this.tintTypeInput.Enabled = false;
-            this.tintTypeInput.Location = new System.Drawing.Point(261, 533);
-            this.tintTypeInput.Name = "tintTypeInput";
-            this.tintTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.tintTypeInput.TabIndex = 71;
-            // 
-            // resprayPearlTypeInput
-            // 
-            this.resprayPearlTypeInput.Enabled = false;
-            this.resprayPearlTypeInput.Location = new System.Drawing.Point(261, 286);
-            this.resprayPearlTypeInput.Name = "resprayPearlTypeInput";
-            this.resprayPearlTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.resprayPearlTypeInput.TabIndex = 38;
-            // 
-            // tintAmountInput
-            // 
-            this.tintAmountInput.Enabled = false;
-            this.tintAmountInput.Location = new System.Drawing.Point(169, 533);
-            this.tintAmountInput.Name = "tintAmountInput";
-            this.tintAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.tintAmountInput.TabIndex = 70;
-            // 
-            // seatsTypeInput
-            // 
-            this.seatsTypeInput.Enabled = false;
-            this.seatsTypeInput.Location = new System.Drawing.Point(261, 420);
-            this.seatsTypeInput.Name = "seatsTypeInput";
-            this.seatsTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.seatsTypeInput.TabIndex = 56;
-            // 
-            // resprayPearlAmountInput
-            // 
-            this.resprayPearlAmountInput.Enabled = false;
-            this.resprayPearlAmountInput.Location = new System.Drawing.Point(169, 286);
-            this.resprayPearlAmountInput.Name = "resprayPearlAmountInput";
-            this.resprayPearlAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.resprayPearlAmountInput.TabIndex = 37;
-            // 
-            // hornTypeInput
-            // 
-            this.hornTypeInput.Enabled = false;
-            this.hornTypeInput.Location = new System.Drawing.Point(261, 130);
-            this.hornTypeInput.Name = "hornTypeInput";
-            this.hornTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.hornTypeInput.TabIndex = 17;
-            // 
-            // seatsAmountInput
-            // 
-            this.seatsAmountInput.Enabled = false;
-            this.seatsAmountInput.Location = new System.Drawing.Point(169, 420);
-            this.seatsAmountInput.Name = "seatsAmountInput";
-            this.seatsAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.seatsAmountInput.TabIndex = 55;
-            // 
-            // strutTypeInput
-            // 
-            this.strutTypeInput.Enabled = false;
-            this.strutTypeInput.Location = new System.Drawing.Point(261, 510);
-            this.strutTypeInput.Name = "strutTypeInput";
-            this.strutTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.strutTypeInput.TabIndex = 68;
-            // 
-            // plateTypeInput
-            // 
-            this.plateTypeInput.Enabled = false;
-            this.plateTypeInput.Location = new System.Drawing.Point(261, 218);
-            this.plateTypeInput.Name = "plateTypeInput";
-            this.plateTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.plateTypeInput.TabIndex = 29;
-            // 
-            // strutAmountInput
-            // 
-            this.strutAmountInput.Enabled = false;
-            this.strutAmountInput.Location = new System.Drawing.Point(169, 510);
-            this.strutAmountInput.Name = "strutAmountInput";
-            this.strutAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.strutAmountInput.TabIndex = 67;
-            // 
-            // roofTypeInput
-            // 
-            this.roofTypeInput.Enabled = false;
-            this.roofTypeInput.Location = new System.Drawing.Point(261, 398);
-            this.roofTypeInput.Name = "roofTypeInput";
-            this.roofTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.roofTypeInput.TabIndex = 53;
-            // 
-            // plateAmountInput
-            // 
-            this.plateAmountInput.Enabled = false;
-            this.plateAmountInput.Location = new System.Drawing.Point(169, 219);
-            this.plateAmountInput.Name = "plateAmountInput";
-            this.plateAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.plateAmountInput.TabIndex = 28;
-            // 
-            // hoodTypeInput
-            // 
-            this.hoodTypeInput.Enabled = false;
-            this.hoodTypeInput.Location = new System.Drawing.Point(261, 108);
-            this.hoodTypeInput.Name = "hoodTypeInput";
-            this.hoodTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.hoodTypeInput.TabIndex = 14;
-            // 
-            // roofAmountInput
-            // 
-            this.roofAmountInput.Enabled = false;
-            this.roofAmountInput.Location = new System.Drawing.Point(169, 398);
-            this.roofAmountInput.Name = "roofAmountInput";
-            this.roofAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.roofAmountInput.TabIndex = 52;
-            // 
-            // steeringWheelTypeInput
-            // 
-            this.steeringWheelTypeInput.Enabled = false;
-            this.steeringWheelTypeInput.Location = new System.Drawing.Point(261, 488);
-            this.steeringWheelTypeInput.Name = "steeringWheelTypeInput";
-            this.steeringWheelTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.steeringWheelTypeInput.TabIndex = 65;
-            // 
-            // ornamentsTypeInput
-            // 
-            this.ornamentsTypeInput.Enabled = false;
-            this.ornamentsTypeInput.Location = new System.Drawing.Point(261, 196);
-            this.ornamentsTypeInput.Name = "ornamentsTypeInput";
-            this.ornamentsTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.ornamentsTypeInput.TabIndex = 26;
-            // 
-            // steeringWheelAmountInput
-            // 
-            this.steeringWheelAmountInput.Enabled = false;
-            this.steeringWheelAmountInput.Location = new System.Drawing.Point(169, 488);
-            this.steeringWheelAmountInput.Name = "steeringWheelAmountInput";
-            this.steeringWheelAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.steeringWheelAmountInput.TabIndex = 64;
-            // 
-            // rimsTypeInput
-            // 
-            this.rimsTypeInput.Enabled = false;
-            this.rimsTypeInput.Location = new System.Drawing.Point(261, 375);
-            this.rimsTypeInput.Name = "rimsTypeInput";
-            this.rimsTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.rimsTypeInput.TabIndex = 50;
-            // 
-            // ornamentsAmountInput
-            // 
-            this.ornamentsAmountInput.Enabled = false;
-            this.ornamentsAmountInput.Location = new System.Drawing.Point(169, 197);
-            this.ornamentsAmountInput.Name = "ornamentsAmountInput";
-            this.ornamentsAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.ornamentsAmountInput.TabIndex = 25;
-            // 
-            // frontBumperTypeInput
-            // 
-            this.frontBumperTypeInput.Enabled = false;
-            this.frontBumperTypeInput.Location = new System.Drawing.Point(261, 85);
-            this.frontBumperTypeInput.Name = "frontBumperTypeInput";
-            this.frontBumperTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.frontBumperTypeInput.TabIndex = 11;
-            // 
-            // rimsAmountInput
-            // 
-            this.rimsAmountInput.Enabled = false;
-            this.rimsAmountInput.Location = new System.Drawing.Point(169, 375);
-            this.rimsAmountInput.Name = "rimsAmountInput";
-            this.rimsAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.rimsAmountInput.TabIndex = 49;
-            // 
-            // spoilerTypeInput
-            // 
-            this.spoilerTypeInput.Enabled = false;
-            this.spoilerTypeInput.Location = new System.Drawing.Point(261, 466);
-            this.spoilerTypeInput.Name = "spoilerTypeInput";
-            this.spoilerTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.spoilerTypeInput.TabIndex = 62;
-            // 
-            // liveryTypeInput
-            // 
-            this.liveryTypeInput.Enabled = false;
-            this.liveryTypeInput.Location = new System.Drawing.Point(261, 174);
-            this.liveryTypeInput.Name = "liveryTypeInput";
-            this.liveryTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.liveryTypeInput.TabIndex = 23;
-            // 
-            // spoilerAmountInput
-            // 
-            this.spoilerAmountInput.Enabled = false;
-            this.spoilerAmountInput.Location = new System.Drawing.Point(169, 466);
-            this.spoilerAmountInput.Name = "spoilerAmountInput";
-            this.spoilerAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.spoilerAmountInput.TabIndex = 61;
-            // 
-            // rimColorTypeInput
-            // 
-            this.rimColorTypeInput.Enabled = false;
-            this.rimColorTypeInput.Location = new System.Drawing.Point(261, 353);
-            this.rimColorTypeInput.Name = "rimColorTypeInput";
-            this.rimColorTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.rimColorTypeInput.TabIndex = 47;
-            // 
-            // liveryAmountInput
-            // 
-            this.liveryAmountInput.Enabled = false;
-            this.liveryAmountInput.Location = new System.Drawing.Point(169, 175);
-            this.liveryAmountInput.Name = "liveryAmountInput";
-            this.liveryAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.liveryAmountInput.TabIndex = 22;
-            // 
-            // exhaustTypeInput
-            // 
-            this.exhaustTypeInput.Enabled = false;
-            this.exhaustTypeInput.Location = new System.Drawing.Point(261, 63);
-            this.exhaustTypeInput.Name = "exhaustTypeInput";
-            this.exhaustTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.exhaustTypeInput.TabIndex = 8;
-            // 
-            // rimColorAmountInput
-            // 
-            this.rimColorAmountInput.Enabled = false;
-            this.rimColorAmountInput.Location = new System.Drawing.Point(169, 353);
-            this.rimColorAmountInput.Name = "rimColorAmountInput";
-            this.rimColorAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.rimColorAmountInput.TabIndex = 46;
-            // 
-            // respraySecondaryTypeInput
-            // 
-            this.respraySecondaryTypeInput.Enabled = false;
-            this.respraySecondaryTypeInput.Location = new System.Drawing.Point(261, 331);
-            this.respraySecondaryTypeInput.Name = "respraySecondaryTypeInput";
-            this.respraySecondaryTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.respraySecondaryTypeInput.TabIndex = 44;
-            // 
-            // engineBlockTypeInput
-            // 
-            this.engineBlockTypeInput.Enabled = false;
-            this.engineBlockTypeInput.Location = new System.Drawing.Point(261, 41);
-            this.engineBlockTypeInput.Name = "engineBlockTypeInput";
-            this.engineBlockTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.engineBlockTypeInput.TabIndex = 5;
-            // 
-            // respraySecondaryAmountInput
-            // 
-            this.respraySecondaryAmountInput.Enabled = false;
-            this.respraySecondaryAmountInput.Location = new System.Drawing.Point(169, 331);
-            this.respraySecondaryAmountInput.Name = "respraySecondaryAmountInput";
-            this.respraySecondaryAmountInput.Size = new System.Drawing.Size(86, 20);
-            this.respraySecondaryAmountInput.TabIndex = 43;
-            // 
-            // removeNeonCheckbox
-            // 
-            this.removeNeonCheckbox.AutoSize = true;
-            this.removeNeonCheckbox.Location = new System.Drawing.Point(14, 601);
-            this.removeNeonCheckbox.Name = "removeNeonCheckbox";
-            this.removeNeonCheckbox.Size = new System.Drawing.Size(95, 17);
-            this.removeNeonCheckbox.TabIndex = 78;
-            this.removeNeonCheckbox.Text = "Remove Neon";
-            this.removeNeonCheckbox.UseVisualStyleBackColor = true;
-            // 
-            // repairCheckbox
-            // 
-            this.repairCheckbox.AutoSize = true;
-            this.repairCheckbox.Location = new System.Drawing.Point(14, 578);
-            this.repairCheckbox.Name = "repairCheckbox";
-            this.repairCheckbox.Size = new System.Drawing.Size(57, 17);
-            this.repairCheckbox.TabIndex = 75;
-            this.repairCheckbox.Text = "Repair";
-            this.repairCheckbox.UseVisualStyleBackColor = true;
-            // 
-            // resprayInteriorCheckbox
-            // 
-            this.resprayInteriorCheckbox.AutoSize = true;
-            this.resprayInteriorCheckbox.Location = new System.Drawing.Point(14, 266);
-            this.resprayInteriorCheckbox.Name = "resprayInteriorCheckbox";
-            this.resprayInteriorCheckbox.Size = new System.Drawing.Size(100, 17);
-            this.resprayInteriorCheckbox.TabIndex = 33;
-            this.resprayInteriorCheckbox.Text = "Respray Interior";
-            this.resprayInteriorCheckbox.UseVisualStyleBackColor = true;
-            // 
-            // tireSmokeCheckbox
-            // 
-            this.tireSmokeCheckbox.AutoSize = true;
-            this.tireSmokeCheckbox.Location = new System.Drawing.Point(14, 557);
-            this.tireSmokeCheckbox.Name = "tireSmokeCheckbox";
-            this.tireSmokeCheckbox.Size = new System.Drawing.Size(80, 17);
-            this.tireSmokeCheckbox.TabIndex = 72;
-            this.tireSmokeCheckbox.Text = "Tire Smoke";
-            this.tireSmokeCheckbox.UseVisualStyleBackColor = true;
-            // 
-            // rearBumperCheckbox
-            // 
-            this.rearBumperCheckbox.AutoSize = true;
-            this.rearBumperCheckbox.Location = new System.Drawing.Point(14, 244);
-            this.rearBumperCheckbox.Name = "rearBumperCheckbox";
-            this.rearBumperCheckbox.Size = new System.Drawing.Size(88, 17);
-            this.rearBumperCheckbox.TabIndex = 30;
-            this.rearBumperCheckbox.Text = "Rear Bumper";
-            this.rearBumperCheckbox.UseVisualStyleBackColor = true;
-            // 
-            // seatsCheckbox
-            // 
-            this.seatsCheckbox.AutoSize = true;
-            this.seatsCheckbox.Location = new System.Drawing.Point(14, 422);
-            this.seatsCheckbox.Name = "seatsCheckbox";
-            this.seatsCheckbox.Size = new System.Drawing.Size(53, 17);
-            this.seatsCheckbox.TabIndex = 54;
-            this.seatsCheckbox.Text = "Seats";
-            this.seatsCheckbox.UseVisualStyleBackColor = true;
-            // 
-            // tintCheckbox
-            // 
-            this.tintCheckbox.AutoSize = true;
-            this.tintCheckbox.Location = new System.Drawing.Point(14, 534);
-            this.tintCheckbox.Name = "tintCheckbox";
-            this.tintCheckbox.Size = new System.Drawing.Size(44, 17);
-            this.tintCheckbox.TabIndex = 69;
-            this.tintCheckbox.Text = "Tint";
-            this.tintCheckbox.UseVisualStyleBackColor = true;
-            // 
-            // roofCheckbox
-            // 
-            this.roofCheckbox.AutoSize = true;
-            this.roofCheckbox.Location = new System.Drawing.Point(14, 400);
-            this.roofCheckbox.Name = "roofCheckbox";
-            this.roofCheckbox.Size = new System.Drawing.Size(49, 17);
-            this.roofCheckbox.TabIndex = 51;
-            this.roofCheckbox.Text = "Roof";
-            this.roofCheckbox.UseVisualStyleBackColor = true;
-            // 
-            // strutCheckbox
-            // 
-            this.strutCheckbox.AutoSize = true;
-            this.strutCheckbox.Location = new System.Drawing.Point(14, 512);
-            this.strutCheckbox.Name = "strutCheckbox";
-            this.strutCheckbox.Size = new System.Drawing.Size(48, 17);
-            this.strutCheckbox.TabIndex = 66;
-            this.strutCheckbox.Text = "Strut";
-            this.strutCheckbox.UseVisualStyleBackColor = true;
-            // 
-            // plateCheckbox
-            // 
-            this.plateCheckbox.AutoSize = true;
-            this.plateCheckbox.Location = new System.Drawing.Point(14, 220);
-            this.plateCheckbox.Name = "plateCheckbox";
-            this.plateCheckbox.Size = new System.Drawing.Size(50, 17);
-            this.plateCheckbox.TabIndex = 27;
-            this.plateCheckbox.Text = "Plate";
-            this.plateCheckbox.UseVisualStyleBackColor = true;
-            // 
-            // rimsCheckbox
-            // 
-            this.rimsCheckbox.AutoSize = true;
-            this.rimsCheckbox.Location = new System.Drawing.Point(14, 378);
-            this.rimsCheckbox.Name = "rimsCheckbox";
-            this.rimsCheckbox.Size = new System.Drawing.Size(49, 17);
-            this.rimsCheckbox.TabIndex = 48;
-            this.rimsCheckbox.Text = "Rims";
-            this.rimsCheckbox.UseVisualStyleBackColor = true;
-            // 
-            // steeringWheelCheckbox
-            // 
-            this.steeringWheelCheckbox.AutoSize = true;
-            this.steeringWheelCheckbox.Location = new System.Drawing.Point(14, 490);
-            this.steeringWheelCheckbox.Name = "steeringWheelCheckbox";
-            this.steeringWheelCheckbox.Size = new System.Drawing.Size(99, 17);
-            this.steeringWheelCheckbox.TabIndex = 63;
-            this.steeringWheelCheckbox.Text = "Steering Wheel";
-            this.steeringWheelCheckbox.UseVisualStyleBackColor = true;
-            // 
-            // ornamentsCheckbox
-            // 
-            this.ornamentsCheckbox.AutoSize = true;
-            this.ornamentsCheckbox.Location = new System.Drawing.Point(14, 198);
-            this.ornamentsCheckbox.Name = "ornamentsCheckbox";
-            this.ornamentsCheckbox.Size = new System.Drawing.Size(77, 17);
-            this.ornamentsCheckbox.TabIndex = 24;
-            this.ornamentsCheckbox.Text = "Ornaments";
-            this.ornamentsCheckbox.UseVisualStyleBackColor = true;
-            // 
-            // rimColorCheckbox
-            // 
-            this.rimColorCheckbox.AutoSize = true;
-            this.rimColorCheckbox.Location = new System.Drawing.Point(14, 356);
-            this.rimColorCheckbox.Name = "rimColorCheckbox";
-            this.rimColorCheckbox.Size = new System.Drawing.Size(71, 17);
-            this.rimColorCheckbox.TabIndex = 45;
-            this.rimColorCheckbox.Text = "Rim Color";
-            this.rimColorCheckbox.UseVisualStyleBackColor = true;
-            // 
-            // spoilerCheckbox
-            // 
-            this.spoilerCheckbox.AutoSize = true;
-            this.spoilerCheckbox.Location = new System.Drawing.Point(14, 467);
-            this.spoilerCheckbox.Name = "spoilerCheckbox";
-            this.spoilerCheckbox.Size = new System.Drawing.Size(58, 17);
-            this.spoilerCheckbox.TabIndex = 60;
-            this.spoilerCheckbox.Text = "Spoiler";
-            this.spoilerCheckbox.UseVisualStyleBackColor = true;
-            // 
-            // liveryCheckbox
-            // 
-            this.liveryCheckbox.AutoSize = true;
-            this.liveryCheckbox.Location = new System.Drawing.Point(14, 175);
-            this.liveryCheckbox.Name = "liveryCheckbox";
-            this.liveryCheckbox.Size = new System.Drawing.Size(54, 17);
-            this.liveryCheckbox.TabIndex = 21;
-            this.liveryCheckbox.Text = "Livery";
-            this.liveryCheckbox.UseVisualStyleBackColor = true;
-            // 
-            // respraySecondaryCheckbox
-            // 
-            this.respraySecondaryCheckbox.AutoSize = true;
-            this.respraySecondaryCheckbox.Location = new System.Drawing.Point(14, 334);
-            this.respraySecondaryCheckbox.Name = "respraySecondaryCheckbox";
-            this.respraySecondaryCheckbox.Size = new System.Drawing.Size(119, 17);
-            this.respraySecondaryCheckbox.TabIndex = 42;
-            this.respraySecondaryCheckbox.Text = "Respray Secondary";
-            this.respraySecondaryCheckbox.UseVisualStyleBackColor = true;
-            // 
-            // sideSkirtCheckbox
-            // 
-            this.sideSkirtCheckbox.AutoSize = true;
-            this.sideSkirtCheckbox.Location = new System.Drawing.Point(14, 445);
-            this.sideSkirtCheckbox.Name = "sideSkirtCheckbox";
-            this.sideSkirtCheckbox.Size = new System.Drawing.Size(71, 17);
-            this.sideSkirtCheckbox.TabIndex = 57;
-            this.sideSkirtCheckbox.Text = "Side Skirt";
-            this.sideSkirtCheckbox.UseVisualStyleBackColor = true;
+            // engineBlockCheckbox
+            // 
+            this.engineBlockCheckbox.AutoSize = true;
+            this.engineBlockCheckbox.Depth = 0;
+            this.engineBlockCheckbox.Location = new System.Drawing.Point(28, 226);
+            this.engineBlockCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.engineBlockCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.engineBlockCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.engineBlockCheckbox.Name = "engineBlockCheckbox";
+            this.engineBlockCheckbox.ReadOnly = false;
+            this.engineBlockCheckbox.Ripple = true;
+            this.engineBlockCheckbox.Size = new System.Drawing.Size(126, 37);
+            this.engineBlockCheckbox.TabIndex = 4;
+            this.engineBlockCheckbox.Text = "Engine Block";
+            this.engineBlockCheckbox.UseVisualStyleBackColor = true;
+            // 
+            // exhaustCheckbox
+            // 
+            this.exhaustCheckbox.AutoSize = true;
+            this.exhaustCheckbox.Depth = 0;
+            this.exhaustCheckbox.Location = new System.Drawing.Point(28, 263);
+            this.exhaustCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.exhaustCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.exhaustCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.exhaustCheckbox.Name = "exhaustCheckbox";
+            this.exhaustCheckbox.ReadOnly = false;
+            this.exhaustCheckbox.Ripple = true;
+            this.exhaustCheckbox.Size = new System.Drawing.Size(92, 37);
+            this.exhaustCheckbox.TabIndex = 4;
+            this.exhaustCheckbox.Text = "Exhaust";
+            this.exhaustCheckbox.UseVisualStyleBackColor = true;
+            // 
+            // fBumperCheckbox
+            // 
+            this.fBumperCheckbox.AutoSize = true;
+            this.fBumperCheckbox.Depth = 0;
+            this.fBumperCheckbox.Location = new System.Drawing.Point(28, 300);
+            this.fBumperCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.fBumperCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.fBumperCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.fBumperCheckbox.Name = "fBumperCheckbox";
+            this.fBumperCheckbox.ReadOnly = false;
+            this.fBumperCheckbox.Ripple = true;
+            this.fBumperCheckbox.Size = new System.Drawing.Size(131, 37);
+            this.fBumperCheckbox.TabIndex = 4;
+            this.fBumperCheckbox.Text = "Front Bumper";
+            this.fBumperCheckbox.UseVisualStyleBackColor = true;
+            // 
+            // grilleCheckbox
+            // 
+            this.grilleCheckbox.AutoSize = true;
+            this.grilleCheckbox.Depth = 0;
+            this.grilleCheckbox.Location = new System.Drawing.Point(28, 337);
+            this.grilleCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.grilleCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.grilleCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.grilleCheckbox.Name = "grilleCheckbox";
+            this.grilleCheckbox.ReadOnly = false;
+            this.grilleCheckbox.Ripple = true;
+            this.grilleCheckbox.Size = new System.Drawing.Size(71, 37);
+            this.grilleCheckbox.TabIndex = 4;
+            this.grilleCheckbox.Text = "Grille";
+            this.grilleCheckbox.UseVisualStyleBackColor = true;
+            // 
+            // newLogButton
+            // 
+            this.newLogButton.AutoSize = false;
+            this.newLogButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.newLogButton.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.newLogButton.Depth = 0;
+            this.newLogButton.HighEmphasis = true;
+            this.newLogButton.Icon = null;
+            this.newLogButton.Location = new System.Drawing.Point(803, 790);
+            this.newLogButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.newLogButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.newLogButton.Name = "newLogButton";
+            this.newLogButton.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.newLogButton.Size = new System.Drawing.Size(160, 36);
+            this.newLogButton.TabIndex = 4;
+            this.newLogButton.Text = "New Log";
+            this.newLogButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.newLogButton.UseAccentColor = false;
+            this.newLogButton.UseVisualStyleBackColor = true;
+            // 
+            // hoodCheckbox
+            // 
+            this.hoodCheckbox.AutoSize = true;
+            this.hoodCheckbox.Depth = 0;
+            this.hoodCheckbox.Location = new System.Drawing.Point(28, 374);
+            this.hoodCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.hoodCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.hoodCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.hoodCheckbox.Name = "hoodCheckbox";
+            this.hoodCheckbox.ReadOnly = false;
+            this.hoodCheckbox.Ripple = true;
+            this.hoodCheckbox.Size = new System.Drawing.Size(73, 37);
+            this.hoodCheckbox.TabIndex = 4;
+            this.hoodCheckbox.Text = "Hood";
+            this.hoodCheckbox.UseVisualStyleBackColor = true;
+            // 
+            // interiorResprayCheckbox
+            // 
+            this.interiorResprayCheckbox.AutoSize = true;
+            this.interiorResprayCheckbox.Depth = 0;
+            this.interiorResprayCheckbox.Location = new System.Drawing.Point(326, 263);
+            this.interiorResprayCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.interiorResprayCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.interiorResprayCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.interiorResprayCheckbox.Name = "interiorResprayCheckbox";
+            this.interiorResprayCheckbox.ReadOnly = false;
+            this.interiorResprayCheckbox.Ripple = true;
+            this.interiorResprayCheckbox.Size = new System.Drawing.Size(145, 37);
+            this.interiorResprayCheckbox.TabIndex = 4;
+            this.interiorResprayCheckbox.Text = "Respray Interior";
+            this.interiorResprayCheckbox.UseVisualStyleBackColor = true;
+            // 
+            // hornCheckbox
+            // 
+            this.hornCheckbox.AutoSize = true;
+            this.hornCheckbox.Depth = 0;
+            this.hornCheckbox.Location = new System.Drawing.Point(28, 411);
+            this.hornCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.hornCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.hornCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.hornCheckbox.Name = "hornCheckbox";
+            this.hornCheckbox.ReadOnly = false;
+            this.hornCheckbox.Ripple = true;
+            this.hornCheckbox.Size = new System.Drawing.Size(69, 37);
+            this.hornCheckbox.TabIndex = 4;
+            this.hornCheckbox.Text = "Horn";
+            this.hornCheckbox.UseVisualStyleBackColor = true;
             // 
             // leftFenderCheckbox
             // 
             this.leftFenderCheckbox.AutoSize = true;
-            this.leftFenderCheckbox.Location = new System.Drawing.Point(14, 153);
+            this.leftFenderCheckbox.Depth = 0;
+            this.leftFenderCheckbox.Location = new System.Drawing.Point(28, 448);
+            this.leftFenderCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.leftFenderCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.leftFenderCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
             this.leftFenderCheckbox.Name = "leftFenderCheckbox";
-            this.leftFenderCheckbox.Size = new System.Drawing.Size(80, 17);
-            this.leftFenderCheckbox.TabIndex = 18;
+            this.leftFenderCheckbox.ReadOnly = false;
+            this.leftFenderCheckbox.Ripple = true;
+            this.leftFenderCheckbox.Size = new System.Drawing.Size(115, 37);
+            this.leftFenderCheckbox.TabIndex = 4;
             this.leftFenderCheckbox.Text = "Left Fender";
             this.leftFenderCheckbox.UseVisualStyleBackColor = true;
             // 
-            // resprayPrimaryCheckbox
+            // liveryCheckbox
             // 
-            this.resprayPrimaryCheckbox.AutoSize = true;
-            this.resprayPrimaryCheckbox.Location = new System.Drawing.Point(14, 311);
-            this.resprayPrimaryCheckbox.Name = "resprayPrimaryCheckbox";
-            this.resprayPrimaryCheckbox.Size = new System.Drawing.Size(102, 17);
-            this.resprayPrimaryCheckbox.TabIndex = 39;
-            this.resprayPrimaryCheckbox.Text = "Respray Primary";
-            this.resprayPrimaryCheckbox.UseVisualStyleBackColor = true;
+            this.liveryCheckbox.AutoSize = true;
+            this.liveryCheckbox.Depth = 0;
+            this.liveryCheckbox.Location = new System.Drawing.Point(28, 485);
+            this.liveryCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.liveryCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.liveryCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.liveryCheckbox.Name = "liveryCheckbox";
+            this.liveryCheckbox.ReadOnly = false;
+            this.liveryCheckbox.Ripple = true;
+            this.liveryCheckbox.Size = new System.Drawing.Size(77, 37);
+            this.liveryCheckbox.TabIndex = 4;
+            this.liveryCheckbox.Text = "Livery";
+            this.liveryCheckbox.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // ornamentsCheckbox
             // 
-            this.groupBox1.Controls.Add(this.label30);
-            this.groupBox1.Controls.Add(this.armorAmountInput);
-            this.groupBox1.Controls.Add(this.label29);
-            this.groupBox1.Controls.Add(this.turboAmountInput);
-            this.groupBox1.Controls.Add(this.transmissionAmountInput);
-            this.groupBox1.Controls.Add(this.suspensionAmountInput);
-            this.groupBox1.Controls.Add(this.label28);
-            this.groupBox1.Controls.Add(this.engineAmountInput);
-            this.groupBox1.Controls.Add(this.brakeAmountInput);
-            this.groupBox1.Controls.Add(this.turboCheckbox);
-            this.groupBox1.Controls.Add(this.transmissionCheckbox);
-            this.groupBox1.Controls.Add(this.label27);
-            this.groupBox1.Controls.Add(this.suspensionCheckbox);
-            this.groupBox1.Controls.Add(this.engineCheckbox);
-            this.groupBox1.Controls.Add(this.brakeCheckbox);
-            this.groupBox1.Controls.Add(this.armorCheckbox);
-            this.groupBox1.Controls.Add(this.label26);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.turboTypeInput);
-            this.groupBox1.Controls.Add(this.engineTypeInput);
-            this.groupBox1.Controls.Add(this.transmissionTypeInput);
-            this.groupBox1.Controls.Add(this.suspensionTypeInput);
-            this.groupBox1.Controls.Add(this.brakeTypeInput);
-            this.groupBox1.Controls.Add(this.armorTypeInput);
-            this.groupBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.groupBox1.Location = new System.Drawing.Point(286, 463);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(473, 180);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Performance Upgrades";
+            this.ornamentsCheckbox.AutoSize = true;
+            this.ornamentsCheckbox.Depth = 0;
+            this.ornamentsCheckbox.Location = new System.Drawing.Point(326, 78);
+            this.ornamentsCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.ornamentsCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.ornamentsCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ornamentsCheckbox.Name = "ornamentsCheckbox";
+            this.ornamentsCheckbox.ReadOnly = false;
+            this.ornamentsCheckbox.Ripple = true;
+            this.ornamentsCheckbox.Size = new System.Drawing.Size(113, 37);
+            this.ornamentsCheckbox.TabIndex = 4;
+            this.ornamentsCheckbox.Text = "Ornaments";
+            this.ornamentsCheckbox.UseVisualStyleBackColor = true;
             // 
-            // label30
+            // oldLiveryCheckbox
             // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(155, 147);
-            this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(13, 13);
-            this.label30.TabIndex = 4;
-            this.label30.Text = "$";
+            this.oldLiveryCheckbox.AutoSize = true;
+            this.oldLiveryCheckbox.Depth = 0;
+            this.oldLiveryCheckbox.Location = new System.Drawing.Point(326, 115);
+            this.oldLiveryCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.oldLiveryCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.oldLiveryCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.oldLiveryCheckbox.Name = "oldLiveryCheckbox";
+            this.oldLiveryCheckbox.ReadOnly = false;
+            this.oldLiveryCheckbox.Ripple = true;
+            this.oldLiveryCheckbox.Size = new System.Drawing.Size(105, 37);
+            this.oldLiveryCheckbox.TabIndex = 4;
+            this.oldLiveryCheckbox.Text = "Old Livery";
+            this.oldLiveryCheckbox.UseVisualStyleBackColor = true;
             // 
-            // label29
+            // plateCheckbox
             // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(155, 35);
-            this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(13, 13);
-            this.label29.TabIndex = 4;
-            this.label29.Text = "$";
+            this.plateCheckbox.AutoSize = true;
+            this.plateCheckbox.Depth = 0;
+            this.plateCheckbox.Location = new System.Drawing.Point(326, 152);
+            this.plateCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.plateCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.plateCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.plateCheckbox.Name = "plateCheckbox";
+            this.plateCheckbox.ReadOnly = false;
+            this.plateCheckbox.Ripple = true;
+            this.plateCheckbox.Size = new System.Drawing.Size(113, 37);
+            this.plateCheckbox.TabIndex = 4;
+            this.plateCheckbox.Text = "Plate Index";
+            this.plateCheckbox.UseVisualStyleBackColor = true;
             // 
-            // label28
+            // rBumperCheckbox
             // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(155, 125);
-            this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(13, 13);
-            this.label28.TabIndex = 4;
-            this.label28.Text = "$";
+            this.rBumperCheckbox.AutoSize = true;
+            this.rBumperCheckbox.Depth = 0;
+            this.rBumperCheckbox.Location = new System.Drawing.Point(326, 189);
+            this.rBumperCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.rBumperCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.rBumperCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.rBumperCheckbox.Name = "rBumperCheckbox";
+            this.rBumperCheckbox.ReadOnly = false;
+            this.rBumperCheckbox.Ripple = true;
+            this.rBumperCheckbox.Size = new System.Drawing.Size(126, 37);
+            this.rBumperCheckbox.TabIndex = 4;
+            this.rBumperCheckbox.Text = "Rear Bumper";
+            this.rBumperCheckbox.UseVisualStyleBackColor = true;
             // 
-            // label27
+            // pearlResprayCheckbox
             // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(155, 102);
-            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(13, 13);
-            this.label27.TabIndex = 4;
-            this.label27.Text = "$";
+            this.pearlResprayCheckbox.AutoSize = true;
+            this.pearlResprayCheckbox.Depth = 0;
+            this.pearlResprayCheckbox.Location = new System.Drawing.Point(326, 300);
+            this.pearlResprayCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.pearlResprayCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.pearlResprayCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.pearlResprayCheckbox.Name = "pearlResprayCheckbox";
+            this.pearlResprayCheckbox.ReadOnly = false;
+            this.pearlResprayCheckbox.Ripple = true;
+            this.pearlResprayCheckbox.Size = new System.Drawing.Size(178, 37);
+            this.pearlResprayCheckbox.TabIndex = 4;
+            this.pearlResprayCheckbox.Text = "Respray Pearlescent";
+            this.pearlResprayCheckbox.UseVisualStyleBackColor = true;
             // 
-            // label26
+            // pResprayCheckbox
             // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(155, 80);
-            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(13, 13);
-            this.label26.TabIndex = 4;
-            this.label26.Text = "$";
+            this.pResprayCheckbox.AutoSize = true;
+            this.pResprayCheckbox.Depth = 0;
+            this.pResprayCheckbox.Location = new System.Drawing.Point(326, 337);
+            this.pResprayCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.pResprayCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.pResprayCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.pResprayCheckbox.Name = "pResprayCheckbox";
+            this.pResprayCheckbox.ReadOnly = false;
+            this.pResprayCheckbox.Ripple = true;
+            this.pResprayCheckbox.Size = new System.Drawing.Size(151, 37);
+            this.pResprayCheckbox.TabIndex = 4;
+            this.pResprayCheckbox.Text = "Respray Primary";
+            this.pResprayCheckbox.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // sResprayCheckbox
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(155, 58);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(13, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "$";
+            this.sResprayCheckbox.AutoSize = true;
+            this.sResprayCheckbox.Depth = 0;
+            this.sResprayCheckbox.Location = new System.Drawing.Point(326, 374);
+            this.sResprayCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.sResprayCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.sResprayCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.sResprayCheckbox.Name = "sResprayCheckbox";
+            this.sResprayCheckbox.ReadOnly = false;
+            this.sResprayCheckbox.Ripple = true;
+            this.sResprayCheckbox.Size = new System.Drawing.Size(171, 37);
+            this.sResprayCheckbox.TabIndex = 4;
+            this.sResprayCheckbox.Text = "Respray Secondary";
+            this.sResprayCheckbox.UseVisualStyleBackColor = true;
             // 
-            // turboTypeInput
+            // rimColorCheckbox
             // 
-            this.turboTypeInput.Enabled = false;
-            this.turboTypeInput.Location = new System.Drawing.Point(265, 144);
-            this.turboTypeInput.Name = "turboTypeInput";
-            this.turboTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.turboTypeInput.TabIndex = 17;
+            this.rimColorCheckbox.AutoSize = true;
+            this.rimColorCheckbox.Depth = 0;
+            this.rimColorCheckbox.Location = new System.Drawing.Point(326, 411);
+            this.rimColorCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.rimColorCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.rimColorCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.rimColorCheckbox.Name = "rimColorCheckbox";
+            this.rimColorCheckbox.ReadOnly = false;
+            this.rimColorCheckbox.Ripple = true;
+            this.rimColorCheckbox.Size = new System.Drawing.Size(104, 37);
+            this.rimColorCheckbox.TabIndex = 4;
+            this.rimColorCheckbox.Text = "Rim Color";
+            this.rimColorCheckbox.UseVisualStyleBackColor = true;
             // 
-            // engineTypeInput
+            // rimsCheckbox
             // 
-            this.engineTypeInput.Enabled = false;
-            this.engineTypeInput.Location = new System.Drawing.Point(265, 77);
-            this.engineTypeInput.Name = "engineTypeInput";
-            this.engineTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.engineTypeInput.TabIndex = 8;
+            this.rimsCheckbox.AutoSize = true;
+            this.rimsCheckbox.Depth = 0;
+            this.rimsCheckbox.Location = new System.Drawing.Point(326, 448);
+            this.rimsCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.rimsCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.rimsCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.rimsCheckbox.Name = "rimsCheckbox";
+            this.rimsCheckbox.ReadOnly = false;
+            this.rimsCheckbox.Ripple = true;
+            this.rimsCheckbox.Size = new System.Drawing.Size(71, 37);
+            this.rimsCheckbox.TabIndex = 4;
+            this.rimsCheckbox.Text = "Rims";
+            this.rimsCheckbox.UseVisualStyleBackColor = true;
             // 
-            // transmissionTypeInput
+            // roofCheckbox
             // 
-            this.transmissionTypeInput.Enabled = false;
-            this.transmissionTypeInput.Location = new System.Drawing.Point(265, 122);
-            this.transmissionTypeInput.Name = "transmissionTypeInput";
-            this.transmissionTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.transmissionTypeInput.TabIndex = 14;
+            this.roofCheckbox.AutoSize = true;
+            this.roofCheckbox.Depth = 0;
+            this.roofCheckbox.Location = new System.Drawing.Point(624, 78);
+            this.roofCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.roofCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.roofCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.roofCheckbox.Name = "roofCheckbox";
+            this.roofCheckbox.ReadOnly = false;
+            this.roofCheckbox.Ripple = true;
+            this.roofCheckbox.Size = new System.Drawing.Size(69, 37);
+            this.roofCheckbox.TabIndex = 4;
+            this.roofCheckbox.Text = "Roof";
+            this.roofCheckbox.UseVisualStyleBackColor = true;
             // 
-            // suspensionTypeInput
+            // rollcageCheckbox
             // 
-            this.suspensionTypeInput.Enabled = false;
-            this.suspensionTypeInput.Location = new System.Drawing.Point(265, 99);
-            this.suspensionTypeInput.Name = "suspensionTypeInput";
-            this.suspensionTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.suspensionTypeInput.TabIndex = 11;
+            this.rollcageCheckbox.AutoSize = true;
+            this.rollcageCheckbox.Depth = 0;
+            this.rollcageCheckbox.Location = new System.Drawing.Point(326, 485);
+            this.rollcageCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.rollcageCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.rollcageCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.rollcageCheckbox.Name = "rollcageCheckbox";
+            this.rollcageCheckbox.ReadOnly = false;
+            this.rollcageCheckbox.Ripple = true;
+            this.rollcageCheckbox.Size = new System.Drawing.Size(102, 37);
+            this.rollcageCheckbox.TabIndex = 4;
+            this.rollcageCheckbox.Text = "Roll Cage";
+            this.rollcageCheckbox.UseVisualStyleBackColor = true;
             // 
-            // brakeTypeInput
+            // seatsCheckbox
             // 
-            this.brakeTypeInput.Enabled = false;
-            this.brakeTypeInput.Location = new System.Drawing.Point(265, 55);
-            this.brakeTypeInput.Name = "brakeTypeInput";
-            this.brakeTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.brakeTypeInput.TabIndex = 5;
+            this.seatsCheckbox.AutoSize = true;
+            this.seatsCheckbox.Depth = 0;
+            this.seatsCheckbox.Location = new System.Drawing.Point(624, 115);
+            this.seatsCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.seatsCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.seatsCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.seatsCheckbox.Name = "seatsCheckbox";
+            this.seatsCheckbox.ReadOnly = false;
+            this.seatsCheckbox.Ripple = true;
+            this.seatsCheckbox.Size = new System.Drawing.Size(75, 37);
+            this.seatsCheckbox.TabIndex = 4;
+            this.seatsCheckbox.Text = "Seats";
+            this.seatsCheckbox.UseVisualStyleBackColor = true;
             // 
-            // armorTypeInput
+            // skirtsCheckbox
             // 
-            this.armorTypeInput.Enabled = false;
-            this.armorTypeInput.Location = new System.Drawing.Point(265, 32);
-            this.armorTypeInput.Name = "armorTypeInput";
-            this.armorTypeInput.Size = new System.Drawing.Size(193, 20);
-            this.armorTypeInput.TabIndex = 2;
+            this.skirtsCheckbox.AutoSize = true;
+            this.skirtsCheckbox.Depth = 0;
+            this.skirtsCheckbox.Location = new System.Drawing.Point(624, 152);
+            this.skirtsCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.skirtsCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.skirtsCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.skirtsCheckbox.Name = "skirtsCheckbox";
+            this.skirtsCheckbox.ReadOnly = false;
+            this.skirtsCheckbox.Ripple = true;
+            this.skirtsCheckbox.Size = new System.Drawing.Size(102, 37);
+            this.skirtsCheckbox.TabIndex = 4;
+            this.skirtsCheckbox.Text = "Side Skirt";
+            this.skirtsCheckbox.UseVisualStyleBackColor = true;
             // 
-            // infoDisplayTextBox
+            // spoilerCheckbox
             // 
-            this.infoDisplayTextBox.Location = new System.Drawing.Point(286, 153);
-            this.infoDisplayTextBox.Multiline = true;
-            this.infoDisplayTextBox.Name = "infoDisplayTextBox";
-            this.infoDisplayTextBox.ReadOnly = true;
-            this.infoDisplayTextBox.Size = new System.Drawing.Size(473, 275);
-            this.infoDisplayTextBox.TabIndex = 0;
-            this.infoDisplayTextBox.Click += new System.EventHandler(this.CopyToClipboard_Click);
+            this.spoilerCheckbox.AutoSize = true;
+            this.spoilerCheckbox.Depth = 0;
+            this.spoilerCheckbox.Location = new System.Drawing.Point(624, 189);
+            this.spoilerCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.spoilerCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.spoilerCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.spoilerCheckbox.Name = "spoilerCheckbox";
+            this.spoilerCheckbox.ReadOnly = false;
+            this.spoilerCheckbox.Ripple = true;
+            this.spoilerCheckbox.Size = new System.Drawing.Size(84, 37);
+            this.spoilerCheckbox.TabIndex = 4;
+            this.spoilerCheckbox.Text = "Spoiler";
+            this.spoilerCheckbox.UseVisualStyleBackColor = true;
+            // 
+            // steeringWheelCheckbox
+            // 
+            this.steeringWheelCheckbox.AutoSize = true;
+            this.steeringWheelCheckbox.Depth = 0;
+            this.steeringWheelCheckbox.Location = new System.Drawing.Point(624, 226);
+            this.steeringWheelCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.steeringWheelCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.steeringWheelCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.steeringWheelCheckbox.Name = "steeringWheelCheckbox";
+            this.steeringWheelCheckbox.ReadOnly = false;
+            this.steeringWheelCheckbox.Ripple = true;
+            this.steeringWheelCheckbox.Size = new System.Drawing.Size(140, 37);
+            this.steeringWheelCheckbox.TabIndex = 4;
+            this.steeringWheelCheckbox.Text = "Steering Wheel";
+            this.steeringWheelCheckbox.UseVisualStyleBackColor = true;
+            // 
+            // strutCheckbox
+            // 
+            this.strutCheckbox.AutoSize = true;
+            this.strutCheckbox.Depth = 0;
+            this.strutCheckbox.Location = new System.Drawing.Point(624, 263);
+            this.strutCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.strutCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.strutCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.strutCheckbox.Name = "strutCheckbox";
+            this.strutCheckbox.ReadOnly = false;
+            this.strutCheckbox.Ripple = true;
+            this.strutCheckbox.Size = new System.Drawing.Size(69, 37);
+            this.strutCheckbox.TabIndex = 4;
+            this.strutCheckbox.Text = "Strut";
+            this.strutCheckbox.UseVisualStyleBackColor = true;
+            // 
+            // speakerCheckbox
+            // 
+            this.speakerCheckbox.AutoSize = true;
+            this.speakerCheckbox.Depth = 0;
+            this.speakerCheckbox.Location = new System.Drawing.Point(624, 300);
+            this.speakerCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.speakerCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.speakerCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.speakerCheckbox.Name = "speakerCheckbox";
+            this.speakerCheckbox.ReadOnly = false;
+            this.speakerCheckbox.Ripple = true;
+            this.speakerCheckbox.Size = new System.Drawing.Size(92, 37);
+            this.speakerCheckbox.TabIndex = 4;
+            this.speakerCheckbox.Text = "Speaker";
+            this.speakerCheckbox.UseVisualStyleBackColor = true;
+            // 
+            // tintCheckbox
+            // 
+            this.tintCheckbox.AutoSize = true;
+            this.tintCheckbox.Depth = 0;
+            this.tintCheckbox.Location = new System.Drawing.Point(624, 337);
+            this.tintCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.tintCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.tintCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.tintCheckbox.Name = "tintCheckbox";
+            this.tintCheckbox.ReadOnly = false;
+            this.tintCheckbox.Ripple = true;
+            this.tintCheckbox.Size = new System.Drawing.Size(63, 37);
+            this.tintCheckbox.TabIndex = 4;
+            this.tintCheckbox.Text = "Tint";
+            this.tintCheckbox.UseVisualStyleBackColor = true;
+            // 
+            // tireSmokeCheckbox
+            // 
+            this.tireSmokeCheckbox.AutoSize = true;
+            this.tireSmokeCheckbox.Depth = 0;
+            this.tireSmokeCheckbox.Location = new System.Drawing.Point(624, 374);
+            this.tireSmokeCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.tireSmokeCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.tireSmokeCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.tireSmokeCheckbox.Name = "tireSmokeCheckbox";
+            this.tireSmokeCheckbox.ReadOnly = false;
+            this.tireSmokeCheckbox.Ripple = true;
+            this.tireSmokeCheckbox.Size = new System.Drawing.Size(115, 37);
+            this.tireSmokeCheckbox.TabIndex = 4;
+            this.tireSmokeCheckbox.Text = "Tire Smoke";
+            this.tireSmokeCheckbox.UseVisualStyleBackColor = true;
+            // 
+            // trimAChekbox
+            // 
+            this.trimAChekbox.AutoSize = true;
+            this.trimAChekbox.Depth = 0;
+            this.trimAChekbox.Location = new System.Drawing.Point(624, 411);
+            this.trimAChekbox.Margin = new System.Windows.Forms.Padding(0);
+            this.trimAChekbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.trimAChekbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.trimAChekbox.Name = "trimAChekbox";
+            this.trimAChekbox.ReadOnly = false;
+            this.trimAChekbox.Ripple = true;
+            this.trimAChekbox.Size = new System.Drawing.Size(82, 37);
+            this.trimAChekbox.TabIndex = 4;
+            this.trimAChekbox.Text = "Trim A";
+            this.trimAChekbox.UseVisualStyleBackColor = true;
+            // 
+            // trimBCheckbox
+            // 
+            this.trimBCheckbox.AutoSize = true;
+            this.trimBCheckbox.Depth = 0;
+            this.trimBCheckbox.Location = new System.Drawing.Point(624, 448);
+            this.trimBCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.trimBCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.trimBCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.trimBCheckbox.Name = "trimBCheckbox";
+            this.trimBCheckbox.ReadOnly = false;
+            this.trimBCheckbox.Ripple = true;
+            this.trimBCheckbox.Size = new System.Drawing.Size(82, 37);
+            this.trimBCheckbox.TabIndex = 4;
+            this.trimBCheckbox.Text = "Trim B";
+            this.trimBCheckbox.UseVisualStyleBackColor = true;
+            // 
+            // trunkCheckbox
+            // 
+            this.trunkCheckbox.AutoSize = true;
+            this.trunkCheckbox.Depth = 0;
+            this.trunkCheckbox.Location = new System.Drawing.Point(624, 485);
+            this.trunkCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.trunkCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.trunkCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.trunkCheckbox.Name = "trunkCheckbox";
+            this.trunkCheckbox.ReadOnly = false;
+            this.trunkCheckbox.Ripple = true;
+            this.trunkCheckbox.Size = new System.Drawing.Size(76, 37);
+            this.trunkCheckbox.TabIndex = 4;
+            this.trunkCheckbox.Text = "Trunk";
+            this.trunkCheckbox.UseVisualStyleBackColor = true;
+            // 
+            // tabControl
+            // 
+            this.tabControl.Controls.Add(this.installTab);
+            this.tabControl.Controls.Add(this.removeTab);
+            this.tabControl.Depth = 0;
+            this.tabControl.Location = new System.Drawing.Point(358, 131);
+            this.tabControl.MouseState = MaterialSkin.MouseState.HOVER;
+            this.tabControl.Multiline = true;
+            this.tabControl.Name = "tabControl";
+            this.tabControl.SelectedIndex = 0;
+            this.tabControl.Size = new System.Drawing.Size(954, 589);
+            this.tabControl.TabIndex = 6;
+            // 
+            // installTab
+            // 
+            this.installTab.Controls.Add(this.archCoverCheckbox);
+            this.installTab.Controls.Add(this.ornamentsCheckbox);
+            this.installTab.Controls.Add(this.oldLiveryCheckbox);
+            this.installTab.Controls.Add(this.plateCheckbox);
+            this.installTab.Controls.Add(this.rBumperCheckbox);
+            this.installTab.Controls.Add(this.hornCheckbox);
+            this.installTab.Controls.Add(this.aerialCheckbox);
+            this.installTab.Controls.Add(this.liveryCheckbox);
+            this.installTab.Controls.Add(this.customTiresCheckbox);
+            this.installTab.Controls.Add(this.leftFenderCheckbox);
+            this.installTab.Controls.Add(this.dResprayCheckbox);
+            this.installTab.Controls.Add(this.rollcageCheckbox);
+            this.installTab.Controls.Add(this.armorDropwdown);
+            this.installTab.Controls.Add(this.brakesDropdown);
+            this.installTab.Controls.Add(this.dialCheckbox);
+            this.installTab.Controls.Add(this.turboCheckbox);
+            this.installTab.Controls.Add(this.trunkCheckbox);
+            this.installTab.Controls.Add(this.engineDropdown);
+            this.installTab.Controls.Add(this.engineBlockCheckbox);
+            this.installTab.Controls.Add(this.transmissionDropdown);
+            this.installTab.Controls.Add(this.trimBCheckbox);
+            this.installTab.Controls.Add(this.suspensionDropdown);
+            this.installTab.Controls.Add(this.exhaustCheckbox);
+            this.installTab.Controls.Add(this.trimAChekbox);
+            this.installTab.Controls.Add(this.fBumperCheckbox);
+            this.installTab.Controls.Add(this.tireSmokeCheckbox);
+            this.installTab.Controls.Add(this.grilleCheckbox);
+            this.installTab.Controls.Add(this.tintCheckbox);
+            this.installTab.Controls.Add(this.hoodCheckbox);
+            this.installTab.Controls.Add(this.speakerCheckbox);
+            this.installTab.Controls.Add(this.interiorResprayCheckbox);
+            this.installTab.Controls.Add(this.strutCheckbox);
+            this.installTab.Controls.Add(this.pearlResprayCheckbox);
+            this.installTab.Controls.Add(this.steeringWheelCheckbox);
+            this.installTab.Controls.Add(this.pResprayCheckbox);
+            this.installTab.Controls.Add(this.spoilerCheckbox);
+            this.installTab.Controls.Add(this.sResprayCheckbox);
+            this.installTab.Controls.Add(this.skirtsCheckbox);
+            this.installTab.Controls.Add(this.rimColorCheckbox);
+            this.installTab.Controls.Add(this.seatsCheckbox);
+            this.installTab.Controls.Add(this.rimsCheckbox);
+            this.installTab.Controls.Add(this.roofCheckbox);
+            this.installTab.Location = new System.Drawing.Point(4, 22);
+            this.installTab.Name = "installTab";
+            this.installTab.Padding = new System.Windows.Forms.Padding(3);
+            this.installTab.Size = new System.Drawing.Size(946, 563);
+            this.installTab.TabIndex = 0;
+            this.installTab.Text = "Install Parts";
+            this.installTab.UseVisualStyleBackColor = true;
+            // 
+            // removeTab
+            // 
+            this.removeTab.Controls.Add(this.removeNeonCheckbox);
+            this.removeTab.Location = new System.Drawing.Point(4, 22);
+            this.removeTab.Name = "removeTab";
+            this.removeTab.Padding = new System.Windows.Forms.Padding(3);
+            this.removeTab.Size = new System.Drawing.Size(946, 563);
+            this.removeTab.TabIndex = 1;
+            this.removeTab.Text = "Remove Parts";
+            this.removeTab.UseVisualStyleBackColor = true;
+            // 
+            // removeNeonCheckbox
+            // 
+            this.removeNeonCheckbox.AutoSize = true;
+            this.removeNeonCheckbox.Depth = 0;
+            this.removeNeonCheckbox.Location = new System.Drawing.Point(24, 25);
+            this.removeNeonCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.removeNeonCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.removeNeonCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.removeNeonCheckbox.Name = "removeNeonCheckbox";
+            this.removeNeonCheckbox.ReadOnly = false;
+            this.removeNeonCheckbox.Ripple = true;
+            this.removeNeonCheckbox.Size = new System.Drawing.Size(156, 37);
+            this.removeNeonCheckbox.TabIndex = 0;
+            this.removeNeonCheckbox.Text = "Remove Neon Kit";
+            this.removeNeonCheckbox.UseVisualStyleBackColor = true;
+            // 
+            // materialTabSelector1
+            // 
+            this.materialTabSelector1.BaseTabControl = this.tabControl;
+            this.materialTabSelector1.CharacterCasing = MaterialSkin.Controls.MaterialTabSelector.CustomCharacterCasing.Normal;
+            this.materialTabSelector1.Depth = 0;
+            this.materialTabSelector1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialTabSelector1.Location = new System.Drawing.Point(358, 77);
+            this.materialTabSelector1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialTabSelector1.Name = "materialTabSelector1";
+            this.materialTabSelector1.Size = new System.Drawing.Size(954, 48);
+            this.materialTabSelector1.TabIndex = 7;
+            this.materialTabSelector1.Text = "materialTabSelector1";
+            // 
+            // clearLogButton
+            // 
+            this.clearLogButton.AutoSize = false;
+            this.clearLogButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.clearLogButton.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.clearLogButton.Depth = 0;
+            this.clearLogButton.HighEmphasis = true;
+            this.clearLogButton.Icon = null;
+            this.clearLogButton.Location = new System.Drawing.Point(1139, 790);
+            this.clearLogButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.clearLogButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.clearLogButton.Name = "clearLogButton";
+            this.clearLogButton.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.clearLogButton.Size = new System.Drawing.Size(160, 36);
+            this.clearLogButton.TabIndex = 4;
+            this.clearLogButton.Text = "Clear Logs";
+            this.clearLogButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.clearLogButton.UseAccentColor = false;
+            this.clearLogButton.UseVisualStyleBackColor = true;
+            // 
+            // repairInput
+            // 
+            this.repairInput.AnimateReadOnly = false;
+            this.repairInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.repairInput.Depth = 0;
+            this.repairInput.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.repairInput.Hint = "Repair";
+            this.repairInput.LeadingIcon = null;
+            this.repairInput.Location = new System.Drawing.Point(191, 245);
+            this.repairInput.MaxLength = 50;
+            this.repairInput.MouseState = MaterialSkin.MouseState.OUT;
+            this.repairInput.Multiline = false;
+            this.repairInput.Name = "repairInput";
+            this.repairInput.Size = new System.Drawing.Size(160, 50);
+            this.repairInput.TabIndex = 1;
+            this.repairInput.Text = "";
+            this.repairInput.TrailingIcon = null;
+            // 
+            // unbilledTextbox
+            // 
+            this.unbilledTextbox.AnimateReadOnly = false;
+            this.unbilledTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.unbilledTextbox.Depth = 0;
+            this.unbilledTextbox.Enabled = false;
+            this.unbilledTextbox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.unbilledTextbox.Hint = "Unbilled Amount";
+            this.unbilledTextbox.LeadingIcon = null;
+            this.unbilledTextbox.Location = new System.Drawing.Point(390, 726);
+            this.unbilledTextbox.MaxLength = 50;
+            this.unbilledTextbox.MouseState = MaterialSkin.MouseState.OUT;
+            this.unbilledTextbox.Multiline = false;
+            this.unbilledTextbox.Name = "unbilledTextbox";
+            this.unbilledTextbox.Size = new System.Drawing.Size(160, 50);
+            this.unbilledTextbox.TabIndex = 8;
+            this.unbilledTextbox.Tag = "exclude";
+            this.unbilledTextbox.Text = "";
+            this.unbilledTextbox.TrailingIcon = null;
+            // 
+            // saveLogButton
+            // 
+            this.saveLogButton.AutoSize = false;
+            this.saveLogButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.saveLogButton.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.saveLogButton.Depth = 0;
+            this.saveLogButton.HighEmphasis = true;
+            this.saveLogButton.Icon = null;
+            this.saveLogButton.Location = new System.Drawing.Point(630, 790);
+            this.saveLogButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.saveLogButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.saveLogButton.Name = "saveLogButton";
+            this.saveLogButton.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.saveLogButton.Size = new System.Drawing.Size(160, 36);
+            this.saveLogButton.TabIndex = 4;
+            this.saveLogButton.Text = "Save Log";
+            this.saveLogButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.saveLogButton.UseAccentColor = false;
+            this.saveLogButton.UseVisualStyleBackColor = true;
+            // 
+            // deleteLogButton
+            // 
+            this.deleteLogButton.AutoSize = false;
+            this.deleteLogButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.deleteLogButton.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.deleteLogButton.Depth = 0;
+            this.deleteLogButton.HighEmphasis = true;
+            this.deleteLogButton.Icon = null;
+            this.deleteLogButton.Location = new System.Drawing.Point(971, 790);
+            this.deleteLogButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.deleteLogButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.deleteLogButton.Name = "deleteLogButton";
+            this.deleteLogButton.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.deleteLogButton.Size = new System.Drawing.Size(160, 36);
+            this.deleteLogButton.TabIndex = 4;
+            this.deleteLogButton.Text = "Delete Log";
+            this.deleteLogButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.deleteLogButton.UseAccentColor = false;
+            this.deleteLogButton.UseVisualStyleBackColor = true;
+            // 
+            // updateBillButton
+            // 
+            this.updateBillButton.AutoSize = false;
+            this.updateBillButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.updateBillButton.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.updateBillButton.Depth = 0;
+            this.updateBillButton.HighEmphasis = true;
+            this.updateBillButton.Icon = null;
+            this.updateBillButton.Location = new System.Drawing.Point(390, 790);
+            this.updateBillButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.updateBillButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.updateBillButton.Name = "updateBillButton";
+            this.updateBillButton.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.updateBillButton.Size = new System.Drawing.Size(160, 36);
+            this.updateBillButton.TabIndex = 4;
+            this.updateBillButton.Text = "Bill Customer";
+            this.updateBillButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.updateBillButton.UseAccentColor = false;
+            this.updateBillButton.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1252, 650);
-            this.Controls.Add(this.infoDisplayTextBox);
-            this.Controls.Add(this.resetBtn);
-            this.Controls.Add(this.deleteLogBtn);
-            this.Controls.Add(this.clearLogsBtn);
-            this.Controls.Add(this.saveLogBtn);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.customerGroup);
+            this.ClientSize = new System.Drawing.Size(1322, 840);
+            this.Controls.Add(this.unbilledTextbox);
+            this.Controls.Add(this.materialTabSelector1);
+            this.Controls.Add(this.tabControl);
+            this.Controls.Add(this.employeeCheckbox);
+            this.Controls.Add(this.logdisplayTextBox);
+            this.Controls.Add(this.plateInput);
+            this.Controls.Add(this.vehicleInput);
+            this.Controls.Add(this.clearLogButton);
+            this.Controls.Add(this.repairInput);
+            this.Controls.Add(this.customerInput);
+            this.Controls.Add(this.updateBillButton);
+            this.Controls.Add(this.deleteLogButton);
+            this.Controls.Add(this.saveLogButton);
+            this.Controls.Add(this.newLogButton);
             this.Controls.Add(this.treeViewLogs);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
-            this.Text = "Mechanic Log Helper v1.3";
-            this.customerGroup.ResumeLayout(false);
-            this.customerGroup.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.Text = "Hayes Log Helper v2.0";
+            this.tabControl.ResumeLayout(false);
+            this.installTab.ResumeLayout(false);
+            this.installTab.PerformLayout();
+            this.removeTab.ResumeLayout(false);
+            this.removeTab.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1702,155 +1205,65 @@
         #endregion
 
         private System.Windows.Forms.TreeView treeViewLogs;
-        private System.Windows.Forms.Label customerNameLabel;
-        private System.Windows.Forms.TextBox customerNameInput;
-        private System.Windows.Forms.TextBox vehicleInput;
-        private System.Windows.Forms.TextBox licenseInput;
-        private System.Windows.Forms.Label vehicleLabel;
-        private System.Windows.Forms.Label licenseLabel;
-        private System.Windows.Forms.CheckBox employeeCheckbox;
-        private System.Windows.Forms.CheckBox armorCheckbox;
-        private System.Windows.Forms.Button saveLogBtn;
-        private System.Windows.Forms.Button clearLogsBtn;
-        private System.Windows.Forms.Button deleteLogBtn;
-        private System.Windows.Forms.Button resetBtn;
-        private System.Windows.Forms.CheckBox brakeCheckbox;
-        private System.Windows.Forms.TextBox armorAmountInput;
-        private System.Windows.Forms.TextBox brakeAmountInput;
-        private System.Windows.Forms.TextBox turboAmountInput;
-        private System.Windows.Forms.TextBox transmissionAmountInput;
-        private System.Windows.Forms.TextBox suspensionAmountInput;
-        private System.Windows.Forms.TextBox engineAmountInput;
-        private System.Windows.Forms.CheckBox engineCheckbox;
-        private System.Windows.Forms.CheckBox turboCheckbox;
-        private System.Windows.Forms.CheckBox transmissionCheckbox;
-        private System.Windows.Forms.CheckBox suspensionCheckbox;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox dialAmountInput;
-        private System.Windows.Forms.TextBox hornAmountInput;
-        private System.Windows.Forms.TextBox hoodAmountInput;
-        private System.Windows.Forms.TextBox frontBumperAmountInput;
-        private System.Windows.Forms.TextBox exhaustAmountInput;
-        private System.Windows.Forms.TextBox engineBlockAmountInput;
-        private System.Windows.Forms.CheckBox hornCheckbox;
-        private System.Windows.Forms.CheckBox hoodCheckbox;
-        private System.Windows.Forms.CheckBox frontBumperCheckbox;
-        private System.Windows.Forms.CheckBox exhaustCheckbox;
-        private System.Windows.Forms.CheckBox engineBlockCheckbox;
-        private System.Windows.Forms.CheckBox dialCheckbox;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.GroupBox customerGroup;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox sideSkirtAmountInput;
-        private System.Windows.Forms.TextBox leftFenderAmountInput;
-        private System.Windows.Forms.TextBox tireSmokeAmountInput;
-        private System.Windows.Forms.TextBox rearBumperAmountInput;
-        private System.Windows.Forms.TextBox tintAmountInput;
-        private System.Windows.Forms.TextBox resprayPearlAmountInput;
-        private System.Windows.Forms.TextBox seatsAmountInput;
-        private System.Windows.Forms.TextBox strutAmountInput;
-        private System.Windows.Forms.TextBox plateAmountInput;
-        private System.Windows.Forms.TextBox roofAmountInput;
-        private System.Windows.Forms.TextBox steeringWheelAmountInput;
-        private System.Windows.Forms.TextBox ornamentsAmountInput;
-        private System.Windows.Forms.TextBox rimsAmountInput;
-        private System.Windows.Forms.TextBox spoilerAmountInput;
-        private System.Windows.Forms.TextBox liveryAmountInput;
-        private System.Windows.Forms.TextBox rimColorAmountInput;
-        private System.Windows.Forms.TextBox respraySecondaryAmountInput;
-        private System.Windows.Forms.CheckBox tireSmokeCheckbox;
-        private System.Windows.Forms.CheckBox rearBumperCheckbox;
-        private System.Windows.Forms.CheckBox seatsCheckbox;
-        private System.Windows.Forms.CheckBox tintCheckbox;
-        private System.Windows.Forms.CheckBox resprayPearlCheckbox;
-        private System.Windows.Forms.CheckBox roofCheckbox;
-        private System.Windows.Forms.CheckBox strutCheckbox;
-        private System.Windows.Forms.CheckBox plateCheckbox;
-        private System.Windows.Forms.CheckBox rimsCheckbox;
-        private System.Windows.Forms.CheckBox steeringWheelCheckbox;
-        private System.Windows.Forms.CheckBox ornamentsCheckbox;
-        private System.Windows.Forms.CheckBox rimColorCheckbox;
-        private System.Windows.Forms.CheckBox spoilerCheckbox;
-        private System.Windows.Forms.CheckBox liveryCheckbox;
-        private System.Windows.Forms.CheckBox respraySecondaryCheckbox;
-        private System.Windows.Forms.CheckBox sideSkirtCheckbox;
-        private System.Windows.Forms.CheckBox leftFenderCheckbox;
-        private System.Windows.Forms.CheckBox resprayPrimaryCheckbox;
-        private System.Windows.Forms.TextBox resprayPrimaryAmountInput;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox sideSkirtTypeInput;
-        private System.Windows.Forms.TextBox leftFenderTypeInput;
-        private System.Windows.Forms.TextBox tireSmokeTypeInput;
-        private System.Windows.Forms.TextBox rearBumperTypeInput;
-        private System.Windows.Forms.TextBox resprayPrimaryTypeInput;
-        private System.Windows.Forms.TextBox dialTypeInput;
-        private System.Windows.Forms.TextBox tintTypeInput;
-        private System.Windows.Forms.TextBox resprayPearlTypeInput;
-        private System.Windows.Forms.TextBox seatsTypeInput;
-        private System.Windows.Forms.TextBox hornTypeInput;
-        private System.Windows.Forms.TextBox strutTypeInput;
-        private System.Windows.Forms.TextBox plateTypeInput;
-        private System.Windows.Forms.TextBox roofTypeInput;
-        private System.Windows.Forms.TextBox hoodTypeInput;
-        private System.Windows.Forms.TextBox steeringWheelTypeInput;
-        private System.Windows.Forms.TextBox ornamentsTypeInput;
-        private System.Windows.Forms.TextBox rimsTypeInput;
-        private System.Windows.Forms.TextBox frontBumperTypeInput;
-        private System.Windows.Forms.TextBox spoilerTypeInput;
-        private System.Windows.Forms.TextBox liveryTypeInput;
-        private System.Windows.Forms.TextBox rimColorTypeInput;
-        private System.Windows.Forms.TextBox exhaustTypeInput;
-        private System.Windows.Forms.TextBox respraySecondaryTypeInput;
-        private System.Windows.Forms.TextBox engineBlockTypeInput;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox turboTypeInput;
-        private System.Windows.Forms.TextBox engineTypeInput;
-        private System.Windows.Forms.TextBox transmissionTypeInput;
-        private System.Windows.Forms.TextBox suspensionTypeInput;
-        private System.Windows.Forms.TextBox brakeTypeInput;
-        private System.Windows.Forms.TextBox armorTypeInput;
-        private System.Windows.Forms.TextBox shopInput;
-        private System.Windows.Forms.Label shopLabel;
-        private System.Windows.Forms.TextBox infoDisplayTextBox;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.TextBox repairTypeInput;
-        private System.Windows.Forms.TextBox repairAmountInput;
-        private System.Windows.Forms.CheckBox repairCheckbox;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.TextBox resprayInteriorTypeInput;
-        private System.Windows.Forms.TextBox resprayInteriorAmountInput;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.TextBox removeNeonTypeInput;
-        private System.Windows.Forms.TextBox removeNeonAmountInput;
-        private System.Windows.Forms.CheckBox removeNeonCheckbox;
-        private System.Windows.Forms.CheckBox resprayInteriorCheckbox;
+        private MaterialSkin.Controls.MaterialTextBox customerInput;
+        private MaterialSkin.Controls.MaterialTextBox vehicleInput;
+        private MaterialSkin.Controls.MaterialTextBox plateInput;
+        private MaterialSkin.Controls.MaterialCheckbox employeeCheckbox;
+        private MaterialSkin.Controls.MaterialMultiLineTextBox logdisplayTextBox;
+        private MaterialSkin.Controls.MaterialComboBox armorDropwdown;
+        private MaterialSkin.Controls.MaterialComboBox brakesDropdown;
+        private MaterialSkin.Controls.MaterialComboBox transmissionDropdown;
+        private MaterialSkin.Controls.MaterialComboBox suspensionDropdown;
+        private MaterialSkin.Controls.MaterialComboBox engineDropdown;
+        private MaterialSkin.Controls.MaterialCheckbox turboCheckbox;
+        private MaterialSkin.Controls.MaterialCheckbox customTiresCheckbox;
+        private MaterialSkin.Controls.MaterialCheckbox aerialCheckbox;
+        private MaterialSkin.Controls.MaterialCheckbox archCoverCheckbox;
+        private MaterialSkin.Controls.MaterialCheckbox grilleCheckbox;
+        private MaterialSkin.Controls.MaterialCheckbox fBumperCheckbox;
+        private MaterialSkin.Controls.MaterialCheckbox exhaustCheckbox;
+        private MaterialSkin.Controls.MaterialCheckbox engineBlockCheckbox;
+        private MaterialSkin.Controls.MaterialCheckbox dialCheckbox;
+        private MaterialSkin.Controls.MaterialCheckbox dResprayCheckbox;
+        private MaterialSkin.Controls.MaterialButton newLogButton;
+        private MaterialSkin.Controls.MaterialCheckbox hoodCheckbox;
+        private MaterialSkin.Controls.MaterialCheckbox interiorResprayCheckbox;
+        private MaterialSkin.Controls.MaterialCheckbox hornCheckbox;
+        private MaterialSkin.Controls.MaterialCheckbox leftFenderCheckbox;
+        private MaterialSkin.Controls.MaterialCheckbox liveryCheckbox;
+        private MaterialSkin.Controls.MaterialCheckbox ornamentsCheckbox;
+        private MaterialSkin.Controls.MaterialCheckbox oldLiveryCheckbox;
+        private MaterialSkin.Controls.MaterialCheckbox plateCheckbox;
+        private MaterialSkin.Controls.MaterialCheckbox rBumperCheckbox;
+        private MaterialSkin.Controls.MaterialCheckbox pearlResprayCheckbox;
+        private MaterialSkin.Controls.MaterialCheckbox pResprayCheckbox;
+        private MaterialSkin.Controls.MaterialCheckbox sResprayCheckbox;
+        private MaterialSkin.Controls.MaterialCheckbox rimColorCheckbox;
+        private MaterialSkin.Controls.MaterialCheckbox rimsCheckbox;
+        private MaterialSkin.Controls.MaterialCheckbox roofCheckbox;
+        private MaterialSkin.Controls.MaterialCheckbox rollcageCheckbox;
+        private MaterialSkin.Controls.MaterialCheckbox seatsCheckbox;
+        private MaterialSkin.Controls.MaterialCheckbox skirtsCheckbox;
+        private MaterialSkin.Controls.MaterialCheckbox spoilerCheckbox;
+        private MaterialSkin.Controls.MaterialCheckbox steeringWheelCheckbox;
+        private MaterialSkin.Controls.MaterialCheckbox strutCheckbox;
+        private MaterialSkin.Controls.MaterialCheckbox speakerCheckbox;
+        private MaterialSkin.Controls.MaterialCheckbox tintCheckbox;
+        private MaterialSkin.Controls.MaterialCheckbox tireSmokeCheckbox;
+        private MaterialSkin.Controls.MaterialCheckbox trimAChekbox;
+        private MaterialSkin.Controls.MaterialCheckbox trimBCheckbox;
+        private MaterialSkin.Controls.MaterialCheckbox trunkCheckbox;
+        private MaterialSkin.Controls.MaterialTabControl tabControl;
+        private System.Windows.Forms.TabPage installTab;
+        private System.Windows.Forms.TabPage removeTab;
+        private MaterialSkin.Controls.MaterialTabSelector materialTabSelector1;
+        private MaterialSkin.Controls.MaterialCheckbox removeNeonCheckbox;
+        private MaterialSkin.Controls.MaterialButton clearLogButton;
+        private MaterialSkin.Controls.MaterialTextBox repairInput;
+        private MaterialSkin.Controls.MaterialTextBox unbilledTextbox;
+        private MaterialSkin.Controls.MaterialButton saveLogButton;
+        private MaterialSkin.Controls.MaterialButton deleteLogButton;
+        private MaterialSkin.Controls.MaterialButton updateBillButton;
     }
 }
 
