@@ -319,7 +319,30 @@ SHOP: {shop}
             }
         }
 
-        
+        private void GenerateCommissionLog_Click(object sender, EventArgs e)
+        {
+            string name = "Mike Lee";
+            DateTime clockIn = DateTime.Now;
+            DateTime clockOut = DateTime.Now;
+            int hoursWorked = 1;
+            int upgradeLogs = 1;
+            int performanceParts = 1;
+            int assistedLogs = 0;
+            int totalCommission = performanceParts * 200;
+
+            string formattedString = $@"```
+Name: {name}
+Clock In Time: {clockIn}
+Clock Out Time: {clockOut}
+Hours Worked: {hoursWorked}
+Upgrade Logs: {upgradeLogs}
+Performance Parts: {performanceParts}
+Assisted Logs: {assistedLogs}
+Total Commission: ${totalCommission:n0}
+```";
+        }
+
+
         private string GetFormattedUpgrades()
         {
             List<string> resprayTypes = new List<string>();
