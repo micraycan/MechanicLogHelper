@@ -5,7 +5,8 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using MaterialSkin;
+using MaterialSkin.Controls;
 
 namespace MechanicLogHelper
 {
@@ -14,6 +15,8 @@ namespace MechanicLogHelper
         public string UpgradeName { get; set; }
         public int UpgradeAmount { get; set; }
         public string UpgradeType { get; set; }
+        public bool UpgradePaid { get; set; }
+        public string UpgradeOption { get; set; }
     }
 
     public class LogEntry
@@ -68,9 +71,31 @@ namespace MechanicLogHelper
 
     public class UpgradeOption
     {
-        public CheckBox Checkbox { get; set; }
-        public TextBox InputField { get; set; }
-        public TextBox TypeField { get; set; }
         public string UpgradeName { get; set; }
+        public string UpgradeType { get; set; }
+    }
+
+    public class UpgradeOptionDropdown : UpgradeOption
+    {
+        public MaterialComboBox UpgradeInput { get; set; }
+        public Dictionary<int, int> Price { get; set; }
+
+        public UpgradeOptionDropdown()
+        {
+            Price = new Dictionary<int, int>()
+            {
+                { 2, 3250 },
+                { 3, 5500 },
+                { 4, 9450 },
+                { 5, 13250 },
+                { 6, 18500 }
+            };
+        }
+    }
+
+    public class UpgradeOptionCheckbox : UpgradeOption
+    {
+        public MaterialCheckbox UpgradeInput { get; set; }
+        public int Price { get; set; }
     }
 }
