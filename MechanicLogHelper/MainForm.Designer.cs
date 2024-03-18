@@ -96,10 +96,11 @@
             // 
             // treeViewLogs
             // 
-            this.treeViewLogs.Location = new System.Drawing.Point(17, 305);
+            this.treeViewLogs.Location = new System.Drawing.Point(34, 587);
+            this.treeViewLogs.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.treeViewLogs.Name = "treeViewLogs";
-            this.treeViewLogs.Size = new System.Drawing.Size(334, 283);
-            this.treeViewLogs.TabIndex = 0;
+            this.treeViewLogs.Size = new System.Drawing.Size(664, 541);
+            this.treeViewLogs.TabIndex = 12;
             // 
             // customerInput
             // 
@@ -109,13 +110,14 @@
             this.customerInput.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.customerInput.Hint = "Customer name";
             this.customerInput.LeadingIcon = null;
-            this.customerInput.Location = new System.Drawing.Point(17, 77);
+            this.customerInput.Location = new System.Drawing.Point(34, 148);
+            this.customerInput.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.customerInput.MaxLength = 50;
             this.customerInput.MouseState = MaterialSkin.MouseState.OUT;
             this.customerInput.Multiline = false;
             this.customerInput.Name = "customerInput";
-            this.customerInput.Size = new System.Drawing.Size(334, 50);
-            this.customerInput.TabIndex = 1;
+            this.customerInput.Size = new System.Drawing.Size(668, 50);
+            this.customerInput.TabIndex = 0;
             this.customerInput.Tag = "exclude";
             this.customerInput.Text = "";
             this.customerInput.TrailingIcon = null;
@@ -128,12 +130,13 @@
             this.vehicleInput.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.vehicleInput.Hint = "Vehicle make/model";
             this.vehicleInput.LeadingIcon = null;
-            this.vehicleInput.Location = new System.Drawing.Point(17, 133);
+            this.vehicleInput.Location = new System.Drawing.Point(34, 256);
+            this.vehicleInput.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.vehicleInput.MaxLength = 50;
             this.vehicleInput.MouseState = MaterialSkin.MouseState.OUT;
             this.vehicleInput.Multiline = false;
             this.vehicleInput.Name = "vehicleInput";
-            this.vehicleInput.Size = new System.Drawing.Size(334, 50);
+            this.vehicleInput.Size = new System.Drawing.Size(668, 50);
             this.vehicleInput.TabIndex = 1;
             this.vehicleInput.Tag = "exclude";
             this.vehicleInput.Text = "";
@@ -147,13 +150,14 @@
             this.plateInput.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.plateInput.Hint = "License plate";
             this.plateInput.LeadingIcon = null;
-            this.plateInput.Location = new System.Drawing.Point(17, 189);
+            this.plateInput.Location = new System.Drawing.Point(34, 363);
+            this.plateInput.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.plateInput.MaxLength = 50;
             this.plateInput.MouseState = MaterialSkin.MouseState.OUT;
             this.plateInput.Multiline = false;
             this.plateInput.Name = "plateInput";
-            this.plateInput.Size = new System.Drawing.Size(334, 50);
-            this.plateInput.TabIndex = 1;
+            this.plateInput.Size = new System.Drawing.Size(668, 50);
+            this.plateInput.TabIndex = 2;
             this.plateInput.Tag = "exclude";
             this.plateInput.Text = "";
             this.plateInput.TrailingIcon = null;
@@ -162,7 +166,7 @@
             // 
             this.employeeCheckbox.AutoSize = true;
             this.employeeCheckbox.Depth = 0;
-            this.employeeCheckbox.Location = new System.Drawing.Point(17, 251);
+            this.employeeCheckbox.Location = new System.Drawing.Point(34, 483);
             this.employeeCheckbox.Margin = new System.Windows.Forms.Padding(0);
             this.employeeCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
             this.employeeCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
@@ -170,7 +174,7 @@
             this.employeeCheckbox.ReadOnly = false;
             this.employeeCheckbox.Ripple = true;
             this.employeeCheckbox.Size = new System.Drawing.Size(139, 37);
-            this.employeeCheckbox.TabIndex = 2;
+            this.employeeCheckbox.TabIndex = 3;
             this.employeeCheckbox.Text = "Employee Sale";
             this.employeeCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -181,12 +185,13 @@
             this.logdisplayTextBox.Depth = 0;
             this.logdisplayTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.logdisplayTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.logdisplayTextBox.Location = new System.Drawing.Point(17, 597);
+            this.logdisplayTextBox.Location = new System.Drawing.Point(34, 1148);
+            this.logdisplayTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.logdisplayTextBox.MouseState = MaterialSkin.MouseState.HOVER;
             this.logdisplayTextBox.Name = "logdisplayTextBox";
             this.logdisplayTextBox.ReadOnly = true;
-            this.logdisplayTextBox.Size = new System.Drawing.Size(334, 229);
-            this.logdisplayTextBox.TabIndex = 3;
+            this.logdisplayTextBox.Size = new System.Drawing.Size(668, 440);
+            this.logdisplayTextBox.TabIndex = 11;
             this.logdisplayTextBox.Tag = "exclude";
             this.logdisplayTextBox.Text = "";
             this.logdisplayTextBox.Click += new System.EventHandler(this.CopyToClipboard_Click);
@@ -213,13 +218,14 @@
             "Armor 4",
             "Armor 5",
             "Armor 6"});
-            this.armorDropwdown.Location = new System.Drawing.Point(28, 16);
+            this.armorDropwdown.Location = new System.Drawing.Point(56, 31);
+            this.armorDropwdown.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.armorDropwdown.MaxDropDownItems = 4;
             this.armorDropwdown.MouseState = MaterialSkin.MouseState.OUT;
             this.armorDropwdown.Name = "armorDropwdown";
-            this.armorDropwdown.Size = new System.Drawing.Size(160, 49);
+            this.armorDropwdown.Size = new System.Drawing.Size(316, 49);
             this.armorDropwdown.StartIndex = 0;
-            this.armorDropwdown.TabIndex = 2;
+            this.armorDropwdown.TabIndex = 0;
             // 
             // brakesDropdown
             // 
@@ -241,13 +247,14 @@
             "Brakes 2",
             "Brakes 3",
             "Brakes 4"});
-            this.brakesDropdown.Location = new System.Drawing.Point(194, 16);
+            this.brakesDropdown.Location = new System.Drawing.Point(388, 31);
+            this.brakesDropdown.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.brakesDropdown.MaxDropDownItems = 4;
             this.brakesDropdown.MouseState = MaterialSkin.MouseState.OUT;
             this.brakesDropdown.Name = "brakesDropdown";
-            this.brakesDropdown.Size = new System.Drawing.Size(160, 49);
+            this.brakesDropdown.Size = new System.Drawing.Size(316, 49);
             this.brakesDropdown.StartIndex = 0;
-            this.brakesDropdown.TabIndex = 2;
+            this.brakesDropdown.TabIndex = 1;
             // 
             // engineDropdown
             // 
@@ -270,11 +277,12 @@
             "Engine 3",
             "Engine 4",
             "Engine 5"});
-            this.engineDropdown.Location = new System.Drawing.Point(360, 16);
+            this.engineDropdown.Location = new System.Drawing.Point(720, 31);
+            this.engineDropdown.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.engineDropdown.MaxDropDownItems = 4;
             this.engineDropdown.MouseState = MaterialSkin.MouseState.OUT;
             this.engineDropdown.Name = "engineDropdown";
-            this.engineDropdown.Size = new System.Drawing.Size(160, 49);
+            this.engineDropdown.Size = new System.Drawing.Size(316, 49);
             this.engineDropdown.StartIndex = 0;
             this.engineDropdown.TabIndex = 2;
             // 
@@ -298,13 +306,14 @@
             "Suspension 2",
             "Suspension 3",
             "Suspension 4"});
-            this.suspensionDropdown.Location = new System.Drawing.Point(526, 16);
+            this.suspensionDropdown.Location = new System.Drawing.Point(1052, 31);
+            this.suspensionDropdown.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.suspensionDropdown.MaxDropDownItems = 4;
             this.suspensionDropdown.MouseState = MaterialSkin.MouseState.OUT;
             this.suspensionDropdown.Name = "suspensionDropdown";
-            this.suspensionDropdown.Size = new System.Drawing.Size(160, 49);
+            this.suspensionDropdown.Size = new System.Drawing.Size(316, 49);
             this.suspensionDropdown.StartIndex = 0;
-            this.suspensionDropdown.TabIndex = 2;
+            this.suspensionDropdown.TabIndex = 3;
             // 
             // transmissionDropdown
             // 
@@ -326,19 +335,20 @@
             "Transmission 2",
             "Transmission 3",
             "Transmission 4"});
-            this.transmissionDropdown.Location = new System.Drawing.Point(692, 16);
+            this.transmissionDropdown.Location = new System.Drawing.Point(1384, 31);
+            this.transmissionDropdown.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.transmissionDropdown.MaxDropDownItems = 4;
             this.transmissionDropdown.MouseState = MaterialSkin.MouseState.OUT;
             this.transmissionDropdown.Name = "transmissionDropdown";
-            this.transmissionDropdown.Size = new System.Drawing.Size(160, 49);
+            this.transmissionDropdown.Size = new System.Drawing.Size(316, 49);
             this.transmissionDropdown.StartIndex = 0;
-            this.transmissionDropdown.TabIndex = 2;
+            this.transmissionDropdown.TabIndex = 4;
             // 
             // turboCheckbox
             // 
             this.turboCheckbox.AutoSize = true;
             this.turboCheckbox.Depth = 0;
-            this.turboCheckbox.Location = new System.Drawing.Point(860, 22);
+            this.turboCheckbox.Location = new System.Drawing.Point(1720, 42);
             this.turboCheckbox.Margin = new System.Windows.Forms.Padding(0);
             this.turboCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
             this.turboCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
@@ -346,7 +356,7 @@
             this.turboCheckbox.ReadOnly = false;
             this.turboCheckbox.Ripple = true;
             this.turboCheckbox.Size = new System.Drawing.Size(77, 37);
-            this.turboCheckbox.TabIndex = 3;
+            this.turboCheckbox.TabIndex = 5;
             this.turboCheckbox.Text = "Turbo";
             this.turboCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -354,7 +364,7 @@
             // 
             this.archCoverCheckbox.AutoSize = true;
             this.archCoverCheckbox.Depth = 0;
-            this.archCoverCheckbox.Location = new System.Drawing.Point(28, 78);
+            this.archCoverCheckbox.Location = new System.Drawing.Point(56, 150);
             this.archCoverCheckbox.Margin = new System.Windows.Forms.Padding(0);
             this.archCoverCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
             this.archCoverCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
@@ -362,7 +372,7 @@
             this.archCoverCheckbox.ReadOnly = false;
             this.archCoverCheckbox.Ripple = true;
             this.archCoverCheckbox.Size = new System.Drawing.Size(111, 37);
-            this.archCoverCheckbox.TabIndex = 4;
+            this.archCoverCheckbox.TabIndex = 6;
             this.archCoverCheckbox.Text = "Arch Cover";
             this.archCoverCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -370,7 +380,7 @@
             // 
             this.aerialCheckbox.AutoSize = true;
             this.aerialCheckbox.Depth = 0;
-            this.aerialCheckbox.Location = new System.Drawing.Point(28, 115);
+            this.aerialCheckbox.Location = new System.Drawing.Point(56, 221);
             this.aerialCheckbox.Margin = new System.Windows.Forms.Padding(0);
             this.aerialCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
             this.aerialCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
@@ -378,7 +388,7 @@
             this.aerialCheckbox.ReadOnly = false;
             this.aerialCheckbox.Ripple = true;
             this.aerialCheckbox.Size = new System.Drawing.Size(75, 37);
-            this.aerialCheckbox.TabIndex = 4;
+            this.aerialCheckbox.TabIndex = 7;
             this.aerialCheckbox.Text = "Aerial";
             this.aerialCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -386,7 +396,7 @@
             // 
             this.customTiresCheckbox.AutoSize = true;
             this.customTiresCheckbox.Depth = 0;
-            this.customTiresCheckbox.Location = new System.Drawing.Point(28, 152);
+            this.customTiresCheckbox.Location = new System.Drawing.Point(56, 292);
             this.customTiresCheckbox.Margin = new System.Windows.Forms.Padding(0);
             this.customTiresCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
             this.customTiresCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
@@ -394,7 +404,7 @@
             this.customTiresCheckbox.ReadOnly = false;
             this.customTiresCheckbox.Ripple = true;
             this.customTiresCheckbox.Size = new System.Drawing.Size(129, 37);
-            this.customTiresCheckbox.TabIndex = 4;
+            this.customTiresCheckbox.TabIndex = 8;
             this.customTiresCheckbox.Text = "Custom Tires";
             this.customTiresCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -402,7 +412,7 @@
             // 
             this.dResprayCheckbox.AutoSize = true;
             this.dResprayCheckbox.Depth = 0;
-            this.dResprayCheckbox.Location = new System.Drawing.Point(326, 226);
+            this.dResprayCheckbox.Location = new System.Drawing.Point(652, 435);
             this.dResprayCheckbox.Margin = new System.Windows.Forms.Padding(0);
             this.dResprayCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
             this.dResprayCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
@@ -410,7 +420,7 @@
             this.dResprayCheckbox.ReadOnly = false;
             this.dResprayCheckbox.Ripple = true;
             this.dResprayCheckbox.Size = new System.Drawing.Size(174, 37);
-            this.dResprayCheckbox.TabIndex = 4;
+            this.dResprayCheckbox.TabIndex = 22;
             this.dResprayCheckbox.Text = "Respray Dashboard";
             this.dResprayCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -418,7 +428,7 @@
             // 
             this.dialCheckbox.AutoSize = true;
             this.dialCheckbox.Depth = 0;
-            this.dialCheckbox.Location = new System.Drawing.Point(28, 189);
+            this.dialCheckbox.Location = new System.Drawing.Point(56, 363);
             this.dialCheckbox.Margin = new System.Windows.Forms.Padding(0);
             this.dialCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
             this.dialCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
@@ -426,7 +436,7 @@
             this.dialCheckbox.ReadOnly = false;
             this.dialCheckbox.Ripple = true;
             this.dialCheckbox.Size = new System.Drawing.Size(63, 37);
-            this.dialCheckbox.TabIndex = 4;
+            this.dialCheckbox.TabIndex = 9;
             this.dialCheckbox.Text = "Dial";
             this.dialCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -434,7 +444,7 @@
             // 
             this.engineBlockCheckbox.AutoSize = true;
             this.engineBlockCheckbox.Depth = 0;
-            this.engineBlockCheckbox.Location = new System.Drawing.Point(28, 226);
+            this.engineBlockCheckbox.Location = new System.Drawing.Point(56, 435);
             this.engineBlockCheckbox.Margin = new System.Windows.Forms.Padding(0);
             this.engineBlockCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
             this.engineBlockCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
@@ -442,7 +452,7 @@
             this.engineBlockCheckbox.ReadOnly = false;
             this.engineBlockCheckbox.Ripple = true;
             this.engineBlockCheckbox.Size = new System.Drawing.Size(126, 37);
-            this.engineBlockCheckbox.TabIndex = 4;
+            this.engineBlockCheckbox.TabIndex = 10;
             this.engineBlockCheckbox.Text = "Engine Block";
             this.engineBlockCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -450,7 +460,7 @@
             // 
             this.exhaustCheckbox.AutoSize = true;
             this.exhaustCheckbox.Depth = 0;
-            this.exhaustCheckbox.Location = new System.Drawing.Point(28, 263);
+            this.exhaustCheckbox.Location = new System.Drawing.Point(56, 506);
             this.exhaustCheckbox.Margin = new System.Windows.Forms.Padding(0);
             this.exhaustCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
             this.exhaustCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
@@ -458,7 +468,7 @@
             this.exhaustCheckbox.ReadOnly = false;
             this.exhaustCheckbox.Ripple = true;
             this.exhaustCheckbox.Size = new System.Drawing.Size(92, 37);
-            this.exhaustCheckbox.TabIndex = 4;
+            this.exhaustCheckbox.TabIndex = 11;
             this.exhaustCheckbox.Text = "Exhaust";
             this.exhaustCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -466,7 +476,7 @@
             // 
             this.fBumperCheckbox.AutoSize = true;
             this.fBumperCheckbox.Depth = 0;
-            this.fBumperCheckbox.Location = new System.Drawing.Point(28, 300);
+            this.fBumperCheckbox.Location = new System.Drawing.Point(56, 577);
             this.fBumperCheckbox.Margin = new System.Windows.Forms.Padding(0);
             this.fBumperCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
             this.fBumperCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
@@ -474,7 +484,7 @@
             this.fBumperCheckbox.ReadOnly = false;
             this.fBumperCheckbox.Ripple = true;
             this.fBumperCheckbox.Size = new System.Drawing.Size(131, 37);
-            this.fBumperCheckbox.TabIndex = 4;
+            this.fBumperCheckbox.TabIndex = 12;
             this.fBumperCheckbox.Text = "Front Bumper";
             this.fBumperCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -482,7 +492,7 @@
             // 
             this.grilleCheckbox.AutoSize = true;
             this.grilleCheckbox.Depth = 0;
-            this.grilleCheckbox.Location = new System.Drawing.Point(28, 337);
+            this.grilleCheckbox.Location = new System.Drawing.Point(56, 648);
             this.grilleCheckbox.Margin = new System.Windows.Forms.Padding(0);
             this.grilleCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
             this.grilleCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
@@ -490,7 +500,7 @@
             this.grilleCheckbox.ReadOnly = false;
             this.grilleCheckbox.Ripple = true;
             this.grilleCheckbox.Size = new System.Drawing.Size(71, 37);
-            this.grilleCheckbox.TabIndex = 4;
+            this.grilleCheckbox.TabIndex = 13;
             this.grilleCheckbox.Text = "Grille";
             this.grilleCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -502,13 +512,13 @@
             this.newLogButton.Depth = 0;
             this.newLogButton.HighEmphasis = true;
             this.newLogButton.Icon = null;
-            this.newLogButton.Location = new System.Drawing.Point(803, 790);
-            this.newLogButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.newLogButton.Location = new System.Drawing.Point(1606, 1519);
+            this.newLogButton.Margin = new System.Windows.Forms.Padding(8, 12, 8, 12);
             this.newLogButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.newLogButton.Name = "newLogButton";
             this.newLogButton.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.newLogButton.Size = new System.Drawing.Size(160, 36);
-            this.newLogButton.TabIndex = 4;
+            this.newLogButton.Size = new System.Drawing.Size(320, 69);
+            this.newLogButton.TabIndex = 8;
             this.newLogButton.Text = "New Log";
             this.newLogButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.newLogButton.UseAccentColor = false;
@@ -518,7 +528,7 @@
             // 
             this.hoodCheckbox.AutoSize = true;
             this.hoodCheckbox.Depth = 0;
-            this.hoodCheckbox.Location = new System.Drawing.Point(28, 374);
+            this.hoodCheckbox.Location = new System.Drawing.Point(56, 719);
             this.hoodCheckbox.Margin = new System.Windows.Forms.Padding(0);
             this.hoodCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
             this.hoodCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
@@ -526,7 +536,7 @@
             this.hoodCheckbox.ReadOnly = false;
             this.hoodCheckbox.Ripple = true;
             this.hoodCheckbox.Size = new System.Drawing.Size(73, 37);
-            this.hoodCheckbox.TabIndex = 4;
+            this.hoodCheckbox.TabIndex = 14;
             this.hoodCheckbox.Text = "Hood";
             this.hoodCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -534,7 +544,7 @@
             // 
             this.interiorResprayCheckbox.AutoSize = true;
             this.interiorResprayCheckbox.Depth = 0;
-            this.interiorResprayCheckbox.Location = new System.Drawing.Point(326, 263);
+            this.interiorResprayCheckbox.Location = new System.Drawing.Point(652, 506);
             this.interiorResprayCheckbox.Margin = new System.Windows.Forms.Padding(0);
             this.interiorResprayCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
             this.interiorResprayCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
@@ -542,7 +552,7 @@
             this.interiorResprayCheckbox.ReadOnly = false;
             this.interiorResprayCheckbox.Ripple = true;
             this.interiorResprayCheckbox.Size = new System.Drawing.Size(145, 37);
-            this.interiorResprayCheckbox.TabIndex = 4;
+            this.interiorResprayCheckbox.TabIndex = 23;
             this.interiorResprayCheckbox.Text = "Respray Interior";
             this.interiorResprayCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -550,7 +560,7 @@
             // 
             this.hornCheckbox.AutoSize = true;
             this.hornCheckbox.Depth = 0;
-            this.hornCheckbox.Location = new System.Drawing.Point(28, 411);
+            this.hornCheckbox.Location = new System.Drawing.Point(56, 790);
             this.hornCheckbox.Margin = new System.Windows.Forms.Padding(0);
             this.hornCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
             this.hornCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
@@ -558,7 +568,7 @@
             this.hornCheckbox.ReadOnly = false;
             this.hornCheckbox.Ripple = true;
             this.hornCheckbox.Size = new System.Drawing.Size(69, 37);
-            this.hornCheckbox.TabIndex = 4;
+            this.hornCheckbox.TabIndex = 15;
             this.hornCheckbox.Text = "Horn";
             this.hornCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -566,7 +576,7 @@
             // 
             this.leftFenderCheckbox.AutoSize = true;
             this.leftFenderCheckbox.Depth = 0;
-            this.leftFenderCheckbox.Location = new System.Drawing.Point(28, 448);
+            this.leftFenderCheckbox.Location = new System.Drawing.Point(56, 862);
             this.leftFenderCheckbox.Margin = new System.Windows.Forms.Padding(0);
             this.leftFenderCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
             this.leftFenderCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
@@ -574,7 +584,7 @@
             this.leftFenderCheckbox.ReadOnly = false;
             this.leftFenderCheckbox.Ripple = true;
             this.leftFenderCheckbox.Size = new System.Drawing.Size(115, 37);
-            this.leftFenderCheckbox.TabIndex = 4;
+            this.leftFenderCheckbox.TabIndex = 16;
             this.leftFenderCheckbox.Text = "Left Fender";
             this.leftFenderCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -582,7 +592,7 @@
             // 
             this.liveryCheckbox.AutoSize = true;
             this.liveryCheckbox.Depth = 0;
-            this.liveryCheckbox.Location = new System.Drawing.Point(28, 485);
+            this.liveryCheckbox.Location = new System.Drawing.Point(56, 933);
             this.liveryCheckbox.Margin = new System.Windows.Forms.Padding(0);
             this.liveryCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
             this.liveryCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
@@ -590,7 +600,7 @@
             this.liveryCheckbox.ReadOnly = false;
             this.liveryCheckbox.Ripple = true;
             this.liveryCheckbox.Size = new System.Drawing.Size(77, 37);
-            this.liveryCheckbox.TabIndex = 4;
+            this.liveryCheckbox.TabIndex = 17;
             this.liveryCheckbox.Text = "Livery";
             this.liveryCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -598,7 +608,7 @@
             // 
             this.ornamentsCheckbox.AutoSize = true;
             this.ornamentsCheckbox.Depth = 0;
-            this.ornamentsCheckbox.Location = new System.Drawing.Point(326, 78);
+            this.ornamentsCheckbox.Location = new System.Drawing.Point(652, 150);
             this.ornamentsCheckbox.Margin = new System.Windows.Forms.Padding(0);
             this.ornamentsCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
             this.ornamentsCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
@@ -606,7 +616,7 @@
             this.ornamentsCheckbox.ReadOnly = false;
             this.ornamentsCheckbox.Ripple = true;
             this.ornamentsCheckbox.Size = new System.Drawing.Size(113, 37);
-            this.ornamentsCheckbox.TabIndex = 4;
+            this.ornamentsCheckbox.TabIndex = 18;
             this.ornamentsCheckbox.Text = "Ornaments";
             this.ornamentsCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -614,7 +624,7 @@
             // 
             this.oldLiveryCheckbox.AutoSize = true;
             this.oldLiveryCheckbox.Depth = 0;
-            this.oldLiveryCheckbox.Location = new System.Drawing.Point(326, 115);
+            this.oldLiveryCheckbox.Location = new System.Drawing.Point(652, 221);
             this.oldLiveryCheckbox.Margin = new System.Windows.Forms.Padding(0);
             this.oldLiveryCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
             this.oldLiveryCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
@@ -622,7 +632,7 @@
             this.oldLiveryCheckbox.ReadOnly = false;
             this.oldLiveryCheckbox.Ripple = true;
             this.oldLiveryCheckbox.Size = new System.Drawing.Size(105, 37);
-            this.oldLiveryCheckbox.TabIndex = 4;
+            this.oldLiveryCheckbox.TabIndex = 19;
             this.oldLiveryCheckbox.Text = "Old Livery";
             this.oldLiveryCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -630,7 +640,7 @@
             // 
             this.plateCheckbox.AutoSize = true;
             this.plateCheckbox.Depth = 0;
-            this.plateCheckbox.Location = new System.Drawing.Point(326, 152);
+            this.plateCheckbox.Location = new System.Drawing.Point(652, 292);
             this.plateCheckbox.Margin = new System.Windows.Forms.Padding(0);
             this.plateCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
             this.plateCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
@@ -638,7 +648,7 @@
             this.plateCheckbox.ReadOnly = false;
             this.plateCheckbox.Ripple = true;
             this.plateCheckbox.Size = new System.Drawing.Size(113, 37);
-            this.plateCheckbox.TabIndex = 4;
+            this.plateCheckbox.TabIndex = 20;
             this.plateCheckbox.Text = "Plate Index";
             this.plateCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -646,7 +656,7 @@
             // 
             this.rBumperCheckbox.AutoSize = true;
             this.rBumperCheckbox.Depth = 0;
-            this.rBumperCheckbox.Location = new System.Drawing.Point(326, 189);
+            this.rBumperCheckbox.Location = new System.Drawing.Point(652, 363);
             this.rBumperCheckbox.Margin = new System.Windows.Forms.Padding(0);
             this.rBumperCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
             this.rBumperCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
@@ -654,7 +664,7 @@
             this.rBumperCheckbox.ReadOnly = false;
             this.rBumperCheckbox.Ripple = true;
             this.rBumperCheckbox.Size = new System.Drawing.Size(126, 37);
-            this.rBumperCheckbox.TabIndex = 4;
+            this.rBumperCheckbox.TabIndex = 21;
             this.rBumperCheckbox.Text = "Rear Bumper";
             this.rBumperCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -662,7 +672,7 @@
             // 
             this.pearlResprayCheckbox.AutoSize = true;
             this.pearlResprayCheckbox.Depth = 0;
-            this.pearlResprayCheckbox.Location = new System.Drawing.Point(326, 300);
+            this.pearlResprayCheckbox.Location = new System.Drawing.Point(652, 577);
             this.pearlResprayCheckbox.Margin = new System.Windows.Forms.Padding(0);
             this.pearlResprayCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
             this.pearlResprayCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
@@ -670,7 +680,7 @@
             this.pearlResprayCheckbox.ReadOnly = false;
             this.pearlResprayCheckbox.Ripple = true;
             this.pearlResprayCheckbox.Size = new System.Drawing.Size(178, 37);
-            this.pearlResprayCheckbox.TabIndex = 4;
+            this.pearlResprayCheckbox.TabIndex = 24;
             this.pearlResprayCheckbox.Text = "Respray Pearlescent";
             this.pearlResprayCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -678,7 +688,7 @@
             // 
             this.pResprayCheckbox.AutoSize = true;
             this.pResprayCheckbox.Depth = 0;
-            this.pResprayCheckbox.Location = new System.Drawing.Point(326, 337);
+            this.pResprayCheckbox.Location = new System.Drawing.Point(652, 648);
             this.pResprayCheckbox.Margin = new System.Windows.Forms.Padding(0);
             this.pResprayCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
             this.pResprayCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
@@ -686,7 +696,7 @@
             this.pResprayCheckbox.ReadOnly = false;
             this.pResprayCheckbox.Ripple = true;
             this.pResprayCheckbox.Size = new System.Drawing.Size(151, 37);
-            this.pResprayCheckbox.TabIndex = 4;
+            this.pResprayCheckbox.TabIndex = 25;
             this.pResprayCheckbox.Text = "Respray Primary";
             this.pResprayCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -694,7 +704,7 @@
             // 
             this.sResprayCheckbox.AutoSize = true;
             this.sResprayCheckbox.Depth = 0;
-            this.sResprayCheckbox.Location = new System.Drawing.Point(326, 374);
+            this.sResprayCheckbox.Location = new System.Drawing.Point(652, 719);
             this.sResprayCheckbox.Margin = new System.Windows.Forms.Padding(0);
             this.sResprayCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
             this.sResprayCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
@@ -702,7 +712,7 @@
             this.sResprayCheckbox.ReadOnly = false;
             this.sResprayCheckbox.Ripple = true;
             this.sResprayCheckbox.Size = new System.Drawing.Size(171, 37);
-            this.sResprayCheckbox.TabIndex = 4;
+            this.sResprayCheckbox.TabIndex = 26;
             this.sResprayCheckbox.Text = "Respray Secondary";
             this.sResprayCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -710,7 +720,7 @@
             // 
             this.rimColorCheckbox.AutoSize = true;
             this.rimColorCheckbox.Depth = 0;
-            this.rimColorCheckbox.Location = new System.Drawing.Point(326, 411);
+            this.rimColorCheckbox.Location = new System.Drawing.Point(652, 790);
             this.rimColorCheckbox.Margin = new System.Windows.Forms.Padding(0);
             this.rimColorCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
             this.rimColorCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
@@ -718,7 +728,7 @@
             this.rimColorCheckbox.ReadOnly = false;
             this.rimColorCheckbox.Ripple = true;
             this.rimColorCheckbox.Size = new System.Drawing.Size(104, 37);
-            this.rimColorCheckbox.TabIndex = 4;
+            this.rimColorCheckbox.TabIndex = 27;
             this.rimColorCheckbox.Text = "Rim Color";
             this.rimColorCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -726,7 +736,7 @@
             // 
             this.rimsCheckbox.AutoSize = true;
             this.rimsCheckbox.Depth = 0;
-            this.rimsCheckbox.Location = new System.Drawing.Point(326, 448);
+            this.rimsCheckbox.Location = new System.Drawing.Point(652, 862);
             this.rimsCheckbox.Margin = new System.Windows.Forms.Padding(0);
             this.rimsCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
             this.rimsCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
@@ -734,7 +744,7 @@
             this.rimsCheckbox.ReadOnly = false;
             this.rimsCheckbox.Ripple = true;
             this.rimsCheckbox.Size = new System.Drawing.Size(71, 37);
-            this.rimsCheckbox.TabIndex = 4;
+            this.rimsCheckbox.TabIndex = 28;
             this.rimsCheckbox.Text = "Rims";
             this.rimsCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -742,7 +752,7 @@
             // 
             this.roofCheckbox.AutoSize = true;
             this.roofCheckbox.Depth = 0;
-            this.roofCheckbox.Location = new System.Drawing.Point(624, 78);
+            this.roofCheckbox.Location = new System.Drawing.Point(1248, 150);
             this.roofCheckbox.Margin = new System.Windows.Forms.Padding(0);
             this.roofCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
             this.roofCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
@@ -750,7 +760,7 @@
             this.roofCheckbox.ReadOnly = false;
             this.roofCheckbox.Ripple = true;
             this.roofCheckbox.Size = new System.Drawing.Size(69, 37);
-            this.roofCheckbox.TabIndex = 4;
+            this.roofCheckbox.TabIndex = 30;
             this.roofCheckbox.Text = "Roof";
             this.roofCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -758,7 +768,7 @@
             // 
             this.rollcageCheckbox.AutoSize = true;
             this.rollcageCheckbox.Depth = 0;
-            this.rollcageCheckbox.Location = new System.Drawing.Point(326, 485);
+            this.rollcageCheckbox.Location = new System.Drawing.Point(652, 933);
             this.rollcageCheckbox.Margin = new System.Windows.Forms.Padding(0);
             this.rollcageCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
             this.rollcageCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
@@ -766,7 +776,7 @@
             this.rollcageCheckbox.ReadOnly = false;
             this.rollcageCheckbox.Ripple = true;
             this.rollcageCheckbox.Size = new System.Drawing.Size(102, 37);
-            this.rollcageCheckbox.TabIndex = 4;
+            this.rollcageCheckbox.TabIndex = 29;
             this.rollcageCheckbox.Text = "Roll Cage";
             this.rollcageCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -774,7 +784,7 @@
             // 
             this.seatsCheckbox.AutoSize = true;
             this.seatsCheckbox.Depth = 0;
-            this.seatsCheckbox.Location = new System.Drawing.Point(624, 115);
+            this.seatsCheckbox.Location = new System.Drawing.Point(1248, 221);
             this.seatsCheckbox.Margin = new System.Windows.Forms.Padding(0);
             this.seatsCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
             this.seatsCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
@@ -782,7 +792,7 @@
             this.seatsCheckbox.ReadOnly = false;
             this.seatsCheckbox.Ripple = true;
             this.seatsCheckbox.Size = new System.Drawing.Size(75, 37);
-            this.seatsCheckbox.TabIndex = 4;
+            this.seatsCheckbox.TabIndex = 31;
             this.seatsCheckbox.Text = "Seats";
             this.seatsCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -790,7 +800,7 @@
             // 
             this.skirtsCheckbox.AutoSize = true;
             this.skirtsCheckbox.Depth = 0;
-            this.skirtsCheckbox.Location = new System.Drawing.Point(624, 152);
+            this.skirtsCheckbox.Location = new System.Drawing.Point(1248, 292);
             this.skirtsCheckbox.Margin = new System.Windows.Forms.Padding(0);
             this.skirtsCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
             this.skirtsCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
@@ -798,7 +808,7 @@
             this.skirtsCheckbox.ReadOnly = false;
             this.skirtsCheckbox.Ripple = true;
             this.skirtsCheckbox.Size = new System.Drawing.Size(102, 37);
-            this.skirtsCheckbox.TabIndex = 4;
+            this.skirtsCheckbox.TabIndex = 32;
             this.skirtsCheckbox.Text = "Side Skirt";
             this.skirtsCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -806,7 +816,7 @@
             // 
             this.spoilerCheckbox.AutoSize = true;
             this.spoilerCheckbox.Depth = 0;
-            this.spoilerCheckbox.Location = new System.Drawing.Point(624, 189);
+            this.spoilerCheckbox.Location = new System.Drawing.Point(1248, 363);
             this.spoilerCheckbox.Margin = new System.Windows.Forms.Padding(0);
             this.spoilerCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
             this.spoilerCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
@@ -814,7 +824,7 @@
             this.spoilerCheckbox.ReadOnly = false;
             this.spoilerCheckbox.Ripple = true;
             this.spoilerCheckbox.Size = new System.Drawing.Size(84, 37);
-            this.spoilerCheckbox.TabIndex = 4;
+            this.spoilerCheckbox.TabIndex = 33;
             this.spoilerCheckbox.Text = "Spoiler";
             this.spoilerCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -822,7 +832,7 @@
             // 
             this.steeringWheelCheckbox.AutoSize = true;
             this.steeringWheelCheckbox.Depth = 0;
-            this.steeringWheelCheckbox.Location = new System.Drawing.Point(624, 226);
+            this.steeringWheelCheckbox.Location = new System.Drawing.Point(1248, 435);
             this.steeringWheelCheckbox.Margin = new System.Windows.Forms.Padding(0);
             this.steeringWheelCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
             this.steeringWheelCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
@@ -830,7 +840,7 @@
             this.steeringWheelCheckbox.ReadOnly = false;
             this.steeringWheelCheckbox.Ripple = true;
             this.steeringWheelCheckbox.Size = new System.Drawing.Size(140, 37);
-            this.steeringWheelCheckbox.TabIndex = 4;
+            this.steeringWheelCheckbox.TabIndex = 34;
             this.steeringWheelCheckbox.Text = "Steering Wheel";
             this.steeringWheelCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -838,7 +848,7 @@
             // 
             this.strutCheckbox.AutoSize = true;
             this.strutCheckbox.Depth = 0;
-            this.strutCheckbox.Location = new System.Drawing.Point(624, 263);
+            this.strutCheckbox.Location = new System.Drawing.Point(1248, 506);
             this.strutCheckbox.Margin = new System.Windows.Forms.Padding(0);
             this.strutCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
             this.strutCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
@@ -846,7 +856,7 @@
             this.strutCheckbox.ReadOnly = false;
             this.strutCheckbox.Ripple = true;
             this.strutCheckbox.Size = new System.Drawing.Size(69, 37);
-            this.strutCheckbox.TabIndex = 4;
+            this.strutCheckbox.TabIndex = 35;
             this.strutCheckbox.Text = "Strut";
             this.strutCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -854,7 +864,7 @@
             // 
             this.speakerCheckbox.AutoSize = true;
             this.speakerCheckbox.Depth = 0;
-            this.speakerCheckbox.Location = new System.Drawing.Point(624, 300);
+            this.speakerCheckbox.Location = new System.Drawing.Point(1248, 577);
             this.speakerCheckbox.Margin = new System.Windows.Forms.Padding(0);
             this.speakerCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
             this.speakerCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
@@ -862,7 +872,7 @@
             this.speakerCheckbox.ReadOnly = false;
             this.speakerCheckbox.Ripple = true;
             this.speakerCheckbox.Size = new System.Drawing.Size(92, 37);
-            this.speakerCheckbox.TabIndex = 4;
+            this.speakerCheckbox.TabIndex = 36;
             this.speakerCheckbox.Text = "Speaker";
             this.speakerCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -870,7 +880,7 @@
             // 
             this.tintCheckbox.AutoSize = true;
             this.tintCheckbox.Depth = 0;
-            this.tintCheckbox.Location = new System.Drawing.Point(624, 337);
+            this.tintCheckbox.Location = new System.Drawing.Point(1248, 648);
             this.tintCheckbox.Margin = new System.Windows.Forms.Padding(0);
             this.tintCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
             this.tintCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
@@ -878,7 +888,7 @@
             this.tintCheckbox.ReadOnly = false;
             this.tintCheckbox.Ripple = true;
             this.tintCheckbox.Size = new System.Drawing.Size(63, 37);
-            this.tintCheckbox.TabIndex = 4;
+            this.tintCheckbox.TabIndex = 37;
             this.tintCheckbox.Text = "Tint";
             this.tintCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -886,7 +896,7 @@
             // 
             this.tireSmokeCheckbox.AutoSize = true;
             this.tireSmokeCheckbox.Depth = 0;
-            this.tireSmokeCheckbox.Location = new System.Drawing.Point(624, 374);
+            this.tireSmokeCheckbox.Location = new System.Drawing.Point(1248, 719);
             this.tireSmokeCheckbox.Margin = new System.Windows.Forms.Padding(0);
             this.tireSmokeCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
             this.tireSmokeCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
@@ -894,7 +904,7 @@
             this.tireSmokeCheckbox.ReadOnly = false;
             this.tireSmokeCheckbox.Ripple = true;
             this.tireSmokeCheckbox.Size = new System.Drawing.Size(115, 37);
-            this.tireSmokeCheckbox.TabIndex = 4;
+            this.tireSmokeCheckbox.TabIndex = 38;
             this.tireSmokeCheckbox.Text = "Tire Smoke";
             this.tireSmokeCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -902,7 +912,7 @@
             // 
             this.trimAChekbox.AutoSize = true;
             this.trimAChekbox.Depth = 0;
-            this.trimAChekbox.Location = new System.Drawing.Point(624, 411);
+            this.trimAChekbox.Location = new System.Drawing.Point(1248, 790);
             this.trimAChekbox.Margin = new System.Windows.Forms.Padding(0);
             this.trimAChekbox.MouseLocation = new System.Drawing.Point(-1, -1);
             this.trimAChekbox.MouseState = MaterialSkin.MouseState.HOVER;
@@ -910,7 +920,7 @@
             this.trimAChekbox.ReadOnly = false;
             this.trimAChekbox.Ripple = true;
             this.trimAChekbox.Size = new System.Drawing.Size(82, 37);
-            this.trimAChekbox.TabIndex = 4;
+            this.trimAChekbox.TabIndex = 39;
             this.trimAChekbox.Text = "Trim A";
             this.trimAChekbox.UseVisualStyleBackColor = true;
             // 
@@ -918,7 +928,7 @@
             // 
             this.trimBCheckbox.AutoSize = true;
             this.trimBCheckbox.Depth = 0;
-            this.trimBCheckbox.Location = new System.Drawing.Point(624, 448);
+            this.trimBCheckbox.Location = new System.Drawing.Point(1248, 862);
             this.trimBCheckbox.Margin = new System.Windows.Forms.Padding(0);
             this.trimBCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
             this.trimBCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
@@ -926,7 +936,7 @@
             this.trimBCheckbox.ReadOnly = false;
             this.trimBCheckbox.Ripple = true;
             this.trimBCheckbox.Size = new System.Drawing.Size(82, 37);
-            this.trimBCheckbox.TabIndex = 4;
+            this.trimBCheckbox.TabIndex = 40;
             this.trimBCheckbox.Text = "Trim B";
             this.trimBCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -934,7 +944,7 @@
             // 
             this.trunkCheckbox.AutoSize = true;
             this.trunkCheckbox.Depth = 0;
-            this.trunkCheckbox.Location = new System.Drawing.Point(624, 485);
+            this.trunkCheckbox.Location = new System.Drawing.Point(1248, 933);
             this.trunkCheckbox.Margin = new System.Windows.Forms.Padding(0);
             this.trunkCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
             this.trunkCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
@@ -942,7 +952,7 @@
             this.trunkCheckbox.ReadOnly = false;
             this.trunkCheckbox.Ripple = true;
             this.trunkCheckbox.Size = new System.Drawing.Size(76, 37);
-            this.trunkCheckbox.TabIndex = 4;
+            this.trunkCheckbox.TabIndex = 41;
             this.trunkCheckbox.Text = "Trunk";
             this.trunkCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -951,13 +961,14 @@
             this.tabControl.Controls.Add(this.installTab);
             this.tabControl.Controls.Add(this.removeTab);
             this.tabControl.Depth = 0;
-            this.tabControl.Location = new System.Drawing.Point(358, 131);
+            this.tabControl.Location = new System.Drawing.Point(716, 252);
+            this.tabControl.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tabControl.MouseState = MaterialSkin.MouseState.HOVER;
             this.tabControl.Multiline = true;
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(954, 589);
-            this.tabControl.TabIndex = 6;
+            this.tabControl.Size = new System.Drawing.Size(1908, 1133);
+            this.tabControl.TabIndex = 5;
             // 
             // installTab
             // 
@@ -1003,10 +1014,11 @@
             this.installTab.Controls.Add(this.seatsCheckbox);
             this.installTab.Controls.Add(this.rimsCheckbox);
             this.installTab.Controls.Add(this.roofCheckbox);
-            this.installTab.Location = new System.Drawing.Point(4, 22);
+            this.installTab.Location = new System.Drawing.Point(8, 39);
+            this.installTab.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.installTab.Name = "installTab";
-            this.installTab.Padding = new System.Windows.Forms.Padding(3);
-            this.installTab.Size = new System.Drawing.Size(946, 563);
+            this.installTab.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.installTab.Size = new System.Drawing.Size(1892, 1086);
             this.installTab.TabIndex = 0;
             this.installTab.Text = "Install Parts";
             this.installTab.UseVisualStyleBackColor = true;
@@ -1014,10 +1026,11 @@
             // removeTab
             // 
             this.removeTab.Controls.Add(this.removeNeonCheckbox);
-            this.removeTab.Location = new System.Drawing.Point(4, 22);
+            this.removeTab.Location = new System.Drawing.Point(8, 39);
+            this.removeTab.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.removeTab.Name = "removeTab";
-            this.removeTab.Padding = new System.Windows.Forms.Padding(3);
-            this.removeTab.Size = new System.Drawing.Size(946, 563);
+            this.removeTab.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.removeTab.Size = new System.Drawing.Size(1892, 1086);
             this.removeTab.TabIndex = 1;
             this.removeTab.Text = "Remove Parts";
             this.removeTab.UseVisualStyleBackColor = true;
@@ -1026,7 +1039,7 @@
             // 
             this.removeNeonCheckbox.AutoSize = true;
             this.removeNeonCheckbox.Depth = 0;
-            this.removeNeonCheckbox.Location = new System.Drawing.Point(24, 25);
+            this.removeNeonCheckbox.Location = new System.Drawing.Point(48, 48);
             this.removeNeonCheckbox.Margin = new System.Windows.Forms.Padding(0);
             this.removeNeonCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
             this.removeNeonCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
@@ -1044,10 +1057,11 @@
             this.materialTabSelector1.CharacterCasing = MaterialSkin.Controls.MaterialTabSelector.CustomCharacterCasing.Normal;
             this.materialTabSelector1.Depth = 0;
             this.materialTabSelector1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTabSelector1.Location = new System.Drawing.Point(358, 77);
+            this.materialTabSelector1.Location = new System.Drawing.Point(716, 148);
+            this.materialTabSelector1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.materialTabSelector1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialTabSelector1.Name = "materialTabSelector1";
-            this.materialTabSelector1.Size = new System.Drawing.Size(954, 48);
+            this.materialTabSelector1.Size = new System.Drawing.Size(1908, 92);
             this.materialTabSelector1.TabIndex = 7;
             this.materialTabSelector1.Text = "materialTabSelector1";
             // 
@@ -1059,13 +1073,13 @@
             this.clearLogButton.Depth = 0;
             this.clearLogButton.HighEmphasis = true;
             this.clearLogButton.Icon = null;
-            this.clearLogButton.Location = new System.Drawing.Point(1139, 790);
-            this.clearLogButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.clearLogButton.Location = new System.Drawing.Point(2278, 1519);
+            this.clearLogButton.Margin = new System.Windows.Forms.Padding(8, 12, 8, 12);
             this.clearLogButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.clearLogButton.Name = "clearLogButton";
             this.clearLogButton.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.clearLogButton.Size = new System.Drawing.Size(160, 36);
-            this.clearLogButton.TabIndex = 4;
+            this.clearLogButton.Size = new System.Drawing.Size(320, 69);
+            this.clearLogButton.TabIndex = 10;
             this.clearLogButton.Text = "Clear Logs";
             this.clearLogButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.clearLogButton.UseAccentColor = false;
@@ -1079,13 +1093,14 @@
             this.repairInput.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.repairInput.Hint = "Repair";
             this.repairInput.LeadingIcon = null;
-            this.repairInput.Location = new System.Drawing.Point(191, 245);
+            this.repairInput.Location = new System.Drawing.Point(382, 471);
+            this.repairInput.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.repairInput.MaxLength = 50;
             this.repairInput.MouseState = MaterialSkin.MouseState.OUT;
             this.repairInput.Multiline = false;
             this.repairInput.Name = "repairInput";
-            this.repairInput.Size = new System.Drawing.Size(160, 50);
-            this.repairInput.TabIndex = 1;
+            this.repairInput.Size = new System.Drawing.Size(320, 50);
+            this.repairInput.TabIndex = 4;
             this.repairInput.Text = "";
             this.repairInput.TrailingIcon = null;
             // 
@@ -1098,12 +1113,13 @@
             this.unbilledTextbox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.unbilledTextbox.Hint = "Unbilled Amount";
             this.unbilledTextbox.LeadingIcon = null;
-            this.unbilledTextbox.Location = new System.Drawing.Point(390, 726);
+            this.unbilledTextbox.Location = new System.Drawing.Point(780, 1396);
+            this.unbilledTextbox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.unbilledTextbox.MaxLength = 50;
             this.unbilledTextbox.MouseState = MaterialSkin.MouseState.OUT;
             this.unbilledTextbox.Multiline = false;
             this.unbilledTextbox.Name = "unbilledTextbox";
-            this.unbilledTextbox.Size = new System.Drawing.Size(160, 50);
+            this.unbilledTextbox.Size = new System.Drawing.Size(320, 50);
             this.unbilledTextbox.TabIndex = 8;
             this.unbilledTextbox.Tag = "exclude";
             this.unbilledTextbox.Text = "";
@@ -1117,13 +1133,13 @@
             this.saveLogButton.Depth = 0;
             this.saveLogButton.HighEmphasis = true;
             this.saveLogButton.Icon = null;
-            this.saveLogButton.Location = new System.Drawing.Point(630, 790);
-            this.saveLogButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.saveLogButton.Location = new System.Drawing.Point(1260, 1519);
+            this.saveLogButton.Margin = new System.Windows.Forms.Padding(8, 12, 8, 12);
             this.saveLogButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.saveLogButton.Name = "saveLogButton";
             this.saveLogButton.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.saveLogButton.Size = new System.Drawing.Size(160, 36);
-            this.saveLogButton.TabIndex = 4;
+            this.saveLogButton.Size = new System.Drawing.Size(320, 69);
+            this.saveLogButton.TabIndex = 7;
             this.saveLogButton.Text = "Save Log";
             this.saveLogButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.saveLogButton.UseAccentColor = false;
@@ -1137,13 +1153,13 @@
             this.deleteLogButton.Depth = 0;
             this.deleteLogButton.HighEmphasis = true;
             this.deleteLogButton.Icon = null;
-            this.deleteLogButton.Location = new System.Drawing.Point(971, 790);
-            this.deleteLogButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.deleteLogButton.Location = new System.Drawing.Point(1942, 1519);
+            this.deleteLogButton.Margin = new System.Windows.Forms.Padding(8, 12, 8, 12);
             this.deleteLogButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.deleteLogButton.Name = "deleteLogButton";
             this.deleteLogButton.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.deleteLogButton.Size = new System.Drawing.Size(160, 36);
-            this.deleteLogButton.TabIndex = 4;
+            this.deleteLogButton.Size = new System.Drawing.Size(320, 69);
+            this.deleteLogButton.TabIndex = 9;
             this.deleteLogButton.Text = "Delete Log";
             this.deleteLogButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.deleteLogButton.UseAccentColor = false;
@@ -1157,13 +1173,13 @@
             this.updateBillButton.Depth = 0;
             this.updateBillButton.HighEmphasis = true;
             this.updateBillButton.Icon = null;
-            this.updateBillButton.Location = new System.Drawing.Point(390, 790);
-            this.updateBillButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.updateBillButton.Location = new System.Drawing.Point(780, 1519);
+            this.updateBillButton.Margin = new System.Windows.Forms.Padding(8, 12, 8, 12);
             this.updateBillButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.updateBillButton.Name = "updateBillButton";
             this.updateBillButton.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.updateBillButton.Size = new System.Drawing.Size(160, 36);
-            this.updateBillButton.TabIndex = 4;
+            this.updateBillButton.Size = new System.Drawing.Size(320, 69);
+            this.updateBillButton.TabIndex = 6;
             this.updateBillButton.Text = "Bill Customer";
             this.updateBillButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.updateBillButton.UseAccentColor = false;
@@ -1171,9 +1187,9 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1322, 840);
+            this.ClientSize = new System.Drawing.Size(2631, 1622);
             this.Controls.Add(this.unbilledTextbox);
             this.Controls.Add(this.materialTabSelector1);
             this.Controls.Add(this.tabControl);
@@ -1190,7 +1206,9 @@
             this.Controls.Add(this.newLogButton);
             this.Controls.Add(this.treeViewLogs);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "MainForm";
+            this.Padding = new System.Windows.Forms.Padding(6, 123, 6, 6);
             this.Text = "Hayes Log Helper v2.0";
             this.tabControl.ResumeLayout(false);
             this.installTab.ResumeLayout(false);
