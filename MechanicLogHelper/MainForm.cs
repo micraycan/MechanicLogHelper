@@ -1,17 +1,21 @@
-﻿using System;
+﻿using MaterialSkin;
+using MaterialSkin.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace MechanicLogHelper
 {
-    public partial class MainForm : Form
+    public partial class MainForm : MaterialForm
     {
         private LogManager logManager;
         private List<UpgradeOption> upgradeOptions = new List<UpgradeOption>();
@@ -20,6 +24,11 @@ namespace MechanicLogHelper
         {
             InitializeComponent();
             InitializeForm();
+
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
+            materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
         }
 
         private void InitializeForm()
@@ -27,96 +36,102 @@ namespace MechanicLogHelper
             logManager = new LogManager();
             RefreshTreeView();
 
-            // init performance upgrade options
-            upgradeOptions.Add(new UpgradeOption { Checkbox = armorCheckbox, InputField = armorAmountInput, TypeField = armorTypeInput, UpgradeName = "Armor" });
-            upgradeOptions.Add(new UpgradeOption { Checkbox = brakeCheckbox, InputField = brakeAmountInput, TypeField = brakeTypeInput, UpgradeName = "Brakes" });
-            upgradeOptions.Add(new UpgradeOption { Checkbox = engineCheckbox, InputField = engineAmountInput, TypeField = engineTypeInput, UpgradeName = "Engine" });
-            upgradeOptions.Add(new UpgradeOption { Checkbox = suspensionCheckbox, InputField = suspensionAmountInput, TypeField = suspensionTypeInput, UpgradeName = "Suspension" });
-            upgradeOptions.Add(new UpgradeOption { Checkbox = transmissionCheckbox, InputField = transmissionAmountInput, TypeField = transmissionTypeInput, UpgradeName = "Transmission" });
-            upgradeOptions.Add(new UpgradeOption { Checkbox = turboCheckbox, InputField = turboAmountInput, TypeField = turboTypeInput, UpgradeName = "Turbo" });
+            // performance upgrade options
+            upgradeOptions.Add(new UpgradeOptionDropdown { UpgradeInput = armorDropwdown, UpgradeName = "Armor", UpgradeType = "Performance" });
+            upgradeOptions.Add(new UpgradeOptionDropdown { UpgradeInput = brakesDropdown, UpgradeName = "Brakes", UpgradeType = "Performance" });
+            upgradeOptions.Add(new UpgradeOptionDropdown { UpgradeInput = engineDropdown, UpgradeName = "Engine", UpgradeType = "Performance" });
+            upgradeOptions.Add(new UpgradeOptionDropdown { UpgradeInput = suspensionDropdown, UpgradeName = "Suspension", UpgradeType = "Performance" });
+            upgradeOptions.Add(new UpgradeOptionDropdown { UpgradeInput = transmissionDropdown, UpgradeName = "Transmission", UpgradeType = "Performance" });
+            upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = turboCheckbox, UpgradeName = "Turbo", Price = 10000, UpgradeType = "Performance" });
 
-            // init cosmetic upgrade options
-            upgradeOptions.Add(new UpgradeOption { Checkbox = dialCheckbox, InputField = dialAmountInput, TypeField = dialTypeInput, UpgradeName = "Dial" });
-            upgradeOptions.Add(new UpgradeOption { Checkbox = engineBlockCheckbox, InputField = engineBlockAmountInput, TypeField = engineBlockTypeInput, UpgradeName = "Engine Block" });
-            upgradeOptions.Add(new UpgradeOption { Checkbox = exhaustCheckbox, InputField = exhaustAmountInput, TypeField = exhaustTypeInput, UpgradeName = "Exhaust" });
-            upgradeOptions.Add(new UpgradeOption { Checkbox = frontBumperCheckbox, InputField = frontBumperAmountInput, TypeField = frontBumperTypeInput, UpgradeName = "Front Bumper" }); 
-            upgradeOptions.Add(new UpgradeOption { Checkbox = hoodCheckbox, InputField = hoodAmountInput, TypeField = hoodTypeInput, UpgradeName = "Hood" }); 
-            upgradeOptions.Add(new UpgradeOption { Checkbox = hornCheckbox, InputField = hornAmountInput, TypeField = hornTypeInput, UpgradeName = "Horn" }); 
-            upgradeOptions.Add(new UpgradeOption { Checkbox = leftFenderCheckbox, InputField = leftFenderAmountInput, TypeField = leftFenderTypeInput, UpgradeName = "Left Fender" }); 
-            upgradeOptions.Add(new UpgradeOption { Checkbox = liveryCheckbox, InputField = liveryAmountInput, TypeField = liveryTypeInput, UpgradeName = "Livery" }); 
-            upgradeOptions.Add(new UpgradeOption { Checkbox = ornamentsCheckbox, InputField = ornamentsAmountInput, TypeField = ornamentsTypeInput, UpgradeName = "Ornaments" }); 
-            upgradeOptions.Add(new UpgradeOption { Checkbox = plateCheckbox, InputField = plateAmountInput, TypeField = plateTypeInput, UpgradeName = "Plate" }); 
-            upgradeOptions.Add(new UpgradeOption { Checkbox = rearBumperCheckbox, InputField = rearBumperAmountInput, TypeField = rearBumperTypeInput, UpgradeName = "Rear Bumper" }); 
-            upgradeOptions.Add(new UpgradeOption { Checkbox = resprayPearlCheckbox, InputField = resprayPearlAmountInput, TypeField = resprayPearlTypeInput, UpgradeName = "Respray Pearl" }); 
-            upgradeOptions.Add(new UpgradeOption { Checkbox = resprayPrimaryCheckbox, InputField = resprayPrimaryAmountInput, TypeField = resprayPrimaryTypeInput, UpgradeName = "Respray Prim" }); 
-            upgradeOptions.Add(new UpgradeOption { Checkbox = respraySecondaryCheckbox, InputField = respraySecondaryAmountInput, TypeField = respraySecondaryTypeInput, UpgradeName = "Respray S" }); 
-            upgradeOptions.Add(new UpgradeOption { Checkbox = rimColorCheckbox, InputField = rimColorAmountInput, TypeField = rimColorTypeInput, UpgradeName = "Rim Color" }); 
-            upgradeOptions.Add(new UpgradeOption { Checkbox = rimsCheckbox, InputField = rimsAmountInput, TypeField = rimsTypeInput, UpgradeName = "Rims" }); 
-            upgradeOptions.Add(new UpgradeOption { Checkbox = roofCheckbox, InputField = roofAmountInput, TypeField = roofTypeInput, UpgradeName = "Roof" }); 
-            upgradeOptions.Add(new UpgradeOption { Checkbox = seatsCheckbox, InputField = seatsAmountInput, TypeField = seatsTypeInput, UpgradeName = "Seats" }); 
-            upgradeOptions.Add(new UpgradeOption { Checkbox = sideSkirtCheckbox, InputField = sideSkirtAmountInput, TypeField = sideSkirtTypeInput, UpgradeName = "Side Skirt" }); 
-            upgradeOptions.Add(new UpgradeOption { Checkbox = spoilerCheckbox, InputField = spoilerAmountInput, TypeField = spoilerTypeInput, UpgradeName = "Spoiler" }); 
-            upgradeOptions.Add(new UpgradeOption { Checkbox = steeringWheelCheckbox, InputField = steeringWheelAmountInput, TypeField = steeringWheelTypeInput, UpgradeName = "Steering Wheel" }); 
-            upgradeOptions.Add(new UpgradeOption { Checkbox = strutCheckbox, InputField = strutAmountInput, TypeField = strutTypeInput, UpgradeName = "Strut" }); 
-            upgradeOptions.Add(new UpgradeOption { Checkbox = tintCheckbox, InputField = tintAmountInput, TypeField = tintTypeInput, UpgradeName = "Tint" });
-            upgradeOptions.Add(new UpgradeOption { Checkbox = tireSmokeCheckbox, InputField = tireSmokeAmountInput, TypeField = tireSmokeTypeInput, UpgradeName = "Tire Smoke" });
-            upgradeOptions.Add(new UpgradeOption { Checkbox = repairCheckbox, InputField = repairAmountInput, TypeField = repairTypeInput, UpgradeName = "Repair" });
-            upgradeOptions.Add(new UpgradeOption { Checkbox = resprayInteriorCheckbox, InputField = resprayInteriorAmountInput, TypeField = resprayInteriorTypeInput, UpgradeName = "Respray Interior" });
-            upgradeOptions.Add(new UpgradeOption { Checkbox = removeNeonCheckbox, InputField = removeNeonAmountInput, TypeField = removeNeonTypeInput, UpgradeName = "Remove Neon Kit" });
+            // cosmetic upgrade options
+            upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = archCoverCheckbox, UpgradeName = "Arch Cover", Price = 400, UpgradeType = "Cosmetic" });
+            upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = aerialCheckbox, UpgradeName = "Aerial", Price = 400, UpgradeType = "Cosmetic" });
+            upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = customTiresCheckbox, UpgradeName = "Custom Tires", Price = 600, UpgradeType = "Cosmetic" });
+            upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = dialCheckbox, UpgradeName = "Dial", Price = 400, UpgradeType = "Cosmetic" });
+            upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = engineBlockCheckbox, UpgradeName = "Engine Block", Price = 400, UpgradeType = "Cosmetic" });
+            upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = exhaustCheckbox, UpgradeName = "Exhaust", Price = 400, UpgradeType = "Cosmetic" });
+            upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = fBumperCheckbox, UpgradeName = "Front Bumper", Price = 400, UpgradeType = "Cosmetic" });
+            upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = grilleCheckbox, UpgradeName = "Grille", Price = 400, UpgradeType = "Cosmetic" });
+            upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = hoodCheckbox, UpgradeName = "Hood", Price = 400, UpgradeType = "Cosmetic" });
+            upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = hornCheckbox, UpgradeName = "Horn", Price = 400, UpgradeType = "Cosmetic" });
+            upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = leftFenderCheckbox, UpgradeName = "Left Fender", Price = 400, UpgradeType = "Cosmetic" });
+            upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = liveryCheckbox, UpgradeName = "Livery", Price = 400, UpgradeType = "Cosmetic" });
+
+            upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = ornamentsCheckbox, UpgradeName = "Ornaments", Price = 400, UpgradeType = "Cosmetic" });
+            upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = oldLiveryCheckbox, UpgradeName = "Old Livery", Price = 100, UpgradeType = "Cosmetic" });
+            upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = plateCheckbox, UpgradeName = "Plate", Price = 1000, UpgradeType = "Cosmetic" });
+            upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = rBumperCheckbox, UpgradeName = "Rear Bumper", Price = 400, UpgradeType = "Cosmetic" });
+            upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = dResprayCheckbox, UpgradeName = "Respray Dashboard", Price = 1000, UpgradeType = "Cosmetic" });
+            upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = interiorResprayCheckbox, UpgradeName = "Respray Interior", Price = 1000, UpgradeType = "Cosmetic" });
+            upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = pearlResprayCheckbox, UpgradeName = "Respray Pearlescent", Price = 1000, UpgradeType = "Cosmetic" });
+            upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = pResprayCheckbox, UpgradeName = "Respray Primary", Price = 1000, UpgradeType = "Cosmetic" });
+            upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = sResprayCheckbox, UpgradeName = "Respray Secondary", Price = 1000, UpgradeType = "Cosmetic" });
+            upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = rimColorCheckbox, UpgradeName = "Rim Color", Price = 1000, UpgradeType = "Cosmetic" });
+            upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = rimsCheckbox, UpgradeName = "Rims", Price = 400, UpgradeType = "Cosmetic" });
+            upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = rollcageCheckbox, UpgradeName = "Roll Cage", Price = 400, UpgradeType = "Cosmetic" });
+
+            upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = roofCheckbox, UpgradeName = "Roof", Price = 400, UpgradeType = "Cosmetic" });
+            upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = seatsCheckbox, UpgradeName = "Seats", Price = 400, UpgradeType = "Cosmetic" });
+            upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = skirtsCheckbox, UpgradeName = "Side Skirt", Price = 400, UpgradeType = "Cosmetic" });
+            upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = spoilerCheckbox, UpgradeName = "Spoiler", Price = 400, UpgradeType = "Cosmetic" });
+            upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = steeringWheelCheckbox, UpgradeName = "Steering Wheel", Price = 400, UpgradeType = "Cosmetic" });
+            upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = strutCheckbox, UpgradeName = "Strut", Price = 400, UpgradeType = "Cosmetic" });
+            upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = speakerCheckbox, UpgradeName = "Speaker", Price = 400, UpgradeType = "Cosmetic" });
+            upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = tintCheckbox, UpgradeName = "Tint", Price = 400, UpgradeType = "Cosmetic" });
+            upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = tireSmokeCheckbox, UpgradeName = "Tire Smoke", Price = 400, UpgradeType = "Cosmetic" });
+            upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = trimAChekbox, UpgradeName = "Trim A", Price = 400, UpgradeType = "Cosmetic" });
+            upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = trimBCheckbox, UpgradeName = "Trim B", Price = 400, UpgradeType = "Cosmetic" });
+            upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = trunkCheckbox, UpgradeName = "Trunk", Price = 400, UpgradeType = "Cosmetic" });
+
+            // remove upgrade options
+            upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = removeNeonCheckbox, UpgradeName = "Remove Neon Kit", Price = 400, UpgradeType = "Cosmetic" });
 
             // button settings
-            saveLogBtn.Click += new EventHandler(SaveLogButton_Click);
-            clearLogsBtn.Click += new EventHandler(ClearAllLogs_Click);
-            deleteLogBtn.Click += new EventHandler(DeleteLogButton_Click);
-            resetBtn.Click += new EventHandler(ResetButton_Click);
+            saveLogButton.Click += new EventHandler(SaveLogButton_Click);
+            deleteLogButton.Click += new EventHandler(DeleteLogButton_Click);
+            newLogButton.Click += new EventHandler(ResetButton_Click);
+            clearLogButton.Click += new EventHandler(ClearLogsButton_Click);
+            updateBillButton.Click += new EventHandler(BillCustomerButton_Click);
+            
 
             // tree view setting
             this.treeViewLogs.AfterSelect += new TreeViewEventHandler(TreeViewLogs_AfterSelect);
 
             // input settings
-            licenseInput.KeyPress += AlphanumericTextBox_KeyPress;
-            armorAmountInput.KeyPress += NumberTextBox_KeyPress;
-            brakeAmountInput.KeyPress += NumberTextBox_KeyPress;
+            plateInput.KeyPress += AlphanumericTextBox_KeyPress;
+            repairInput.KeyPress += NumberTextBox_KeyPress;
 
-            // checkbox settings
-            armorCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
-            brakeCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
-            engineCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
-            suspensionCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
-            transmissionCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
-            turboCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
-            dialCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
-            engineBlockCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
-            exhaustCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
-            frontBumperCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
-            hoodCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
-            hornCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
-            leftFenderCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
-            liveryCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
-            ornamentsCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
-            plateCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
-            rearBumperCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
-            resprayPearlCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
-            resprayPrimaryCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
-            respraySecondaryCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
-            rimColorCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
-            rimsCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
-            roofCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
-            seatsCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
-            sideSkirtCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
-            spoilerCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
-            steeringWheelCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
-            strutCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
-            tintCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
-            tireSmokeCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
-            repairCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
-            resprayInteriorCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
-            removeNeonCheckbox.CheckedChanged += UpgradeCheckbox_CheckedChanged;
+            // input update settings
+            AssignUpdateEventHandlers(this.Controls);
+        }
+
+        private void AssignUpdateEventHandlers(Control.ControlCollection controls)
+        {
+            foreach (Control control in controls)
+            {
+                if (control.Tag != null && control.Tag.ToString() == "exclude") { continue; }
+
+                if (control is MaterialCheckbox matCheckbox)
+                {
+                    matCheckbox.CheckedChanged += UpgradeInput_Changed;
+                }
+                else if (control is MaterialComboBox matComboBox)
+                {
+                    matComboBox.SelectedValueChanged += UpgradeInput_Changed;
+                }
+                else if (control is MaterialTextBox matTextBox)
+                {
+                    matTextBox.TextChanged += UpgradeInput_Changed;
+                }
+
+                if (control.HasChildren) { AssignUpdateEventHandlers(control.Controls); }
+            }
         }
 
         private void NumberTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            (sender as TextBox).MaxLength = 5;
+            (sender as MaterialTextBox).MaxLength = 5;
 
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
@@ -126,14 +141,26 @@ namespace MechanicLogHelper
 
         private void AlphanumericTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            (sender as TextBox).MaxLength = 8;
+            (sender as MaterialTextBox).MaxLength = 8;
 
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && !char.IsLetter(e.KeyChar))
             {
                 e.Handled = true;
             }
+            else
+            {
+                e.KeyChar = char.ToUpper(e.KeyChar);
+            }
         }
 
+        private void UpgradeInput_Changed(object sender, EventArgs e)
+        {
+            var installedUpgrades = GetInstalledUpgrades();
+
+            UpdateUnbilledPrice(installedUpgrades);
+            GenerateLogString();
+        }
+        
         private void RefreshTreeView()
         {
             treeViewLogs.Nodes.Clear();
@@ -164,14 +191,110 @@ namespace MechanicLogHelper
             treeViewLogs.ExpandAll();
         }
 
-        private void GenerateInfoString()
+        private List<UpgradeInfo> GetInstalledUpgrades()
         {
-            string customerName = employeeCheckbox.Checked ? $"{customerNameInput.Text} (MECH)" : customerNameInput.Text;
+            List<UpgradeInfo> installedUpgrades = new List<UpgradeInfo>();
+
+            foreach (var option in upgradeOptions)
+            {
+                if (option is UpgradeOptionDropdown dropdownOption)
+                {
+                    if (!String.IsNullOrEmpty(dropdownOption.UpgradeInput.SelectedItem.ToString()))
+                    {
+                        string selectedUpgrade = dropdownOption.UpgradeInput.SelectedItem.ToString();
+
+                        var match = Regex.Match(selectedUpgrade, @"\d+");
+                        if (match.Success)
+                        {
+                            int selectedLevel = int.Parse(match.Value);
+
+                            if (dropdownOption.Price.TryGetValue(selectedLevel, out int price))
+                            {
+                                var upgradeInfo = new UpgradeInfo
+                                {
+                                    UpgradeName = dropdownOption.UpgradeName,
+                                    UpgradeType = dropdownOption.UpgradeType,
+                                    UpgradeAmount = price,
+                                    UpgradeOption = selectedUpgrade,
+                                    UpgradePaid = !dropdownOption.UpgradeInput.Enabled
+                                };
+
+                                int totalCost = CalculateUpgradeMargin(upgradeInfo);
+                                upgradeInfo.UpgradeAmount = totalCost;
+                                installedUpgrades.Add(upgradeInfo);
+                            }
+                        }
+                    }
+                }
+                else if (option is UpgradeOptionCheckbox checkboxOption)
+                {
+                    if (checkboxOption.UpgradeInput.Checked)
+                    {
+                        var upgradeInfo = new UpgradeInfo
+                        {
+                            UpgradeName = checkboxOption.UpgradeName,
+                            UpgradeType = checkboxOption.UpgradeType,
+                            UpgradeAmount = checkboxOption.Price,
+                            UpgradePaid = !checkboxOption.UpgradeInput.Enabled
+                        };
+
+                        int totalCost = CalculateUpgradeMargin(upgradeInfo);
+                        upgradeInfo.UpgradeAmount = totalCost;
+                        installedUpgrades.Add(upgradeInfo);
+                    }
+                }
+            }
+
+            if (!String.IsNullOrEmpty(repairInput.Text))
+            {
+                installedUpgrades.Add(new UpgradeInfo
+                {
+                    UpgradeName = "Repair",
+                    UpgradeType = "Repair",
+                    UpgradeAmount = int.Parse(repairInput.Text),
+                    UpgradePaid = !repairInput.Enabled
+                });
+            }
+
+            return installedUpgrades;
+        }
+
+        private void UpdateUnbilledPrice(List<UpgradeInfo> installedUpgrades)
+        {
+            int total = 0;
+
+            foreach (var upgrade in installedUpgrades)
+            {
+                if (!upgrade.UpgradePaid)
+                {
+                    total += upgrade.UpgradeAmount;
+                }
+            }
+
+            unbilledTextbox.Text = total.ToString();
+        }
+
+        private int CalculateUpgradeMargin(UpgradeInfo upgrade)
+        {
+            int margin = 0;
+
+            if (!employeeCheckbox.Checked)
+            {
+                if (upgrade.UpgradeType == "Performance") { margin = 1000; }
+                else if (upgrade.UpgradeType == "Cosmetic") { margin = 100; }
+            }
+
+            return upgrade.UpgradeAmount + margin;
+        }
+        
+        private void GenerateLogString()
+        {
+            string customerName = employeeCheckbox.Checked ? $"{customerInput.Text} (MECH)" : customerInput.Text;
             string vehicle = vehicleInput.Text;
-            string plate = licenseInput.Text;
+            string plate = plateInput.Text;
             string upgrades = GetFormattedUpgrades();
             int priceCharged = CalculateTotalPrice();
-            string shop = shopInput.Text;
+            string shop = "Hayes";
 
             string formattedString = $@"```
 Customer Name: {customerName}
@@ -182,68 +305,68 @@ Price Charged: ${priceCharged:n0}
 SHOP: {shop}
 ```";
 
-            infoDisplayTextBox.Text = formattedString;
+            logdisplayTextBox.Text = formattedString;
         }
+        
 
+        
         private void CopyToClipboard_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(infoDisplayTextBox.Text))
+            if (!string.IsNullOrEmpty(logdisplayTextBox.Text))
             {
-                Clipboard.SetText(infoDisplayTextBox.Text);
-                MessageBox.Show("Log copied to clilpboard");
+                Clipboard.SetText(logdisplayTextBox.Text);
+                MaterialMessageBox.Show("Log copied to clilpboard");
             }
         }
 
+        
         private string GetFormattedUpgrades()
         {
             List<string> resprayTypes = new List<string>();
             List<string> bumperTypes = new List<string>();
             List<string> otherUpgrades = new List<string>();
 
-            foreach (UpgradeOption upgrade in upgradeOptions)
+            foreach (UpgradeInfo upgrade in GetInstalledUpgrades())
             {
-                if (upgrade.Checkbox.Checked)
+                if (upgrade.UpgradeName.Contains("Respray"))
                 {
-                    if (upgrade.UpgradeName.Contains("Respray"))
-                    {
-                        var words = upgrade.UpgradeName.Split(' ');
-                        var type = "";
+                    var words = upgrade.UpgradeName.Split(' ');
+                    var type = "";
 
-                        if (words.Length > 1 && words[0] == "Respray")
-                        {
-                            type = words[1].Substring(0, 1);
-                        }
+                    if (words.Length > 1 && words[0] == "Respray")
+                    {
+                        type = words[1].Substring(0, 1);
+                    }
 
-                        resprayTypes.Add(type);
-                    }
-                    else if (upgrade.UpgradeName.Contains("Bumper"))
-                    {
-                        var words = upgrade.UpgradeName.Split(' ');
-                        var type = "";
+                    resprayTypes.Add(type);
+                }
+                else if (upgrade.UpgradeName.Contains("Bumper"))
+                {
+                    var words = upgrade.UpgradeName.Split(' ');
+                    var type = "";
 
-                        if (words.Length > 1 && words[1] == "Bumper")
-                        {
-                            type = words[0].Substring(0, 1);
-                        }
+                    if (words.Length > 1 && words[1] == "Bumper")
+                    {
+                        type = words[0].Substring(0, 1);
+                    }
 
-                        bumperTypes.Add(type);
-                    }
-                    else if (upgrade.UpgradeName.Contains("Repair"))
-                    {
-                        continue;
-                    }
-                    else if (upgrade.UpgradeName.Contains("Left Fender"))
-                    {
-                        otherUpgrades.Add("L Fender");
-                    }
-                    else if (upgrade.UpgradeName.Contains("Side Skirt"))
-                    {
-                        otherUpgrades.Add("Skirts");
-                    }
-                    else
-                    {
-                        otherUpgrades.Add(upgrade.UpgradeName);
-                    }
+                    bumperTypes.Add(type);
+                }
+                else if (upgrade.UpgradeName.Contains("Repair"))
+                {
+                    continue;
+                }
+                else if (upgrade.UpgradeName.Contains("Left Fender"))
+                {
+                    otherUpgrades.Add("L Fender");
+                }
+                else if (upgrade.UpgradeName.Contains("Side Skirt"))
+                {
+                    otherUpgrades.Add("Skirts");
+                }
+                else
+                {
+                    otherUpgrades.Add(upgrade.UpgradeName);
                 }
             }
 
@@ -264,21 +387,20 @@ SHOP: {shop}
             return string.Join(", ", allUpgrades);
         }
 
+        
         private int CalculateTotalPrice()
         {
             int totalPrice = 0;
 
-            foreach (UpgradeOption upgrade in upgradeOptions)
+            foreach (UpgradeInfo upgrade in GetInstalledUpgrades())
             {
-                if (upgrade.Checkbox.Checked)
-                {
-                    totalPrice += int.Parse(upgrade.InputField.Text);
-                }
+                totalPrice += upgrade.UpgradeAmount;
             }
 
             return totalPrice;
         }
 
+        
         private void SaveLogButton_Click(object sender, EventArgs e)
         {
             if (!IsInputValid()) { return; }
@@ -287,12 +409,11 @@ SHOP: {shop}
 
             LogEntry logEntry = new LogEntry
             {
-                CustomerName = customerNameInput.Text,
+                CustomerName = customerInput.Text,
                 Vehicle = vehicleInput.Text,
-                LicensePlate = licenseInput.Text,
+                LicensePlate = plateInput.Text,
                 IsEmployee = employeeCheckbox.Checked,
                 Date = DateTime.Now,
-                Shop = shopInput.Text,
                 Upgrades = GetInstalledUpgrades()
             };
 
@@ -312,16 +433,50 @@ SHOP: {shop}
             ClearFormFields();
         }
 
+        
         private void ClearLogsButton_Click(object sender, EventArgs e)
         {
             logManager.ClearLogs();
+            ClearFormFields();
             RefreshTreeView();
         }
 
+        
         private void ResetButton_Click(object sender, EventArgs e)
         {
             ClearFormFields();
             RefreshTreeView();
+        }
+
+        private void BillCustomerButton_Click(object sender, EventArgs e)
+        {
+            foreach (var upgrade in GetInstalledUpgrades())
+            {
+                foreach (var option in upgradeOptions)
+                {
+                    if (upgrade.UpgradeName == option.UpgradeName)
+                    {
+                        if (option is UpgradeOptionDropdown dropdown)
+                        {
+                            dropdown.UpgradeInput.Enabled = false;
+                            upgrade.UpgradePaid = true;
+                        }
+                        else if (option is UpgradeOptionCheckbox checkbox)
+                        {
+                            checkbox.UpgradeInput.Enabled = false;
+                            upgrade.UpgradePaid = true;
+                        }
+                    }
+                }
+
+                if (upgrade.UpgradeName.Contains("Repair"))
+                {
+                    repairInput.Enabled = false;
+                    upgrade.UpgradePaid = true;
+                }
+            }
+
+            UpdateUnbilledPrice(GetInstalledUpgrades());
         }
 
         private void DeleteLogButton_Click(object sender, EventArgs e)
@@ -331,43 +486,19 @@ SHOP: {shop}
                 var logEntry = treeViewLogs.SelectedNode.Tag as LogEntry;
                 if (logEntry != null)
                 {
-                    var result = MessageBox.Show("Are you sure you want to delete this log?", "Confirm Deletion", MessageBoxButtons.YesNo);
-                    if (result == DialogResult.Yes)
-                    {
-                        logManager.DeleteLog(logEntry);
-                        ClearFormFields();
-                        RefreshTreeView();
-                    }
+                    logManager.DeleteLog(logEntry);
+                    ClearFormFields();
+                    RefreshTreeView();
                 }
             }
         }
-
-        private void UpgradeCheckbox_CheckedChanged(object sender, EventArgs e)
-        {
-            System.Windows.Forms.CheckBox checkBox = (System.Windows.Forms.CheckBox)sender;
-            if (checkBox != null)
-            {
-                var upgradeOption = upgradeOptions.FirstOrDefault(uo => uo.Checkbox == checkBox);
-                if (upgradeOption != null)
-                {
-                    upgradeOption.InputField.Enabled = checkBox.Checked;
-                    upgradeOption.TypeField.Enabled = checkBox.Checked;
-
-                    if (!upgradeOption.Checkbox.Checked)
-                    {
-                        upgradeOption.InputField.Text = String.Empty;
-                        upgradeOption.TypeField.Text = String.Empty;
-                    }
-                }
-            }
-        }
-
+        
         private bool IsInputValid()
         {
             List<string> errorMessages = new List<string>();
             errorMessages.Add("Required fields missing:");
 
-            if (string.IsNullOrWhiteSpace(customerNameInput.Text))
+            if (string.IsNullOrWhiteSpace(customerInput.Text))
             {
                 errorMessages.Add("Customer Name");
             }
@@ -377,25 +508,15 @@ SHOP: {shop}
                 errorMessages.Add("Vehicle Make/Model");
             }
 
-            if (string.IsNullOrWhiteSpace(licenseInput.Text))
+            if (string.IsNullOrWhiteSpace(plateInput.Text))
             {
                 errorMessages.Add("License Plate");
-            }
-
-            if (!IsAtleastOneUpgradeSelected())
-            {
-                errorMessages.Add("Minimum of one upgrade");
-            }
-
-            if (!IsUpgradeInputValid())
-            {
-                errorMessages.Add("Installed upgrade price");
             }
 
             if (errorMessages.Count > 1)
             {
                 string errorMessage = string.Join("\n", errorMessages);
-                MessageBox.Show(errorMessage);
+                MaterialMessageBox.Show(errorMessage);
                 return false;
             }
 
@@ -404,19 +525,33 @@ SHOP: {shop}
 
         private void ClearFormFields()
         {
-            customerNameInput.Text = String.Empty;
+            customerInput.Text = String.Empty;
             vehicleInput.Text = String.Empty;
-            licenseInput.Text = String.Empty;
+            plateInput.Text = String.Empty;
             employeeCheckbox.Checked = false;
-            // add upgrade field clearing
+            logdisplayTextBox.Text = String.Empty;
+            repairInput.Text = String.Empty;
+            repairInput.Enabled = true;
+
             foreach (UpgradeOption option in upgradeOptions)
             {
-                option.Checkbox.Checked = false;
-                option.InputField.Text = "";
+                if (option is UpgradeOptionDropdown dropdown)
+                {
+                    dropdown.UpgradeInput.ResetText();
+                    dropdown.UpgradeInput.Enabled = true;
+                    dropdown.UpgradeInput.Refresh();
+                }
+                else if (option is UpgradeOptionCheckbox checkbox)
+                {
+                    checkbox.UpgradeInput.Checked = false;
+                    checkbox.UpgradeInput.Enabled = true;
+                }
             }
-            infoDisplayTextBox.Text = String.Empty;
+
+            GenerateLogString();
         }
 
+        
         private void TreeViewLogs_AfterSelect(object sender, TreeViewEventArgs e)
         {
             if (e.Node.Level == 1)
@@ -427,77 +562,41 @@ SHOP: {shop}
                 {
                     ClearFormFields();
 
-                    customerNameInput.Text = selectedLog.CustomerName;
+                    customerInput.Text = selectedLog.CustomerName;
                     vehicleInput.Text = selectedLog.Vehicle;
-                    licenseInput.Text = selectedLog.LicensePlate;
+                    plateInput.Text = selectedLog.LicensePlate;
                     employeeCheckbox.Checked = selectedLog.IsEmployee;
-                    shopInput.Text = selectedLog.Shop;
 
                     foreach (var upgrade in selectedLog.Upgrades)
                     {
-                        var upgradeOption = upgradeOptions.FirstOrDefault(uo => uo.UpgradeName == upgrade.UpgradeName);
-                        if (upgradeOption != null)
+                        foreach (var upgradeOption in upgradeOptions)
                         {
-                            upgradeOption.Checkbox.Checked = true;
-                            upgradeOption.InputField.Text = upgrade.UpgradeAmount.ToString();
-                            upgradeOption.TypeField.Text = upgrade.UpgradeType;
-                            GenerateInfoString();
+                            if (upgradeOption.UpgradeName == upgrade.UpgradeName)
+                            {
+                                if (upgradeOption is UpgradeOptionCheckbox checkboxOption)
+                                {
+                                    checkboxOption.UpgradeInput.Checked = true;
+                                    checkboxOption.UpgradeInput.Enabled = !upgrade.UpgradePaid;
+                                }
+                                else if (upgradeOption is UpgradeOptionDropdown dropdownOption)
+                                {
+                                    dropdownOption.UpgradeInput.Text = upgrade.UpgradeOption;
+                                    dropdownOption.UpgradeInput.Enabled = !upgrade.UpgradePaid;
+                                    dropdownOption.UpgradeInput.Refresh();
+                                }
+                            }
+                        }
+
+                        if (upgrade.UpgradeName.Contains("Repair"))
+                        {
+                            repairInput.Text = upgrade.UpgradeAmount.ToString();
+                            repairInput.Enabled = !upgrade.UpgradePaid;
                         }
                     }
+
+                    GenerateLogString();
                 }
             }
-        }
-
-        private void ClearAllLogs_Click(object sender, EventArgs e)
-        {
-            logManager.ClearLogs();
-            RefreshTreeView();
-        }
-
-        private List<UpgradeInfo> GetInstalledUpgrades()
-        {
-            List<UpgradeInfo> installedUpgrades = new List<UpgradeInfo>();
-
-            foreach (UpgradeOption upgrade in upgradeOptions)
-            {
-                if (upgrade.Checkbox.Checked)
-                {
-                    installedUpgrades.Add(new UpgradeInfo
-                    {
-                        UpgradeName = upgrade.UpgradeName,
-                        UpgradeAmount = int.Parse(upgrade.InputField.Text),
-                        UpgradeType = upgrade.TypeField.Text
-                    });
-                }
-            }
-
-            return installedUpgrades;
-        }
-
-        private bool IsAtleastOneUpgradeSelected()
-        {
-            foreach (UpgradeOption upgrade in upgradeOptions)
-            {
-                if (upgrade.Checkbox.Checked)
-                {
-                    return true;
-                }
-            }
-
-            return false;
-        }
-
-        private bool IsUpgradeInputValid()
-        {
-            foreach (UpgradeOption upgrade in upgradeOptions)
-            {
-                if (upgrade.Checkbox.Checked && String.IsNullOrEmpty(upgrade.InputField.Text))
-                {
-                    return false;
-                }
-            }
-
-            return true;
         }
     }
 }
