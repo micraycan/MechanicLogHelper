@@ -12,7 +12,6 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace MechanicLogHelper
 {
@@ -90,8 +89,7 @@ namespace MechanicLogHelper
 
             // button settings
             saveLogButton.Click += new EventHandler(SaveLogButton_Click);
-            //clearLogsBtn.Click += new EventHandler(ClearAllLogs_Click);
-            //deleteLogBtn.Click += new EventHandler(DeleteLogButton_Click);
+            deleteLogButton.Click += new EventHandler(DeleteLogButton_Click);
             newLogButton.Click += new EventHandler(ResetButton_Click);
             clearLogButton.Click += new EventHandler(ClearLogsButton_Click);
             updateBillButton.Click += new EventHandler(BillCustomerButton_Click);
@@ -103,7 +101,6 @@ namespace MechanicLogHelper
             // input settings
             plateInput.KeyPress += AlphanumericTextBox_KeyPress;
             repairInput.KeyPress += NumberTextBox_KeyPress;
-            //armorAmountInput.KeyPress += NumberTextBox_KeyPress;
 
             // input update settings
             AssignUpdateEventHandlers(this.Controls);
@@ -149,6 +146,10 @@ namespace MechanicLogHelper
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && !char.IsLetter(e.KeyChar))
             {
                 e.Handled = true;
+            }
+            else
+            {
+                e.KeyChar = char.ToUpper(e.KeyChar);
             }
         }
 
@@ -402,7 +403,7 @@ SHOP: {shop}
         
         private void SaveLogButton_Click(object sender, EventArgs e)
         {
-            //if (!IsInputValid()) { return; }
+            if (!IsInputValid()) { return; }
 
             var logs = logManager.LoadLogs();
 
@@ -478,7 +479,6 @@ SHOP: {shop}
             UpdateUnbilledPrice(GetInstalledUpgrades());
         }
 
-        /*
         private void DeleteLogButton_Click(object sender, EventArgs e)
         {
             if (treeViewLogs.SelectedNode != null && treeViewLogs.SelectedNode.Level == 1)
@@ -486,45 +486,19 @@ SHOP: {shop}
                 var logEntry = treeViewLogs.SelectedNode.Tag as LogEntry;
                 if (logEntry != null)
                 {
-                    var result = MessageBox.Show("Are you sure you want to delete this log?", "Confirm Deletion", MessageBoxButtons.YesNo);
-                    if (result == DialogResult.Yes)
-                    {
-                        logManager.DeleteLog(logEntry);
-                        ClearFormFields();
-                        RefreshTreeView();
-                    }
+                    logManager.DeleteLog(logEntry);
+                    ClearFormFields();
+                    RefreshTreeView();
                 }
             }
-        }*/
-
-        /*
-        private void UpgradeCheckbox_CheckedChanged(object sender, EventArgs e)
-        {
-            System.Windows.Forms.CheckBox checkBox = (System.Windows.Forms.CheckBox)sender;
-            if (checkBox != null)
-            {
-                var upgradeOption = upgradeOptions.FirstOrDefault(uo => uo.Checkbox == checkBox);
-                if (upgradeOption != null)
-                {
-                    upgradeOption.InputField.Enabled = checkBox.Checked;
-                    upgradeOption.TypeField.Enabled = checkBox.Checked;
-
-                    if (!upgradeOption.Checkbox.Checked)
-                    {
-                        upgradeOption.InputField.Text = String.Empty;
-                        upgradeOption.TypeField.Text = String.Empty;
-                    }
-                }
-            }
-        }*/
-
-        /*
+        }
+        
         private bool IsInputValid()
         {
             List<string> errorMessages = new List<string>();
             errorMessages.Add("Required fields missing:");
 
-            if (string.IsNullOrWhiteSpace(customerNameInput.Text))
+            if (string.IsNullOrWhiteSpace(customerInput.Text))
             {
                 errorMessages.Add("Customer Name");
             }
@@ -534,30 +508,20 @@ SHOP: {shop}
                 errorMessages.Add("Vehicle Make/Model");
             }
 
-            if (string.IsNullOrWhiteSpace(licenseInput.Text))
+            if (string.IsNullOrWhiteSpace(plateInput.Text))
             {
                 errorMessages.Add("License Plate");
-            }
-
-            if (!IsAtleastOneUpgradeSelected())
-            {
-                errorMessages.Add("Minimum of one upgrade");
-            }
-
-            if (!IsUpgradeInputValid())
-            {
-                errorMessages.Add("Installed upgrade price");
             }
 
             if (errorMessages.Count > 1)
             {
                 string errorMessage = string.Join("\n", errorMessages);
-                MessageBox.Show(errorMessage);
+                MaterialMessageBox.Show(errorMessage);
                 return false;
             }
 
             return true;
-        }*/
+        }
 
         private void ClearFormFields()
         {
@@ -566,6 +530,8 @@ SHOP: {shop}
             plateInput.Text = String.Empty;
             employeeCheckbox.Checked = false;
             logdisplayTextBox.Text = String.Empty;
+            repairInput.Text = String.Empty;
+            repairInput.Enabled = true;
 
             foreach (UpgradeOption option in upgradeOptions)
             {
@@ -573,6 +539,7 @@ SHOP: {shop}
                 {
                     dropdown.UpgradeInput.ResetText();
                     dropdown.UpgradeInput.Enabled = true;
+                    dropdown.UpgradeInput.Refresh();
                 }
                 else if (option is UpgradeOptionCheckbox checkbox)
                 {
@@ -580,6 +547,8 @@ SHOP: {shop}
                     checkbox.UpgradeInput.Enabled = true;
                 }
             }
+
+            GenerateLogString();
         }
 
         
@@ -602,7 +571,7 @@ SHOP: {shop}
                     {
                         foreach (var upgradeOption in upgradeOptions)
                         {
-                            if (upgradeOption.UpgradeName == upgrade.UpgradeName && upgradeOption.UpgradeType == upgrade.UpgradeType)
+                            if (upgradeOption.UpgradeName == upgrade.UpgradeName)
                             {
                                 if (upgradeOption is UpgradeOptionCheckbox checkboxOption)
                                 {
@@ -611,16 +580,9 @@ SHOP: {shop}
                                 }
                                 else if (upgradeOption is UpgradeOptionDropdown dropdownOption)
                                 {
-                                    var index = dropdownOption.Price.FirstOrDefault(p => p.Key == upgrade.UpgradeAmount).Key;
-                                    if (index != 0)
-                                    {
-                                        int dropdownIndex = dropdownOption.UpgradeInput.Items.IndexOf(index.ToString());
-                                        if (dropdownIndex != -1)
-                                        {
-                                            dropdownOption.UpgradeInput.SelectedIndex = dropdownIndex + 1;
-                                            dropdownOption.UpgradeInput.Enabled = !upgrade.UpgradePaid;
-                                        }
-                                    }
+                                    dropdownOption.UpgradeInput.Text = upgrade.UpgradeOption;
+                                    dropdownOption.UpgradeInput.Enabled = !upgrade.UpgradePaid;
+                                    dropdownOption.UpgradeInput.Refresh();
                                 }
                             }
                         }
@@ -636,54 +598,5 @@ SHOP: {shop}
                 }
             }
         }
-
-        /*
-        private List<UpgradeInfo> GetInstalledUpgrades()
-        {
-            List<UpgradeInfo> installedUpgrades = new List<UpgradeInfo>();
-
-            foreach (UpgradeOption upgrade in upgradeOptions)
-            {
-                if (upgrade.Checkbox.Checked)
-                {
-                    installedUpgrades.Add(new UpgradeInfo
-                    {
-                        UpgradeName = upgrade.UpgradeName,
-                        UpgradeAmount = int.Parse(upgrade.InputField.Text),
-                        UpgradeType = upgrade.TypeField.Text
-                    });
-                }
-            }
-
-            return installedUpgrades;
-        }*/
-
-        /*
-        private bool IsAtleastOneUpgradeSelected()
-        {
-            foreach (UpgradeOption upgrade in upgradeOptions)
-            {
-                if (upgrade.Checkbox.Checked)
-                {
-                    return true;
-                }
-            }
-
-            return false;
-        } */
-
-        /*
-        private bool IsUpgradeInputValid()
-        {
-            foreach (UpgradeOption upgrade in upgradeOptions)
-            {
-                if (upgrade.Checkbox.Checked && String.IsNullOrEmpty(upgrade.InputField.Text))
-                {
-                    return false;
-                }
-            }
-
-            return true;
-        }*/
     }
 }
