@@ -610,7 +610,11 @@ Total Commission: ${totalCommission:n0}
                 Upgrades = GetInstalledUpgrades()
             };
 
-            var existingLog = logs.FirstOrDefault(log => log.CustomerName == logEntry.CustomerName && log.Date.Date == logEntry.Date.Date);
+            var existingLog = logs.FirstOrDefault(log => 
+                log.CustomerName == logEntry.CustomerName && 
+                log.Date.Date == logEntry.Date.Date &&
+                log.Vehicle == logEntry.Vehicle);
+
             if (existingLog != null)
             {
                 logs[logs.IndexOf(existingLog)] = logEntry;
