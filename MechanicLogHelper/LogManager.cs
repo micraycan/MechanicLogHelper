@@ -69,7 +69,7 @@ namespace MechanicLogHelper
         }
     }
 
-    public class UpgradeOption
+    public abstract class UpgradeOption
     {
         public string UpgradeName { get; set; }
         public string UpgradeType { get; set; }
@@ -97,5 +97,12 @@ namespace MechanicLogHelper
     {
         public MaterialCheckbox UpgradeInput { get; set; }
         public int Price { get; set; }
+    }
+
+    public class UpgradeOptionUnlisted : UpgradeOption
+    {
+        public MaterialTextBox UpgradeInput { get; set; }
+        public MaterialTextBox UpgradePrice { get; set; }
+        public MaterialComboBox TypeInput { get; set; }
     }
 }

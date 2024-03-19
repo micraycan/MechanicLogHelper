@@ -34,6 +34,10 @@ namespace MechanicLogHelper
 
         private void InitializeForm()
         {
+            // load default string property settings
+            mechNameInput.Text = Properties.Settings.Default.MechName;
+            mechShopInput.Text = Properties.Settings.Default.MechShop;
+
             logManager = new LogManager();
             RefreshTreeView();
 
@@ -46,6 +50,7 @@ namespace MechanicLogHelper
             upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = turboCheckbox, UpgradeName = "Turbo", Price = 10000, UpgradeType = "Performance" });
 
             // cosmetic upgrade options
+            upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = airFilterCheckbox, UpgradeName = "Air Filter", Price = 400, UpgradeType = "Cosmetic" });
             upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = archCoverCheckbox, UpgradeName = "Arch Cover", Price = 400, UpgradeType = "Cosmetic" });
             upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = aerialCheckbox, UpgradeName = "Aerial", Price = 400, UpgradeType = "Cosmetic" });
             upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = customTiresCheckbox, UpgradeName = "Custom Tires", Price = 600, UpgradeType = "Cosmetic" });
@@ -68,6 +73,7 @@ namespace MechanicLogHelper
             upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = pearlResprayCheckbox, UpgradeName = "Respray Pearlescent", Price = 1000, UpgradeType = "Cosmetic" });
             upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = pResprayCheckbox, UpgradeName = "Respray Primary", Price = 1000, UpgradeType = "Cosmetic" });
             upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = sResprayCheckbox, UpgradeName = "Respray Secondary", Price = 1000, UpgradeType = "Cosmetic" });
+            upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = rightFenderCheckbox, UpgradeName = "Right Fender", Price = 400, UpgradeType = "Cosmetic" });
             upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = rimColorCheckbox, UpgradeName = "Rim Color", Price = 1000, UpgradeType = "Cosmetic" });
             upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = rimsCheckbox, UpgradeName = "Rims", Price = 400, UpgradeType = "Cosmetic" });
             upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = rollcageCheckbox, UpgradeName = "Roll Cage", Price = 400, UpgradeType = "Cosmetic" });
@@ -84,9 +90,21 @@ namespace MechanicLogHelper
             upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = trimAChekbox, UpgradeName = "Trim A", Price = 400, UpgradeType = "Cosmetic" });
             upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = trimBCheckbox, UpgradeName = "Trim B", Price = 400, UpgradeType = "Cosmetic" });
             upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = trunkCheckbox, UpgradeName = "Trunk", Price = 400, UpgradeType = "Cosmetic" });
+            upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = vanityCheckbox, UpgradeName = "Vanity Plate", Price = 400, UpgradeType = "Cosmetic" });
+
+            // unlisted upgrade options
+            upgradeOptions.Add(new UpgradeOptionUnlisted { UpgradeInput = uName1, UpgradePrice = uPrice1, TypeInput = uType1 });
+            upgradeOptions.Add(new UpgradeOptionUnlisted { UpgradeInput = uName2, UpgradePrice = uPrice2, TypeInput = uType2 });
+            upgradeOptions.Add(new UpgradeOptionUnlisted { UpgradeInput = uName3, UpgradePrice = uPrice3, TypeInput = uType3 });
+            upgradeOptions.Add(new UpgradeOptionUnlisted { UpgradeInput = uName4, UpgradePrice = uPrice4, TypeInput = uType4 });
+            upgradeOptions.Add(new UpgradeOptionUnlisted { UpgradeInput = uName5, UpgradePrice = uPrice5, TypeInput = uType5 });
+            upgradeOptions.Add(new UpgradeOptionUnlisted { UpgradeInput = uName6, UpgradePrice = uPrice6, TypeInput = uType6 });
+            upgradeOptions.Add(new UpgradeOptionUnlisted { UpgradeInput = uName7, UpgradePrice = uPrice7, TypeInput = uType7 });
+            upgradeOptions.Add(new UpgradeOptionUnlisted { UpgradeInput = uName8, UpgradePrice = uPrice8, TypeInput = uType8 });
 
             // remove upgrade options
             upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = removeNeonCheckbox, UpgradeName = "Remove Neon Kit", Price = 400, UpgradeType = "Cosmetic" });
+            upgradeOptions.Add(new UpgradeOptionCheckbox { UpgradeInput = removeXenonCheckbox, UpgradeName = "Remove Xenon Kit", Price = 400, UpgradeType = "Cosmetic" });
 
             // button settings
             saveLogButton.Click += new EventHandler(SaveLogButton_Click);
@@ -98,7 +116,7 @@ namespace MechanicLogHelper
             clockOutButton.Click += new EventHandler(ClockOutButton_Click);
             getCommissionLogButton.Click += new EventHandler(GenerateCommissionLog_Click);
             clearCommissionLogButton.Click += new EventHandler(ClearCommissionLog_Click);
-            
+            setDefaultButton.Click += new EventHandler(SettingsSaveButton_Click);
 
             // tree view setting
             this.treeViewLogs.AfterSelect += new TreeViewEventHandler(TreeViewLogs_AfterSelect);
@@ -106,6 +124,14 @@ namespace MechanicLogHelper
             // input settings
             plateInput.KeyPress += AlphanumericTextBox_KeyPress;
             repairInput.KeyPress += NumberTextBox_KeyPress;
+            uPrice1.KeyPress += NumberTextBox_KeyPress;
+            uPrice2.KeyPress += NumberTextBox_KeyPress;
+            uPrice3.KeyPress += NumberTextBox_KeyPress;
+            uPrice4.KeyPress += NumberTextBox_KeyPress;
+            uPrice5.KeyPress += NumberTextBox_KeyPress;
+            uPrice6.KeyPress += NumberTextBox_KeyPress;
+            uPrice7.KeyPress += NumberTextBox_KeyPress;
+            uPrice8.KeyPress += NumberTextBox_KeyPress;
             clockInInput.TextChanged += ClockInOutInput_TextChanged;
             clockOutInput.TextChanged += ClockInOutInput_TextChanged;
 
@@ -134,6 +160,13 @@ namespace MechanicLogHelper
 
                 if (control.HasChildren) { AssignUpdateEventHandlers(control.Controls); }
             }
+        }
+
+        private void SettingsSaveButton_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.MechName = mechNameInput.Text;
+            Properties.Settings.Default.MechShop = mechShopInput.Text;
+            Properties.Settings.Default.Save();
         }
 
         private void NumberTextBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -250,6 +283,26 @@ namespace MechanicLogHelper
                         installedUpgrades.Add(upgradeInfo);
                     }
                 }
+                else if (option is UpgradeOptionUnlisted unlistedOption)
+                {
+                    if (unlistedOption.UpgradeInput.TextLength > 0 && unlistedOption.UpgradePrice.TextLength > 0 && unlistedOption.TypeInput.SelectedIndex > 0)
+                    {
+                        if (int.TryParse(unlistedOption.UpgradePrice.Text, out int parsedPrice))
+                        {
+                            var upgradeInfo = new UpgradeInfo
+                            {
+                                UpgradeName = unlistedOption.UpgradeInput.Text,
+                                UpgradeType = unlistedOption.TypeInput.Text,
+                                UpgradeAmount = parsedPrice,
+                                UpgradePaid = !unlistedOption.UpgradePrice.Enabled
+                            };
+
+                            int totalCost = CalculateUpgradeMargin(upgradeInfo);
+                            upgradeInfo.UpgradeAmount = totalCost;
+                            installedUpgrades.Add(upgradeInfo);
+                        }
+                    }
+                }
             }
 
             if (!String.IsNullOrEmpty(repairInput.Text))
@@ -296,12 +349,12 @@ namespace MechanicLogHelper
         
         private void GenerateLogString()
         {
-            string customerName = employeeCheckbox.Checked ? $"{customerInput.Text} (MECH)" : customerInput.Text;
+            string customerName = employeeCheckbox.Checked ? $"{customerInput.Text} [MECH]" : customerInput.Text;
             string vehicle = vehicleInput.Text;
             string plate = plateInput.Text;
             string upgrades = GetFormattedUpgrades();
             int priceCharged = CalculateTotalPrice();
-            string shop = "Hayes";
+            string shop = Properties.Settings.Default.MechShop;
 
             string formattedString = $@"```
 Customer Name: {customerName}
@@ -323,9 +376,32 @@ SHOP: {shop}
 
             if (sourceTextBox != null && !string.IsNullOrEmpty(sourceTextBox.Text))
             {
-                Clipboard.SetText(logdisplayTextBox.Text);
+                Clipboard.SetText(sourceTextBox.Text);
                 MaterialMessageBox.Show("Log copied to clilpboard");
             }
+        }
+
+        private string RoundTime(DateTime time)
+        {
+            int minutes = time.Minute;
+            int remainder = minutes % 15;
+            int change = remainder < 8 ? -remainder : 15 - remainder;
+
+            DateTime roundedTime = time.AddMinutes(change);
+            return roundedTime.ToString("hh:mm tt");
+        }
+
+        private void ClockInButton_Click(object sender, EventArgs e)
+        {
+            var roundedTime = RoundTime(DateTime.Now);
+            comDateInput.Text = DateTime.Now.ToString("M/dd/yyyy");
+            clockInInput.Text = roundedTime;
+        }
+
+        private void ClockOutButton_Click(object sender, EventArgs e)
+        {
+            var roundedTime = RoundTime(DateTime.Now);
+            clockOutInput.Text = roundedTime;
         }
 
         private void ClearCommissionLog_Click(object sender, EventArgs e)
@@ -338,7 +414,7 @@ SHOP: {shop}
 
         private void GenerateCommissionLog_Click(object sender, EventArgs e)
         {
-            string name = "Mike Lee";
+            string name = Properties.Settings.Default.MechName;
             string date = comDateInput.Text;
             string clockIn = clockInInput.Text;
             string clockOut = clockOutInput.Text;
@@ -361,19 +437,6 @@ Total Commission: ${totalCommission:n0}
 ```";
 
             commissionLogTextBox.Text = formattedString;
-        }
-
-        private void ClockInButton_Click(object sender, EventArgs e)
-        {
-            var roundedTime = RoundUpTime(DateTime.Now);
-            comDateInput.Text = roundedTime.ToString("MM/dd/yyyy");
-            clockInInput.Text = roundedTime.ToString("hh:mm tt");
-        }
-
-        private void ClockOutButton_Click(object sender, EventArgs e)
-        {
-            var roundedTime = RoundUpTime(DateTime.Now);
-            clockOutInput.Text = roundedTime.ToString("hh:mm tt");
         }
 
         private string GetHoursWorked()
@@ -432,6 +495,7 @@ Total Commission: ${totalCommission:n0}
         private string GetFormattedUpgrades()
         {
             List<string> resprayTypes = new List<string>();
+            List<string> fenderTypes = new List<string>();
             List<string> bumperTypes = new List<string>();
             List<string> otherUpgrades = new List<string>();
 
@@ -440,34 +504,36 @@ Total Commission: ${totalCommission:n0}
                 if (upgrade.UpgradeName.Contains("Respray"))
                 {
                     var words = upgrade.UpgradeName.Split(' ');
-                    var type = "";
 
                     if (words.Length > 1 && words[0] == "Respray")
                     {
-                        type = words[1].Substring(0, 1);
+                        var type = words[1].Substring(0, 1);
+                        resprayTypes.Add(type);
                     }
-
-                    resprayTypes.Add(type);
                 }
                 else if (upgrade.UpgradeName.Contains("Bumper"))
                 {
                     var words = upgrade.UpgradeName.Split(' ');
-                    var type = "";
 
                     if (words.Length > 1 && words[1] == "Bumper")
                     {
-                        type = words[0].Substring(0, 1);
+                        var type = words[0].Substring(0, 1);
+                        bumperTypes.Add(type);
                     }
+                }
+                else if (upgrade.UpgradeName.Contains("Fender"))
+                {
+                    var words = upgrade.UpgradeName.Split(' ');
 
-                    bumperTypes.Add(type);
+                    if (words.Length > 1 && words[1] == "Fender")
+                    {
+                        var type = words[0].Substring(0, 1);
+                        fenderTypes.Add(type);
+                    }
                 }
                 else if (upgrade.UpgradeName.Contains("Repair"))
                 {
                     continue;
-                }
-                else if (upgrade.UpgradeName.Contains("Left Fender"))
-                {
-                    otherUpgrades.Add("L Fender");
                 }
                 else if (upgrade.UpgradeName.Contains("Side Skirt"))
                 {
@@ -479,18 +545,36 @@ Total Commission: ${totalCommission:n0}
                 }
             }
 
-            string resprayFormatted = resprayTypes.Count > 0 ? $"{string.Join("/", resprayTypes)} Respray" : String.Empty;
-            string bumperFormatted = bumperTypes.Count > 0 ? $"{string.Join ("/", bumperTypes)} Bumper" : String.Empty;
+            var resprayOrder = new List<string> { "P", "S", "I", "D" };
 
-            List<String> allUpgrades = otherUpgrades.ToList();
-            if (!string.IsNullOrEmpty(resprayFormatted))
+            var sortedResprays = resprayOrder
+                .Where(r => resprayTypes.Contains(r))
+                .SelectMany(r => resprayTypes.Where(t => t == r))
+                .ToList();
+
+            for (int i = 0; i < sortedResprays.Count - 2; i++)
             {
-                allUpgrades.Add(resprayFormatted);
+                if (sortedResprays[i] == "P" && sortedResprays[i + 1] == "P" && sortedResprays[i + 2] == "S")
+                {
+                    sortedResprays[i + 1] = "S";
+                    sortedResprays[i + 2] = "P";
+                    break;
+                }
             }
 
-            if (!string.IsNullOrEmpty(bumperFormatted))
+            string resprayFormatted = sortedResprays.Count > 0 ? $"{string.Join("/", sortedResprays)} Respray" : String.Empty;
+            string bumperFormatted = bumperTypes.Count > 0 ? $"{string.Join ("/", bumperTypes)} Bumper" : String.Empty;
+            string fenderFormatted = fenderTypes.Count > 0 ? $"{string.Join("/", fenderTypes)} Fender" : String.Empty;
+            
+            string[] formattedUpgrades = { resprayFormatted, bumperFormatted, fenderFormatted };
+            List<string> allUpgrades = otherUpgrades.ToList();
+
+            foreach(string upgrade in formattedUpgrades)
             {
-                allUpgrades.Add(bumperFormatted);
+                if (!string.IsNullOrEmpty(upgrade))
+                {
+                    allUpgrades.Add(upgrade);
+                }
             }
 
             return string.Join(", ", allUpgrades);
@@ -576,6 +660,16 @@ Total Commission: ${totalCommission:n0}
                             upgrade.UpgradePaid = true;
                         }
                     }
+                    else if (option is UpgradeOptionUnlisted unlisted)
+                    {
+                        if (unlisted.UpgradeInput.Text == upgrade.UpgradeName)
+                        {
+                            unlisted.UpgradeInput.Enabled = false;
+                            unlisted.UpgradePrice.Enabled = false;
+                            unlisted.TypeInput.Enabled = false;
+                            upgrade.UpgradePaid = true;
+                        }
+                    }
                 }
 
                 if (upgrade.UpgradeName.Contains("Repair"))
@@ -616,7 +710,7 @@ Total Commission: ${totalCommission:n0}
             {
                 errorMessages.Add("Vehicle Make/Model");
             }
-
+            
             if (string.IsNullOrWhiteSpace(plateInput.Text))
             {
                 errorMessages.Add("License Plate");
@@ -704,6 +798,7 @@ Total Commission: ${totalCommission:n0}
                     }
 
                     GenerateLogString();
+                    UpdateUnbilledPrice(GetInstalledUpgrades());
                 }
             }
         }
