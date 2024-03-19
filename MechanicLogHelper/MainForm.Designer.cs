@@ -82,6 +82,7 @@
             this.installTab = new System.Windows.Forms.TabPage();
             this.removeTab = new System.Windows.Forms.TabPage();
             this.removeNeonCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
             this.clearLogButton = new MaterialSkin.Controls.MaterialButton();
             this.repairInput = new MaterialSkin.Controls.MaterialTextBox();
@@ -89,9 +90,18 @@
             this.saveLogButton = new MaterialSkin.Controls.MaterialButton();
             this.deleteLogButton = new MaterialSkin.Controls.MaterialButton();
             this.updateBillButton = new MaterialSkin.Controls.MaterialButton();
+            this.getCommissionLogButton = new MaterialSkin.Controls.MaterialButton();
+            this.comDateInput = new MaterialSkin.Controls.MaterialTextBox();
+            this.clockInInput = new MaterialSkin.Controls.MaterialTextBox();
+            this.clockInButton = new MaterialSkin.Controls.MaterialButton();
+            this.clockOutInput = new MaterialSkin.Controls.MaterialTextBox();
+            this.clockOutButton = new MaterialSkin.Controls.MaterialButton();
+            this.commissionLogTextBox = new MaterialSkin.Controls.MaterialMultiLineTextBox();
+            this.clearCommissionLogButton = new MaterialSkin.Controls.MaterialButton();
             this.tabControl.SuspendLayout();
             this.installTab.SuspendLayout();
             this.removeTab.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // treeViewLogs
@@ -99,7 +109,7 @@
             this.treeViewLogs.Location = new System.Drawing.Point(17, 305);
             this.treeViewLogs.Name = "treeViewLogs";
             this.treeViewLogs.Size = new System.Drawing.Size(334, 283);
-            this.treeViewLogs.TabIndex = 0;
+            this.treeViewLogs.TabIndex = 12;
             // 
             // customerInput
             // 
@@ -115,7 +125,7 @@
             this.customerInput.Multiline = false;
             this.customerInput.Name = "customerInput";
             this.customerInput.Size = new System.Drawing.Size(334, 50);
-            this.customerInput.TabIndex = 1;
+            this.customerInput.TabIndex = 0;
             this.customerInput.Tag = "exclude";
             this.customerInput.Text = "";
             this.customerInput.TrailingIcon = null;
@@ -153,7 +163,7 @@
             this.plateInput.Multiline = false;
             this.plateInput.Name = "plateInput";
             this.plateInput.Size = new System.Drawing.Size(334, 50);
-            this.plateInput.TabIndex = 1;
+            this.plateInput.TabIndex = 2;
             this.plateInput.Tag = "exclude";
             this.plateInput.Text = "";
             this.plateInput.TrailingIcon = null;
@@ -170,7 +180,7 @@
             this.employeeCheckbox.ReadOnly = false;
             this.employeeCheckbox.Ripple = true;
             this.employeeCheckbox.Size = new System.Drawing.Size(139, 37);
-            this.employeeCheckbox.TabIndex = 2;
+            this.employeeCheckbox.TabIndex = 3;
             this.employeeCheckbox.Text = "Employee Sale";
             this.employeeCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -186,7 +196,7 @@
             this.logdisplayTextBox.Name = "logdisplayTextBox";
             this.logdisplayTextBox.ReadOnly = true;
             this.logdisplayTextBox.Size = new System.Drawing.Size(334, 229);
-            this.logdisplayTextBox.TabIndex = 3;
+            this.logdisplayTextBox.TabIndex = 11;
             this.logdisplayTextBox.Tag = "exclude";
             this.logdisplayTextBox.Text = "";
             this.logdisplayTextBox.Click += new System.EventHandler(this.CopyToClipboard_Click);
@@ -219,7 +229,7 @@
             this.armorDropwdown.Name = "armorDropwdown";
             this.armorDropwdown.Size = new System.Drawing.Size(160, 49);
             this.armorDropwdown.StartIndex = 0;
-            this.armorDropwdown.TabIndex = 2;
+            this.armorDropwdown.TabIndex = 0;
             // 
             // brakesDropdown
             // 
@@ -247,7 +257,7 @@
             this.brakesDropdown.Name = "brakesDropdown";
             this.brakesDropdown.Size = new System.Drawing.Size(160, 49);
             this.brakesDropdown.StartIndex = 0;
-            this.brakesDropdown.TabIndex = 2;
+            this.brakesDropdown.TabIndex = 1;
             // 
             // engineDropdown
             // 
@@ -304,7 +314,7 @@
             this.suspensionDropdown.Name = "suspensionDropdown";
             this.suspensionDropdown.Size = new System.Drawing.Size(160, 49);
             this.suspensionDropdown.StartIndex = 0;
-            this.suspensionDropdown.TabIndex = 2;
+            this.suspensionDropdown.TabIndex = 3;
             // 
             // transmissionDropdown
             // 
@@ -332,7 +342,7 @@
             this.transmissionDropdown.Name = "transmissionDropdown";
             this.transmissionDropdown.Size = new System.Drawing.Size(160, 49);
             this.transmissionDropdown.StartIndex = 0;
-            this.transmissionDropdown.TabIndex = 2;
+            this.transmissionDropdown.TabIndex = 4;
             // 
             // turboCheckbox
             // 
@@ -346,7 +356,7 @@
             this.turboCheckbox.ReadOnly = false;
             this.turboCheckbox.Ripple = true;
             this.turboCheckbox.Size = new System.Drawing.Size(77, 37);
-            this.turboCheckbox.TabIndex = 3;
+            this.turboCheckbox.TabIndex = 5;
             this.turboCheckbox.Text = "Turbo";
             this.turboCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -362,7 +372,7 @@
             this.archCoverCheckbox.ReadOnly = false;
             this.archCoverCheckbox.Ripple = true;
             this.archCoverCheckbox.Size = new System.Drawing.Size(111, 37);
-            this.archCoverCheckbox.TabIndex = 4;
+            this.archCoverCheckbox.TabIndex = 6;
             this.archCoverCheckbox.Text = "Arch Cover";
             this.archCoverCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -378,7 +388,7 @@
             this.aerialCheckbox.ReadOnly = false;
             this.aerialCheckbox.Ripple = true;
             this.aerialCheckbox.Size = new System.Drawing.Size(75, 37);
-            this.aerialCheckbox.TabIndex = 4;
+            this.aerialCheckbox.TabIndex = 7;
             this.aerialCheckbox.Text = "Aerial";
             this.aerialCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -394,7 +404,7 @@
             this.customTiresCheckbox.ReadOnly = false;
             this.customTiresCheckbox.Ripple = true;
             this.customTiresCheckbox.Size = new System.Drawing.Size(129, 37);
-            this.customTiresCheckbox.TabIndex = 4;
+            this.customTiresCheckbox.TabIndex = 8;
             this.customTiresCheckbox.Text = "Custom Tires";
             this.customTiresCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -410,7 +420,7 @@
             this.dResprayCheckbox.ReadOnly = false;
             this.dResprayCheckbox.Ripple = true;
             this.dResprayCheckbox.Size = new System.Drawing.Size(174, 37);
-            this.dResprayCheckbox.TabIndex = 4;
+            this.dResprayCheckbox.TabIndex = 22;
             this.dResprayCheckbox.Text = "Respray Dashboard";
             this.dResprayCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -426,7 +436,7 @@
             this.dialCheckbox.ReadOnly = false;
             this.dialCheckbox.Ripple = true;
             this.dialCheckbox.Size = new System.Drawing.Size(63, 37);
-            this.dialCheckbox.TabIndex = 4;
+            this.dialCheckbox.TabIndex = 9;
             this.dialCheckbox.Text = "Dial";
             this.dialCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -442,7 +452,7 @@
             this.engineBlockCheckbox.ReadOnly = false;
             this.engineBlockCheckbox.Ripple = true;
             this.engineBlockCheckbox.Size = new System.Drawing.Size(126, 37);
-            this.engineBlockCheckbox.TabIndex = 4;
+            this.engineBlockCheckbox.TabIndex = 10;
             this.engineBlockCheckbox.Text = "Engine Block";
             this.engineBlockCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -458,7 +468,7 @@
             this.exhaustCheckbox.ReadOnly = false;
             this.exhaustCheckbox.Ripple = true;
             this.exhaustCheckbox.Size = new System.Drawing.Size(92, 37);
-            this.exhaustCheckbox.TabIndex = 4;
+            this.exhaustCheckbox.TabIndex = 11;
             this.exhaustCheckbox.Text = "Exhaust";
             this.exhaustCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -474,7 +484,7 @@
             this.fBumperCheckbox.ReadOnly = false;
             this.fBumperCheckbox.Ripple = true;
             this.fBumperCheckbox.Size = new System.Drawing.Size(131, 37);
-            this.fBumperCheckbox.TabIndex = 4;
+            this.fBumperCheckbox.TabIndex = 12;
             this.fBumperCheckbox.Text = "Front Bumper";
             this.fBumperCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -490,7 +500,7 @@
             this.grilleCheckbox.ReadOnly = false;
             this.grilleCheckbox.Ripple = true;
             this.grilleCheckbox.Size = new System.Drawing.Size(71, 37);
-            this.grilleCheckbox.TabIndex = 4;
+            this.grilleCheckbox.TabIndex = 13;
             this.grilleCheckbox.Text = "Grille";
             this.grilleCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -508,7 +518,7 @@
             this.newLogButton.Name = "newLogButton";
             this.newLogButton.NoAccentTextColor = System.Drawing.Color.Empty;
             this.newLogButton.Size = new System.Drawing.Size(160, 36);
-            this.newLogButton.TabIndex = 4;
+            this.newLogButton.TabIndex = 8;
             this.newLogButton.Text = "New Log";
             this.newLogButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.newLogButton.UseAccentColor = false;
@@ -526,7 +536,7 @@
             this.hoodCheckbox.ReadOnly = false;
             this.hoodCheckbox.Ripple = true;
             this.hoodCheckbox.Size = new System.Drawing.Size(73, 37);
-            this.hoodCheckbox.TabIndex = 4;
+            this.hoodCheckbox.TabIndex = 14;
             this.hoodCheckbox.Text = "Hood";
             this.hoodCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -542,7 +552,7 @@
             this.interiorResprayCheckbox.ReadOnly = false;
             this.interiorResprayCheckbox.Ripple = true;
             this.interiorResprayCheckbox.Size = new System.Drawing.Size(145, 37);
-            this.interiorResprayCheckbox.TabIndex = 4;
+            this.interiorResprayCheckbox.TabIndex = 23;
             this.interiorResprayCheckbox.Text = "Respray Interior";
             this.interiorResprayCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -558,7 +568,7 @@
             this.hornCheckbox.ReadOnly = false;
             this.hornCheckbox.Ripple = true;
             this.hornCheckbox.Size = new System.Drawing.Size(69, 37);
-            this.hornCheckbox.TabIndex = 4;
+            this.hornCheckbox.TabIndex = 15;
             this.hornCheckbox.Text = "Horn";
             this.hornCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -574,7 +584,7 @@
             this.leftFenderCheckbox.ReadOnly = false;
             this.leftFenderCheckbox.Ripple = true;
             this.leftFenderCheckbox.Size = new System.Drawing.Size(115, 37);
-            this.leftFenderCheckbox.TabIndex = 4;
+            this.leftFenderCheckbox.TabIndex = 16;
             this.leftFenderCheckbox.Text = "Left Fender";
             this.leftFenderCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -590,7 +600,7 @@
             this.liveryCheckbox.ReadOnly = false;
             this.liveryCheckbox.Ripple = true;
             this.liveryCheckbox.Size = new System.Drawing.Size(77, 37);
-            this.liveryCheckbox.TabIndex = 4;
+            this.liveryCheckbox.TabIndex = 17;
             this.liveryCheckbox.Text = "Livery";
             this.liveryCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -606,7 +616,7 @@
             this.ornamentsCheckbox.ReadOnly = false;
             this.ornamentsCheckbox.Ripple = true;
             this.ornamentsCheckbox.Size = new System.Drawing.Size(113, 37);
-            this.ornamentsCheckbox.TabIndex = 4;
+            this.ornamentsCheckbox.TabIndex = 18;
             this.ornamentsCheckbox.Text = "Ornaments";
             this.ornamentsCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -622,7 +632,7 @@
             this.oldLiveryCheckbox.ReadOnly = false;
             this.oldLiveryCheckbox.Ripple = true;
             this.oldLiveryCheckbox.Size = new System.Drawing.Size(105, 37);
-            this.oldLiveryCheckbox.TabIndex = 4;
+            this.oldLiveryCheckbox.TabIndex = 19;
             this.oldLiveryCheckbox.Text = "Old Livery";
             this.oldLiveryCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -638,7 +648,7 @@
             this.plateCheckbox.ReadOnly = false;
             this.plateCheckbox.Ripple = true;
             this.plateCheckbox.Size = new System.Drawing.Size(113, 37);
-            this.plateCheckbox.TabIndex = 4;
+            this.plateCheckbox.TabIndex = 20;
             this.plateCheckbox.Text = "Plate Index";
             this.plateCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -654,7 +664,7 @@
             this.rBumperCheckbox.ReadOnly = false;
             this.rBumperCheckbox.Ripple = true;
             this.rBumperCheckbox.Size = new System.Drawing.Size(126, 37);
-            this.rBumperCheckbox.TabIndex = 4;
+            this.rBumperCheckbox.TabIndex = 21;
             this.rBumperCheckbox.Text = "Rear Bumper";
             this.rBumperCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -670,7 +680,7 @@
             this.pearlResprayCheckbox.ReadOnly = false;
             this.pearlResprayCheckbox.Ripple = true;
             this.pearlResprayCheckbox.Size = new System.Drawing.Size(178, 37);
-            this.pearlResprayCheckbox.TabIndex = 4;
+            this.pearlResprayCheckbox.TabIndex = 24;
             this.pearlResprayCheckbox.Text = "Respray Pearlescent";
             this.pearlResprayCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -686,7 +696,7 @@
             this.pResprayCheckbox.ReadOnly = false;
             this.pResprayCheckbox.Ripple = true;
             this.pResprayCheckbox.Size = new System.Drawing.Size(151, 37);
-            this.pResprayCheckbox.TabIndex = 4;
+            this.pResprayCheckbox.TabIndex = 25;
             this.pResprayCheckbox.Text = "Respray Primary";
             this.pResprayCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -702,7 +712,7 @@
             this.sResprayCheckbox.ReadOnly = false;
             this.sResprayCheckbox.Ripple = true;
             this.sResprayCheckbox.Size = new System.Drawing.Size(171, 37);
-            this.sResprayCheckbox.TabIndex = 4;
+            this.sResprayCheckbox.TabIndex = 26;
             this.sResprayCheckbox.Text = "Respray Secondary";
             this.sResprayCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -718,7 +728,7 @@
             this.rimColorCheckbox.ReadOnly = false;
             this.rimColorCheckbox.Ripple = true;
             this.rimColorCheckbox.Size = new System.Drawing.Size(104, 37);
-            this.rimColorCheckbox.TabIndex = 4;
+            this.rimColorCheckbox.TabIndex = 27;
             this.rimColorCheckbox.Text = "Rim Color";
             this.rimColorCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -734,7 +744,7 @@
             this.rimsCheckbox.ReadOnly = false;
             this.rimsCheckbox.Ripple = true;
             this.rimsCheckbox.Size = new System.Drawing.Size(71, 37);
-            this.rimsCheckbox.TabIndex = 4;
+            this.rimsCheckbox.TabIndex = 28;
             this.rimsCheckbox.Text = "Rims";
             this.rimsCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -750,7 +760,7 @@
             this.roofCheckbox.ReadOnly = false;
             this.roofCheckbox.Ripple = true;
             this.roofCheckbox.Size = new System.Drawing.Size(69, 37);
-            this.roofCheckbox.TabIndex = 4;
+            this.roofCheckbox.TabIndex = 30;
             this.roofCheckbox.Text = "Roof";
             this.roofCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -766,7 +776,7 @@
             this.rollcageCheckbox.ReadOnly = false;
             this.rollcageCheckbox.Ripple = true;
             this.rollcageCheckbox.Size = new System.Drawing.Size(102, 37);
-            this.rollcageCheckbox.TabIndex = 4;
+            this.rollcageCheckbox.TabIndex = 29;
             this.rollcageCheckbox.Text = "Roll Cage";
             this.rollcageCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -782,7 +792,7 @@
             this.seatsCheckbox.ReadOnly = false;
             this.seatsCheckbox.Ripple = true;
             this.seatsCheckbox.Size = new System.Drawing.Size(75, 37);
-            this.seatsCheckbox.TabIndex = 4;
+            this.seatsCheckbox.TabIndex = 31;
             this.seatsCheckbox.Text = "Seats";
             this.seatsCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -798,7 +808,7 @@
             this.skirtsCheckbox.ReadOnly = false;
             this.skirtsCheckbox.Ripple = true;
             this.skirtsCheckbox.Size = new System.Drawing.Size(102, 37);
-            this.skirtsCheckbox.TabIndex = 4;
+            this.skirtsCheckbox.TabIndex = 32;
             this.skirtsCheckbox.Text = "Side Skirt";
             this.skirtsCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -814,7 +824,7 @@
             this.spoilerCheckbox.ReadOnly = false;
             this.spoilerCheckbox.Ripple = true;
             this.spoilerCheckbox.Size = new System.Drawing.Size(84, 37);
-            this.spoilerCheckbox.TabIndex = 4;
+            this.spoilerCheckbox.TabIndex = 33;
             this.spoilerCheckbox.Text = "Spoiler";
             this.spoilerCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -830,7 +840,7 @@
             this.steeringWheelCheckbox.ReadOnly = false;
             this.steeringWheelCheckbox.Ripple = true;
             this.steeringWheelCheckbox.Size = new System.Drawing.Size(140, 37);
-            this.steeringWheelCheckbox.TabIndex = 4;
+            this.steeringWheelCheckbox.TabIndex = 34;
             this.steeringWheelCheckbox.Text = "Steering Wheel";
             this.steeringWheelCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -846,7 +856,7 @@
             this.strutCheckbox.ReadOnly = false;
             this.strutCheckbox.Ripple = true;
             this.strutCheckbox.Size = new System.Drawing.Size(69, 37);
-            this.strutCheckbox.TabIndex = 4;
+            this.strutCheckbox.TabIndex = 35;
             this.strutCheckbox.Text = "Strut";
             this.strutCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -862,7 +872,7 @@
             this.speakerCheckbox.ReadOnly = false;
             this.speakerCheckbox.Ripple = true;
             this.speakerCheckbox.Size = new System.Drawing.Size(92, 37);
-            this.speakerCheckbox.TabIndex = 4;
+            this.speakerCheckbox.TabIndex = 36;
             this.speakerCheckbox.Text = "Speaker";
             this.speakerCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -878,7 +888,7 @@
             this.tintCheckbox.ReadOnly = false;
             this.tintCheckbox.Ripple = true;
             this.tintCheckbox.Size = new System.Drawing.Size(63, 37);
-            this.tintCheckbox.TabIndex = 4;
+            this.tintCheckbox.TabIndex = 37;
             this.tintCheckbox.Text = "Tint";
             this.tintCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -894,7 +904,7 @@
             this.tireSmokeCheckbox.ReadOnly = false;
             this.tireSmokeCheckbox.Ripple = true;
             this.tireSmokeCheckbox.Size = new System.Drawing.Size(115, 37);
-            this.tireSmokeCheckbox.TabIndex = 4;
+            this.tireSmokeCheckbox.TabIndex = 38;
             this.tireSmokeCheckbox.Text = "Tire Smoke";
             this.tireSmokeCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -910,7 +920,7 @@
             this.trimAChekbox.ReadOnly = false;
             this.trimAChekbox.Ripple = true;
             this.trimAChekbox.Size = new System.Drawing.Size(82, 37);
-            this.trimAChekbox.TabIndex = 4;
+            this.trimAChekbox.TabIndex = 39;
             this.trimAChekbox.Text = "Trim A";
             this.trimAChekbox.UseVisualStyleBackColor = true;
             // 
@@ -926,7 +936,7 @@
             this.trimBCheckbox.ReadOnly = false;
             this.trimBCheckbox.Ripple = true;
             this.trimBCheckbox.Size = new System.Drawing.Size(82, 37);
-            this.trimBCheckbox.TabIndex = 4;
+            this.trimBCheckbox.TabIndex = 40;
             this.trimBCheckbox.Text = "Trim B";
             this.trimBCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -942,7 +952,7 @@
             this.trunkCheckbox.ReadOnly = false;
             this.trunkCheckbox.Ripple = true;
             this.trunkCheckbox.Size = new System.Drawing.Size(76, 37);
-            this.trunkCheckbox.TabIndex = 4;
+            this.trunkCheckbox.TabIndex = 41;
             this.trunkCheckbox.Text = "Trunk";
             this.trunkCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -950,6 +960,7 @@
             // 
             this.tabControl.Controls.Add(this.installTab);
             this.tabControl.Controls.Add(this.removeTab);
+            this.tabControl.Controls.Add(this.tabPage1);
             this.tabControl.Depth = 0;
             this.tabControl.Location = new System.Drawing.Point(358, 131);
             this.tabControl.MouseState = MaterialSkin.MouseState.HOVER;
@@ -957,7 +968,7 @@
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(954, 589);
-            this.tabControl.TabIndex = 6;
+            this.tabControl.TabIndex = 5;
             // 
             // installTab
             // 
@@ -1005,7 +1016,7 @@
             this.installTab.Controls.Add(this.roofCheckbox);
             this.installTab.Location = new System.Drawing.Point(4, 22);
             this.installTab.Name = "installTab";
-            this.installTab.Padding = new System.Windows.Forms.Padding(3);
+            this.installTab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.installTab.Size = new System.Drawing.Size(946, 563);
             this.installTab.TabIndex = 0;
             this.installTab.Text = "Install Parts";
@@ -1016,7 +1027,7 @@
             this.removeTab.Controls.Add(this.removeNeonCheckbox);
             this.removeTab.Location = new System.Drawing.Point(4, 22);
             this.removeTab.Name = "removeTab";
-            this.removeTab.Padding = new System.Windows.Forms.Padding(3);
+            this.removeTab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.removeTab.Size = new System.Drawing.Size(946, 563);
             this.removeTab.TabIndex = 1;
             this.removeTab.Text = "Remove Parts";
@@ -1037,6 +1048,24 @@
             this.removeNeonCheckbox.TabIndex = 0;
             this.removeNeonCheckbox.Text = "Remove Neon Kit";
             this.removeNeonCheckbox.UseVisualStyleBackColor = true;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.clockOutButton);
+            this.tabPage1.Controls.Add(this.clockInButton);
+            this.tabPage1.Controls.Add(this.clearCommissionLogButton);
+            this.tabPage1.Controls.Add(this.getCommissionLogButton);
+            this.tabPage1.Controls.Add(this.clockOutInput);
+            this.tabPage1.Controls.Add(this.commissionLogTextBox);
+            this.tabPage1.Controls.Add(this.clockInInput);
+            this.tabPage1.Controls.Add(this.comDateInput);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(946, 563);
+            this.tabPage1.TabIndex = 2;
+            this.tabPage1.Text = "Commission Log";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // materialTabSelector1
             // 
@@ -1065,7 +1094,7 @@
             this.clearLogButton.Name = "clearLogButton";
             this.clearLogButton.NoAccentTextColor = System.Drawing.Color.Empty;
             this.clearLogButton.Size = new System.Drawing.Size(160, 36);
-            this.clearLogButton.TabIndex = 4;
+            this.clearLogButton.TabIndex = 10;
             this.clearLogButton.Text = "Clear Logs";
             this.clearLogButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.clearLogButton.UseAccentColor = false;
@@ -1085,7 +1114,7 @@
             this.repairInput.Multiline = false;
             this.repairInput.Name = "repairInput";
             this.repairInput.Size = new System.Drawing.Size(160, 50);
-            this.repairInput.TabIndex = 1;
+            this.repairInput.TabIndex = 4;
             this.repairInput.Text = "";
             this.repairInput.TrailingIcon = null;
             // 
@@ -1123,7 +1152,7 @@
             this.saveLogButton.Name = "saveLogButton";
             this.saveLogButton.NoAccentTextColor = System.Drawing.Color.Empty;
             this.saveLogButton.Size = new System.Drawing.Size(160, 36);
-            this.saveLogButton.TabIndex = 4;
+            this.saveLogButton.TabIndex = 7;
             this.saveLogButton.Text = "Save Log";
             this.saveLogButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.saveLogButton.UseAccentColor = false;
@@ -1143,7 +1172,7 @@
             this.deleteLogButton.Name = "deleteLogButton";
             this.deleteLogButton.NoAccentTextColor = System.Drawing.Color.Empty;
             this.deleteLogButton.Size = new System.Drawing.Size(160, 36);
-            this.deleteLogButton.TabIndex = 4;
+            this.deleteLogButton.TabIndex = 9;
             this.deleteLogButton.Text = "Delete Log";
             this.deleteLogButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.deleteLogButton.UseAccentColor = false;
@@ -1163,17 +1192,174 @@
             this.updateBillButton.Name = "updateBillButton";
             this.updateBillButton.NoAccentTextColor = System.Drawing.Color.Empty;
             this.updateBillButton.Size = new System.Drawing.Size(160, 36);
-            this.updateBillButton.TabIndex = 4;
+            this.updateBillButton.TabIndex = 6;
             this.updateBillButton.Text = "Bill Customer";
             this.updateBillButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.updateBillButton.UseAccentColor = false;
             this.updateBillButton.UseVisualStyleBackColor = true;
             // 
+            // getCommissionLogButton
+            // 
+            this.getCommissionLogButton.AutoSize = false;
+            this.getCommissionLogButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.getCommissionLogButton.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.getCommissionLogButton.Depth = 0;
+            this.getCommissionLogButton.HighEmphasis = true;
+            this.getCommissionLogButton.Icon = null;
+            this.getCommissionLogButton.Location = new System.Drawing.Point(28, 207);
+            this.getCommissionLogButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.getCommissionLogButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.getCommissionLogButton.Name = "getCommissionLogButton";
+            this.getCommissionLogButton.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.getCommissionLogButton.Size = new System.Drawing.Size(334, 50);
+            this.getCommissionLogButton.TabIndex = 5;
+            this.getCommissionLogButton.Text = "Generate Commission Log";
+            this.getCommissionLogButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.getCommissionLogButton.UseAccentColor = false;
+            this.getCommissionLogButton.UseVisualStyleBackColor = true;
+            // 
+            // comDateInput
+            // 
+            this.comDateInput.AnimateReadOnly = false;
+            this.comDateInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.comDateInput.Depth = 0;
+            this.comDateInput.Enabled = false;
+            this.comDateInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.comDateInput.Hint = "Date";
+            this.comDateInput.LeadingIcon = null;
+            this.comDateInput.Location = new System.Drawing.Point(28, 36);
+            this.comDateInput.MaxLength = 50;
+            this.comDateInput.MouseState = MaterialSkin.MouseState.OUT;
+            this.comDateInput.Multiline = false;
+            this.comDateInput.Name = "comDateInput";
+            this.comDateInput.Size = new System.Drawing.Size(334, 50);
+            this.comDateInput.TabIndex = 0;
+            this.comDateInput.Tag = "exclude";
+            this.comDateInput.Text = "";
+            this.comDateInput.TrailingIcon = null;
+            // 
+            // clockInInput
+            // 
+            this.clockInInput.AnimateReadOnly = false;
+            this.clockInInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.clockInInput.Depth = 0;
+            this.clockInInput.Enabled = false;
+            this.clockInInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.clockInInput.Hint = "Clock in time";
+            this.clockInInput.LeadingIcon = null;
+            this.clockInInput.Location = new System.Drawing.Point(28, 92);
+            this.clockInInput.MaxLength = 50;
+            this.clockInInput.MouseState = MaterialSkin.MouseState.OUT;
+            this.clockInInput.Multiline = false;
+            this.clockInInput.Name = "clockInInput";
+            this.clockInInput.Size = new System.Drawing.Size(160, 50);
+            this.clockInInput.TabIndex = 1;
+            this.clockInInput.Tag = "exclude";
+            this.clockInInput.Text = "";
+            this.clockInInput.TrailingIcon = null;
+            // 
+            // clockInButton
+            // 
+            this.clockInButton.AutoSize = false;
+            this.clockInButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.clockInButton.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.clockInButton.Depth = 0;
+            this.clockInButton.HighEmphasis = true;
+            this.clockInButton.Icon = null;
+            this.clockInButton.Location = new System.Drawing.Point(202, 92);
+            this.clockInButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.clockInButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.clockInButton.Name = "clockInButton";
+            this.clockInButton.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.clockInButton.Size = new System.Drawing.Size(160, 50);
+            this.clockInButton.TabIndex = 2;
+            this.clockInButton.Text = "Clock In";
+            this.clockInButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.clockInButton.UseAccentColor = false;
+            this.clockInButton.UseVisualStyleBackColor = true;
+            // 
+            // clockOutInput
+            // 
+            this.clockOutInput.AnimateReadOnly = false;
+            this.clockOutInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.clockOutInput.Depth = 0;
+            this.clockOutInput.Enabled = false;
+            this.clockOutInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.clockOutInput.Hint = "Clock out time";
+            this.clockOutInput.LeadingIcon = null;
+            this.clockOutInput.Location = new System.Drawing.Point(28, 148);
+            this.clockOutInput.MaxLength = 50;
+            this.clockOutInput.MouseState = MaterialSkin.MouseState.OUT;
+            this.clockOutInput.Multiline = false;
+            this.clockOutInput.Name = "clockOutInput";
+            this.clockOutInput.Size = new System.Drawing.Size(160, 50);
+            this.clockOutInput.TabIndex = 3;
+            this.clockOutInput.Tag = "exclude";
+            this.clockOutInput.Text = "";
+            this.clockOutInput.TrailingIcon = null;
+            // 
+            // clockOutButton
+            // 
+            this.clockOutButton.AutoSize = false;
+            this.clockOutButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.clockOutButton.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.clockOutButton.Depth = 0;
+            this.clockOutButton.HighEmphasis = true;
+            this.clockOutButton.Icon = null;
+            this.clockOutButton.Location = new System.Drawing.Point(202, 148);
+            this.clockOutButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.clockOutButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.clockOutButton.Name = "clockOutButton";
+            this.clockOutButton.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.clockOutButton.Size = new System.Drawing.Size(160, 50);
+            this.clockOutButton.TabIndex = 4;
+            this.clockOutButton.Text = "Clock Out";
+            this.clockOutButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.clockOutButton.UseAccentColor = false;
+            this.clockOutButton.UseVisualStyleBackColor = true;
+            // 
+            // commissionLogTextBox
+            // 
+            this.commissionLogTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.commissionLogTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.commissionLogTextBox.Depth = 0;
+            this.commissionLogTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.commissionLogTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.commissionLogTextBox.Location = new System.Drawing.Point(369, 36);
+            this.commissionLogTextBox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.commissionLogTextBox.Name = "commissionLogTextBox";
+            this.commissionLogTextBox.ReadOnly = true;
+            this.commissionLogTextBox.Size = new System.Drawing.Size(568, 221);
+            this.commissionLogTextBox.TabIndex = 6;
+            this.commissionLogTextBox.Tag = "exclude";
+            this.commissionLogTextBox.Text = "";
+            this.commissionLogTextBox.Click += new System.EventHandler(this.CopyToClipboard_Click);
+            // 
+            // clearCommissionLogButton
+            // 
+            this.clearCommissionLogButton.AutoSize = false;
+            this.clearCommissionLogButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.clearCommissionLogButton.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.clearCommissionLogButton.Depth = 0;
+            this.clearCommissionLogButton.HighEmphasis = true;
+            this.clearCommissionLogButton.Icon = null;
+            this.clearCommissionLogButton.Location = new System.Drawing.Point(28, 269);
+            this.clearCommissionLogButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.clearCommissionLogButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.clearCommissionLogButton.Name = "clearCommissionLogButton";
+            this.clearCommissionLogButton.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.clearCommissionLogButton.Size = new System.Drawing.Size(334, 50);
+            this.clearCommissionLogButton.TabIndex = 5;
+            this.clearCommissionLogButton.Text = "Clear Commission Log";
+            this.clearCommissionLogButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.clearCommissionLogButton.UseAccentColor = false;
+            this.clearCommissionLogButton.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1322, 840);
+            this.ClientSize = new System.Drawing.Size(1316, 843);
             this.Controls.Add(this.unbilledTextbox);
             this.Controls.Add(this.materialTabSelector1);
             this.Controls.Add(this.tabControl);
@@ -1197,6 +1383,7 @@
             this.installTab.PerformLayout();
             this.removeTab.ResumeLayout(false);
             this.removeTab.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1264,6 +1451,15 @@
         private MaterialSkin.Controls.MaterialButton saveLogButton;
         private MaterialSkin.Controls.MaterialButton deleteLogButton;
         private MaterialSkin.Controls.MaterialButton updateBillButton;
+        private System.Windows.Forms.TabPage tabPage1;
+        private MaterialSkin.Controls.MaterialButton getCommissionLogButton;
+        private MaterialSkin.Controls.MaterialTextBox comDateInput;
+        private MaterialSkin.Controls.MaterialButton clockInButton;
+        private MaterialSkin.Controls.MaterialTextBox clockInInput;
+        private MaterialSkin.Controls.MaterialButton clockOutButton;
+        private MaterialSkin.Controls.MaterialTextBox clockOutInput;
+        private MaterialSkin.Controls.MaterialMultiLineTextBox commissionLogTextBox;
+        private MaterialSkin.Controls.MaterialButton clearCommissionLogButton;
     }
 }
 

@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Net.Sockets;
 using System.Text;
@@ -93,6 +94,10 @@ namespace MechanicLogHelper
             newLogButton.Click += new EventHandler(ResetButton_Click);
             clearLogButton.Click += new EventHandler(ClearLogsButton_Click);
             updateBillButton.Click += new EventHandler(BillCustomerButton_Click);
+            clockInButton.Click += new EventHandler(ClockInButton_Click);
+            clockOutButton.Click += new EventHandler(ClockOutButton_Click);
+            getCommissionLogButton.Click += new EventHandler(GenerateCommissionLog_Click);
+            clearCommissionLogButton.Click += new EventHandler(ClearCommissionLog_Click);
             
 
             // tree view setting
@@ -101,6 +106,8 @@ namespace MechanicLogHelper
             // input settings
             plateInput.KeyPress += AlphanumericTextBox_KeyPress;
             repairInput.KeyPress += NumberTextBox_KeyPress;
+            clockInInput.TextChanged += ClockInOutInput_TextChanged;
+            clockOutInput.TextChanged += ClockInOutInput_TextChanged;
 
             // input update settings
             AssignUpdateEventHandlers(this.Controls);
@@ -312,14 +319,116 @@ SHOP: {shop}
         
         private void CopyToClipboard_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(logdisplayTextBox.Text))
+            MaterialMultiLineTextBox sourceTextBox = sender as MaterialMultiLineTextBox;
+
+            if (sourceTextBox != null && !string.IsNullOrEmpty(sourceTextBox.Text))
             {
                 Clipboard.SetText(logdisplayTextBox.Text);
                 MaterialMessageBox.Show("Log copied to clilpboard");
             }
         }
 
-        
+        private void ClearCommissionLog_Click(object sender, EventArgs e)
+        {
+            comDateInput.Clear();
+            clockInInput.Clear();
+            clockOutInput.Clear();
+            commissionLogTextBox.Clear();
+        }
+
+        private void GenerateCommissionLog_Click(object sender, EventArgs e)
+        {
+            string name = "Mike Lee";
+            string date = comDateInput.Text;
+            string clockIn = clockInInput.Text;
+            string clockOut = clockOutInput.Text;
+            string hoursWorked = GetHoursWorked();
+            int upgradeLogs = CountLogEntries();
+            int performanceParts = CountPerformancePartInstalls();
+            int assistedLogs = 0;
+            int totalCommission = performanceParts * 200;
+
+            string formattedString = $@"```
+Name: {name}
+Date: {date}
+Clock In Time: {clockIn}
+Clock Out Time: {clockOut}
+Hours Worked: {hoursWorked}
+Upgrade Logs: {upgradeLogs}
+Performance Parts: {performanceParts}
+Assisted Logs: {assistedLogs}
+Total Commission: ${totalCommission:n0}
+```";
+
+            commissionLogTextBox.Text = formattedString;
+        }
+
+        private void ClockInButton_Click(object sender, EventArgs e)
+        {
+            var roundedTime = RoundUpTime(DateTime.Now);
+            comDateInput.Text = roundedTime.ToString("MM/dd/yyyy");
+            clockInInput.Text = roundedTime.ToString("hh:mm tt");
+        }
+
+        private void ClockOutButton_Click(object sender, EventArgs e)
+        {
+            var roundedTime = RoundUpTime(DateTime.Now);
+            clockOutInput.Text = roundedTime.ToString("hh:mm tt");
+        }
+
+        private string GetHoursWorked()
+        {
+            DateTime clockInTime = DateTime.ParseExact(clockInInput.Text, "hh:mm tt", CultureInfo.InvariantCulture);
+            DateTime clockOutTime = DateTime.ParseExact(clockOutInput.Text, "hh:mm tt", CultureInfo.InvariantCulture);
+
+            TimeSpan hoursWorked = clockOutTime - clockInTime;
+            return hoursWorked.TotalHours.ToString("N0");
+        }
+
+        private DateTime RoundUpTime(DateTime time)
+        {
+            int minutes = time.Minute;
+            int delta = 15 - (minutes % 15);
+            if (delta == 15) delta = 0;
+            return time.AddMinutes(delta);
+        }
+
+        private void ClockInOutInput_TextChanged(object sender, EventArgs e)
+        {
+            getCommissionLogButton.Enabled = !string.IsNullOrEmpty(clockInInput.Text) && !string.IsNullOrEmpty(clockOutInput.Text);
+        }
+
+        private int CountLogEntries()
+        {
+            int logCount = 0;
+
+            foreach (TreeNode dateNode in treeViewLogs.Nodes)
+            {
+                logCount += dateNode.Nodes.Count;
+            }
+
+            return logCount;
+        }
+
+        private int CountPerformancePartInstalls()
+        {
+            int partCount = 0;
+            var logs = logManager.LoadLogs();
+
+            foreach (var log in logs)
+            {
+                foreach (var upgrade in log.Upgrades)
+                {
+                    if (upgrade.UpgradeType == "Performance")
+                    {
+                        partCount++;
+                    }
+                }
+            }
+
+            return partCount;
+        }
+
         private string GetFormattedUpgrades()
         {
             List<string> resprayTypes = new List<string>();
