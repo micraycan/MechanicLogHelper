@@ -29,6 +29,7 @@ namespace MechanicLogHelper
         public int TotalPrice { get; set; }
         public DateTime Date { get; set; }
         public string Shop { get; set; }
+        public int ShiftNumber { get; set; }
     }
 
     public class LogManager

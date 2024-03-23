@@ -46,5 +46,17 @@ namespace MechanicLogHelper.Properties {
                 this["MechShop"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public int CurrentShiftNumber {
+            get {
+                return ((int)(this["CurrentShiftNumber"]));
+            }
+            set {
+                this["CurrentShiftNumber"] = value;
+            }
+        }
     }
 }
