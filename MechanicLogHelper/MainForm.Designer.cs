@@ -131,6 +131,8 @@
             this.removeXenonCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
             this.rightFenderCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
             this.airFilterCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.newShiftButton = new MaterialSkin.Controls.MaterialButton();
+            this.shiftNumberDropdown = new MaterialSkin.Controls.MaterialComboBox();
             this.tabControl.SuspendLayout();
             this.installTab.SuspendLayout();
             this.unlistedTab.SuspendLayout();
@@ -143,7 +145,7 @@
             // 
             this.treeViewLogs.Location = new System.Drawing.Point(17, 305);
             this.treeViewLogs.Name = "treeViewLogs";
-            this.treeViewLogs.Size = new System.Drawing.Size(334, 283);
+            this.treeViewLogs.Size = new System.Drawing.Size(334, 238);
             this.treeViewLogs.TabIndex = 12;
             // 
             // customerInput
@@ -1655,6 +1657,7 @@
             // 
             // commissionTab
             // 
+            this.commissionTab.Controls.Add(this.shiftNumberDropdown);
             this.commissionTab.Controls.Add(this.clearCommissionLogButton);
             this.commissionTab.Controls.Add(this.clockOutButton);
             this.commissionTab.Controls.Add(this.clockInButton);
@@ -1679,7 +1682,7 @@
             this.clearCommissionLogButton.Depth = 0;
             this.clearCommissionLogButton.HighEmphasis = true;
             this.clearCommissionLogButton.Icon = null;
-            this.clearCommissionLogButton.Location = new System.Drawing.Point(28, 269);
+            this.clearCommissionLogButton.Location = new System.Drawing.Point(28, 324);
             this.clearCommissionLogButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.clearCommissionLogButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.clearCommissionLogButton.Name = "clearCommissionLogButton";
@@ -1739,7 +1742,7 @@
             this.getCommissionLogButton.Depth = 0;
             this.getCommissionLogButton.HighEmphasis = true;
             this.getCommissionLogButton.Icon = null;
-            this.getCommissionLogButton.Location = new System.Drawing.Point(28, 207);
+            this.getCommissionLogButton.Location = new System.Drawing.Point(28, 262);
             this.getCommissionLogButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.getCommissionLogButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.getCommissionLogButton.Name = "getCommissionLogButton";
@@ -1782,7 +1785,7 @@
             this.commissionLogTextBox.MouseState = MaterialSkin.MouseState.HOVER;
             this.commissionLogTextBox.Name = "commissionLogTextBox";
             this.commissionLogTextBox.ReadOnly = true;
-            this.commissionLogTextBox.Size = new System.Drawing.Size(568, 221);
+            this.commissionLogTextBox.Size = new System.Drawing.Size(568, 338);
             this.commissionLogTextBox.TabIndex = 7;
             this.commissionLogTextBox.Tag = "exclude";
             this.commissionLogTextBox.Text = "";
@@ -2077,6 +2080,48 @@
             this.airFilterCheckbox.Text = "Air Filter";
             this.airFilterCheckbox.UseVisualStyleBackColor = true;
             // 
+            // newShiftButton
+            // 
+            this.newShiftButton.AutoSize = false;
+            this.newShiftButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.newShiftButton.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.newShiftButton.Depth = 0;
+            this.newShiftButton.HighEmphasis = true;
+            this.newShiftButton.Icon = null;
+            this.newShiftButton.Location = new System.Drawing.Point(17, 552);
+            this.newShiftButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.newShiftButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.newShiftButton.Name = "newShiftButton";
+            this.newShiftButton.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.newShiftButton.Size = new System.Drawing.Size(334, 36);
+            this.newShiftButton.TabIndex = 6;
+            this.newShiftButton.Text = "Start New Shift";
+            this.newShiftButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.newShiftButton.UseAccentColor = false;
+            this.newShiftButton.UseVisualStyleBackColor = true;
+            // 
+            // shiftNumberDropdown
+            // 
+            this.shiftNumberDropdown.AutoResize = false;
+            this.shiftNumberDropdown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.shiftNumberDropdown.Depth = 0;
+            this.shiftNumberDropdown.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.shiftNumberDropdown.DropDownHeight = 174;
+            this.shiftNumberDropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.shiftNumberDropdown.DropDownWidth = 121;
+            this.shiftNumberDropdown.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.shiftNumberDropdown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.shiftNumberDropdown.FormattingEnabled = true;
+            this.shiftNumberDropdown.IntegralHeight = false;
+            this.shiftNumberDropdown.ItemHeight = 43;
+            this.shiftNumberDropdown.Location = new System.Drawing.Point(28, 204);
+            this.shiftNumberDropdown.MaxDropDownItems = 4;
+            this.shiftNumberDropdown.MouseState = MaterialSkin.MouseState.OUT;
+            this.shiftNumberDropdown.Name = "shiftNumberDropdown";
+            this.shiftNumberDropdown.Size = new System.Drawing.Size(334, 49);
+            this.shiftNumberDropdown.StartIndex = 0;
+            this.shiftNumberDropdown.TabIndex = 8;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2092,6 +2137,7 @@
             this.Controls.Add(this.clearLogButton);
             this.Controls.Add(this.repairInput);
             this.Controls.Add(this.customerInput);
+            this.Controls.Add(this.newShiftButton);
             this.Controls.Add(this.updateBillButton);
             this.Controls.Add(this.deleteLogButton);
             this.Controls.Add(this.saveLogButton);
@@ -2217,6 +2263,8 @@
         private MaterialSkin.Controls.MaterialCheckbox removeXenonCheckbox;
         private MaterialSkin.Controls.MaterialCheckbox airFilterCheckbox;
         private MaterialSkin.Controls.MaterialCheckbox rightFenderCheckbox;
+        private MaterialSkin.Controls.MaterialButton newShiftButton;
+        private MaterialSkin.Controls.MaterialComboBox shiftNumberDropdown;
     }
 }
 

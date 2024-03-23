@@ -20,6 +20,7 @@ namespace MechanicLogHelper
     {
         private LogManager logManager;
         private List<UpgradeOption> upgradeOptions = new List<UpgradeOption>();
+        private LogEntry selectedLogEntry = null;
 
         public MainForm()
         {
@@ -117,6 +118,7 @@ namespace MechanicLogHelper
             getCommissionLogButton.Click += new EventHandler(GenerateCommissionLog_Click);
             clearCommissionLogButton.Click += new EventHandler(ClearCommissionLog_Click);
             setDefaultButton.Click += new EventHandler(SettingsSaveButton_Click);
+            newShiftButton.Click += new EventHandler(StartNewShiftButton_Click);
 
             // tree view setting
             this.treeViewLogs.AfterSelect += new TreeViewEventHandler(TreeViewLogs_AfterSelect);
@@ -200,35 +202,57 @@ namespace MechanicLogHelper
             UpdateUnbilledPrice(installedUpgrades);
             GenerateLogString();
         }
+
+        private void StartNewShiftButton_Click(object sender, EventArgs e)
+        {
+            var logs = logManager.LoadLogs();
+            int currentShift = Properties.Settings.Default.CurrentShiftNumber;
+
+            if (logs.Any(log => log.ShiftNumber == currentShift))
+            {
+                Properties.Settings.Default.CurrentShiftNumber++;
+                Properties.Settings.Default.Save();
+            }
+            
+            RefreshTreeView();
+        }
         
         private void RefreshTreeView()
         {
             treeViewLogs.Nodes.Clear();
             var logs = logManager.LoadLogs();
+            int currentShift = Properties.Settings.Default.CurrentShiftNumber;
 
-            if (logs == null || !logs.Any())
+            if (!logs.Any(log => log.ShiftNumber == currentShift))
             {
-                TreeNode emptyNode = new TreeNode(DateTime.Now.ToString("yyyy-MM-dd"));
-                treeViewLogs.Nodes.Add(emptyNode);
+                logs.Add(new LogEntry { ShiftNumber = currentShift, Date = DateTime.Now });
             }
-            else
-            {
-                var groupedLogs = logs.GroupBy(log => log.Date.ToString("yyyy-MM-dd"));
 
-                foreach (var group in groupedLogs)
+            var groupedLogs = logs.GroupBy(log => log.ShiftNumber)
+                    .OrderByDescending(group => group.Key);
+
+            foreach (var group in groupedLogs)
+            {
+                var earliestDate = group.Where(log => log.Date != DateTime.MinValue)
+                    .OrderBy(log => log.Date)
+                    .FirstOrDefault()?.Date.ToString("M/dd/yyyy") ?? DateTime.Now.ToString("M/dd/yyyy");
+
+                TreeNode shiftNode = new TreeNode($"Shift #{group.Key} ({earliestDate})");
+                foreach (var log in group)
                 {
-                    TreeNode dateNode = new TreeNode(group.Key);
-                    foreach (var log in group)
+                    if (!string.IsNullOrEmpty(log.CustomerName))
                     {
                         TreeNode logNode = new TreeNode($"{log.CustomerName} - {log.Vehicle}");
                         logNode.Tag = log;
-                        dateNode.Nodes.Add(logNode);
+                        shiftNode.Nodes.Add(logNode);
                     }
-                    treeViewLogs.Nodes.Add(dateNode);
                 }
+
+                treeViewLogs.Nodes.Add(shiftNode);
             }
 
             treeViewLogs.ExpandAll();
+            PopulateShiftDropdown();
         }
 
         private List<UpgradeInfo> GetInstalledUpgrades()
@@ -414,17 +438,27 @@ SHOP: {shop}
 
         private void GenerateCommissionLog_Click(object sender, EventArgs e)
         {
-            string name = Properties.Settings.Default.MechName;
-            string date = comDateInput.Text;
-            string clockIn = clockInInput.Text;
-            string clockOut = clockOutInput.Text;
-            string hoursWorked = GetHoursWorked();
-            int upgradeLogs = CountLogEntries();
-            int performanceParts = CountPerformancePartInstalls();
-            int assistedLogs = 0;
-            int totalCommission = performanceParts * 200;
+            if (shiftNumberDropdown.SelectedItem == null)
+            {
+                return;
+            }
 
-            string formattedString = $@"```
+            string selectedShiftString = shiftNumberDropdown.SelectedItem.ToString();
+            if (int.TryParse(selectedShiftString.Split('#').Last(), out int selectedShiftNumber))
+            {
+                var logs = logManager.LoadLogs().Where(log => log.ShiftNumber == selectedShiftNumber).ToList();
+
+                string name = Properties.Settings.Default.MechName;
+                string date = comDateInput.Text;
+                string clockIn = clockInInput.Text;
+                string clockOut = clockOutInput.Text;
+                string hoursWorked = GetHoursWorked();
+                int upgradeLogs = logs.Count;
+                int performanceParts = logs.Sum(log => CountPerformancePartInstalls(log));
+                int assistedLogs = 0;
+                int totalCommission = performanceParts * 200;
+
+                string formattedString = $@"```
 Name: {name}
 Date: {date}
 Clock In Time: {clockIn}
@@ -436,7 +470,25 @@ Assisted Logs: {assistedLogs}
 Total Commission: ${totalCommission:n0}
 ```";
 
-            commissionLogTextBox.Text = formattedString;
+                commissionLogTextBox.Text = formattedString;
+            }
+        }
+
+        private void PopulateShiftDropdown()
+        {
+            var logs = logManager.LoadLogs();
+            var shiftNumbers = logs.Select(log => log.ShiftNumber).Distinct().OrderBy(number => number);
+
+            shiftNumberDropdown.Items.Clear();
+            foreach (var shiftNumber in shiftNumbers)
+            {
+                shiftNumberDropdown.Items.Add($"Shift #{shiftNumber}");
+            }
+
+            if (shiftNumberDropdown.Items.Count > 0)
+            {
+                shiftNumberDropdown.SelectedIndex = 0;
+            }
         }
 
         private string GetHoursWorked()
@@ -448,44 +500,20 @@ Total Commission: ${totalCommission:n0}
             return hoursWorked.TotalHours.ToString("N0");
         }
 
-        private DateTime RoundUpTime(DateTime time)
-        {
-            int minutes = time.Minute;
-            int delta = 15 - (minutes % 15);
-            if (delta == 15) delta = 0;
-            return time.AddMinutes(delta);
-        }
-
         private void ClockInOutInput_TextChanged(object sender, EventArgs e)
         {
             getCommissionLogButton.Enabled = !string.IsNullOrEmpty(clockInInput.Text) && !string.IsNullOrEmpty(clockOutInput.Text);
         }
 
-        private int CountLogEntries()
-        {
-            int logCount = 0;
-
-            foreach (TreeNode dateNode in treeViewLogs.Nodes)
-            {
-                logCount += dateNode.Nodes.Count;
-            }
-
-            return logCount;
-        }
-
-        private int CountPerformancePartInstalls()
+        private int CountPerformancePartInstalls(LogEntry logEntry)
         {
             int partCount = 0;
-            var logs = logManager.LoadLogs();
 
-            foreach (var log in logs)
+            foreach (var upgrade in logEntry.Upgrades)
             {
-                foreach (var upgrade in log.Upgrades)
+                if (upgrade.UpgradeType == "Performance")
                 {
-                    if (upgrade.UpgradeType == "Performance")
-                    {
-                        partCount++;
-                    }
+                    partCount++;
                 }
             }
 
@@ -607,17 +635,23 @@ Total Commission: ${totalCommission:n0}
                 LicensePlate = plateInput.Text,
                 IsEmployee = employeeCheckbox.Checked,
                 Date = DateTime.Now,
-                Upgrades = GetInstalledUpgrades()
+                Upgrades = GetInstalledUpgrades(),
+                ShiftNumber = Properties.Settings.Default.CurrentShiftNumber
             };
 
-            var existingLog = logs.FirstOrDefault(log => 
-                log.CustomerName == logEntry.CustomerName && 
-                log.Date.Date == logEntry.Date.Date &&
-                log.Vehicle == logEntry.Vehicle);
-
-            if (existingLog != null)
+            int logIndex = -1;
+            if (selectedLogEntry != null)
             {
-                logs[logs.IndexOf(existingLog)] = logEntry;
+                logIndex = logs.FindIndex(log =>
+                    log.CustomerName == selectedLogEntry.CustomerName &&
+                    log.Vehicle == selectedLogEntry.Vehicle &&
+                    log.Date.Date == selectedLogEntry.Date.Date &&
+                    log.ShiftNumber == selectedLogEntry.ShiftNumber);
+            }
+
+            if (logIndex != -1)
+            {
+                logs[logIndex] = logEntry;
             }
             else
             {
@@ -628,14 +662,18 @@ Total Commission: ${totalCommission:n0}
 
             RefreshTreeView();
             ClearFormFields();
+            selectedLogEntry = null;
         }
 
         
         private void ClearLogsButton_Click(object sender, EventArgs e)
         {
             logManager.ClearLogs();
+            Properties.Settings.Default.CurrentShiftNumber = 1;
+            Properties.Settings.Default.Save();
             ClearFormFields();
             RefreshTreeView();
+            selectedLogEntry = null;
         }
 
         
@@ -643,6 +681,7 @@ Total Commission: ${totalCommission:n0}
         {
             ClearFormFields();
             RefreshTreeView();
+            selectedLogEntry = null;
         }
 
         private void BillCustomerButton_Click(object sender, EventArgs e)
@@ -688,16 +727,14 @@ Total Commission: ${totalCommission:n0}
 
         private void DeleteLogButton_Click(object sender, EventArgs e)
         {
-            if (treeViewLogs.SelectedNode != null && treeViewLogs.SelectedNode.Level == 1)
+            if (selectedLogEntry != null)
             {
-                var logEntry = treeViewLogs.SelectedNode.Tag as LogEntry;
-                if (logEntry != null)
-                {
-                    logManager.DeleteLog(logEntry);
-                    ClearFormFields();
-                    RefreshTreeView();
-                }
+                logManager.DeleteLog(selectedLogEntry);
+                ClearFormFields();
+                RefreshTreeView();
             }
+
+            selectedLogEntry = null;
         }
         
         private bool IsInputValid()
@@ -763,18 +800,18 @@ Total Commission: ${totalCommission:n0}
         {
             if (e.Node.Level == 1)
             {
-                var selectedLog = e.Node.Tag as LogEntry;
+                selectedLogEntry = e.Node.Tag as LogEntry;
 
-                if (selectedLog != null)
+                if (selectedLogEntry != null)
                 {
                     ClearFormFields();
 
-                    customerInput.Text = selectedLog.CustomerName;
-                    vehicleInput.Text = selectedLog.Vehicle;
-                    plateInput.Text = selectedLog.LicensePlate;
-                    employeeCheckbox.Checked = selectedLog.IsEmployee;
+                    customerInput.Text = selectedLogEntry.CustomerName;
+                    vehicleInput.Text = selectedLogEntry.Vehicle;
+                    plateInput.Text = selectedLogEntry.LicensePlate;
+                    employeeCheckbox.Checked = selectedLogEntry.IsEmployee;
 
-                    foreach (var upgrade in selectedLog.Upgrades)
+                    foreach (var upgrade in selectedLogEntry.Upgrades)
                     {
                         foreach (var upgradeOption in upgradeOptions)
                         {
@@ -804,6 +841,10 @@ Total Commission: ${totalCommission:n0}
                     GenerateLogString();
                     UpdateUnbilledPrice(GetInstalledUpgrades());
                 }
+            }
+            else
+            {
+                selectedLogEntry = null;
             }
         }
     }
