@@ -58,5 +58,17 @@ namespace MechanicLogHelper.Properties {
                 this["CurrentShiftNumber"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Blacklisted {
+            get {
+                return ((string)(this["Blacklisted"]));
+            }
+            set {
+                this["Blacklisted"] = value;
+            }
+        }
     }
 }

@@ -80,7 +80,9 @@
             this.trunkCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
             this.tabControl = new MaterialSkin.Controls.MaterialTabControl();
             this.installTab = new System.Windows.Forms.TabPage();
+            this.airFilterCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
             this.vanityCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            this.rightFenderCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
             this.unlistedTab = new System.Windows.Forms.TabPage();
             this.uType8 = new MaterialSkin.Controls.MaterialComboBox();
             this.uType7 = new MaterialSkin.Controls.MaterialComboBox();
@@ -107,8 +109,10 @@
             this.uName5 = new MaterialSkin.Controls.MaterialTextBox();
             this.uName1 = new MaterialSkin.Controls.MaterialTextBox();
             this.removeTab = new System.Windows.Forms.TabPage();
+            this.removeXenonCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
             this.removeNeonCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
             this.commissionTab = new System.Windows.Forms.TabPage();
+            this.shiftNumberDropdown = new MaterialSkin.Controls.MaterialComboBox();
             this.clearCommissionLogButton = new MaterialSkin.Controls.MaterialButton();
             this.clockOutButton = new MaterialSkin.Controls.MaterialButton();
             this.clockInButton = new MaterialSkin.Controls.MaterialButton();
@@ -128,11 +132,8 @@
             this.saveLogButton = new MaterialSkin.Controls.MaterialButton();
             this.deleteLogButton = new MaterialSkin.Controls.MaterialButton();
             this.updateBillButton = new MaterialSkin.Controls.MaterialButton();
-            this.removeXenonCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
-            this.rightFenderCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
-            this.airFilterCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
             this.newShiftButton = new MaterialSkin.Controls.MaterialButton();
-            this.shiftNumberDropdown = new MaterialSkin.Controls.MaterialComboBox();
+            this.blacklistedInput = new MaterialSkin.Controls.MaterialMultiLineTextBox2();
             this.tabControl.SuspendLayout();
             this.installTab.SuspendLayout();
             this.unlistedTab.SuspendLayout();
@@ -1065,6 +1066,22 @@
             this.installTab.Text = "Install Parts";
             this.installTab.UseVisualStyleBackColor = true;
             // 
+            // airFilterCheckbox
+            // 
+            this.airFilterCheckbox.AutoSize = true;
+            this.airFilterCheckbox.Depth = 0;
+            this.airFilterCheckbox.Location = new System.Drawing.Point(28, 78);
+            this.airFilterCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.airFilterCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.airFilterCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.airFilterCheckbox.Name = "airFilterCheckbox";
+            this.airFilterCheckbox.ReadOnly = false;
+            this.airFilterCheckbox.Ripple = true;
+            this.airFilterCheckbox.Size = new System.Drawing.Size(93, 37);
+            this.airFilterCheckbox.TabIndex = 6;
+            this.airFilterCheckbox.Text = "Air Filter";
+            this.airFilterCheckbox.UseVisualStyleBackColor = true;
+            // 
             // vanityCheckbox
             // 
             this.vanityCheckbox.AutoSize = true;
@@ -1080,6 +1097,22 @@
             this.vanityCheckbox.TabIndex = 41;
             this.vanityCheckbox.Text = "Vanity Plate";
             this.vanityCheckbox.UseVisualStyleBackColor = true;
+            // 
+            // rightFenderCheckbox
+            // 
+            this.rightFenderCheckbox.AutoSize = true;
+            this.rightFenderCheckbox.Depth = 0;
+            this.rightFenderCheckbox.Location = new System.Drawing.Point(360, 411);
+            this.rightFenderCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.rightFenderCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.rightFenderCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.rightFenderCheckbox.Name = "rightFenderCheckbox";
+            this.rightFenderCheckbox.ReadOnly = false;
+            this.rightFenderCheckbox.Ripple = true;
+            this.rightFenderCheckbox.Size = new System.Drawing.Size(124, 37);
+            this.rightFenderCheckbox.TabIndex = 26;
+            this.rightFenderCheckbox.Text = "Right Fender";
+            this.rightFenderCheckbox.UseVisualStyleBackColor = true;
             // 
             // unlistedTab
             // 
@@ -1639,6 +1672,22 @@
             this.removeTab.Text = "Remove Parts";
             this.removeTab.UseVisualStyleBackColor = true;
             // 
+            // removeXenonCheckbox
+            // 
+            this.removeXenonCheckbox.AutoSize = true;
+            this.removeXenonCheckbox.Depth = 0;
+            this.removeXenonCheckbox.Location = new System.Drawing.Point(28, 73);
+            this.removeXenonCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.removeXenonCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.removeXenonCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.removeXenonCheckbox.Name = "removeXenonCheckbox";
+            this.removeXenonCheckbox.ReadOnly = false;
+            this.removeXenonCheckbox.Ripple = true;
+            this.removeXenonCheckbox.Size = new System.Drawing.Size(164, 37);
+            this.removeXenonCheckbox.TabIndex = 1;
+            this.removeXenonCheckbox.Text = "Remove Xenon Kit";
+            this.removeXenonCheckbox.UseVisualStyleBackColor = true;
+            // 
             // removeNeonCheckbox
             // 
             this.removeNeonCheckbox.AutoSize = true;
@@ -1673,6 +1722,28 @@
             this.commissionTab.TabIndex = 2;
             this.commissionTab.Text = "Commission Log";
             this.commissionTab.UseVisualStyleBackColor = true;
+            // 
+            // shiftNumberDropdown
+            // 
+            this.shiftNumberDropdown.AutoResize = false;
+            this.shiftNumberDropdown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.shiftNumberDropdown.Depth = 0;
+            this.shiftNumberDropdown.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.shiftNumberDropdown.DropDownHeight = 174;
+            this.shiftNumberDropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.shiftNumberDropdown.DropDownWidth = 121;
+            this.shiftNumberDropdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.shiftNumberDropdown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.shiftNumberDropdown.FormattingEnabled = true;
+            this.shiftNumberDropdown.IntegralHeight = false;
+            this.shiftNumberDropdown.ItemHeight = 43;
+            this.shiftNumberDropdown.Location = new System.Drawing.Point(28, 204);
+            this.shiftNumberDropdown.MaxDropDownItems = 4;
+            this.shiftNumberDropdown.MouseState = MaterialSkin.MouseState.OUT;
+            this.shiftNumberDropdown.Name = "shiftNumberDropdown";
+            this.shiftNumberDropdown.Size = new System.Drawing.Size(334, 49);
+            this.shiftNumberDropdown.StartIndex = 0;
+            this.shiftNumberDropdown.TabIndex = 8;
             // 
             // clearCommissionLogButton
             // 
@@ -1833,6 +1904,7 @@
             // 
             // settingsTab
             // 
+            this.settingsTab.Controls.Add(this.blacklistedInput);
             this.settingsTab.Controls.Add(this.mechShopInput);
             this.settingsTab.Controls.Add(this.mechNameInput);
             this.settingsTab.Controls.Add(this.setDefaultButton);
@@ -1889,14 +1961,14 @@
             this.setDefaultButton.Depth = 0;
             this.setDefaultButton.HighEmphasis = true;
             this.setDefaultButton.Icon = null;
-            this.setDefaultButton.Location = new System.Drawing.Point(28, 152);
+            this.setDefaultButton.Location = new System.Drawing.Point(28, 323);
             this.setDefaultButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.setDefaultButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.setDefaultButton.Name = "setDefaultButton";
             this.setDefaultButton.NoAccentTextColor = System.Drawing.Color.Empty;
             this.setDefaultButton.Size = new System.Drawing.Size(334, 50);
             this.setDefaultButton.TabIndex = 2;
-            this.setDefaultButton.Text = "Set Default Values";
+            this.setDefaultButton.Text = "Save Values";
             this.setDefaultButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.setDefaultButton.UseAccentColor = false;
             this.setDefaultButton.UseVisualStyleBackColor = true;
@@ -2032,54 +2104,6 @@
             this.updateBillButton.UseAccentColor = false;
             this.updateBillButton.UseVisualStyleBackColor = true;
             // 
-            // removeXenonCheckbox
-            // 
-            this.removeXenonCheckbox.AutoSize = true;
-            this.removeXenonCheckbox.Depth = 0;
-            this.removeXenonCheckbox.Location = new System.Drawing.Point(28, 73);
-            this.removeXenonCheckbox.Margin = new System.Windows.Forms.Padding(0);
-            this.removeXenonCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.removeXenonCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
-            this.removeXenonCheckbox.Name = "removeXenonCheckbox";
-            this.removeXenonCheckbox.ReadOnly = false;
-            this.removeXenonCheckbox.Ripple = true;
-            this.removeXenonCheckbox.Size = new System.Drawing.Size(164, 37);
-            this.removeXenonCheckbox.TabIndex = 1;
-            this.removeXenonCheckbox.Text = "Remove Xenon Kit";
-            this.removeXenonCheckbox.UseVisualStyleBackColor = true;
-            // 
-            // rightFenderCheckbox
-            // 
-            this.rightFenderCheckbox.AutoSize = true;
-            this.rightFenderCheckbox.Depth = 0;
-            this.rightFenderCheckbox.Location = new System.Drawing.Point(360, 411);
-            this.rightFenderCheckbox.Margin = new System.Windows.Forms.Padding(0);
-            this.rightFenderCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.rightFenderCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
-            this.rightFenderCheckbox.Name = "rightFenderCheckbox";
-            this.rightFenderCheckbox.ReadOnly = false;
-            this.rightFenderCheckbox.Ripple = true;
-            this.rightFenderCheckbox.Size = new System.Drawing.Size(124, 37);
-            this.rightFenderCheckbox.TabIndex = 26;
-            this.rightFenderCheckbox.Text = "Right Fender";
-            this.rightFenderCheckbox.UseVisualStyleBackColor = true;
-            // 
-            // airFilterCheckbox
-            // 
-            this.airFilterCheckbox.AutoSize = true;
-            this.airFilterCheckbox.Depth = 0;
-            this.airFilterCheckbox.Location = new System.Drawing.Point(28, 78);
-            this.airFilterCheckbox.Margin = new System.Windows.Forms.Padding(0);
-            this.airFilterCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.airFilterCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
-            this.airFilterCheckbox.Name = "airFilterCheckbox";
-            this.airFilterCheckbox.ReadOnly = false;
-            this.airFilterCheckbox.Ripple = true;
-            this.airFilterCheckbox.Size = new System.Drawing.Size(93, 37);
-            this.airFilterCheckbox.TabIndex = 6;
-            this.airFilterCheckbox.Text = "Air Filter";
-            this.airFilterCheckbox.UseVisualStyleBackColor = true;
-            // 
             // newShiftButton
             // 
             this.newShiftButton.AutoSize = false;
@@ -2100,27 +2124,31 @@
             this.newShiftButton.UseAccentColor = false;
             this.newShiftButton.UseVisualStyleBackColor = true;
             // 
-            // shiftNumberDropdown
+            // blacklistedInput
             // 
-            this.shiftNumberDropdown.AutoResize = false;
-            this.shiftNumberDropdown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.shiftNumberDropdown.Depth = 0;
-            this.shiftNumberDropdown.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.shiftNumberDropdown.DropDownHeight = 174;
-            this.shiftNumberDropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.shiftNumberDropdown.DropDownWidth = 121;
-            this.shiftNumberDropdown.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.shiftNumberDropdown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.shiftNumberDropdown.FormattingEnabled = true;
-            this.shiftNumberDropdown.IntegralHeight = false;
-            this.shiftNumberDropdown.ItemHeight = 43;
-            this.shiftNumberDropdown.Location = new System.Drawing.Point(28, 204);
-            this.shiftNumberDropdown.MaxDropDownItems = 4;
-            this.shiftNumberDropdown.MouseState = MaterialSkin.MouseState.OUT;
-            this.shiftNumberDropdown.Name = "shiftNumberDropdown";
-            this.shiftNumberDropdown.Size = new System.Drawing.Size(334, 49);
-            this.shiftNumberDropdown.StartIndex = 0;
-            this.shiftNumberDropdown.TabIndex = 8;
+            this.blacklistedInput.AnimateReadOnly = false;
+            this.blacklistedInput.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.blacklistedInput.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.blacklistedInput.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.blacklistedInput.Depth = 0;
+            this.blacklistedInput.HideSelection = true;
+            this.blacklistedInput.Hint = "Blacklisted (name per line)";
+            this.blacklistedInput.Location = new System.Drawing.Point(28, 148);
+            this.blacklistedInput.MaxLength = 32767;
+            this.blacklistedInput.MouseState = MaterialSkin.MouseState.OUT;
+            this.blacklistedInput.Name = "blacklistedInput";
+            this.blacklistedInput.PasswordChar = '\0';
+            this.blacklistedInput.ReadOnly = false;
+            this.blacklistedInput.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.blacklistedInput.SelectedText = "";
+            this.blacklistedInput.SelectionLength = 0;
+            this.blacklistedInput.SelectionStart = 0;
+            this.blacklistedInput.ShortcutsEnabled = true;
+            this.blacklistedInput.Size = new System.Drawing.Size(334, 166);
+            this.blacklistedInput.TabIndex = 4;
+            this.blacklistedInput.TabStop = false;
+            this.blacklistedInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.blacklistedInput.UseSystemPasswordChar = false;
             // 
             // MainForm
             // 
@@ -2265,6 +2293,7 @@
         private MaterialSkin.Controls.MaterialCheckbox rightFenderCheckbox;
         private MaterialSkin.Controls.MaterialButton newShiftButton;
         private MaterialSkin.Controls.MaterialComboBox shiftNumberDropdown;
+        private MaterialSkin.Controls.MaterialMultiLineTextBox2 blacklistedInput;
     }
 }
 

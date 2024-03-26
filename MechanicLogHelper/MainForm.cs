@@ -27,6 +27,10 @@ namespace MechanicLogHelper
             InitializeComponent();
             InitializeForm();
 
+            Version version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
+            string versionString = $"v{version.Major}.{version.Minor}";
+            this.Text = $"Mechanic Log Helper {versionString}";
+
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
@@ -38,6 +42,7 @@ namespace MechanicLogHelper
             // load default string property settings
             mechNameInput.Text = Properties.Settings.Default.MechName;
             mechShopInput.Text = Properties.Settings.Default.MechShop;
+            blacklistedInput.Text = Properties.Settings.Default.Blacklisted;
 
             logManager = new LogManager();
             RefreshTreeView();
@@ -136,6 +141,7 @@ namespace MechanicLogHelper
             uPrice8.KeyPress += NumberTextBox_KeyPress;
             clockInInput.TextChanged += ClockInOutInput_TextChanged;
             clockOutInput.TextChanged += ClockInOutInput_TextChanged;
+            customerInput.TextChanged += CustomerNameInput_Changed;
 
             // input update settings
             AssignUpdateEventHandlers(this.Controls);
@@ -168,6 +174,7 @@ namespace MechanicLogHelper
         {
             Properties.Settings.Default.MechName = mechNameInput.Text;
             Properties.Settings.Default.MechShop = mechShopInput.Text;
+            Properties.Settings.Default.Blacklisted = blacklistedInput.Text;
             Properties.Settings.Default.Save();
         }
 
@@ -195,6 +202,22 @@ namespace MechanicLogHelper
             }
         }
 
+        private void CustomerNameInput_Changed(object sender, EventArgs e)
+        {
+            List<string> blacklisted = GetBlacklistedNames();
+
+            foreach (var name in blacklisted)
+            {
+                if (customerInput.Text == name)
+                {
+                    customerInput.Text = String.Empty;
+                    MaterialMessageBox.Show($"{name} is blacklisted, cannot work on vehicle.\n" +
+                        $"Check city or shop email for more info.\n" +
+                        $"If blacklist has expired, please remove.");
+                }
+            }
+        }
+
         private void UpgradeInput_Changed(object sender, EventArgs e)
         {
             var installedUpgrades = GetInstalledUpgrades();
@@ -215,6 +238,15 @@ namespace MechanicLogHelper
             }
             
             RefreshTreeView();
+        }
+
+        private List<string> GetBlacklistedNames()
+        {
+            var blacklistedNamesString = Properties.Settings.Default.Blacklisted;
+
+            return blacklistedNamesString
+                .Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.RemoveEmptyEntries)
+                .ToList();
         }
         
         private void RefreshTreeView()
@@ -252,6 +284,13 @@ namespace MechanicLogHelper
             }
 
             treeViewLogs.ExpandAll();
+
+            if (treeViewLogs.Nodes.Count > 0)
+            {
+                treeViewLogs.SelectedNode = treeViewLogs.Nodes[0];
+                treeViewLogs.Nodes[0].EnsureVisible();
+            }
+
             PopulateShiftDropdown();
         }
 
@@ -496,8 +535,22 @@ Total Commission: ${totalCommission:n0}
             DateTime clockInTime = DateTime.ParseExact(clockInInput.Text, "hh:mm tt", CultureInfo.InvariantCulture);
             DateTime clockOutTime = DateTime.ParseExact(clockOutInput.Text, "hh:mm tt", CultureInfo.InvariantCulture);
 
+            if (clockOutTime < clockInTime)
+            {
+                clockOutTime = clockOutTime.AddDays(1);
+            }
+
             TimeSpan hoursWorked = clockOutTime - clockInTime;
-            return hoursWorked.TotalHours.ToString("N0");
+
+            string hoursWorkedString = hoursWorked.TotalHours.ToString("N2");
+            hoursWorkedString = hoursWorkedString.TrimEnd('0');
+
+            if (hoursWorkedString.EndsWith("."))
+            {
+                hoursWorkedString = hoursWorkedString.TrimEnd('.');
+            }
+
+            return hoursWorkedString;
         }
 
         private void ClockInOutInput_TextChanged(object sender, EventArgs e)
